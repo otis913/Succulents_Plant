@@ -1,0 +1,157 @@
+@import'./sass/sassVar';
+@import'./sass/sassMix';
+
+body{
+  font-family: Ariel, 微軟正黑體;
+  background-color:#eeebeb;
+  line-height: 2;
+  cursor: default;
+
+  .handmake_wrapper{
+   @include marginAuto(1920px);
+   display: flex;
+   justify-content: center;
+  }
+}
+
+.handmake_left{
+  background-image: url(./img/HandMake_bakgrGreen.png);
+  background-size: contain;
+  font-weight: bold;
+  width: 960px;
+
+  // display: flex;
+  // flex-direction: column;
+  // align-items: flex-end;
+  h1{
+    font-size: $h2;
+    margin: 10px;
+  }
+    .handmake_left_class{
+      display: flex;
+      flex-direction: column;
+     
+        button{
+          background-color:#2f4f4f;;
+          border-radius: 5px;      
+          margin: 5px;
+          font-size: $h3;
+          color:#fff;
+          border: 1px solid #fff;
+          padding: 5px;
+          font-weight: bold;
+          width: 200px;
+          cursor:pointer;
+        }
+        button:hover{
+          background-color:#fff ;
+          color:#2f4f4f ;
+        }
+    }
+
+    .fa-calendar-alt{
+      font-size: $h2;
+      margin-left:10px;
+      cursor:pointer;
+    }
+    .custom_select{
+      margin-left: 10px;
+      width: 200px;
+    }
+
+    .choseNumber{
+      display: flex;
+      margin: 10px;
+        .number_people{
+          width: 40px;
+          text-align: center;
+        }
+        
+        .fa-minus{
+          font-size: $h3;
+          margin:0 10px;
+          cursor:pointer;
+        }
+        .fa-plus{
+          font-size: $h3;
+          margin:0 10px;
+          cursor:pointer;
+        }
+    }
+
+    .handmake_left_text{
+      span{
+        font-size: $h1;
+        color: #d9a420;
+      }
+      h1:nth-child(2){
+        color:#d9a420;
+      }
+    }
+
+    .SignUp{
+      background-color:#d9a420;
+      width: 200px;
+      border-radius: 10px;  
+      color:#2f4f4f ;
+      font-size: $h3;
+      padding: 10px;
+      font-weight: bold;
+    }
+    .SignUp:hover{
+      background-color: #fff;
+      color:#2f4f4f ;
+    }
+}
+
+.handmake_right{
+  width: 800px;
+  margin-left: 10px;
+  color: #2f4f4f;
+  h1{
+    font-weight: bold;
+    font-size: $h2;
+    margin: 10px;
+  }
+  p{
+    font-size: $h3;
+  }
+  img{
+    display: block;
+    width: 400px;
+    height: 150px;
+    
+    margin: 0 auto;
+  }
+
+  .handmake_right_main{
+    
+    p{
+      margin:10px 40px
+    }
+    p:nth-child(2){
+      font-weight: bold;
+    }
+    p:before{
+      content: '';
+      display: block;
+      width: 4px;
+      height: 30px;
+      background-color:#d9a420 ;
+      float: left;
+      margin-right: 10px;
+    }
+    li{
+      margin:10px 30px
+      // color: #2f4f4f;
+    }
+  }
+  .notice_main{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 0;
+  }
+}
+
+
+
