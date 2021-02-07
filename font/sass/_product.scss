@@ -1,0 +1,251 @@
+// 引用
+//這個是取消全部樣式的css
+@import "./reset";
+@import "./var";
+//這個是bubble_btn的css，記得html要引用bubble_btn動畫效果的js & TweenMax
+@import "./bubblebtn";
+
+//----------------共用scss開始-------------------------
+
+.btn {
+  @include btn;
+}
+
+// 動態
+.-shop-click {
+  background-color: map-get($color, "gray2");
+}
+
+.-show-flex {
+  display: flex;
+}
+
+.-show-block {
+  display: block;
+}
+
+.-red {
+  color: red;
+}
+
+.-pro-border {
+  border: 5px solid;
+}
+
+.-pro-bb {
+  border-bottom: 2px solid;
+}
+
+.recommend {
+  background-image: url(../img/background.png);
+  background-position: center 0;
+  background-size: cover;
+}
+
+// 開始
+.product_up {
+  @include flex() {
+    align-items: flex-start;
+  }
+}
+
+.product_left {
+  width: 50%;
+  &_simg {
+    @include flex() {
+      justify-content: space-around;
+      &_smpic img {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.product_right {
+  width: 50%;
+  margin-left: 50px;
+  text-align: left;
+}
+
+.product_title {
+  font-size: map-get($fontsize, "big");
+  margin-bottom: 20px;
+}
+
+.product_tag {
+  @include flex() {
+    justify-content: flex-start;
+  }
+  &_cust,
+  &_new,
+  &_hot {
+    font-size: map-get($fontsize, "small");
+    padding: 5px;
+    border: 1px solid;
+    margin: 0 5px;
+    margin-bottom: 20px;
+  }
+  &_new {
+    color: map-get($color, "pink");
+  }
+  &_hot {
+    color: map-get($color, "yellow");
+  }
+}
+
+.product_word {
+  margin-bottom: 20px;
+}
+
+.product_price {
+  font-size: map-get($fontsize, "big");
+  margin-bottom: 20px;
+}
+
+.product_amount {
+  margin-bottom: 20px;
+  label {
+    margin-right: 10px;
+  }
+  .fas {
+    cursor: pointer;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  .createFollowCheck input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  &_number {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+// 賀卡
+.product_cardcheck {
+  @include flex() {
+    justify-content: flex-start;
+  }
+  margin-bottom: 20px;
+  input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+}
+
+.product_card {
+  display: flex;
+  flex-direction: column;
+  input {
+    padding: 5px 10px;
+    margin-bottom: 20px;
+  }
+  textarea {
+    margin-bottom: 20px;
+  }
+  &_style {
+    @include flex() {
+      flex-wrap: wrap;
+    }
+    li {
+      padding: 10px;
+      text-align: center;
+    }
+  }
+  &_second {
+    display: flex;
+  }
+  display: none;
+}
+
+// 加入購物車按鈕樣式-開始
+.product_right .bubble_btnn {
+  margin: 40px 0;
+}
+
+.product_right .button--bubble {
+  width: 100%;
+  text-align: center;
+}
+
+.lie {
+  width: 100%;
+}
+// 加入購物車按鈕樣式-結束
+
+// 收藏我的按鈕樣式
+// .product_right .btn_green {
+.product_right .product_collect {
+  a {
+    background-color: transparent;
+    border: 2px solid #2f4f4f;
+    color: #2f4f4f;
+    margin: 0;
+    margin-left: auto;
+    @include flex;
+  }
+  .fa-heart {
+    margin-right: 20px;
+    font-size: map-get($fontsize, "big");
+  }
+}
+
+// product_downa
+.product_tabs {
+  @include flex;
+  li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 33.33%;
+    font-size: map-get($fontsize, "big");
+  }
+}
+
+.product_content_notice {
+  display: none;
+}
+
+.product_content_word {
+  font-size: map-get($fontsize, "larger");
+}
+
+.product_content_assess {
+  ol li {
+    @include flex() {
+      justify-content: space-between;
+    }
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px 20px;
+    width: 960px;
+    margin: 0 auto;
+  }
+  display: none;
+}
+
+.product_assess_star {
+  margin-right: auto;
+  margin-left: 50px;
+  .fa-star {
+    color: map-get($color, "yellow");
+  }
+}
+
+.product_other {
+  h2 {
+    text-align: left;
+    font-size: map-get($fontsize, "big");
+  }
+  &_hot {
+    @include flex;
+    li {
+      width: 25%;
+      padding: 10px;
+    }
+  }
+}

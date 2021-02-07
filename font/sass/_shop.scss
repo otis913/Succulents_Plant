@@ -1,0 +1,240 @@
+// 引用
+@import "./reset";
+@import "./var";
+@import "./bubblebtn";
+// @import "./mixins";
+
+.btn {
+  @include btn;
+}
+
+// 動態
+.-shop-click {
+  background-color: map-get($color, "gray2");
+}
+
+.-show-flex {
+  display: flex;
+}
+
+.-show-block {
+  display: block;
+}
+
+.-red {
+  color: red;
+}
+
+.-pro-border {
+  border: 5px solid;
+}
+
+.-pro-bb {
+  border-bottom: 2px solid;
+}
+
+// 開始
+.shop_banner {
+  img {
+    height: 75vh;
+  }
+}
+
+.shop_note {
+  @include flex() {
+    // justify-content: space-around;
+  }
+  li {
+    background-color: map-get($color, "main_g");
+    flex-grow: 1;
+    &:last-child {
+      background-color: map-get($color, "yellow");
+    }
+  }
+  a {
+    padding: 25px 0;
+
+    text-align: center;
+    color: map-get($color, "white");
+    font-size: map-get($fontsize, "big");
+  }
+}
+
+// 篩選
+.shop_filterbox {
+  padding: 50px 0;
+}
+
+.shop_mainfilter {
+  margin-bottom: 20px;
+  @include flex() {
+    justify-content: space-between;
+  }
+  a {
+    @include flex() {
+      justify-content: space-around;
+    }
+    font-size: map-get($fontsize, "big");
+    border: 1px solid #ccc;
+    width: 250px;
+    &:hover {
+      background-color: map-get($color, "gray2");
+    }
+  }
+  img {
+    width: 80px;
+  }
+}
+
+.shop_childfilter {
+  margin-bottom: 20px;
+  @include flex {
+    justify-content: flex-start;
+  }
+  a {
+    @include flex() {
+      justify-content: space-around;
+    }
+    font-size: map-get($fontsize, "normall");
+    border: 1px solid #ccc;
+    margin-right: 20px;
+    &:hover {
+      background-color: map-get($color, "gray2");
+    }
+  }
+  img {
+    width: 50px;
+  }
+  display: none;
+}
+
+.shop_otherfilter {
+  text-align: left;
+  select {
+    padding: 10px;
+    border-radius: 5%;
+    margin-right: 20px;
+    outline: none;
+    font-size: map-get($fontsize, "normall");
+  }
+}
+
+form {
+  float: right;
+}
+.shop_search {
+  input {
+    outline: none;
+    border-radius: 5%;
+    background-color: map-get($color, "gray2");
+    border: 1px solid #444444;
+    padding: 10px;
+  }
+  button {
+    background-color: transparent;
+    border: 0;
+    color: map-get($color, "main_g");
+    border-radius: 10%;
+    background-color: map-get($color, "gray2");
+    transform: translateX(-45px);
+    border-right: 0;
+    outline: none;
+  }
+}
+
+// 商品
+.shop_main {
+  margin-bottom: 20px;
+  @include flex() {
+    flex-wrap: wrap;
+  }
+}
+
+.shop_card {
+  width: 33.33%;
+  padding: 20px;
+  &_tag {
+    @include flex;
+  }
+  &_img {
+    position: relative;
+
+    img {
+      display: block;
+    }
+    button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: map-get($fontsize, "big");
+      background-color: transparent;
+      outline: none;
+      border: none;
+    }
+  }
+  &_title,
+  &_take,
+  &_price {
+    font-size: map-get($fontsize, "larger");
+  }
+
+  &_price {
+    margin-bottom: 30px;
+  }
+
+  &_take {
+    @include flex;
+    li {
+      margin: 5px;
+    }
+  }
+  &_addcart {
+    background: map-get($color, "main_g");
+    color: map-get($color, "white");
+    width: 100%;
+  }
+}
+
+// 加入購物車按鈕-新增
+.lie {
+  width: 100%;
+}
+
+.shop_card_tag {
+  // @include flex;
+  &_cust,
+  &_new,
+  &_hot {
+    font-size: map-get($fontsize, "small");
+    background-color: #fff;
+    opacity: 0.7;
+    padding: 5px;
+    position: absolute;
+  }
+  &_new {
+    color: map-get($color, "pink");
+    top: 10px;
+    left: 120px;
+  }
+  &_hot {
+    color: map-get($color, "yellow");
+    top: 10px;
+    left: 20px;
+  }
+}
+
+.shop_pagination {
+  @include flex;
+  li {
+    margin: 0 20px;
+  }
+  a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    &:hover {
+      border: 1px solid;
+      border-radius: 50%;
+    }
+  }
+}

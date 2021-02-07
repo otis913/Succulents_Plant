@@ -1,0 +1,150 @@
+
+//這個是取消全部樣式的css
+@import "./reset";
+//這個是bubble_btn的css，記得html要引用bubble_btn動畫效果的js & TweenMax
+@import "./bubblebtn";
+
+//----------------以上不要動！！，以下開放自己的sass，按照自己的區塊放(可自己更動區塊名字)-------------------------
+@import "./var";
+%ex20px {
+  padding: 20px 0;
+}
+
+.ex20px{
+  @extend %ex20px;
+}
+
+body{
+  cursor: default;
+  // color:#eeebeb;
+}
+.full_wrapper{
+  // background-image: url(../img/1.jpg);
+}
+
+.handmake_section{
+    display: flex;
+    justify-content: center;
+}
+
+.handmake_left{
+  background-size: contain;
+  font-weight: bold;
+  h1{
+
+    margin: 10px;
+  }
+    .handmake_left_class{
+      display: flex;
+      flex-direction: column;
+     
+        button {
+          @include buttons(); 
+        }
+        button:hover{
+          background-color:#fff ;
+          color:#2f4f4f ;
+        }
+    }
+
+    .fa-calendar-alt{
+
+      margin-left:10px;
+      cursor:pointer;
+    }
+    .custom_select{
+      margin-left: 10px;
+      width: 200px;
+    }
+
+    .choseNumber{
+      display: flex;
+      margin: 10px;
+        .number_people{
+          width: 40px;
+          text-align: center;
+        }
+        
+        .fa-minus{
+   
+          margin:0 10px;
+          cursor:pointer;
+        }
+        .fa-plus{
+
+          margin:0 10px;
+          cursor:pointer;
+        }
+    }
+
+    .handmake_left_text{
+      span{
+        color: #d9a420;
+      }
+      h1:nth-child(2){
+        color:#d9a420;
+      }
+    }
+
+    .SignUp{
+      background-color:#d9a420;
+      width: 200px;
+      border-radius: 10px;  
+      color:#2f4f4f ;
+      padding: 10px;
+      font-weight: bold;
+    }
+    .SignUp:hover{
+      background-color: #fff;
+      color:#2f4f4f ;
+    }
+}
+
+.handmake_right{
+  // width: 800px;
+  margin-left: 10px;
+  color: #2f4f4f;
+  h1{
+    font-weight: bold;
+    margin: 10px;
+  }
+  p{
+  }
+  img{
+    display: block;
+    width: 400px;  
+    margin: 0 auto;
+  }
+
+  .handmake_right_main{
+    padding-left: 50px;
+    text-align: left;
+    // color:#eeebeb;
+    p{
+      margin:10px 40px
+    }
+    p:nth-child(2){
+      font-weight: bold;
+    }
+    p:before{
+      content: '';
+      display: block;
+      width: 4px;
+      height: 30px;
+      background-color:#d9a420 ;
+      float: left;
+      margin-right: 10px;
+    }
+    li{
+      margin:10px 30px
+    }
+  }
+  .notice_main{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 0;
+  }
+}
+
+
+

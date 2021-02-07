@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A</title>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous"></link>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- aos動畫效果 -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- 自己的css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- vue cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js"></script>
+</head>
+<body>
+
+    <!-- 目前共用的標籤 
+        body
+        html
+        section
+        article
+        .bread
+        .btn_green
+        .btn_yellow
+        .bubble_btnn
+        .ex
+        footer
+    -->
+
+
+    <!-- section 的範圍為全螢幕，主要用來放background-image的-->
+    <!-- 要新增背景圖請另外加class ex:class="full_wrapper" -->
+    <section class="full_wrapper">
+
+
+        <!-- 麵包屑在這 -->
+        <article>
+            <div class="bread">
+               <a href="">首頁</a> > <a href="">心理測驗</a>
+            </div>
+        </article>
+
+
+
+
+        <!-- article 的內容的安全範圍(1200px)，每個區塊都用一個article包起來 -->
+        <article>
+            <!-- 內容放這裡 -->
+            <div class="qa" >
+              <img src="/img/QA/QA_LOGO.png" alt="">
+            </div>
+            <div class="qaBg">
+              <div class="cancel"></div>
+              <div class="question">
+                <h2>Q:想更換或取消訂單，怎麼辦呢？</h2>
+                <p class="ans">A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
+              </div>
+              <div class="question1">
+                <h2>Q:收到商品了，可以退換貨嗎？</h2>
+                <p class="ans1">A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
+              </div>
+              <div class="question2">
+                <h2>Q:如何查詢我的訂單是否成立</h2>
+                <p class="ans2">A:您可以登入在『會員中心』查詢，在『訂單明細』中，方便您掌握商品狀況！</p>
+              </div>
+              <div class="question3">
+                <h2>Q:是否提供商品保固？</h2>
+                <p class="ans3">A:恕本店不提供保固期，敬請見諒！</p>
+              </div>
+              <div class="question4">
+                <h2>Q:忘記密碼怎麼辦？</h2>
+                <p class="ans4">A:請於“會員登入”頁面，點選“忘記密碼”，填完註冊信箱，會有專人為您服務！</p>
+              </div>
+              <div class="cusQ" id="app">
+                <div class="cusQUS" >{{message}}</div>
+                <div class="answer">we will hope you</div>
+                <div class="adimit" > <input type="text" v-model="message"><button class="btn">送出</button></div>
+              </div>
+              
+            </div>
+          
+
+
+        </article>
+
+
+
+
+        <!-- 用來調整上下間隔高度的，高度目前設定為100px，一定要放在section裡 -->
+        <div class="ex"></div>
+        <div class="ex"></div>
+        <div class="ex"></div>
+        <div class="ex"></div>
+        <div class="ex"></div>
+        <div class="ex"></div>
+       
+    </section>
+  
+
+
+
+    
+
+
+    <footer>
+        <article>
+            <div class="brand_info">
+                <ul>
+                    <li><a href="">商品專區</a></li>
+                    <li><a href="">客製多肉</a></li>
+                    <li><a href="">心理測驗</a></li>
+                    <li><a href="">手作課程</a></li>
+                    <li><a href="">部落格</a></li>
+                </ul>    
+
+                <ol>
+                    <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                </ol>
+
+                <p>ⓒ Copyright Shimabara Shokuhin All Rights Reserved. </p>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="logo_info">
+                <a href=""><img src="img/icon_logo_footer.png" alt=""></a>
+                <p>tel : 02-2338-8365</p>
+                <p>e-mail : Succulents Monster@gmail.com </p>
+                <p>address : 104 台北市中山區南京東路三段219號</p>
+                <p>open : 週一至週日 11:00 – 18:30</p>
+
+            </div>
+
+        </article>
+
+    </footer>
+    <!-- footer end -->
+
+
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- aos動畫效果 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- bubble_btn動畫效果 -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="js/bubblebtn.js"></script>
+
+    <!-- 自已的js -->
+    <script src="./js/qa.js"></script>
+</body>
+</html>
