@@ -73,14 +73,33 @@ $color: (
   align-items: center;
   @content;
 }
-@mixin buttons(){
-  background-color:#2f4f4f;
-  border-radius: 5px;     
+@mixin buttons() {
+  background-color: #2f4f4f;
+  border-radius: 5px;
   margin: 5px;
-  color:#fff;
+  color: #fff;
   border: 1px solid #fff;
   padding: 5px;
   font-weight: bold;
   width: 200px;
-  cursor:pointer;
+  cursor: pointer;
+}
+
+// 斷點
+@mixin pad {
+  @media (max-width: 990px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: 414px) {
+    @content;
+  }
 }
