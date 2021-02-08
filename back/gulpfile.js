@@ -10,6 +10,8 @@ var concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
 var sass = require('gulp-sass');
 const fileinclude = require('gulp-file-include');
+var clean = require('gulp-clean');
+
 
 var sourcemaps = require('gulp-sourcemaps');
 function sassStyle() {
@@ -22,6 +24,11 @@ function sassStyle() {
     .pipe(concat('all.css')) // 合併
     .pipe(cleanCSS()) //壓縮
     .pipe(dest('css/'))
+}
+
+exports.clean = function cleanfile() {
+  return src('./*.html', { read: false, allowEmpty: true })
+    .pipe(clean())
 }
 
 exports.html = function includeHTML(done) {
