@@ -36,7 +36,10 @@
 // 開始
 .shop_banner {
   img {
-    height: 75vh;
+    // height: 75vh;
+    // @include pad() {
+    display: none;
+    // }
   }
 }
 
@@ -117,11 +120,11 @@
     outline: none;
     font-size: map-get($fontsize, "normall");
   }
+  form {
+    float: right;
+  }
 }
 
-form {
-  float: right;
-}
 .shop_search {
   input {
     outline: none;
