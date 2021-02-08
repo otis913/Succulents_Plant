@@ -25,12 +25,12 @@ function sassStyle() {
 }
 
 exports.html = function includeHTML(done) {
-  return src('./*.html')
+  return src('./original/*.html')
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(dest('./dist'));
+    .pipe(dest('./'));
   done();
 }
 

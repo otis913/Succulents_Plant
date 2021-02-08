@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/back_index.css">
+  <link rel="stylesheet" href="./css/back_index.css">
   <title>肉多不怪會員管理中心</title>
 </head>
 
@@ -16,7 +16,68 @@
 
     <div class="list">
 
-      @@include('./back_layout/back_LeftNavbar.html')
+      <ul>
+  <a class="submenutitle" href="#memberSubmenu" data-toggle="collapse" aria-expanded="false">會員管理</a>
+  <ol class="collapse list-unstyled" id="memberSubmenu">
+    <li>
+      <a href="">會員狀態修改</a>
+    </li>
+  </ol>
+</ul>
+
+<ul>
+  <a href="#orderSubmenu" data-toggle="collapse" aria-expanded="false">訂單管理</a>
+  <ol class="collapse list-unstyled" id="orderSubmenu">
+    <li>
+      <a href="./member_manage.html">訂單狀態修改</a>
+    </li>
+  </ol>
+</ul>
+
+<ul>
+  <a href="#productSubmenu" data-toggle="collapse" aria-expanded="false">商品管理</a>
+  <ol class="collapse list-unstyled" id="productSubmenu">
+    <li>
+      <a href="">新增商品</a>
+    </li>
+    <li>
+      <a href="">修改商品</a>
+    </li>
+  </ol>
+</ul>
+
+<ul>
+  <a href="#classSubmenu" data-toggle="collapse" aria-expanded="false">課程管理</a>
+  <ol class="collapse list-unstyled" id="classSubmenu">
+    <li>
+      <a href="">新增課程</a>
+    </li>
+    <li>
+      <a href="">修改課程</a>
+    </li>
+  </ol>
+</ul>
+
+<ul>
+  <a href="#customSubmenu" data-toggle="collapse" aria-expanded="false">客製多肉管理</a>
+  <ol class="collapse list-unstyled" id="customSubmenu">
+    <li>
+      <a href="">新增內容</a>
+    </li>
+    <li>
+      <a href="">修改內容</a>
+    </li>
+  </ol>
+</ul>
+
+<ul>
+  <a href="#reportSubmenu" data-toggle="collapse" aria-expanded="false">回報訊息管理</a>
+  <ol class="collapse list-unstyled" id="reportSubmenu">
+    <li>
+      <a href="">回復訊息</a>
+    </li>
+  </ol>
+</ul>
 
     </div>
 
