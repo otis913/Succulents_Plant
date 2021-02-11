@@ -35,12 +35,13 @@
 
 // 開始
 .shop_banner {
-  img {
-    // height: 75vh;
-    // @include pad() {
-    display: none;
-    // }
-  }
+  background-image: url(../img/shop/product_kv1.png);
+  background-size: cover;
+  background-position: center;
+  height: 65vh;
+  // height: 500px;
+  // width: auto;
+  background-repeat: no-repeat;
 }
 
 .shop_note {
@@ -80,9 +81,6 @@
     font-size: map-get($fontsize, "big");
     border: 1px solid #ccc;
     width: 250px;
-    &:hover {
-      background-color: map-get($color, "gray2");
-    }
   }
   img {
     width: 80px;

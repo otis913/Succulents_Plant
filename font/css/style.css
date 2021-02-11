@@ -963,8 +963,12 @@ table {
   border-bottom: 2px solid;
 }
 
-.shop_banner img {
-  height: 75vh;
+.shop_banner {
+  background-image: url(../img/shop/product_kv1.png);
+  background-size: cover;
+  background-position: center;
+  height: 65vh;
+  background-repeat: no-repeat;
 }
 
 .shop_note {
@@ -1011,10 +1015,6 @@ table {
   width: 250px;
 }
 
-.shop_mainfilter a:hover {
-  background-color: #efefef;
-}
-
 .shop_mainfilter img {
   width: 80px;
 }
@@ -1058,7 +1058,7 @@ table {
   font-size: 1.6rem;
 }
 
-form {
+.shop_otherfilter form {
   float: right;
 }
 
@@ -1502,12 +1502,6 @@ table {
   border-bottom: 2px solid;
 }
 
-.recommend {
-  background-image: url(../img/background.png);
-  background-position: center 0;
-  background-size: cover;
-}
-
 .product_up {
   display: flex;
   justify-content: center;
@@ -1521,12 +1515,13 @@ table {
 
 .product_left_simg {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-around;
 }
 
-.product_left_simg_smpic img {
+.product_left_simg_smpic {
+  margin-right: 40px;
+}
+
+.product_left_simg img {
   cursor: pointer;
 }
 
@@ -1721,9 +1716,15 @@ table {
   color: #d9a420;
 }
 
+.recommend {
+  background-image: url(../img/product/shop_hot_bg.png);
+  background-position: center 0;
+}
+
 .product_other h2 {
   text-align: left;
   font-size: 2.6rem;
+  padding-bottom: 20px;
 }
 
 .product_other_hot {
