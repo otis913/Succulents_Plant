@@ -6,9 +6,14 @@ body{
 .wrapper{
   width: 1200px;
   margin:0 auto;
+ }
+.section_main{
   display: flex;
   justify-content: center;
+}
 
+.member_main{
+  
 }
 
 .list{
@@ -51,8 +56,28 @@ ul>a:nth-child(1):hover{
   .list ol a:hover{
     color:#d9a420;
    }
-
-
+.back_header{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  h1{
+    font-weight: bold;
+    color:#2f4f4f;
+    font-size:25px;
+  }
+  .back_signOut_btn{
+    background-color: #2f4f4f;
+    border-radius: 5px;
+    margin: 5px;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 5px;
+    font-weight: bold;
+    width: 100px;
+    cursor: pointer;
+  }
+  
+}
 
 
 
