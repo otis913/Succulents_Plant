@@ -85,6 +85,22 @@ $color: (
   cursor: pointer;
 }
 
+// 會員中心
+@mixin memberin {
+  margin: 20px 20px;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+}
+@mixin memberh1 {
+  background-color: map-get($color, "main_g");
+  color: map-get($color, "white");
+  border-radius: 20px;
+  line-height: 3;
+}
+
+
 // 斷點
 @mixin pad {
   @media (max-width: 990px) {
