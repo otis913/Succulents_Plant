@@ -18,84 +18,31 @@
 
       @@include('./back_layout/back_LeftNavbar.html')
 
-      <div class="member_main">
+      <div class="report_main">
 
-        <div class="search_name">
-          <form>
-            <h1>姓名搜尋</h1>
-            <input type="text">
-            <input type="radio" value="male"><label>男生</label>
-            <input type="radio" value="female"><label>女生</label>
-            <input type="submit" value="搜尋">
-          </form>
-        </div>
 
-        <div class="member_information">
+        <div class="report_information">
           <table class="table">
             <thead>
               <tr>
+                <th scope="col">回報編號</th>
+                <th scope="col">回報日期</th>
                 <th scope="col">會員編號</th>
-                <th scope="col">會員帳號</th>
-                <th scope="col">會員姓名</th>
-                <th scope="col">帳號狀態</th>
-                <th scope="col">是否停權</th>
+                <th scope="col">處理狀態</th>
+                <th scope="col">是否回復</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td>123@gmail.com</td>
-                <td>江美璿</td>
-                <td>正常</td>
+                <td>2021/03/30</td>
+                <td>2021231234</td>
+                <td>還未回覆</td>
                 <td>
-                  <button>確定</button>
+                  <button type="button" class="btn btn-info">回覆</button>
                 </td>
               </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>123@gmail.com</td>
-                <td>蘇帥政</td>
-                <td>正常</td>
-                <td>
-                  <button>確定</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>123@gmail.com</td>
-                <td>黃型閎</td>
-                <td>正常</td>
-                <td>
-                  <button>確定</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>123@gmail.com</td>
-                <td>莊酷麟</td>
-                <td>正常</td>
-                <td>
-                  <button>確定</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>123@gmail.com</td>
-                <td>李帥慶</td>
-                <td>停用</td>
-                <td>
-                  <button>確定</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>123@gmail.com</td>
-                <td>林帥哲</td>
-                <td>正常</td>
-                <td>
-                  <button>確定</button>
-                </td>
-              </tr>
+
             </tbody>
           </table>
         </div>

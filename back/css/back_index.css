@@ -244,11 +244,16 @@ ul > a:nth-child(1):hover {
 
 .back_product_img {
   display: block;
-  width: 200px;
+  width: 50px;
 }
 
 .knowledge_img {
   display: block;
-  width: 200px;
+  width: 100px;
+}
+
+.back_custom_img {
+  display: block;
+  width: 100px;
 }
 /*# sourceMappingURL=back_index.css.map */

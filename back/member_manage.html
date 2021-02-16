@@ -12,11 +12,93 @@
 
 <body>
   <div class="wrapper">
-    @@include('./back_layout/back_header.html')
+    <div class="back_header">
+
+  <h1>肉多不怪後臺管理</h1>
+
+  <input type="button" class="back_signOut_btn" name="" id="" value="帳號登出" />
+</div>
 
     <div class="section_main">
 
-      @@include('./back_layout/back_LeftNavbar.html')
+      <div class="list">
+  <ul>
+    <a class="submenutitle" href="#memberSubmenu" data-toggle="collapse" aria-expanded="false">會員管理</a>
+    <ol class="collapse list-unstyled" id="memberSubmenu">
+      <li>
+        <a href="./member_manage.html">查看會員</a>
+      </li>
+
+    </ol>
+  </ul>
+
+  <ul>
+    <a href="#orderSubmenu" data-toggle="collapse" aria-expanded="false">訂單管理</a>
+    <ol class="collapse list-unstyled" id="orderSubmenu">
+      <li>
+        <a href="./order_manage.html">查看訂單狀態</a>
+      </li>
+    </ol>
+  </ul>
+
+  <ul>
+    <a href="#productSubmenu" data-toggle="collapse" aria-expanded="false">商品管理</a>
+    <ol class="collapse list-unstyled" id="productSubmenu">
+      <li>
+        <a href="./porduct_manage.html">查看商品</a>
+      </li>
+      <li>
+        <a href="./porduct_manage.html">新增商品</a>
+      </li>
+    </ol>
+  </ul>
+
+  <ul>
+    <a href="#classSubmenu" data-toggle="collapse" aria-expanded="false">課程管理</a>
+    <ol class="collapse list-unstyled" id="classSubmenu">
+      <li>
+        <a href="./handClass_manage.html">查看課程</a>
+      </li>
+      <li>
+        <a href="./handClass_manage.html">新增課程</a>
+      </li>
+    </ol>
+  </ul>
+
+  <ul>
+    <a href="#customSubmenu" data-toggle="collapse" aria-expanded="false">客製多肉管理</a>
+    <ol class="collapse list-unstyled" id="customSubmenu">
+      <li>
+        <a href="./Custom_manage.html">查看客製多肉內容</a>
+      </li>
+      <li>
+        <a href="./Custom_manage.html">新增客製多肉內容</a>
+      </li>
+    </ol>
+  </ul>
+
+  <ul>
+    <a href="#productSubmenu" data-toggle="collapse" aria-expanded="false">知識文章</a>
+    <ol class="collapse list-unstyled" id="productSubmenu">
+      <li>
+        <a href="./knowledge_manage.html">查看文章</a>
+      </li>
+      <li>
+        <a href="./knowledge_manage.html">新增文章</a>
+      </li>
+    </ol>
+  </ul>
+
+
+  <ul>
+    <a href="#reportSubmenu" data-toggle="collapse" aria-expanded="false">回報訊息管理</a>
+    <ol class="collapse list-unstyled" id="reportSubmenu">
+      <li>
+        <a href="./report_manage.html">查看回報問題</a>
+      </li>
+    </ol>
+  </ul>
+</div>
 
       <div class="member_main">
 

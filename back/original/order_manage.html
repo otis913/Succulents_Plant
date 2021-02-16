@@ -18,19 +18,21 @@
 
       @@include('./back_layout/back_LeftNavbar.html')
 
-      <div class="member_main">
+      <div class="order_main">
 
         <table class="table">
           <thead class="thead-dark">
             <tr>
               <th scope="col">訂單編號</th>
-              <th scope="col">訂購人姓名</th>
               <th scope="col">收件人姓名</th>
+              <th scope="col">收件人手機</th>
+              <th scope="col">收件人地址</th>
               <th scope="col">訂單日期</th>
               <th scope="col">付款方式</th>
               <th scope="col">信用卡號</th>
               <th scope="col">訂單付款狀態</th>
               <th scope="col">訂單狀態</th>
+              <th scope="col">會員編號</th>
               <th scope="col">修改訂單狀態</th>
             </tr>
           </thead>
@@ -38,13 +40,17 @@
             <tr>
               <th scope="row">112312312</th>
               <td>蘇帥政</td>
-              <td>江美璿</td>
+              <td>0123456789</td>
+              <td>新北市XXXXXXXXXXXXXX</td>
               <td>2020/01/30</td>
               <td>信用卡付款</td>
               <td>1122-3344-5566-7788</td>
               <td>已結帳</td>
               <td>送貨中</td>
-              <td><select name="" id=""></select></td>
+              <td>0001</td>
+              <td>
+                <button type="button" class="btn btn-success">修改</button>
+              </td>
             </tr>
 
           </tbody>
