@@ -21,7 +21,6 @@
 
   <!-- 自己的css -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="./css/MemberCentre.css">
 
 </head>
 
@@ -45,7 +44,7 @@
   <!-- 要新增背景圖請另外加class ex:class="full_wrapper" -->
   <section class="full_wrapper">
 
-    <h1>21312</h1>
+
     <!-- 麵包屑在這 -->
     <article>
       <div class="bread">
@@ -57,27 +56,35 @@
 
 
     <!-- article 的內容的安全範圍(1200px)，每個區塊都用一個article包起來 -->
-    <article>
+    <article class="memberarticle">
       <!-- 內容放這裡 -->
-      <div class="btn_green">
-        <a href="#" id="MemberDiv" class="MemberDiv">會員中心</a>
-        <a href="#" id="OrderTrackingDiv" class="OrderTrackingDiv">訂單查詢</a>
-        <a href="#" id="MyCollectionDiv" class="MyCollectionDiv">我的收藏</a>
-        <a href="#" id="IhaveaquestionDiv" class="IhaveaquestionDiv">我有問題</a>
+      <div class="membergreen">
+        <div class="btn_green">
+          <a href="#" id="MemberDiv" class="MemberDiv">會員中心</a>
+          <a href="#" id="OrderTrackingDiv" class="OrderTrackingDiv">訂單查詢</a>
+          <a href="#" id="MyCollectionDiv" class="MyCollectionDiv">我的收藏</a>
+          <a href="#" id="IhaveaquestionDiv" class="IhaveaquestionDiv">我有問題</a>
+        </div>
       </div>
+
       <div id="member" class="member">
         <h1>個人資料</h1>
-        <img class="PeopleAvatars" src="img/member/PeopleAvatars.png">
-        <input class="photo" type="image" src="img/member/photo.png">
+        <div class="memberPeopleAvatars">
+          <div class="memberPeopleAvatarsimg"> 
+            <i class="fas fa-camera"></i>
+            <img class="PeopleAvatars" src="img/member/PeopleAvatars.png">
+            <!-- <input class="photo" type="image" src="img/member/photo.png"> -->
+          </div>
         <ul>
-          <li>姓名:</li> <input type="text">
-          <li>帳號:</li>
-          <li class="ID"></li>
-          <li>密碼:</li> <input type="password">
-          <li>生日:</li> <input type="date">
-          <li>電話:</li> <input type="tel">
-          <li>地址:</li> <input type="text" class="add">
+          <li>姓名: <input type="text"></li>
+          <li>帳號: <p class="ID"></p> </li>
+          <li>密碼: <input type="password"></li>
+          <li>生日: <input type="date"></li>
+          <li>電話: <input type="tel"></li>
+          <li>地址: <input type="text" class="add"></li> 
         </ul>
+      </div>
+
         <!-- 綠色bubble按鈕 start -->
         <div class="bubble_btnn">
           <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
@@ -110,6 +117,8 @@
         </div>
         <!-- 綠色bubble按鈕 end -->
       </div>
+
+
       <!-- 所有訂單 -->
       <div class="OrderTracking">
         <h1>所有訂單</h1>
@@ -136,65 +145,137 @@
             <td></td>
           </tr>
         </table>
+        <!-- 333333333333 -->
+        <table>
+          <tr class="OrderTrackingtitle">
+            <td>訂單時間</td>
+            <td>訂單編號</td>
+            <td>付款方式</td>
+            <td>訂單金額</td>
+            <td>訂單狀態</td>
+          </tr>
+          <tr class="OrderTrackingChild">
+            <td>2021/2/3</td>
+            <td>202102031244</td>
+            <td>信用卡</td>
+            <td>$550</td>
+            <td>已完成</td>
+          </tr>
+          <tr>
+            <td>訂單內容 <i class="fas fa-plus"></i></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>商品名稱</td>
+            <td></td>
+            <td></td>
+            <td>數量</td>
+            <td>價格</td>
+          </tr>
+          <tr>
+            <td><img src="img/member/smallimg.png"></td>
+            <td colspan="2">
+            <h2>黃金山脈-金晃丸盆栽</h2>
+            <h3>賀卡訂製</h3>
+              <ul>
+                <li>收禮人:小明</li>
+                <li>賀詞內容:生日快樂</li>
+                <li>送禮人資訊:強強</li>
+                <li>賀卡樣式:A.春意盎然</li>
+              </ul>
+            </td>
+            <td>1</td>
+            <td>$550</td>
+          </tr>
+        </table>
+
+        <table>
+          <tr class="OrderTrackingtitle">
+            <td>訂單時間</td>
+            <td>訂單編號</td>
+            <td>付款方式</td>
+            <td>訂單金額</td>
+            <td>訂單狀態</td>
+          </tr>
+          <tr class="OrderTrackingChild">
+            <td>2021/11/3</td>
+            <td>202102031244</td>
+            <td>信用卡</td>
+            <td>$244</td>
+            <td>已取消</td>
+          </tr>
+          <tr>
+            <td>訂單內容 <i class="fas fa-plus"></i></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        <!-- 333333333333 -->
+
       </div>
       <!-- 我的收藏清單 -->
       <div class="MyCollection">
         <h1>我的收藏清單</h1>
         <div class="MyCollectionPage">
           <div class="MyCollectionLove">
+            <div class="MyCollectionLoveimg">
             <img class="MyCollectionLovePhoto" src="img/member/P0fnNp.png">
+            </div>
             <h2>黃金山脈 - 金晃丸盆栽</h2>
-            <li>NT$1850</li>
-            <img class="MyCollectionTrashcan" src="img/member/trashcan.png">
+            <h3>NT$1850</h3>
+            <div class="MyCollectionLovegreen">
+              <div class="MyCollectionLovegreeni">
+            <i class="fas fa-trash-alt"></i>
+              </div>
+            <div class="btn_green">
             <a href="#">前往購買</a>
+            </div>
+            </div>
           </div>
           <!-- 3 -->
           <div class="MyCollectionLove">
+            <div class="MyCollectionLoveimg">
             <img class="MyCollectionLovePhoto" src="img/member/P0fnNp.png">
+            </div>
             <h2>黃金山脈 - 金晃丸盆栽</h2>
-            <li>NT$1850</li>
-            <div class="member_btn">
-              <i class="fas fa-trash-alt"></i>
-              <div class="btn_green">
-                <a href="">前往購買</a>
+            <h3>NT$1850</h3>
+            <div class="MyCollectionLovegreen">
+              <div class="MyCollectionLovegreeni">
+            <i class="fas fa-trash-alt"></i>
               </div>
+            <div class="btn_green">
+            <a href="#">前往購買</a>
+            </div>
             </div>
           </div>
-
-        </div>
-        <div class="MyCollectionLove">
-          <img class="MyCollectionLovePhoto" src="img/member/P0fnNp.png">
-          <h2>黃金山脈 - 金晃丸盆栽</h2>
-          <li>NT$1850</li>
-          <img class="MyCollectionTrashcan" src="img/member/trashcan.png">
-          <a href="#">前往購買</a>
-        </div>
-        <div class="MyCollectionLove">
-          <img class="MyCollectionLovePhoto" src="img/member/P0fnNp.png">
-          <h2>黃金山脈 - 金晃丸盆栽</h2>
-          <li>NT$1850</li>
-          <img class="MyCollectionTrashcan" src="img/member/trashcan.png">
-          <a href="#">前往購買</a>
-        </div>
-        <div class="MyCollectionLove">
-          <img class="MyCollectionLovePhoto" src="img/P0fnNp.png">
-          <h2>黃金山脈 - 金晃丸盆栽</h2>
-          <li>NT$1850</li>
-          <img class="MyCollectionTrashcan" src="img/trashcan.png">
-          <a href="#">前往購買</a>
-        </div>
-        <div class="MyCollectionLove">
-          <img class="MyCollectionLovePhoto" src="img/P0fnNp.png">
-          <h2>黃金山脈 - 金晃丸盆栽</h2>
-          <li>NT$1850</li>
-          <img class="MyCollectionTrashcan" src="img/trashcan.png">
-          <a href="#">前往購買</a>
-        </div>
+          <div class="MyCollectionLove">
+            <div class="MyCollectionLoveimg">
+            <img class="MyCollectionLovePhoto" src="img/member/P0fnNp.png">
+            </div>
+            <h2>黃金山脈 - 金晃丸盆栽</h2>
+            <h3>NT$1850</h3>
+            <div class="MyCollectionLovegreen">
+              <div class="MyCollectionLovegreeni">
+            <i class="fas fa-trash-alt"></i>
+              </div>
+            <div class="btn_green">
+            <a href="#">前往購買</a>
+            </div>
+            </div>
+          </div>
         <!-- 3 -->
       </div>
       </div>
       <!-- 我有問題 -->
+      
       <div class="Ihaveaquestion">
+        <div class="Ihaveaquestionadd">
+        <div class="Ihaveaquestionenter">
         <input type="text">
         <!-- 綠色bubble按鈕 start -->
         <div class="bubble_btnn">
@@ -226,8 +307,134 @@
             </span>
           </span>
         </div>
+        </div>
         <!-- 綠色bubble按鈕 end -->
       </div>
+      <!-- 333333333333333333333333333333333333333 -->
+      <div class="Ihaveaquestionadd">
+        <div class="IhaveaquestionaddQuestion">
+          <div class="IhaveaquestionaddQuestionimg">
+          <img src="" alt="">
+          </div>
+          <h2>我想應徵客服</h2>
+        </div>
+          <h3>2021/1/30 13:30</h3>
+        <div class="Ihaveaquestionenter">
+        <input type="text">
+        <!-- 綠色bubble按鈕 start -->
+        <div class="bubble_btnn">
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+            <defs>
+              <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                  result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" />
+              </filter>
+            </defs>
+          </svg>
+
+          <span class="button--bubble__container">
+            <a href="" class="button button--bubble">
+              回覆
+            </a>
+            <span class="button--bubble__effect-container">
+              <span class="circle top-left"></span>
+              <span class="circle top-left"></span>
+              <span class="circle top-left"></span>
+
+              <span class="button effect-button"></span>
+
+              <span class="circle bottom-right"></span>
+              <span class="circle bottom-right"></span>
+              <span class="circle bottom-right"></span>
+            </span>
+          </span>
+        </div>
+        </div>
+        <!-- 綠色bubble按鈕 end -->
+      </div>
+      <!-- 333333333333333333333333333333333333333 -->
+      
+      <!-- 3ooooooooooooooo -->
+      <div class="Ihaveaquestionadd">
+        <div class="IhaveaquestionaddQuestion">
+          <div class="IhaveaquestionaddQuestionimg">
+          <img src="" alt="">
+          </div>
+          <h2>我的商品一年了都還沒送到是怎樣!</h2>
+        </div>
+          <h3>2021/1/30 13:30</h3>
+          <!-- 3333333addd -->
+          <div class="IhaveaquestionaddQuestionadd">
+          <div class="IhaveaquestionaddQuestionimg">
+            <img src="" alt="">
+            </div>
+            <div class="IhaveaquestionaddQuestionaddbg">
+            <h2>我是客服我不想寄</h2>
+            <h3>2021/1/30 13:30</h3>
+            </div>
+            </div>
+
+            <div class="IhaveaquestionaddQuestionadd">
+              <div class="IhaveaquestionaddQuestionimg">
+                <img src="" alt="">
+                </div>
+                <div class="IhaveaquestionaddQuestionaddbg">
+                <h2>真的不想寄</h2>
+                <h3>2021/1/30 13:33</h3>
+                </div>
+                </div>
+
+                <div class="IhaveaquestionaddQuestionadd">
+                  <div class="IhaveaquestionaddQuestionimg">
+                    <img src="" alt="">
+                    </div>
+                    <div class="IhaveaquestionaddQuestionaddbg">
+                    <h2>我是客服我認真不想寄,結束對話</h2>
+                    <h3>2021/1/30 13:35</h3>
+                    </div>
+                    </div>
+
+
+          <!-- 3333333addd -->
+        <div class="Ihaveaquestionenter">
+        <input type="text">
+        <!-- 綠色bubble按鈕 start -->
+        <div class="bubble_btnn">
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+            <defs>
+              <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                  result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" />
+              </filter>
+            </defs>
+          </svg>
+
+          <span class="button--bubble__container">
+            <a href="" class="button button--bubble">
+              回覆
+            </a>
+            <span class="button--bubble__effect-container">
+              <span class="circle top-left"></span>
+              <span class="circle top-left"></span>
+              <span class="circle top-left"></span>
+
+              <span class="button effect-button"></span>
+
+              <span class="circle bottom-right"></span>
+              <span class="circle bottom-right"></span>
+              <span class="circle bottom-right"></span>
+            </span>
+          </span>
+        </div>
+        </div>
+        <!-- 綠色bubble按鈕 end -->
+      </div>
+      <!-- 3ooooooooooooooooo -->
+    </div>
     </article>
 
 
@@ -293,8 +500,8 @@
   <script src="js/bubblebtn.js"></script>
 
   <!-- 自已的js -->
-  <!-- <script src="js/your.js"></script> -->
-  <script src="js/MemberCentre.js"></script>
+
+  <!-- <script src="js/MemberCentre.js"></script> -->
 </body>
 
 </html>
