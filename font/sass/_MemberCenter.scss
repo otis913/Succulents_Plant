@@ -5,6 +5,9 @@
   //購物車＆結帳系統
 
   //會員中心 & 會員登入
+  article{
+    width: 100%;
+  }
   .memberarticle{
     display: flex;
     padding-left: 50px;
@@ -195,7 +198,6 @@
     margin-right: 10px;
   }
   // 3333
- 
   .OrderTracking{
     display: none;
   }
@@ -205,3 +207,14 @@
   .Ihaveaquestion{
     display: none;
   }
+  // 333
+
+  //RWD
+  @media (max-width: 990px) {
+  }
+
+  @media (max-width: 768px) {
+    }
+
+  @media (max-width: 414px) {
+    }

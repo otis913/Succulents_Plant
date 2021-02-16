@@ -2503,6 +2503,10 @@ body {
   padding: 10px 0;
 }
 
+article {
+  width: 100%;
+}
+
 .blogpage02 {
   width: 100%;
 }
@@ -3491,6 +3495,10 @@ body {
   background-color: #d9a420;
   color: #2f4f4f;
   border-radius: 5px;
+}
+
+article {
+  width: 100%;
 }
 
 .memberarticle {
