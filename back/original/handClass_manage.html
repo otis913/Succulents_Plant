@@ -18,84 +18,38 @@
 
       @@include('./back_layout/back_LeftNavbar.html')
 
-      <div class="member_main">
+      <div class="handClass_manage_main">
 
-        <div class="search_name">
-          <form>
-            <h1>姓名搜尋</h1>
-            <input type="text">
-            <input type="radio" value="male"><label>男生</label>
-            <input type="radio" value="female"><label>女生</label>
-            <input type="submit" value="搜尋">
-          </form>
-        </div>
-
-        <div class="member_information">
+        <div class="handClass_manage_information">
           <table class="table">
+            <button type="button" class="btn btn-primary handClass_inser_btn">新增課程</button>
             <thead>
               <tr>
-                <th scope="col">會員編號</th>
-                <th scope="col">會員帳號</th>
-                <th scope="col">會員姓名</th>
-                <th scope="col">帳號狀態</th>
-                <th scope="col">是否停權</th>
+                <th scope="col">課程編號</th>
+                <th scope="col">課程名稱</th>
+                <th scope="col">課程日期</th>
+                <th scope="col">課程最多人數</th>
+                <th scope="col">課程報名人數</th>
+                <th scope="col">價格</th>
+                <th scope="col">修改或刪除</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td>123@gmail.com</td>
-                <td>江美璿</td>
-                <td>正常</td>
+                <td>手捏陶器+多肉組盆</td>
                 <td>
-                  <button>確定</button>
+                  2021/03/30
+                </td>
+                <td>10</td>
+                <td>05</td>
+                <td>2000</td>
+                <td>
+                  <button type="button" class="btn btn-success">修改</button>
+                  <button type="button" class="btn btn-danger">刪除</button>
                 </td>
               </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>123@gmail.com</td>
-                <td>蘇帥政</td>
-                <td>正常</td>
-                <td>
-                  <button>確定</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>123@gmail.com</td>
-                <td>黃型閎</td>
-                <td>正常</td>
-                <td>
-                  <button>確定</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>123@gmail.com</td>
-                <td>莊酷麟</td>
-                <td>正常</td>
-                <td>
-                  <button>確定</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>123@gmail.com</td>
-                <td>李帥慶</td>
-                <td>停用</td>
-                <td>
-                  <button>確定</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>123@gmail.com</td>
-                <td>林帥哲</td>
-                <td>正常</td>
-                <td>
-                  <button>確定</button>
-                </td>
-              </tr>
+
             </tbody>
           </table>
         </div>

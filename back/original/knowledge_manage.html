@@ -18,84 +18,52 @@
 
       @@include('./back_layout/back_LeftNavbar.html')
 
-      <div class="member_main">
+      <div class="knowledge_main">
 
-        <div class="search_name">
-          <form>
-            <h1>姓名搜尋</h1>
-            <input type="text">
-            <input type="radio" value="male"><label>男生</label>
-            <input type="radio" value="female"><label>女生</label>
-            <input type="submit" value="搜尋">
-          </form>
-        </div>
-
-        <div class="member_information">
+        <div class="knowledge_information">
           <table class="table">
+            <button type="button" class="btn btn-primary knowledge_inser_btn">新增文章</button>
             <thead>
               <tr>
-                <th scope="col">會員編號</th>
-                <th scope="col">會員帳號</th>
-                <th scope="col">會員姓名</th>
-                <th scope="col">帳號狀態</th>
-                <th scope="col">是否停權</th>
+                <th scope="col">文章編號</th>
+                <th scope="col">文章版型</th>
+                <th scope="col">文章外顯示圖片</th>
+                <th scope="col">文章標題</th>
+                <th scope="col">文章內文01</th>
+                <th scope="col">文章內文02</th>
+                <th scope="col">文章內文03</th>
+                <th scope="col">文章圖片01</th>
+                <th scope="col">文章圖片02</th>
+                <th scope="col">文章圖片03</th>
+                <th scope="col">修改或刪除</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td>123@gmail.com</td>
-                <td>江美璿</td>
-                <td>正常</td>
+                <td>1</td>
                 <td>
-                  <button>確定</button>
+                  <img class="knowledge_img" src="./img/product_big.png" alt="">
+                </td>
+                <td>種植多肉的十個必須要知道的事情</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <img class="knowledge_img" src="./img/product_big.png" alt="">
+                </td>
+                <td>
+                  <img class="knowledge_img" src="./img/product_big.png" alt="">
+                </td>
+                <td>
+                  <img class="knowledge_img" src="./img/product_big.png" alt="">
+                </td>
+                <td>
+                  <button type="button" class="btn btn-success">修改</button>
+                  <button type="button" class="btn btn-danger">刪除</button>
                 </td>
               </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>123@gmail.com</td>
-                <td>蘇帥政</td>
-                <td>正常</td>
-                <td>
-                  <button>確定</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>123@gmail.com</td>
-                <td>黃型閎</td>
-                <td>正常</td>
-                <td>
-                  <button>確定</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>123@gmail.com</td>
-                <td>莊酷麟</td>
-                <td>正常</td>
-                <td>
-                  <button>確定</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>123@gmail.com</td>
-                <td>李帥慶</td>
-                <td>停用</td>
-                <td>
-                  <button>確定</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>123@gmail.com</td>
-                <td>林帥哲</td>
-                <td>正常</td>
-                <td>
-                  <button>確定</button>
-                </td>
-              </tr>
+
             </tbody>
           </table>
         </div>

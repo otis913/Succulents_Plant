@@ -165,7 +165,7 @@ body {
   text-align: center;
   border-radius: 5px;
   padding: 10px;
-  margin: 10px;
+  margin: 5px;
   font-weight: bold;
 }
 
@@ -193,7 +193,7 @@ ul > a:nth-child(1):hover {
 
 .back_header {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 50px;
 }
 
@@ -201,6 +201,7 @@ ul > a:nth-child(1):hover {
   font-weight: bold;
   color: #2f4f4f;
   font-size: 25px;
+  margin-right: 50px;
 }
 
 .back_header .back_signOut_btn {
@@ -215,8 +216,17 @@ ul > a:nth-child(1):hover {
   cursor: pointer;
 }
 
+.back_header :hover {
+  background-color: #d0c3a3;
+  color: #2f4f4f;
+}
+
+.wrapper .btn-primary {
+  margin-bottom: 10px;
+}
+
 .member_main {
-  margin: 50px;
+  margin: 25px;
 }
 
 .member_main .search_name {
@@ -230,5 +240,15 @@ ul > a:nth-child(1):hover {
 
 .member_main .search_name input {
   margin: 10px 10px;
+}
+
+.back_product_img {
+  display: block;
+  width: 200px;
+}
+
+.knowledge_img {
+  display: block;
+  width: 200px;
 }
 /*# sourceMappingURL=back_index.css.map */
