@@ -1,6 +1,8 @@
 // 商品篩選
 $(document).ready(function () {
   $(`.shop_mainfilter>li>a`).click(function (e) {
+    // e.preventDefault();
+
     $(`.shop_mainfilter>li>a`).removeClass("-shop-click");
     // $(`.shop_childfilter`).removeClass(`-show-flex`);
     $(`.shop_childfilter`).addClass("-off");
