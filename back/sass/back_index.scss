@@ -6,9 +6,14 @@ body{
 .wrapper{
   width: 1200px;
   margin:0 auto;
+ }
+.section_main{
   display: flex;
   justify-content: center;
+}
 
+.member_main{
+  
 }
 
 .list{
@@ -27,7 +32,7 @@ body{
     text-align: center;
     border-radius: 5px;
     padding: 10px;
-    margin: 10px;
+    margin: 5px;
     font-weight: bold; 
 }
 
@@ -51,15 +56,42 @@ ul>a:nth-child(1):hover{
   .list ol a:hover{
     color:#d9a420;
    }
+.back_header{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  h1{
+    font-weight: bold;
+    color:#2f4f4f;
+    font-size:25px;
+    margin-right: 50px;
+  }
+  .back_signOut_btn{
+    background-color: #2f4f4f;
+    border-radius: 5px;
+    margin: 5px;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 5px;
+    font-weight: bold;
+    width: 100px;
+    cursor: pointer;
+  }
+  :hover{
+    background-color: #d0c3a3;
+    color: #2f4f4f;    
+  }
+  
+}
+.wrapper .btn-primary{
+  margin-bottom: 10px;
+}
 
 
-
-
-
-// ---------後台會員管理中心
+// 會員管理中心
 
 .member_main{
-  margin: 50px;
+  margin: 25px;
   .search_name{
     display: flex;
     justify-content: space-between;
@@ -70,4 +102,24 @@ ul>a:nth-child(1):hover{
       margin:10px 10px;
     }
   }
+}
+
+// 商品管理
+.back_product_img{
+  display: block;
+  width: 50px;
+}
+
+// 手作課程
+
+
+//知識文章
+.knowledge_img{
+  display: block;
+  width: 100px;
+}
+// 客製多肉
+.back_custom_img{
+  display: block;
+  width: 100px;
 }

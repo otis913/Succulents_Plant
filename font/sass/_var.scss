@@ -73,14 +73,49 @@ $color: (
   align-items: center;
   @content;
 }
-@mixin buttons(){
-  background-color:#2f4f4f;
-  border-radius: 5px;     
-  margin: 5px;
-  color:#fff;
-  border: 1px solid #fff;
-  padding: 5px;
-  font-weight: bold;
-  width: 200px;
-  cursor:pointer;
+// @mixin buttons() {
+//   background-color: #2f4f4f;
+//   border-radius: 5px;
+//   margin: 5px;
+//   color: #fff;
+//   border: 1px solid #fff;
+//   padding: 5px;
+//   font-weight: bold;
+//   width: 200px;
+//   cursor: pointer;
+// }
+
+// 會員中心
+@mixin memberin {
+  margin: 20px 20px;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+}
+@mixin memberh1 {
+  background-color: map-get($color, "main_g");
+  color: map-get($color, "white");
+  border-radius: 20px;
+  line-height: 3;
+}
+
+
+// 斷點
+@mixin pad {
+  @media (max-width: 990px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: 414px) {
+    @content;
+  }
 }

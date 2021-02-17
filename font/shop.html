@@ -24,7 +24,7 @@
 
       <!-- 產品輪播banner -->
       <div class="shop_banner">
-        <img src="./img/shop/product_kv.png" alt="多肉植物banner" />
+        <!-- <img src="./img/shop/product_kv.png" alt="多肉植物banner" /> -->
       </div>
 
       <!-- 麵包屑 -->
@@ -35,24 +35,25 @@
       </article>
 
       <ol class="shop_note">
-        <li><a href="#">全館含運</a></li>
-        <li><a href="#">多肉客製</a></li>
+        <li><a href="">全館含運</a></li>
+        <li><a href="custom.html">多肉客製</a></li>
       </ol>
       <!-- 篩選 -->
       <article class="shop_filterbox">
         <ul class="shop_mainfilter">
-          <li><a class="btn -shop_click"  href="#">全部商品</a></li>
-          <li ><a class="btn" href="#">多肉專區<img src="./img/shop/plant_01.png" alt=""></a></li>
-          <li ><a class="btn" href="#">裝飾配件<img src="./img/shop/house_2.png" alt=""></a></li>
-          <li ><a class="btn" href="#">盆栽器皿<img src="./img/shop/basin.png" alt=""></a></li>
+          <li><a class="btn -shop-click"  ref="">全部商品</a></li>
+          <li ><a class="btn shop_succulents" ref="">多肉專區<img src="./img/shop/plant_01-1.png" alt=""></a></li>
+          <li ><a class="btn" ref="">裝飾配件<img src="./img/shop/house_2.png" alt=""></a></li>
+          <li ><a class="btn" ref="">盆栽器皿<img src="./img/shop/basin.png" alt=""></a></li>
         </ul>
-        <ul class="shop_childfilter">
-          <li  ><a class="btn" href="#">阿福花科 <img src="./img/shop/icon4.png" alt=""></a></li>
-          <li  ><a class="btn" href="#">仙人掌科<img src="./img/shop/icon2.png" alt=""></a></li>
-          <li  ><a class="btn" href="#">番杏科<img src="./img/shop/icon10.png" alt=""></a></li>
-          <li  ><a class="btn" href="#">景天科 <img src="./img/shop/icon5.png" alt=""></a></li>
+        <ul class="shop_childfilter -off">
+          <li  ><a class="btn" ref="">仙人掌科<img src="./img/shop/icon2.png" alt=""></a></li>
+          <li  ><a class="btn" ref="">阿福花科 <img src="./img/shop/icon4.png" alt=""></a></li>
+          <li  ><a class="btn" ref="">番杏科<img src="./img/shop/icon10.png" alt=""></a></li>
+          <li  ><a class="btn" ref="">景天科 <img src="./img/shop/icon5.png" alt=""></a></li>
         </ul>
         <div class="shop_otherfilter">
+          <div class="shop_otherfilter_select">
           <select name="" id="">
             <option value="">照顧難易度　易到難</option>
             <option value="">照顧難易度　難到易</option>
@@ -62,7 +63,7 @@
             <option value="">價格　低到高</option>
             <option value="">價格　高到低</option>
           </select>
-        
+        </div>
           <form action="">
             <div class="shop_search">
               <input type="search">
@@ -75,6 +76,7 @@
       <!-- 商品 -->
       <article>
         <ul class="shop_main">
+
           <li class="shop_card">
             <div class="shop_card_img">
               <ol class="shop_card_tag">
@@ -82,7 +84,7 @@
                 <li class="shop_card_tag_new">新上市</li>
                 <li class="shop_card_tag_hot">人氣NO.1</li>
               </ol>
-              <button><i class="fas fa-heart"></i></button>
+              <button class="shop_card_heart"><i class="fas fa-heart"></i></button>
               <a href="product.html"><img src="https://picsum.photos/300" alt="" /></a>
               
             </div>
@@ -94,7 +96,7 @@
             </ol>
             <p class="shop_card_price">NT$1850</p>
             <!-- <button class="btn shop_card_addcart">加入購物車</button> -->
-        <!-- 綠色bubble按鈕 start -->
+            <!-- 綠色bubble按鈕 start -->
             <div class="bubble_btnn">
                   <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
                     <defs>
@@ -126,9 +128,413 @@
         <!-- 綠色bubble按鈕 end -->
           </li>
 
+          <li class="shop_card">
+            <div class="shop_card_img">
+              <ol class="shop_card_tag">
+                <!-- <li class="shop_card_tag_cust">可客製</li> -->
+                <li class="shop_card_tag_new">新上市</li>
+                <li class="shop_card_tag_hot">人氣NO.1</li>
+              </ol>
+              <button class="shop_card_heart"><i class="fas fa-heart"></i></button>
+              <a href="product.html"><img src="https://picsum.photos/300" alt="" /></a>
+              
+            </div>
+            <h3 class="shop_card_title">黃金山脈 – 金晃丸盆栽</h3>
+            <ol class="shop_card_take">
+              <li><i class="fas fa-leaf"></i></li>
+              <li><i class="fas fa-leaf"></i></li>
+              <li><i class="fas fa-leaf"></i></li>
+            </ol>
+            <p class="shop_card_price">NT$1850</p>
+            <!-- <button class="btn shop_card_addcart">加入購物車</button> -->
+            <!-- 綠色bubble按鈕 start -->
+            <div class="bubble_btnn">
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+                    <defs>
+                      <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                        <feComposite in="SourceGraphic" in2="goo"/>
+                      </filter>
+                    </defs>
+                  </svg>
+                  
+                  <span class="button--bubble__container lie">
+                    <a href="" class="button button--bubble">
+                      加入購物車
+                    </a>
+                    <span class="button--bubble__effect-container">
+                      <span class="circle top-left"></span>
+                      <span class="circle top-left"></span>
+                      <span class="circle top-left"></span>
+                  
+                      <span class="button effect-button"></span>
+                  
+                      <span class="circle bottom-right"></span>
+                      <span class="circle bottom-right"></span>
+                      <span class="circle bottom-right"></span>
+                    </span>
+                  </span>
+            </div>
+        <!-- 綠色bubble按鈕 end -->
+          </li>
 
+          <li class="shop_card">
+            <div class="shop_card_img">
+              <ol class="shop_card_tag">
+                <!-- <li class="shop_card_tag_cust">可客製</li> -->
+                <li class="shop_card_tag_new">新上市</li>
+                <li class="shop_card_tag_hot">人氣NO.1</li>
+              </ol>
+              <button class="shop_card_heart"><i class="fas fa-heart"></i></button>
+              <a href="product.html"><img src="https://picsum.photos/300" alt="" /></a>
+              
+            </div>
+            <h3 class="shop_card_title">黃金山脈 – 金晃丸盆栽</h3>
+            <ol class="shop_card_take">
+              <li><i class="fas fa-leaf"></i></li>
+              <li><i class="fas fa-leaf"></i></li>
+              <li><i class="fas fa-leaf"></i></li>
+            </ol>
+            <p class="shop_card_price">NT$1850</p>
+            <!-- <button class="btn shop_card_addcart">加入購物車</button> -->
+            <!-- 綠色bubble按鈕 start -->
+            <div class="bubble_btnn">
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+                    <defs>
+                      <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                        <feComposite in="SourceGraphic" in2="goo"/>
+                      </filter>
+                    </defs>
+                  </svg>
+                  
+                  <span class="button--bubble__container lie">
+                    <a href="" class="button button--bubble">
+                      加入購物車
+                    </a>
+                    <span class="button--bubble__effect-container">
+                      <span class="circle top-left"></span>
+                      <span class="circle top-left"></span>
+                      <span class="circle top-left"></span>
+                  
+                      <span class="button effect-button"></span>
+                  
+                      <span class="circle bottom-right"></span>
+                      <span class="circle bottom-right"></span>
+                      <span class="circle bottom-right"></span>
+                    </span>
+                  </span>
+            </div>
+        <!-- 綠色bubble按鈕 end -->
+          </li>
 
+          <li class="shop_card">
+            <div class="shop_card_img">
+              <ol class="shop_card_tag">
+                <!-- <li class="shop_card_tag_cust">可客製</li> -->
+                <li class="shop_card_tag_new">新上市</li>
+                <li class="shop_card_tag_hot">人氣NO.1</li>
+              </ol>
+              <button class="shop_card_heart"><i class="fas fa-heart"></i></button>
+              <a href="product.html"><img src="https://picsum.photos/300" alt="" /></a>
+              
+            </div>
+            <h3 class="shop_card_title">黃金山脈 – 金晃丸盆栽</h3>
+            <ol class="shop_card_take">
+              <li><i class="fas fa-leaf"></i></li>
+              <li><i class="fas fa-leaf"></i></li>
+              <li><i class="fas fa-leaf"></i></li>
+            </ol>
+            <p class="shop_card_price">NT$1850</p>
+            <!-- <button class="btn shop_card_addcart">加入購物車</button> -->
+            <!-- 綠色bubble按鈕 start -->
+            <div class="bubble_btnn">
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+                    <defs>
+                      <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                        <feComposite in="SourceGraphic" in2="goo"/>
+                      </filter>
+                    </defs>
+                  </svg>
+                  
+                  <span class="button--bubble__container lie">
+                    <a href="" class="button button--bubble">
+                      加入購物車
+                    </a>
+                    <span class="button--bubble__effect-container">
+                      <span class="circle top-left"></span>
+                      <span class="circle top-left"></span>
+                      <span class="circle top-left"></span>
+                  
+                      <span class="button effect-button"></span>
+                  
+                      <span class="circle bottom-right"></span>
+                      <span class="circle bottom-right"></span>
+                      <span class="circle bottom-right"></span>
+                    </span>
+                  </span>
+            </div>
+        <!-- 綠色bubble按鈕 end -->
+          </li>
 
+          <li class="shop_card">
+            <div class="shop_card_img">
+              <ol class="shop_card_tag">
+                <!-- <li class="shop_card_tag_cust">可客製</li> -->
+                <li class="shop_card_tag_new">新上市</li>
+                <li class="shop_card_tag_hot">人氣NO.1</li>
+              </ol>
+              <button class="shop_card_heart"><i class="fas fa-heart"></i></button>
+              <a href="product.html"><img src="https://picsum.photos/300" alt="" /></a>
+              
+            </div>
+            <h3 class="shop_card_title">黃金山脈 – 金晃丸盆栽</h3>
+            <ol class="shop_card_take">
+              <li><i class="fas fa-leaf"></i></li>
+              <li><i class="fas fa-leaf"></i></li>
+              <li><i class="fas fa-leaf"></i></li>
+            </ol>
+            <p class="shop_card_price">NT$1850</p>
+            <!-- <button class="btn shop_card_addcart">加入購物車</button> -->
+            <!-- 綠色bubble按鈕 start -->
+            <div class="bubble_btnn">
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+                    <defs>
+                      <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                        <feComposite in="SourceGraphic" in2="goo"/>
+                      </filter>
+                    </defs>
+                  </svg>
+                  
+                  <span class="button--bubble__container lie">
+                    <a href="" class="button button--bubble">
+                      加入購物車
+                    </a>
+                    <span class="button--bubble__effect-container">
+                      <span class="circle top-left"></span>
+                      <span class="circle top-left"></span>
+                      <span class="circle top-left"></span>
+                  
+                      <span class="button effect-button"></span>
+                  
+                      <span class="circle bottom-right"></span>
+                      <span class="circle bottom-right"></span>
+                      <span class="circle bottom-right"></span>
+                    </span>
+                  </span>
+            </div>
+        <!-- 綠色bubble按鈕 end -->
+          </li>
+
+          <li class="shop_card">
+            <div class="shop_card_img">
+              <ol class="shop_card_tag">
+                <!-- <li class="shop_card_tag_cust">可客製</li> -->
+                <li class="shop_card_tag_new">新上市</li>
+                <li class="shop_card_tag_hot">人氣NO.1</li>
+              </ol>
+              <button class="shop_card_heart"><i class="fas fa-heart"></i></button>
+              <a href="product.html"><img src="https://picsum.photos/300" alt="" /></a>
+              
+            </div>
+            <h3 class="shop_card_title">黃金山脈 – 金晃丸盆栽</h3>
+            <ol class="shop_card_take">
+              <li><i class="fas fa-leaf"></i></li>
+              <li><i class="fas fa-leaf"></i></li>
+              <li><i class="fas fa-leaf"></i></li>
+            </ol>
+            <p class="shop_card_price">NT$1850</p>
+            <!-- <button class="btn shop_card_addcart">加入購物車</button> -->
+            <!-- 綠色bubble按鈕 start -->
+            <div class="bubble_btnn">
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+                    <defs>
+                      <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                        <feComposite in="SourceGraphic" in2="goo"/>
+                      </filter>
+                    </defs>
+                  </svg>
+                  
+                  <span class="button--bubble__container lie">
+                    <a href="" class="button button--bubble">
+                      加入購物車
+                    </a>
+                    <span class="button--bubble__effect-container">
+                      <span class="circle top-left"></span>
+                      <span class="circle top-left"></span>
+                      <span class="circle top-left"></span>
+                  
+                      <span class="button effect-button"></span>
+                  
+                      <span class="circle bottom-right"></span>
+                      <span class="circle bottom-right"></span>
+                      <span class="circle bottom-right"></span>
+                    </span>
+                  </span>
+            </div>
+        <!-- 綠色bubble按鈕 end -->
+          </li>
+
+          <li class="shop_card">
+            <div class="shop_card_img">
+              <ol class="shop_card_tag">
+                <!-- <li class="shop_card_tag_cust">可客製</li> -->
+                <li class="shop_card_tag_new">新上市</li>
+                <li class="shop_card_tag_hot">人氣NO.1</li>
+              </ol>
+              <button class="shop_card_heart"><i class="fas fa-heart"></i></button>
+              <a href="product.html"><img src="https://picsum.photos/300" alt="" /></a>
+              
+            </div>
+            <h3 class="shop_card_title">黃金山脈 – 金晃丸盆栽</h3>
+            <ol class="shop_card_take">
+              <li><i class="fas fa-leaf"></i></li>
+              <li><i class="fas fa-leaf"></i></li>
+              <li><i class="fas fa-leaf"></i></li>
+            </ol>
+            <p class="shop_card_price">NT$1850</p>
+            <!-- <button class="btn shop_card_addcart">加入購物車</button> -->
+            <!-- 綠色bubble按鈕 start -->
+            <div class="bubble_btnn">
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+                    <defs>
+                      <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                        <feComposite in="SourceGraphic" in2="goo"/>
+                      </filter>
+                    </defs>
+                  </svg>
+                  
+                  <span class="button--bubble__container lie">
+                    <a href="" class="button button--bubble">
+                      加入購物車
+                    </a>
+                    <span class="button--bubble__effect-container">
+                      <span class="circle top-left"></span>
+                      <span class="circle top-left"></span>
+                      <span class="circle top-left"></span>
+                  
+                      <span class="button effect-button"></span>
+                  
+                      <span class="circle bottom-right"></span>
+                      <span class="circle bottom-right"></span>
+                      <span class="circle bottom-right"></span>
+                    </span>
+                  </span>
+            </div>
+        <!-- 綠色bubble按鈕 end -->
+          </li>
+
+          <li class="shop_card">
+            <div class="shop_card_img">
+              <ol class="shop_card_tag">
+                <!-- <li class="shop_card_tag_cust">可客製</li> -->
+                <li class="shop_card_tag_new">新上市</li>
+                <li class="shop_card_tag_hot">人氣NO.1</li>
+              </ol>
+              <button class="shop_card_heart"><i class="fas fa-heart"></i></button>
+              <a href="product.html"><img src="https://picsum.photos/300" alt="" /></a>
+              
+            </div>
+            <h3 class="shop_card_title">黃金山脈 – 金晃丸盆栽</h3>
+            <ol class="shop_card_take">
+              <li><i class="fas fa-leaf"></i></li>
+              <li><i class="fas fa-leaf"></i></li>
+              <li><i class="fas fa-leaf"></i></li>
+            </ol>
+            <p class="shop_card_price">NT$1850</p>
+            <!-- <button class="btn shop_card_addcart">加入購物車</button> -->
+            <!-- 綠色bubble按鈕 start -->
+            <div class="bubble_btnn">
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+                    <defs>
+                      <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                        <feComposite in="SourceGraphic" in2="goo"/>
+                      </filter>
+                    </defs>
+                  </svg>
+                  
+                  <span class="button--bubble__container lie">
+                    <a href="" class="button button--bubble">
+                      加入購物車
+                    </a>
+                    <span class="button--bubble__effect-container">
+                      <span class="circle top-left"></span>
+                      <span class="circle top-left"></span>
+                      <span class="circle top-left"></span>
+                  
+                      <span class="button effect-button"></span>
+                  
+                      <span class="circle bottom-right"></span>
+                      <span class="circle bottom-right"></span>
+                      <span class="circle bottom-right"></span>
+                    </span>
+                  </span>
+            </div>
+        <!-- 綠色bubble按鈕 end -->
+          </li>
+
+          <li class="shop_card">
+            <div class="shop_card_img">
+              <ol class="shop_card_tag">
+                <!-- <li class="shop_card_tag_cust">可客製</li> -->
+                <li class="shop_card_tag_new">新上市</li>
+                <li class="shop_card_tag_hot">人氣NO.1</li>
+              </ol>
+              <button class="shop_card_heart"><i class="fas fa-heart"></i></button>
+              <a href="product.html"><img src="https://picsum.photos/300" alt="" /></a>
+              
+            </div>
+            <h3 class="shop_card_title">黃金山脈 – 金晃丸盆栽</h3>
+            <ol class="shop_card_take">
+              <li><i class="fas fa-leaf"></i></li>
+              <li><i class="fas fa-leaf"></i></li>
+              <li><i class="fas fa-leaf"></i></li>
+            </ol>
+            <p class="shop_card_price">NT$1850</p>
+            <!-- <button class="btn shop_card_addcart">加入購物車</button> -->
+            <!-- 綠色bubble按鈕 start -->
+            <div class="bubble_btnn">
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+                    <defs>
+                      <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                        <feComposite in="SourceGraphic" in2="goo"/>
+                      </filter>
+                    </defs>
+                  </svg>
+                  
+                  <span class="button--bubble__container lie">
+                    <a href="" class="button button--bubble">
+                      加入購物車
+                    </a>
+                    <span class="button--bubble__effect-container">
+                      <span class="circle top-left"></span>
+                      <span class="circle top-left"></span>
+                      <span class="circle top-left"></span>
+                  
+                      <span class="button effect-button"></span>
+                  
+                      <span class="circle bottom-right"></span>
+                      <span class="circle bottom-right"></span>
+                      <span class="circle bottom-right"></span>
+                    </span>
+                  </span>
+            </div>
+        <!-- 綠色bubble按鈕 end -->
+          </li>
 
         </ul>
       </article>
@@ -200,6 +606,8 @@
     <script src="js/bubblebtn.js"></script>
 
     <!-- 自已的js -->
+    <script src="./js/shop.js"></script>
+
     <!-- <script src="js/your.js"></script> -->
   </body>
 </html>
