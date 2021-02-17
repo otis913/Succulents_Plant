@@ -30,6 +30,9 @@ body{
 .handmake_left{
   background-size: contain;
   font-weight: bold;
+  background-color: #2f4f4f;
+  border-radius: 10px;
+  color:#fff ;
   h1{
     margin: 10px;
   }
@@ -38,7 +41,15 @@ body{
       flex-direction: column;
      
         button {
-          @include buttons(); 
+          background-color:transparent;
+          border-radius: 5px;
+          margin: 5px 10px;
+          color: #fff;
+          border: 1.5px solid #fff;
+          padding: 5px;
+          font-weight: bold;
+          // width: 200psx;
+          cursor: pointer; 
         }
         button:hover{
           background-color:#fff ;
@@ -52,12 +63,12 @@ body{
       cursor:pointer;
     }
     .custom_select{
-      margin-left: 10px;
+      // margin-left: 10px;
       width: 200px;
     }
 
     .choseNumber{
-      display: flex;
+      // display: flex;
       margin: 10px;
         .number_people{
           width: 40px;
@@ -86,18 +97,12 @@ body{
     }
 
     .SignUp{
-      // background-color:#d9a420;
-      // width: 200px;
-      // border-radius: 10px;  
-      // color:#2f4f4f ;
-      // padding: 10px;
-      // font-weight: bold;
+      margin: 20px;
     }
 
 }
 
 .handmake_right{
-  // width: 800px;
   margin-left: 10px;
   color: #2f4f4f;
   h1{
