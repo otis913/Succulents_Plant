@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/back_index.css">
+  <title>肉多不怪會員管理中心</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    @@include('./back_layout/back_header.html')
+
+    <div class="section_main">
+
+      @@include('./back_layout/back_LeftNavbar.html')
+
+      <div class="knowledge_main">
+
+        <div class="knowledge_information">
+          <table class="table">
+            <button type="button" class="btn btn-primary knowledge_inser_btn">新增文章</button>
+            <thead>
+              <tr>
+                <th scope="col">文章編號</th>
+                <th scope="col">文章版型</th>
+                <th scope="col">文章外顯示圖片</th>
+                <th scope="col">文章標題</th>
+                <th scope="col">文章內文01</th>
+                <th scope="col">文章內文02</th>
+                <th scope="col">文章內文03</th>
+                <th scope="col">文章圖片01</th>
+                <th scope="col">文章圖片02</th>
+                <th scope="col">文章圖片03</th>
+                <th scope="col">修改或刪除</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>1</td>
+                <td>
+                  <img class="knowledge_img" src="./img/product_big.png" alt="">
+                </td>
+                <td>種植多肉的十個必須要知道的事情</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <img class="knowledge_img" src="./img/product_big.png" alt="">
+                </td>
+                <td>
+                  <img class="knowledge_img" src="./img/product_big.png" alt="">
+                </td>
+                <td>
+                  <img class="knowledge_img" src="./img/product_big.png" alt="">
+                </td>
+                <td>
+                  <button type="button" class="btn btn-success">修改</button>
+                  <button type="button" class="btn btn-danger">刪除</button>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

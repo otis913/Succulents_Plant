@@ -1,0 +1,28 @@
+// 商品篩選
+$(document).ready(function () {
+  $(`.shop_mainfilter>li>a`).click(function (e) {
+    $(`.shop_mainfilter>li>a`).removeClass("-shop-click");
+    $(`.shop_childfilter`).removeClass(`-show-flex`);
+
+    $(this).addClass("-shop-click");
+  });
+
+  $(`.shop_succulents`).click(function (e) {
+    $(`.shop_childfilter`).addClass(`-show-flex`);
+  });
+
+  $(`.shop_childfilter>li>a`).click(function (e) {
+    $(`.shop_childfilter>li>a`).removeClass("-shop-click");
+    $(this).addClass("-shop-click");
+  });
+
+  // 愛心收藏
+  $(`.shop_card_heart`).click(function (e) {
+    // e.preventDefault();
+    if ($(this).hasClass("-heart")) {
+      $(this).removeClass("-heart");
+    } else {
+      $(this).addClass("-heart");
+    }
+  });
+});

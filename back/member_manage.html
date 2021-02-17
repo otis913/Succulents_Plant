@@ -6,100 +6,214 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/back_index.css">
+  <link rel="stylesheet" href="./css/back_index.css">
   <title>肉多不怪會員管理中心</title>
 </head>
 
 <body>
-
   <div class="wrapper">
+    <div class="back_header">
 
-    <div class="list">
+  <h1>肉多不怪後臺管理</h1>
 
-      @@include('./back_layout/back_LeftNavbar.html')
+  <input type="button" class="back_signOut_btn" name="" id="" value="帳號登出" />
+</div>
 
-    </div>
+    <div class="section_main">
 
-    <div class="member_main">
+      <div class="list">
+  <ul>
+    <a class="submenutitle" href="#memberSubmenu" data-toggle="collapse" aria-expanded="false">會員管理</a>
+    <ol class="collapse list-unstyled" id="memberSubmenu">
+      <li>
+        <a href="./member_manage.html">查看會員</a>
+      </li>
 
-      <div class="search_name">
-        <form>
-          <h1>姓名搜尋</h1>
-          <input type="text">
-          <input type="radio" value="male"><label>男生</label>
-          <input type="radio" value="female"><label>女生</label>
-          <input type="submit" value="搜尋">
-        </form>
-      </div>
+    </ol>
+  </ul>
 
-      <div class="member_information">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">會員編號</th>
-              <th scope="col">會員帳號</th>
-              <th scope="col">會員姓名</th>
-              <th scope="col">帳號狀態</th>
-              <th scope="col">是否停權</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>123@gmail.com</td>
-              <td>江美璿</td>
-              <td>正常</td>
-              <td>
-                <button>確定</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>123@gmail.com</td>
-              <td>蘇帥政</td>
-              <td>正常</td>
-              <td>
-                <button>確定</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>123@gmail.com</td>
-              <td>黃型閎</td>
-              <td>正常</td>
-              <td>
-                <button>確定</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>123@gmail.com</td>
-              <td>莊酷麟</td>
-              <td>正常</td>
-              <td>
-                <button>確定</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>123@gmail.com</td>
-              <td>李帥慶</td>
-              <td>停用</td>
-              <td>
-                <button>確定</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>123@gmail.com</td>
-              <td>林帥哲</td>
-              <td>正常</td>
-              <td>
-                <button>確定</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+  <ul>
+    <a href="#orderSubmenu" data-toggle="collapse" aria-expanded="false">訂單管理</a>
+    <ol class="collapse list-unstyled" id="orderSubmenu">
+      <li>
+        <a href="./order_manage.html">查看訂單狀態</a>
+      </li>
+    </ol>
+  </ul>
+
+  <ul>
+    <a href="#productSubmenu" data-toggle="collapse" aria-expanded="false">商品管理</a>
+    <ol class="collapse list-unstyled" id="productSubmenu">
+      <li>
+        <a href="./porduct_manage.html">查看商品</a>
+      </li>
+      <li>
+        <a href="./porduct_manage.html">新增商品</a>
+      </li>
+    </ol>
+  </ul>
+
+  <ul>
+    <a href="#classSubmenu" data-toggle="collapse" aria-expanded="false">課程管理</a>
+    <ol class="collapse list-unstyled" id="classSubmenu">
+      <li>
+        <a href="./handClass_manage.html">查看課程</a>
+      </li>
+      <li>
+        <a href="./handClass_manage.html">新增課程</a>
+      </li>
+    </ol>
+  </ul>
+
+  <ul>
+    <a href="#customSubmenu" data-toggle="collapse" aria-expanded="false">客製多肉管理</a>
+    <ol class="collapse list-unstyled" id="customSubmenu">
+      <li>
+        <a href="./Custom_manage.html">查看客製多肉內容</a>
+      </li>
+      <li>
+        <a href="./Custom_manage.html">新增客製多肉內容</a>
+      </li>
+    </ol>
+  </ul>
+
+  <ul>
+    <a href="#productSubmenu" data-toggle="collapse" aria-expanded="false">知識文章</a>
+    <ol class="collapse list-unstyled" id="productSubmenu">
+      <li>
+        <a href="./knowledge_manage.html">查看文章</a>
+      </li>
+      <li>
+        <a href="./knowledge_manage.html">新增文章</a>
+      </li>
+    </ol>
+  </ul>
+
+
+  <ul>
+    <a href="#reportSubmenu" data-toggle="collapse" aria-expanded="false">回報訊息管理</a>
+    <ol class="collapse list-unstyled" id="reportSubmenu">
+      <li>
+        <a href="./report_manage.html">查看回報問題</a>
+      </li>
+    </ol>
+  </ul>
+</div>
+
+      <div class="member_main">
+
+        <div class="search_name">
+          <form>
+            <h1>姓名搜尋</h1>
+            <input type="text">
+            <input type="submit" value="搜尋">
+          </form>
+        </div>
+
+        <div class="member_information">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">會員編號</th>
+                <th scope="col">會員帳號</th>
+                <th scope="col">會員密碼</th>
+                <th scope="col">會員姓名</th>
+                <th scope="col">會員手機</th>
+                <th scope="col">會員地址</th>
+                <th scope="col">會員生日</th>
+                <th scope="col">帳號狀態</th>
+                <th scope="col">是否停權</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">0001</th>
+                <td>123@gmail.com</td>
+                <td>qazwsx778</td>
+                <td>江美璿</td>
+                <td>0123456789</td>
+                <td>新北市XXXXXXXXXX</td>
+                <td>1990/01/01</td>
+                <td>正常</td>
+                <td>
+                  <button type="button" class="btn btn-success">恢復</button>
+                  <button type="button" class="btn btn-danger">停權</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">0002</th>
+                <td>123@gmail.com</td>
+                <td>qazwsx778</td>
+                <td>蘇帥政</td>
+                <td>0123456789</td>
+                <td>新北市XXXXXXXXXX</td>
+                <td>1990/01/01</td>
+                <td>正常</td>
+                <td>
+                  <button type="button" class="btn btn-success">恢復</button>
+                  <button type="button" class="btn btn-danger">停權</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">0003</th>
+                <td>123@gmail.com</td>
+                <td>qazwsx778</td>
+                <td>黃型閎</td>
+                <td>0123456789</td>
+                <td>新北市XXXXXXXXXX</td>
+                <td>1990/01/01</td>
+                <td>正常</td>
+                <td>
+                  <button type="button" class="btn btn-success">恢復</button>
+                  <button type="button" class="btn btn-danger">停權</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">0004</th>
+                <td>123@gmail.com</td>
+                <td>qazwsx778</td>
+                <td>莊酷麟</td>
+                <td>0123456789</td>
+                <td>新北市XXXXXXXXXX</td>
+                <td>1990/01/01</td>
+                <td>正常</td>
+                <td>
+                  <button type="button" class="btn btn-success">恢復</button>
+                  <button type="button" class="btn btn-danger">停權</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">0005</th>
+                <td>123@gmail.com</td>
+                <td>qazwsx778</td>
+                <td>李帥慶</td>
+                <td>0123456789</td>
+                <td>新北市XXXXXXXXXX</td>
+                <td>1990/01/01</td>
+                <td>停用</td>
+                <td>
+                  <button type="button" class="btn btn-success">恢復</button>
+                  <button type="button" class="btn btn-danger">停權</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">0006</th>
+                <td>123@gmail.com</td>
+                <td>qazwsx778</td>
+                <td>林帥哲</td>
+                <td>0123456789</td>
+                <td>新北市XXXXXXXXXX</td>
+                <td>1990/01/01</td>
+                <td>正常</td>
+                <td>
+                  <button type="button" class="btn btn-success">恢復</button>
+                  <button type="button" class="btn btn-danger">停權</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
       </div>
 
     </div>
