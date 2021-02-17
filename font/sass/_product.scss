@@ -42,8 +42,8 @@ article .-off {
   display: none;
 }
 
-.-red {
-  color: red;
+.-heart {
+  color: map-get($color, "pink");
 }
 
 .-pro-border {
