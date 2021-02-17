@@ -667,6 +667,10 @@ article .index_diy .h1_small {
 <<<<<<< HEAD
 }
 
+article .-off {
+  display: none;
+}
+
 .-heart {
   color: #d87680;
 }
@@ -841,7 +845,6 @@ article .index_diy .h1_small {
   align-items: center;
 <<<<<<< HEAD
   justify-content: flex-start;
-  display: none;
 }
 
 .shop_childfilter a {

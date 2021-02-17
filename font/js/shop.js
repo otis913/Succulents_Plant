@@ -2,13 +2,21 @@
 $(document).ready(function () {
   $(`.shop_mainfilter>li>a`).click(function (e) {
     $(`.shop_mainfilter>li>a`).removeClass("-shop-click");
-    $(`.shop_childfilter`).removeClass(`-show-flex`);
+    // $(`.shop_childfilter`).removeClass(`-show-flex`);
+    $(`.shop_childfilter`).addClass("-off");
 
     $(this).addClass("-shop-click");
   });
 
   $(`.shop_succulents`).click(function (e) {
-    $(`.shop_childfilter`).addClass(`-show-flex`);
+    $(`.shop_childfilter`).removeClass("-off");
+
+    // if ($(`.shop_childfilter`).hasClass("-off")) {
+    //   $(`.shop_childfilter`).removeClass("-off");
+    // } else {
+    //   $(`.shop_childfilter`).addClass("-off");
+    // }
+    // $(`.shop_childfilter`).addClass(`-show-flex`);
   });
 
   $(`.shop_childfilter>li>a`).click(function (e) {
