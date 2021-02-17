@@ -666,6 +666,10 @@ article .index_diy .h1_small {
   display: block;
 }
 
+article .-off {
+  display: none;
+}
+
 .-heart {
   color: #d87680;
 }
@@ -780,7 +784,6 @@ article .index_diy .h1_small {
   justify-content: center;
   align-items: center;
   justify-content: flex-start;
-  display: none;
 }
 
 .shop_childfilter a {
