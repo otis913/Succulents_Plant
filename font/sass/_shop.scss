@@ -38,7 +38,7 @@ article .-off {
   display: none;
 }
 
-.-heart {
+article .-heart {
   color: map-get($color, "pink");
 }
 
@@ -73,6 +73,9 @@ article .-off {
   li {
     background-color: map-get($color, "main_g");
     flex-grow: 1;
+    &:first-child a {
+      cursor: default;
+    }
     &:last-child {
       background-color: map-get($color, "yellow");
     }
@@ -102,11 +105,12 @@ article .-off {
   }
   a {
     @include flex() {
-      justify-content: space-around;
+      justify-content: space-evenly;
     }
     font-size: map-get($fontsize, "big");
     border: 1px solid #ccc;
-    width: 250px;
+    width: 270px;
+    cursor: pointer;
     @include pad() {
       width: 200px;
     }
@@ -116,7 +120,7 @@ article .-off {
     }
   }
   img {
-    width: 80px;
+    width: 50px;
     @include pad() {
       width: 60px;
     }
@@ -138,9 +142,7 @@ article .-off {
     font-size: map-get($fontsize, "normall");
     border: 1px solid #ccc;
     margin-right: 20px;
-    &:hover {
-      background-color: map-get($color, "gray2");
-    }
+    cursor: pointer;
   }
   img {
     width: 50px;
@@ -249,6 +251,7 @@ article .-off {
       outline: none;
       border: none;
       cursor: pointer;
+      color: rgba(0, 0, 0, 0.5);
     }
   }
   &_title,

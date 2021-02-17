@@ -42,15 +42,15 @@ article .-off {
   display: none;
 }
 
-.-heart {
+article .-heart {
   color: map-get($color, "pink");
 }
 
-.-pro-border {
-  border: 5px solid;
+.product_card_style .-pro-border {
+  border: 5px solid #2f4f4f;
 }
 
-.-pro-bb {
+article .-pro-bb {
   border-bottom: 2px solid;
 }
 
@@ -183,12 +183,19 @@ article .-off {
       flex-wrap: wrap;
     }
     li {
-      padding: 10px;
+      margin: 10px;
+      // padding: 10px;
       text-align: center;
+      cursor: pointer;
+      border: 5px solid transparent;
     }
   }
   &_second {
     display: flex;
+    a {
+      color: red;
+      font-weight: bold;
+    }
   }
 }
 
