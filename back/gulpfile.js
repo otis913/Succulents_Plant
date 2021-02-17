@@ -10,6 +10,8 @@ var concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
 var sass = require('gulp-sass');
 const fileinclude = require('gulp-file-include');
+var clean = require('gulp-clean');
+
 
 var sourcemaps = require('gulp-sourcemaps');
 function sassStyle() {
@@ -24,13 +26,18 @@ function sassStyle() {
     .pipe(dest('css/'))
 }
 
+exports.clean = function cleanfile() {
+  return src('./*.html', { read: false, allowEmpty: true })
+    .pipe(clean())
+}
+
 exports.html = function includeHTML(done) {
-  return src('./*.html')
+  return src('./original/*.html')
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(dest('./dist'));
+    .pipe(dest('./'));
   done();
 }
 
