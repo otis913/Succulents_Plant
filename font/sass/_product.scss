@@ -1,15 +1,29 @@
 // 引用
 //這個是取消全部樣式的css
-@import "./reset";
-@import "./var";
+// @import "./reset";
+// @import "./var";
 //這個是bubble_btn的css，記得html要引用bubble_btn動畫效果的js & TweenMax
-@import "./bubblebtn";
+// @import "./bubblebtn";
 
 //----------------共用scss開始-------------------------
 
 .btn {
   @include btn;
 }
+
+// rwd
+// article {
+//   @include pad() {
+//     width: auto;
+//   }
+// }
+
+// img {
+//   @include pad() {
+//     max-width: 100%;
+//     height: auto;
+//   }
+// }
 
 // 動態
 .-shop-click {
@@ -22,6 +36,10 @@
 
 .-show-block {
   display: block;
+}
+
+article .-off {
+  display: none;
 }
 
 .-red {
@@ -41,10 +59,21 @@
   @include flex() {
     align-items: flex-start;
   }
+
+  @include mobile() {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .product_left {
   width: 50%;
+  @include mobile() {
+    width: 70%;
+  }
+  @include phone() {
+    width: 100%;
+  }
   &_simg {
     display: flex;
     &_smpic {
@@ -61,6 +90,11 @@
   width: 50%;
   margin-left: 50px;
   text-align: left;
+
+  @include mobile() {
+    margin-left: 0;
+    width: 100%;
+  }
 }
 
 .product_title {
@@ -136,6 +170,7 @@
 .product_card {
   display: flex;
   flex-direction: column;
+  // display: none;
   input {
     padding: 5px 10px;
     margin-bottom: 20px;
@@ -155,7 +190,6 @@
   &_second {
     display: flex;
   }
-  display: none;
 }
 
 // 加入購物車按鈕樣式-開始
@@ -200,18 +234,31 @@
     justify-content: space-around;
     width: 33.33%;
     font-size: map-get($fontsize, "big");
+    @include phone() {
+      font-size: 2rem;
+    }
   }
 }
 
-.product_content_notice {
-  display: none;
-}
+.product_content {
+  padding: 20px 0px;
 
-.product_content_word {
-  font-size: map-get($fontsize, "larger");
+  &_info {
+    padding: 20px 0;
+  }
+
+  &_notice {
+    padding: 20px 0;
+    // display: none;
+  }
+
+  &_word {
+    font-size: map-get($fontsize, "larger");
+  }
 }
 
 .product_content_assess {
+  padding: 20px 0;
   ol li {
     @include flex() {
       justify-content: space-between;
@@ -219,10 +266,20 @@
     border: 1px solid;
     border-radius: 10px;
     padding: 5px 20px;
-    width: 960px;
+    // width: 960px;
     margin: 0 auto;
+    margin: 0 20px;
+
+    @include phone() {
+      // width: 100%;
+      margin: 0;
+    }
+    @include phone() {
+      padding: 5px 10px;
+    }
   }
-  display: none;
+
+  // display: none;
 }
 
 .product_assess_star {
@@ -230,6 +287,9 @@
   margin-left: 50px;
   .fa-star {
     color: map-get($color, "yellow");
+  }
+  @include phone() {
+    margin-left: 10px;
   }
 }
 
