@@ -1,34 +1,69 @@
-section{
+@mixin pad990 {
+    @media (max-width: 990px) {
+        @content;
+    }
+}
+@mixin pad768 {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin phone414 {
+    @media (max-width: 414px) {
+        @content;
+    }
+}
+
+section {
     box-sizing: border-box;
     position: relative;
-    .qa{
+    .qa {
         // outline: 1px solid red;
         width: 200px;
-        height: 200px;    
+        height: 200px;
         position: absolute;
-        left: 75vw;
-        top: 52vh;
-        // display: none;
+        right: 10vw;
+        bottom: 2vh;
     }
-    .qaBg{
+    .qaBg {
         // z-index: 2;
         // outline: 1px solid red;
-        background-image: url(/img/QA/QA_BG.png);
+        background-image: url(../img/QA/QA_BG.png);
         background-repeat: no-repeat;
         width: 100%;
         height: 100%;
         position: absolute;
         left: 60vw;
-        top: 25vh;
+        top: 20vh;
         display: none;
-        .cancel{
+        @include pad990 {
+            width: 60%;
+            height: 80%;
+            left: 35vw;
+            top: 20vh;
+        }
+        @include pad768 {
+            background-image: url(../img/QA/QA_BG2.png);
+            // outline: 1px solid red;
+            left: 35vw;
+            top: 35vh;
+        }
+        @include phone414{
+            width: 100%;
+            top: 45vh;
+            left: 20vw;
+            // outline: 1px solid red;
+            background-image: url(../img/QA/QA_BG3.png);
+
+        }
+        .cancel {
             margin-left: 460px;
             width: 60px;
             height: 60px;
             // outline: 1px solid red;
         }
-        .question{
-              // outline: 1px solid red;
+        .question {
+            // outline: 1px solid red;
             font-size: 12px;
             width: 15%;
             border-radius: 10px;
@@ -36,18 +71,33 @@ section{
             margin-top: 15px;
             margin-left: 150px;
             padding: 5px;
-            background-color: #6A764E;
-           
-            h2{
+            background-color: #6a764e;
+            @include pad990 {
+                width: 40%;
+                margin-left: 180px;
+                margin-top: 10px;
+            }
+            @include pad768() {
+                width: 42%;
+                font-size: 10px;
+                margin-left: 120px;
+            }
+            @include phone414(){
+                font-size: 8px;
+                margin-left: 60px;
+                display: none;
+            }
+
+            h2 {
                 color: aliceblue;
             }
-            p{
+            p {
                 color: aliceblue;
                 display: none;
             }
         }
-        .question1{
-              // outline: 1px solid red;
+        .question1 {
+            // outline: 1px solid red;
             font-size: 12px;
             width: 15%;
             border-radius: 10px;
@@ -55,18 +105,34 @@ section{
             margin-top: 20px;
             margin-left: 150px;
             padding: 5px;
-            background-color: #6A764E;
-           
-            h2{
+            background-color: #6a764e;
+            @include pad990 {
+                width: 40%;
+                margin-right: 20px;
+                margin-top: 10px;
+                margin-left: 180px;
+            }
+            @include pad768() {
+                width: 42%;
+                font-size: 10px;
+                margin-left: 120px;
+            }
+            @include phone414(){
+                font-size: 8px;
+                margin-left: 60px;
+                display: none;
+            }
+
+            h2 {
                 color: aliceblue;
             }
-            p{
+            p {
                 color: aliceblue;
                 display: none;
             }
         }
-        .question2{
-              // outline: 1px solid red;
+        .question2 {
+            // outline: 1px solid red;
             font-size: 12px;
             width: 15%;
             border-radius: 10px;
@@ -74,18 +140,33 @@ section{
             margin-top: 20px;
             margin-left: 150px;
             padding: 5px;
-            background-color: #6A764E;
-           
-            h2{
+            background-color: #6a764e;
+            @include pad990 {
+                width: 40%;
+                margin-top: 10px;
+                margin-left: 180px;
+            }
+            @include pad768() {
+                width: 42%;
+                font-size: 10px;
+                margin-left: 120px;
+            }
+            @include phone414(){
+                font-size: 8px;
+                margin-left: 60px;
+                display: none;
+            }
+
+            h2 {
                 color: aliceblue;
             }
-            p{
+            p {
                 color: aliceblue;
                 display: none;
             }
         }
-        .question3{
-              // outline: 1px solid red;
+        .question3 {
+            // outline: 1px solid red;
             font-size: 12px;
             width: 15%;
             border-radius: 10px;
@@ -93,18 +174,29 @@ section{
             margin-top: 20px;
             margin-left: 150px;
             padding: 5px;
-            background-color: #6A764E;
-           
-            h2{
+            background-color: #6a764e;
+            @include pad990 {
+                width: 40%;
+                margin-top: 10px;
+                margin-left: 180px;
+            }
+            @include pad768() {
+                width: 42%;
+                font-size: 10px;
+                margin-left: 120px;
+                display: none;
+            }
+
+            h2 {
                 color: aliceblue;
             }
-            p{
+            p {
                 color: aliceblue;
                 display: none;
             }
         }
-        .question4{
-              // outline: 1px solid red;
+        .question4 {
+            // outline: 1px solid red;
             font-size: 12px;
             width: 15%;
             border-radius: 10px;
@@ -112,17 +204,28 @@ section{
             margin-top: 20px;
             margin-left: 150px;
             padding: 5px;
-            background-color: #6A764E;
-           
-            h2{
+            background-color: #6a764e;
+            @include pad990 {
+                width: 40%;
+                margin-top: 10px;
+                margin-left: 180px;
+            }
+            @include pad768() {
+                width: 42%;
+                font-size: 10px;
+                margin-left: 120px;
+                display: none;
+            }
+
+            h2 {
                 color: aliceblue;
             }
-            p{
+            p {
                 color: aliceblue;
                 display: none;
             }
         }
-        .cusQ{
+        .cusQ {
             // outline: 1px solid red;
             width: 20%;
             height: 20%;
@@ -132,8 +235,8 @@ section{
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-            .cusQUS{
-                width: 290px;
+            .cusQUS {
+                width: 240px;
                 height: 30px;
                 border-radius: 10px;
                 font-size: 12px;
@@ -141,45 +244,117 @@ section{
                 text-align: left;
                 // margin-left: 105px;
                 padding-left: 15px;
-                background-color: #6A764E;
+                // background-color: #6a764e;
                 color: aliceblue;
                 // display: none;
+                @include pad990 {
+                    margin-left: 280px;
+                    margin-top: 120px;
+                    // outline: 1px solid red;
+                    width: 240px;
+                }
+                @include pad768{
+                    width: 200px;
+                    font-size: 10px;
+                    margin-left: 140px;
+                    margin-top: 50px;
+                }
+                @include phone414(){
+                    width: 150px;
+                    font-size: 10px;
+                    margin-left: 60px;
+                    
+                }
             }
-            .answer{
-                color: aliceblue;
+            .answer {
+                color: rgb(231, 196, 82);
                 font-size: 12px;
                 line-height: 30px;
-                width: 290px;
+                width: 240px;
                 height: 30px;
                 text-align: left;
                 padding-left: 15px;
                 border-radius: 10px;
                 // margin-left: 105px;
-                background-color: #6A764E;
+                // background-color: #6a764e;
                 display: none;
+                @include pad990 {
+                    margin-left: 280px;
+                    // margin-top: 20px;
+                    width: 240px;
+                }
+                @include pad768{
+                    width: 200px;
+                    margin-top: 10px;
+                    margin-left: 140px;
+                    font-size: 10px;
+                }
+                @include phone414(){
+                    width: 150px;
+                    margin-top: 20px;
+                    font-size: 10px;
+                    margin-left: -70px;              
+                }
             }
-            .adimit{
+            .adimit {
                 width: 100%;
                 // outline: 1px solid red;
-                input{
+                input {
                     color: aliceblue;
                     border-radius: 10px;
                     height: 30px;
-                    width: 220px;
-                    margin-right: 20px;
+                    width: 200px;
+                    // margin-right: 10px;
                     padding-left: 15px;
-                    background-color: #6A764E;
+                    margin-bottom: 10px;
+                    background-color: #6a764e;
                     border: none;
+                    @include pad990 {
+                        // margin-top: 20px;
+                        margin-left: 80px;
+                        // outline: 1px solid red;
+                        width: 240px;
+                    }
+                    @include pad768{
+                        width: 200px;
+                        margin-top: 10px;
+                        margin-left: 16px;
+                        font-size: 10px;
+                    }
+                    @include phone414(){
+                        width: 150px;
+                        font-size: 10px;
+                        margin-top: 20px;
+                        margin-left: 5px;
+                    }
                 }
-                button{
-                    height: 30px;
-                    background-color: #D1C4A4;
-                    color: #6A764E;
+                button {
+                    // outline: 1px solid red;
+                    height: 20px;
+                    line-height: 0;
+                    background-color: #d1c4a4;
+                    color: #6a764e;
                     border: none;
                     border-radius: 10px;
+                    @include pad990 {
+                        margin-top: 20px;
+                        margin-left: 80px;
+                        width: 240px;
+                    }
+                    @include pad768{
+                        width: 200px;
+                        margin-top: 10px;
+                        margin-left: 20px;
+                        font-size: 10px;
+                    }
+                    @include phone414(){
+                        width: 150px;
+                        margin-top: 20px;
+                        font-size: 8px;
+                        margin-left: -30px;
+                    }
                 }
             }
-
         }
     }
 }
