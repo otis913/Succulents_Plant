@@ -8,6 +8,10 @@
   @include btn;
 }
 
+article .pro_bread {
+  margin-top: 0;
+}
+
 // rwd article {
 //   @include pad() {
 //     // width: auto;
