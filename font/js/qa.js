@@ -37,7 +37,7 @@ $(document).ready(function() {
 var app =new Vue({
     el:"#app",
     data:{
-        message:'why did you so late',
+        message:'why did you so late?',
     },
     methods:{
         
