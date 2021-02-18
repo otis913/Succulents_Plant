@@ -78,6 +78,7 @@ article .-pro-bb {
     display: flex;
     &_smpic {
       margin-right: 40px;
+      width: 100px;
     }
     img {
       cursor: pointer;
@@ -183,11 +184,18 @@ article .-pro-bb {
       flex-wrap: wrap;
     }
     li {
+      // width: 50%;
       margin: 10px;
       // padding: 10px;
       text-align: center;
       cursor: pointer;
       border: 5px solid transparent;
+      @include pad() {
+        width: 45%;
+      }
+      @include mobile() {
+        width: 40%;
+      }
     }
   }
   &_second {
@@ -219,6 +227,7 @@ article .-pro-bb {
 // .product_right .btn_green {
 .product_right .product_collect {
   a {
+    cursor: pointer;
     background-color: transparent;
     border: 2px solid #2f4f4f;
     color: #2f4f4f;
@@ -234,6 +243,7 @@ article .-pro-bb {
 
 // product_downa
 .product_tabs {
+  padding-bottom: 20px;
   @include flex;
   li {
     display: flex;
@@ -248,24 +258,12 @@ article .-pro-bb {
 }
 
 .product_content {
-  padding: 20px 0px;
-
-  &_info {
-    padding: 20px 0;
-  }
-
-  &_notice {
-    padding: 20px 0;
-    // display: none;
-  }
-
   &_word {
     font-size: map-get($fontsize, "larger");
   }
 }
 
 .product_content_assess {
-  padding: 20px 0;
   ol li {
     @include flex() {
       justify-content: space-between;
@@ -274,12 +272,11 @@ article .-pro-bb {
     border-radius: 10px;
     padding: 5px 20px;
     // width: 960px;
-    margin: 0 auto;
-    margin: 0 20px;
+    margin: 10px 20px;
 
     @include phone() {
       // width: 100%;
-      margin: 0;
+      margin: 10px 0;
     }
     @include phone() {
       padding: 5px 10px;
@@ -316,7 +313,7 @@ article .-pro-bb {
     @include flex;
     li {
       width: 25%;
-      padding: 10px;
+      // padding: 10px;
     }
   }
 }
