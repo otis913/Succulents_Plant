@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,36 +8,55 @@
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous"></link>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
+        integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    </link>
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
 
     <!-- tweenmax動畫效果 -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 
     <!-- aos動畫效果 -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        
+
 
     <!-- 自己的css -->
     <link rel="stylesheet" href="css/style.css">
-    
-    
+
+
 </head>
+
 <body class="full_wrapper">
 
     <section class="custom_pos">
+        <div class="top">
+
+            <img src="./img/blog1/house.png" alt="">
+            <ul class="header_mid">
+                <li><a href="./product.html">商品專區</a></li>
+                <li><a href="./custom.html">客製多肉</a></li>
+                <li><a href="./mindtest.html">心理測驗</a></li>
+                <li><a href="./HandMake.html">手作課程</a></li>
+                <li><a href="./blog_all.html">部落格</a></li>
+            </ul>
+            <i class="fas fa-bars fa-2x ham"></i>
+            <ul class="header_right">
+                <li><i class="fas fa-cart-plus fa-2x"></i></li>
+                <li><i class="fas fa-user fa-2x"></i></li>
+            </ul>
+        </div>
         <article>
             <div class="bread">
-               <a href="">首頁</a> > <a href="">客製多肉</a>
+                <a href="">首頁</a> > <a href="">客製多肉</a>
             </div>
         </article>
-        
+
 
         <article class="custom_wrapper">
             <div class="custom_block7">
@@ -48,8 +68,8 @@
                 <div class="custom_draw">
                     <!-- 禮物上半部 -->
                     <img src="img/custom/ribbon.png" alt="" class="custom_gift_ribbon">
-                    <img src="img/custom/gift_top.png" alt="" class="custom_gift_top">                   
-                  
+                    <img src="img/custom/gift_top.png" alt="" class="custom_gift_top">
+
                     <div class="custom_draw_plant">
                         <img src="img/custom/custom_01.png" alt="" id="custom_01">
                         <img src="img/custom/custom_02.png" alt="" id="custom_02">
@@ -60,11 +80,11 @@
                     <div class="custom_draw_pot ">
                         <img src="img/custom/pot_01.png" alt="" id="pot">
                     </div>
-                </div> 
+                </div>
 
                 <!-- 禮物底部 -->
                 <img src="img/custom/gift_bottom.png" alt="" class="custom_gift_bottom">
-               
+
                 <div class="custom_price">
                     每盆售價<br> $<span>1660</span>元
                 </div>
@@ -72,30 +92,31 @@
                 <!-- bubble按鈕 start -->
                 <div class="bubble_btnn">
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
-                      <defs>
-                        <filter id="goo">
-                          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-                          <feComposite in="SourceGraphic" in2="goo"/>
-                        </filter>
-                      </defs>
+                        <defs>
+                            <filter id="goo">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                                <feColorMatrix in="blur" mode="matrix"
+                                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                                <feComposite in="SourceGraphic" in2="goo" />
+                            </filter>
+                        </defs>
                     </svg>
-                    
+
                     <span class="button--bubble__container">
-                      <a ref="" class="button button--bubble">
-                        確認送出
-                      </a>
-                      <span class="button--bubble__effect-container">
-                        <span class="circle top-left"></span>
-                        <span class="circle top-left"></span>
-                        <span class="circle top-left"></span>
-                    
-                        <span class="button effect-button"></span>
-                    
-                        <span class="circle bottom-right"></span>
-                        <span class="circle bottom-right"></span>
-                        <span class="circle bottom-right"></span>
-                      </span>
+                        <a ref="" class="button button--bubble">
+                            確認送出
+                        </a>
+                        <span class="button--bubble__effect-container">
+                            <span class="circle top-left"></span>
+                            <span class="circle top-left"></span>
+                            <span class="circle top-left"></span>
+
+                            <span class="button effect-button"></span>
+
+                            <span class="circle bottom-right"></span>
+                            <span class="circle bottom-right"></span>
+                            <span class="circle bottom-right"></span>
+                        </span>
                     </span>
                 </div>
                 <!-- bubble按鈕 end -->
@@ -109,22 +130,22 @@
 
             <div class="custom_block3 ">
                 <img src="img/custom/door.png" alt="">
-               
+
                 <div class="custom_product">
                     <ul class="custom_product_type">
                         <li>多<br class="pconly">肉</li>
                         <li class="bg_gold">裝<br class="pconly">飾</li>
-                        <li class="bg_green">器<br class="pconly">皿</li>    
+                        <li class="bg_green">器<br class="pconly">皿</li>
                     </ul>
 
-                    
+
                     <div class="custom_product_items">
                         <div class="custom_say">
-                            <p>請選擇<b>3</b>種</p> 
+                            <p>請選擇<b>3</b>種</p>
                             <i class="fas fa-exclamation-circle"></i>
-                            
+
                         </div>
-                        <ul class="_onon pp" >
+                        <ul class="_onon pp">
                             <li><a ref=""><img src="img/custom/custom_01.png" alt="">仙人掌</a></li>
                             <li><a ref=""><img src="img/custom/custom_02.png" alt="">仙人掌</a></li>
                             <li><a ref=""><img src="img/custom/custom_03.png" alt="">仙人掌</a></li>
@@ -155,15 +176,15 @@
                             <li><a ref=""><img src="img/custom/pot_06.png" alt="">陶瓷器皿</a></li>
                         </ul>
                     </div>
-                    
-                    
+
+
                 </div>
 
             </div>
-            
+
         </article>
 
-        
+
 
         <div class="ex"></div>
         <div class="ex"></div>
@@ -202,7 +223,7 @@
                     <li><a href="">心理測驗</a></li>
                     <li><a href="">手作課程</a></li>
                     <li><a href="">多肉知識</a></li>
-                </ul>    
+                </ul>
 
                 <ol>
                     <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
@@ -234,8 +255,8 @@
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-     <!-- jquery-ui -->
-     <script src="js/jquery-ui.min.js"></script>
+    <!-- jquery-ui -->
+    <script src="js/jquery-ui.min.js"></script>
 
     <!-- aos動畫效果 -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -248,34 +269,34 @@
         $(document).ready(function () {
 
             //客製多肉商品區
-            $('.custom_product_type li:nth-child(1)').click(function () {    
+            $('.custom_product_type li:nth-child(1)').click(function () {
                 $('.custom_product_items ul:first').addClass('_onon');
-                $('.custom_product_items ul:first').siblings().removeClass('_onon');  
-                $('.custom_product_items').removeClass('bg_green');  
+                $('.custom_product_items ul:first').siblings().removeClass('_onon');
+                $('.custom_product_items').removeClass('bg_green');
                 $('.custom_product_items').removeClass('bg_gold');
-                $('.custom_say p').html('請選擇<b>3</b>種');    
-                   
+                $('.custom_say p').html('請選擇<b>3</b>種');
+
             });
-            $('.custom_product_type li:nth-child(2)').click(function () {    
+            $('.custom_product_type li:nth-child(2)').click(function () {
                 $('.custom_product_items ul:nth-child(3)').addClass('_onon');
-                $('.custom_product_items ul:nth-child(3)').siblings().removeClass('_onon');  
-                $('.custom_product_items').addClass('bg_gold');  
-                $('.custom_product_items').removeClass('bg_green');  
-                $('.custom_say p').html('請選擇<b>1</b>種');     
-                   
+                $('.custom_product_items ul:nth-child(3)').siblings().removeClass('_onon');
+                $('.custom_product_items').addClass('bg_gold');
+                $('.custom_product_items').removeClass('bg_green');
+                $('.custom_say p').html('請選擇<b>1</b>種');
+
             });
-            $('.custom_product_type li:nth-child(3)').click(function () {    
+            $('.custom_product_type li:nth-child(3)').click(function () {
                 $('.custom_product_items ul:last').addClass('_onon');
-                $('.custom_product_items ul:last').siblings().removeClass('_onon');     
-                $('.custom_product_items').addClass('bg_green');  
-                $('.custom_product_items').removeClass('bg_gold');   
-                $('.custom_say p').html('請選擇<b>1</b>種');    
-                   
+                $('.custom_product_items ul:last').siblings().removeClass('_onon');
+                $('.custom_product_items').addClass('bg_green');
+                $('.custom_product_items').removeClass('bg_gold');
+                $('.custom_say p').html('請選擇<b>1</b>種');
+
             });
-            $('.turn180').click(function () { 
+            $('.turn180').click(function () {
                 $('.custom_draw_plant img').toggleClass('-mirror');
                 $('.custom_draw_pot img').toggleClass('-mirrorpot');
-                
+
             });
 
 
@@ -285,7 +306,7 @@
                 // opacity: .5,
                 revert: false, //回到原點
                 axis: "x", //只能拖x軸 or y軸
-                containment:"parent", //只能在父層範圍內使用
+                containment: "parent", //只能在父層範圍內使用
 
                 // start: function(){},
                 // drag: function(){},
@@ -297,7 +318,7 @@
                 // drag(){
                 //     $('#feedback').text("拖曳中");
                 //     $('#feedback').css("color","red");
-                     
+
                 // },
                 // stop(){
                 //     $('#feedback').text("拖曳結束");
@@ -309,11 +330,12 @@
             });
 
 
-            
+
         });
     </script>
 
     <!-- 自已的js -->
     <!-- <script src="js/custom.js"></script> -->
 </body>
+
 </html>

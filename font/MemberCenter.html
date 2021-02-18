@@ -43,7 +43,22 @@
   <!-- section 的範圍為全螢幕，主要用來放background-image的-->
   <!-- 要新增背景圖請另外加class ex:class="full_wrapper" -->
   <section class="full_wrapper">
+    <div class="top">
 
+      <img src="./img/blog1/house.png" alt="">
+      <ul class="header_mid">
+        <li><a href="./product.html">商品專區</a></li>
+        <li><a href="./custom.html">客製多肉</a></li>
+        <li><a href="./mindtest.html">心理測驗</a></li>
+        <li><a href="./HandMake.html">手作課程</a></li>
+        <li><a href="./blog_all.html">部落格</a></li>
+      </ul>
+      <i class="fas fa-bars fa-2x ham"></i>
+      <ul class="header_right">
+        <li><i class="fas fa-cart-plus fa-2x"></i></li>
+        <li><i class="fas fa-user fa-2x"></i></li>
+      </ul>
+    </div>
 
     <!-- 麵包屑在這 -->
     <article class="articlebread">
@@ -60,30 +75,33 @@
       <!-- 內容放這裡 -->
       <div class="membergreen">
         <div class="btn_green">
-          <a id="MemberDiv" class="MemberDiv" style="background-color:#2f4f4f;color: white;">會員中心</a>
-          <a href="OrderTracking.html" id="OrderTrackingDiv" class="OrderTrackingDiv">訂單查詢</a>
-          <a href="MyCollection.html" id="MyCollectionDiv" class="MyCollectionDiv">我的收藏</a>
-          <a href="Ihaveaquestion.html" id="IhaveaquestionDiv" class="IhaveaquestionDiv">我有問題</a>
+          <a id="MemberDiv" class="membernow">會員中心</a>
+          <a href="OrderTracking.html">訂單查詢</a>
+          <a href="MyCollection.html">我的收藏</a>
+          <a href="Ihaveaquestion.html">我有問題</a>
         </div>
       </div>
 
       <div id="member" class="member">
         <h1>個人資料</h1>
         <div class="memberPeopleAvatars">
-          <div class="memberPeopleAvatarsimg"> 
+          <div class="memberPeopleAvatarsimg">
             <i class="fas fa-camera"><input type="file"></i>
             <img class="PeopleAvatars" src="img/member/PeopleAvatars.png">
             <!-- <input class="photo" type="image" src="img/member/photo.png"> -->
           </div>
-        <ul>
-          <li>姓名: <p></p></li>
-          <li>帳號: <p></p></li>
-          <li>密碼: <input type="password"></li>
-          <li>生日: <p></p></li>
-          <li>電話: <input type="tel"></li>
-          <li>地址: <input type="text" class="add"></li> 
-        </ul>
-      </div>
+          <ul>
+            <li>姓名: <p></p>
+            </li>
+            <li>帳號: <p></p>
+            </li>
+            <li>密碼: <input type="password"></li>
+            <li>生日: <p></p>
+            </li>
+            <li>電話: <input type="tel"></li>
+            <li>地址: <input type="text" class="add"></li>
+          </ul>
+        </div>
 
         <!-- 綠色bubble按鈕 start -->
         <div class="bubble_btnn">
@@ -117,7 +135,7 @@
         </div>
         <!-- 綠色bubble按鈕 end -->
       </div>
-    </div>
+      </div>
     </article>
 
 

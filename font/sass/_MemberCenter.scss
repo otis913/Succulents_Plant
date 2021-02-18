@@ -23,12 +23,17 @@
     background-color: map-get($color, "gray");
     color: map-get($color, "main_g");
   }
+  .membergreen .btn_green .membernow{
+    background-color: map-get($color, "main_g");
+    color: map-get($color, "white");
+  }
   .member{
     @include memberin;
   }
   .member h1{
     @include memberh1;
   }
+  
   .memberPeopleAvatars{
     max-width: 400px;
     display: flex; 
@@ -90,7 +95,7 @@
   .OrderTrackingtable{
     border: map-get($color, "gray") solid 2px;
     margin: 20px auto;
-    width: 80%;
+    width: 95%;
   }
   .OrderTracking .OrderTrackingtitle{
     background-color: map-get($color, "gray");
@@ -152,7 +157,7 @@
     margin: 30px auto;
   }
   .MyCollectionLoveimg{
-    margin: 10px 10px;
+    margin: 10px;
   }
   .MyCollectionLovegreen{
     display: flex;
@@ -187,7 +192,7 @@
   .Ihaveaquestionadd{
     @include memberin;
     min-height: 100px;
-    max-width: 870px;
+    max-width: 800px;
   }
   .IhaveaquestionaddQuestion{
     border-bottom: map-get($color, "green") solid 3px;
@@ -209,6 +214,7 @@
   }
   .Ihaveaquestionadd h3{
     text-align: right;
+    margin: 0 10px;
     max-width: 800px;
   }
   .Ihaveaquestionenter{
@@ -256,6 +262,9 @@
     }
   
     @media (max-width: 768px) {
+      .membergreen .btn_green a{
+        margin: 0 5px;
+      }
       .memberarticle{
         display: block;
         font-size: 0.1em;
