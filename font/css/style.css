@@ -3050,6 +3050,10 @@ body {
   }
 }
 
+.articlebread {
+  width: 100%;
+}
+
 .blogpage02 {
   width: 100%;
 }
@@ -4192,7 +4196,7 @@ article ul li {
   border-radius: 5px;
 }
 
-article {
+.articlebread {
   width: 100%;
 }
 
