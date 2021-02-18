@@ -23,6 +23,10 @@
     background-color: map-get($color, "gray");
     color: map-get($color, "main_g");
   }
+  .membergreen .btn_green .membernow{
+    background-color: map-get($color, "main_g");
+    color: map-get($color, "white");
+  }
   .member{
     @include memberin;
   }
