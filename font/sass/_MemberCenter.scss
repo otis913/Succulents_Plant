@@ -23,12 +23,17 @@
     background-color: map-get($color, "gray");
     color: map-get($color, "main_g");
   }
+  .membergreen .btn_green .membernow{
+    background-color: map-get($color, "main_g");
+    color: map-get($color, "white");
+  }
   .member{
     @include memberin;
   }
   .member h1{
     @include memberh1;
   }
+  
   .memberPeopleAvatars{
     max-width: 400px;
     display: flex; 
