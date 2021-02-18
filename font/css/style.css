@@ -2874,6 +2874,12 @@ table {
   padding: 20px 0;
 }
 
+@media (max-width: 990px) {
+  article {
+    max-width: 100%;
+  }
+}
+
 body {
   cursor: default;
 }
@@ -2897,15 +2903,23 @@ body {
   color: #fff;
 }
 
+@media (max-width: 990px) {
+  .handmake_left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
 .handmake_left h1 {
   text-align: left;
   margin: 10px 0 10px 50px;
 }
 
 @media (max-width: 990px) {
-  .handmake_left {
-    display: flex;
-    flex-direction: column;
+  .handmake_left h1 {
+    margin: 0 auto;
+    text-align: center;
   }
 }
 
@@ -2915,8 +2929,8 @@ body {
 }
 
 @media (max-width: 990px) {
-  .handmake_left .handmake_left_class {
-    flex-direction: row;
+  .handmake_left .handmake_left_class .handmake_left_class_btn {
+    flex-direction: column;
   }
 }
 
@@ -2932,6 +2946,13 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 990px) {
+  .handmake_left .handmake_left_class button {
+    width: 100px;
+    margin: 5px;
+  }
+}
+
 .handmake_left .handmake_left_class button:hover {
   background-color: #fff;
   color: #2f4f4f;
@@ -2942,14 +2963,45 @@ body {
   cursor: pointer;
 }
 
-.handmake_left .custom_select {
+@media (max-width: 990px) {
+  .handmake_left .HM_Date h1 {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 990px) {
+  .handmake_left .HM_Date {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 990px) {
+  .handmake_left .HM_Date .HM_Date_select {
+    margin-top: 5px;
+  }
+}
+
+.handmake_left .HM_Date .HM_Date_select .custom_select {
   width: auto;
   padding: 2% 15%;
   border-radius: 5px;
 }
 
-.handmake_left .custom_select option {
+@media (max-width: 990px) {
+  .handmake_left .HM_Date .HM_Date_select .custom_select {
+    width: 100%;
+    padding: 5px 5px;
+  }
+}
+
+.handmake_left .HM_Date .HM_Date_select .custom_select option {
   text-align: center;
+}
+
+@media (max-width: 990px) {
+  .handmake_left .HM_Number h1 {
+    text-align: center;
+  }
 }
 
 .handmake_left .HM_Number .HM_choseNumber .number_people {
@@ -2966,6 +3018,12 @@ body {
 .handmake_left .HM_Number .HM_choseNumber .fa-plus {
   margin: 0 10px;
   cursor: pointer;
+}
+
+@media (max-width: 990px) {
+  .handmake_left .handmake_left_text {
+    display: none;
+  }
 }
 
 .handmake_left .handmake_left_text span {
