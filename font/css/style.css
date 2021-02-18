@@ -4310,7 +4310,7 @@ body {
 .OrderTrackingtable {
   border: #eeebeb solid 2px;
   margin: 20px auto;
-  width: 80%;
+  width: 95%;
 }
 
 .OrderTracking .OrderTrackingtitle {
@@ -4393,7 +4393,7 @@ body {
 }
 
 .MyCollectionLoveimg {
-  margin: 10px 10px;
+  margin: 10px;
 }
 
 .MyCollectionLovegreen {
@@ -4513,6 +4513,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .membergreen .btn_green a {
+    margin: 0 5px;
+  }
   .memberarticle {
     display: block;
     font-size: 0.1em;

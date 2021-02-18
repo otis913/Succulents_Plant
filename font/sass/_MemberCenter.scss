@@ -90,7 +90,7 @@
   .OrderTrackingtable{
     border: map-get($color, "gray") solid 2px;
     margin: 20px auto;
-    width: 80%;
+    width: 95%;
   }
   .OrderTracking .OrderTrackingtitle{
     background-color: map-get($color, "gray");
@@ -152,7 +152,7 @@
     margin: 30px auto;
   }
   .MyCollectionLoveimg{
-    margin: 10px 10px;
+    margin: 10px;
   }
   .MyCollectionLovegreen{
     display: flex;
@@ -256,6 +256,9 @@
     }
   
     @media (max-width: 768px) {
+      .membergreen .btn_green a{
+        margin: 0 5px;
+      }
       .memberarticle{
         display: block;
         font-size: 0.1em;
