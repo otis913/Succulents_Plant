@@ -27,10 +27,27 @@
 
 <body>
     <div class="full_wrapper">
+        <!------header----->
+        <div class="top">
+
+            <img src="./img/blog1/house.png" alt="">
+            <ul class="header_mid">
+                <li><a href="">商品專區</a></li>
+                <li><a href="">客製多肉</a></li>
+                <li><a href="">心理測驗</a></li>
+                <li><a href="">手作課程</a></li>
+                <li><a href="">部落格</a></li>
+            </ul>
+            <i class="fas fa-bars fa-2x ham"></i>
+            <ul class="header_right">
+                <li><i class="fas fa-cart-plus fa-2x"></i></li>
+                <li><i class="fas fa-user fa-2x"></i></li>
+            </ul>
+        </div>
+
         <!-----------最上面輪播---------->
         <nav>
             <div class="index_run">
-                <h1>test</h1>
                 <div class="plant1 show"><img src="./img/index/plant_01.png" alt=""></div>
                 <div class="plant2 show"><img src="./img/index/plant_02.png" alt=""></div>
                 <div class="plant3 show"><img src="./img/index/plant_03.png" alt=""></div>
@@ -233,13 +250,31 @@
             <h1>Blog</h1>
             <h1 class="h1_small">部落格</h1>
             <ul>
-                <li><img src="./img/index/IMG_3541.JPG" alt=""></li>
-                <li><img src="./img/index/IMG_3568.JPG" alt=""></li>
-                <li><img src="./img/index/IMG_3568.JPG" alt=""></li>
-                <li><img src="./img/index/IMG_3541.JPG" alt=""></li>
+                <li><img src="./img/index/plant_01.png" alt=""></li>
+                <li><img src="./img/index/plant_01.png" alt=""></li>
+                <li><img src="./img/index/plant_01.png" alt=""></li>
+                <li><img src="./img/index/plant_01.png" alt=""></li>
             </ul>
         </article>
     </div>
+
+    <script>
+        let hide = document.getElementsByClassName('ham')[0];
+        let ul = document.getElementsByClassName('header_mid')[0];
+
+        document.addEventListener("click", function (e) {
+            if (e.target.closest('.ham')) {
+
+                ul.style.top = "80px";
+            } else {
+                ul.style.top = "-550px";
+            }
+
+
+
+        });
+    </script>
+
 </body>
 
 </html>

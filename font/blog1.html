@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>肉多不怪</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
+        integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    </link>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- aos動畫效果 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- aos動畫效果 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- bubble_btn動畫效果 -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="js/bubblebtn.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+
+
+</head>
+
+<body>
+    <div class="full_wrapper">
+
+        <!-------輪播---------->
+        <div class="top">
+
+            <img src="./img/blog1/house.png" alt="">
+            <ul class="header_mid">
+                <li><a href="">商品專區</a></li>
+                <li><a href="">客製多肉</a></li>
+                <li><a href="">心理測驗</a></li>
+                <li><a href="">手作課程</a></li>
+                <li><a href="">部落格</a></li>
+            </ul>
+            <i class="fas fa-bars fa-2x ham"></i>
+            <ul class="header_right">
+                <li><i class="fas fa-cart-plus fa-2x"></i></li>
+                <li><i class="fas fa-user fa-2x"></i></li>
+            </ul>
+        </div>
+        <div class="blog_turn">
+            <img src="./img/blog1/product_kv.png" alt="">
+            <h1>Jaguar & Land Rover<br>的聖誕禮物</h1>
+        </div>
+
+        <article>
+            <div class="bread">
+                <a href="">首頁</a> > <a href="">部落格</a>
+            </div>
+        </article>
+
+        <article>
+            <img src="./img/blog1/product_kv.png" alt="">
+            <p>新的年度的起始，<br>
+                你會做些什麼事讓自己今年順利平安呢？<br>
+                到廟裡拜拜？請熟識的老師指點一番？<br>
+                <br>
+                或者身上配戴幸運小物？<br>
+                隨著 2021
+                年的到來，你有想過玩植物也能增加自己的好運嗎？園藝<br>是一門人類古老的技藝，除了近代時常說的心理層面的園藝治療之外<br>，現在科學上也佐證了園藝能夠讓自己心情更愉悅，保持正能量與好心情<br>，必能吸引更多的好運在身旁。
+            </p>
+        </article>
+        <article>
+            <img src="./img/blog1/product_kv.png" alt="">
+            <p>新的年度的起始，<br>
+                你會做些什麼事讓自己今年順利平安呢？<br>
+                到廟裡拜拜？請熟識的老師指點一番？<br>
+                <br>
+                或者身上配戴幸運小物？<br>
+                隨著 2021
+                年的到來，你有想過玩植物也能增加自己的好運嗎？園藝<br>是一門人類古老的技藝，除了近代時常說的心理層面的園藝治療之外<br>，現在科學上也佐證了園藝能夠讓自己心情更愉悅，保持正能量與好心情<br>，必能吸引更多的好運在身旁。
+            </p>
+        </article>
+        <article>
+            <img src="./img/blog1/product_kv.png" alt="">
+            <p>新的年度的起始，<br>
+                你會做些什麼事讓自己今年順利平安呢？<br>
+                到廟裡拜拜？請熟識的老師指點一番？<br>
+                <br>
+                或者身上配戴幸運小物？<br>
+                隨著 2021
+                年的到來，你有想過玩植物也能增加自己的好運嗎？園藝<br>是一門人類古老的技藝，除了近代時常說的心理層面的園藝治療之外<br>，現在科學上也佐證了園藝能夠讓自己心情更愉悅，保持正能量與好心情<br>，必能吸引更多的好運在身旁。
+            </p>
+        </article>
+    </div>
+    <script>
+        let hide = document.getElementsByClassName('ham')[0];
+        let ul = document.getElementsByClassName('header_mid')[0];
+
+        document.addEventListener("click", function (e) {
+            if (e.target.closest('.ham')) {
+
+                ul.style.top = "80px";
+            } else {
+                ul.style.top = "-550px";
+            }
+
+
+
+        });
+    </script>
+
+</body>
+
+</html>

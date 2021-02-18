@@ -25,7 +25,7 @@ nav{
     width:100%;
     margin: 0 auto;
     margin-bottom: 60px;
-    outline: 1px solid red;
+    // outline: 1px solid red;
     .index_run{
         width: 1200px;
         margin: 0 auto;
@@ -363,10 +363,438 @@ article{
             display: flex;
             justify-content: space-between;
             li{
-                
                 img{
                     width: 200px;
                     height: auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:990px){
+    .full_wrapper{
+        width: 100vw;
+    }
+    nav{
+        width: 100vw;
+        .index_run{
+            width: 100vw;
+            .show{
+                img{
+                    width: 150px;
+                }
+            }
+        }
+    }
+    
+    article{
+    width: 100vw;
+    .index_introduce{
+        width: 90vw;
+        h1{
+            width: 90vw;
+        }
+        .index_introduce_in{
+            width: 90vw;
+           
+            img{
+                width: 400px;
+                height: 100%;
+            }
+            .index_introduce_word{
+                width: 300px;
+                padding-right: 100px;
+                h1{
+                    width: 200px;
+                }
+                .bubble_btnn{
+                    margin-left: 25px;
+                }
+            }
+        }
+    }
+}
+
+article{
+    .index_about{
+        img{
+            width: 300px;
+        }
+    }
+}
+article{
+    .index_product{
+        width: 100vw;
+    }
+}
+.one{
+    width: 700px;
+    .pic_left{
+        padding-left: 100px;
+    }
+    .pic_right{
+        padding-left: 120px;
+    }
+    ul{
+        padding-left: 150px;
+        li{
+            h1{
+                font-size: 20px;
+            }
+            .h1_small{
+                font-size: 18px;
+            }
+        }
+    }
+}
+.one::before{
+ 
+    left: 699px;
+
+}
+.three{
+    width: 700px;
+    .pic_left{
+        padding-left: 100px;
+    }
+    .pic_right{
+        padding-left: 45px;
+    }
+    ul{
+        padding-left: 150px;
+        li{
+            width: 200px;
+            h1{
+                font-size: 20px;
+            }
+            .h1_small{
+                font-size: 18px;
+            }
+        }
+    }
+}
+.three::before{
+ 
+    left: 699px;
+
+}
+.two{
+    width: 700px;
+    
+    .pic_left{
+        padding-left: 100px;
+        width: 300px;
+    }
+    .pic_right{
+        padding-left: 120px;
+    }
+    ul{
+        padding-left: 150px;
+        li{
+            h1{
+                font-size: 20px;
+            }
+            .h1_small{
+                font-size: 18px;
+            }
+        }
+    }
+}
+.two::before{
+ 
+    left: 699px;
+
+}
+.diy_turn{
+    width: 100vw;
+}
+
+.index_blog{
+    article{
+        ul{
+            li{
+                img{
+                    width: 150px;
+                }
+            }
+        }
+    }
+}
+
+}
+
+@media screen and (max-width:768px){
+    article{
+        .index_about{
+            .index_about_word{
+                margin-bottom: 30px;
+            }
+            img{
+                margin-right: 65px;
+            }
+    }
+        
+
+    }
+    .one{
+        width: 100vw;
+        .pic_left{
+            padding-left: 50px;
+        }
+        ul{
+            padding-left: 100px;
+        }
+        .pic_right{
+            padding-left: 100px;
+            display: none;
+        }
+    }
+    .one::before{
+        left: 568px;
+        display: none;
+    }
+    .two{
+        width: 100vw;
+        .pic_left{
+
+        }
+        .pic_right{
+            padding-left: 100px;
+            display: none;
+        }
+        ul{
+            padding-left: 70px;
+        }
+    }
+    .two::before{
+        left: 568px;
+        display: none;
+    }
+    .three{
+        width: 100vw;
+        .pic_left{
+            padding-left: 70px;
+        }
+        .pic_right{
+            padding-left: 0px;
+            display: none;
+        }
+        ul{
+            padding-left: 100px;
+        }
+    }
+    
+    .three::before{
+        left: 568px;
+        display: none;
+    }
+
+    .index_blog{
+        article{
+            ul{width: 90vw;
+                li{
+                    img{
+                        width: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:414px){
+    nav{
+        width: 100vw;
+        .index_run{
+            width: 100vw;
+            .show{
+
+                img{
+                    width: 50px;
+                    height: auto;
+                }
+            }
+        }
+    }
+   article{
+       .index_introduce{
+           h1{
+               font-size: 24px;
+               margin-bottom: 20px;
+           }
+           .h1_small{
+               font-size: 14px;
+           }
+           .index_introduce_in{
+               img{
+                   width: 200px;
+                   padding-top: 0;
+                margin-left: 80px;
+                float: none;
+               }
+               .index_introduce_word{
+                   padding: 0;
+                   float: none;
+                   margin: 0 auto;
+                   h1{
+                       font-size: 24px;
+                       margin-left: 50px;
+                   }
+                   .bubble_btnn{
+                       margin-left: 50px;
+                   }
+               }
+           }
+       }
+   }
+    .ex{
+        display: none;
+    }
+    article{
+        .index_about{
+            h1{
+                font-size: 24px;
+            }
+            .h1_small{
+                font-size: 14px;
+            }
+            .index_about_word{
+                float: none;
+                h1{
+                    font-size: 24px;
+                    text-align: center;
+                    padding-bottom: 10px;
+                }
+                p{
+                    font-size: 14px;
+                    text-align: center;
+                    margin-top: 0;
+                }
+                .bubble_btnn{
+                    margin-left: 90px;
+                }
+            }
+            img{
+                float: none;
+                width: 300px;
+                margin-right: 0;
+                display: block;
+                margin-left: 20px;
+            }
+        }
+    }
+    article{
+        .index_product{
+            h1{
+                font-size: 24px;
+            }
+            .h1_small{
+                font-size: 14px;
+            }
+        }
+    }
+    .one{
+        width: 100vw;
+        height: 100px;
+        .pic_left{
+            height: 100px;
+            padding-left: 50px;
+        }
+        .pic_right{
+            height: 100px;
+            display: none;
+            
+        }
+        ul{
+            padding-left: 70px;
+            padding-top: 20px;
+            h1{
+                font-size: 24px;
+            }
+            .h1_small{
+                font-size: 18px;
+
+            }
+        }
+    }
+    .one::before{
+        display: none;
+    }
+
+    .two{
+        width: 100vw;
+        height: 100px;
+        .pic_left{
+            height: 100px;
+            width: 200px;
+            padding-left: 50px;
+        }
+        .pic_right{
+            height: 100px;
+            display: none;
+        }
+        ul{
+            padding-left: 25px;
+            padding-top: 25px;
+        }
+       
+    }
+    .two::before{
+        display: none;
+
+    }
+    .three{
+        width: 100vw;
+        height: 100px;
+        .pic_left{
+            height: 100px;
+            width: auto;
+            padding-left: 70px;
+        }
+        .pic_right{
+            display: none;
+        }
+        ul{width: 200px;
+            padding-left: 55px;
+            padding-top: 25px;
+            li{
+                width: 118px;
+            }
+        }
+    }
+    .three::before{
+        display:none;
+    }
+
+    article{
+        .index_diy{
+            h1{
+                font-size: 24px;
+            }
+            .h1_small{
+                font-size: 14px;
+            }
+        }
+    }
+    .diy_turn{
+        width: 100vw;
+    }
+    .index_blog{
+        width: 100vw;
+        article{
+            h1{
+               font-size: 24px; 
+            }
+            .h1_small{
+                font-size: 14px;
+            }
+            ul{
+                width: 400px;
+                li{
+                    img{
+                        width: 100px;
+                    }
                 }
             }
         }
