@@ -175,6 +175,9 @@ body{
   }
   .SignUp_RWD{
     display: none;
+    @include pad{
+      display: block;
+    }
   }
     
 }
