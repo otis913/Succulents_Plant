@@ -2981,6 +2981,275 @@ body {
   padding: 10px 0;
 }
 
+article {
+  width: 100%;
+}
+
+.memberarticle {
+  display: flex;
+  padding-left: 50px;
+  width: 100%;
+}
+
+.membergreen .btn_green a {
+  margin: 20px 0;
+}
+
+.member {
+  margin: 20px 20px;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.member h1 {
+  background-color: #2f4f4f;
+  color: #ffffff;
+  border-radius: 20px;
+  line-height: 3;
+}
+
+.memberPeopleAvatars {
+  max-width: 400px;
+  display: flex;
+  align-items: flex-start;
+  margin: 20px auto;
+}
+
+.memberPeopleAvatarsimg {
+  position: relative;
+}
+
+.memberPeopleAvatarsimg i {
+  position: absolute;
+  left: -13px;
+  bottom: 5px;
+  width: 200px;
+}
+
+.PeopleAvatars {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+.member ul {
+  text-align: left;
+  width: 300px;
+  margin-left: 20px;
+}
+
+.member ul li {
+  margin: 20px 0;
+}
+
+.OrderTracking {
+  margin: 20px 20px;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.OrderTracking h1 {
+  background-color: #2f4f4f;
+  color: #ffffff;
+  border-radius: 20px;
+  line-height: 3;
+}
+
+.OrderTracking table {
+  border: #eeebeb solid 2px;
+  margin: 20px auto;
+}
+
+.OrderTracking .OrderTrackingtitle {
+  background-color: #eeebeb;
+}
+
+.OrderTracking .OrderTrackingChild {
+  border-bottom: #eeebeb dashed 2px;
+}
+
+.OrderTracking td {
+  padding: 0 10px;
+  line-height: 3;
+}
+
+.OrderTracking td img {
+  width: 50px;
+}
+
+.OrderTracking h2 {
+  text-align: left;
+  line-height: 1;
+}
+
+.OrderTracking h3 {
+  text-align: left;
+}
+
+.OrderTracking ul li {
+  text-decoration: none;
+  text-align: left;
+  color: #918f8f;
+  font-size: 10px;
+  max-width: 150px;
+  margin-left: 10px;
+}
+
+.MyCollection {
+  margin: 20px 20px;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.MyCollection h1 {
+  background-color: #2f4f4f;
+  color: #ffffff;
+  border-radius: 20px;
+  line-height: 3;
+}
+
+.MyCollectionPage {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.MyCollectionLove {
+  border: #eeebeb solid 1px;
+  margin: 30px auto;
+}
+
+.MyCollectionLoveimg {
+  margin: 10px 10px;
+}
+
+.MyCollectionLovegreen {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px auto;
+  max-width: 190px;
+}
+
+.MyCollectionLovegreeni {
+  border: solid #eeebeb 2px;
+  border-radius: 5px;
+  width: 40px;
+}
+
+.MyCollectionLovegreen i {
+  width: 30px;
+  margin: 12px auto;
+}
+
+.MyCollectionLovegreen .btn_green a {
+  max-width: 140px;
+  line-height: 10px;
+  margin-left: 10px;
+}
+
+.Ihaveaquestion {
+  width: 100%;
+}
+
+.Ihaveaquestionadd {
+  margin: 20px 20px;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+  min-height: 100px;
+  max-width: 870px;
+}
+
+.IhaveaquestionaddQuestion {
+  border-bottom: solid 3px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.IhaveaquestionaddQuestionimg {
+  border: solid red 3px;
+  width: 70px;
+  height: 65px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.IhaveaquestionaddQuestion h2 {
+  margin: 0 auto;
+}
+
+.Ihaveaquestionadd h3 {
+  text-align: right;
+  max-width: 800px;
+}
+
+.Ihaveaquestionenter {
+  margin: 20px 20px;
+  height: 60px;
+  display: flex;
+}
+
+.Ihaveaquestion input {
+  width: 80%;
+  background-color: #eeebeb;
+  border-radius: 10px;
+  border: none;
+  margin-top: 20px;
+  height: 60px;
+}
+
+.Ihaveaquestionenter .bubble_btnn {
+  margin-top: 10px;
+}
+
+.Ihaveaquestion .bubble_btnn a {
+  max-width: 200px;
+}
+
+.IhaveaquestionaddQuestionadd {
+  display: flex;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.IhaveaquestionaddQuestionaddbg {
+  margin: 0 10px;
+  width: 100%;
+  background-color: #eeebeb;
+  border-radius: 5px;
+}
+
+.IhaveaquestionaddQuestionadd h2 {
+  margin-top: 20px;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.IhaveaquestionaddQuestionadd h3 {
+  margin-right: 10px;
+}
+
+.OrderTracking {
+  display: none;
+}
+
+.MyCollection {
+  display: none;
+}
+
+.Ihaveaquestion {
+  display: none;
+}
+
 .blog_turn {
   width: 100%;
   position: relative;
@@ -3992,6 +4261,275 @@ article ul li {
   background-color: #d9a420;
   color: #2f4f4f;
   border-radius: 5px;
+}
+
+article {
+  width: 100%;
+}
+
+.memberarticle {
+  display: flex;
+  padding-left: 50px;
+  width: 100%;
+}
+
+.membergreen .btn_green a {
+  margin: 20px 0;
+}
+
+.member {
+  margin: 20px 20px;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.member h1 {
+  background-color: #2f4f4f;
+  color: #ffffff;
+  border-radius: 20px;
+  line-height: 3;
+}
+
+.memberPeopleAvatars {
+  max-width: 400px;
+  display: flex;
+  align-items: flex-start;
+  margin: 20px auto;
+}
+
+.memberPeopleAvatarsimg {
+  position: relative;
+}
+
+.memberPeopleAvatarsimg i {
+  position: absolute;
+  left: -13px;
+  bottom: 5px;
+  width: 200px;
+}
+
+.PeopleAvatars {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+.member ul {
+  text-align: left;
+  width: 300px;
+  margin-left: 20px;
+}
+
+.member ul li {
+  margin: 20px 0;
+}
+
+.OrderTracking {
+  margin: 20px 20px;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.OrderTracking h1 {
+  background-color: #2f4f4f;
+  color: #ffffff;
+  border-radius: 20px;
+  line-height: 3;
+}
+
+.OrderTracking table {
+  border: #eeebeb solid 2px;
+  margin: 20px auto;
+}
+
+.OrderTracking .OrderTrackingtitle {
+  background-color: #eeebeb;
+}
+
+.OrderTracking .OrderTrackingChild {
+  border-bottom: #eeebeb dashed 2px;
+}
+
+.OrderTracking td {
+  padding: 0 10px;
+  line-height: 3;
+}
+
+.OrderTracking td img {
+  width: 50px;
+}
+
+.OrderTracking h2 {
+  text-align: left;
+  line-height: 1;
+}
+
+.OrderTracking h3 {
+  text-align: left;
+}
+
+.OrderTracking ul li {
+  text-decoration: none;
+  text-align: left;
+  color: #918f8f;
+  font-size: 10px;
+  max-width: 150px;
+  margin-left: 10px;
+}
+
+.MyCollection {
+  margin: 20px 20px;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.MyCollection h1 {
+  background-color: #2f4f4f;
+  color: #ffffff;
+  border-radius: 20px;
+  line-height: 3;
+}
+
+.MyCollectionPage {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.MyCollectionLove {
+  border: #eeebeb solid 1px;
+  margin: 30px auto;
+}
+
+.MyCollectionLoveimg {
+  margin: 10px 10px;
+}
+
+.MyCollectionLovegreen {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px auto;
+  max-width: 190px;
+}
+
+.MyCollectionLovegreeni {
+  border: solid #eeebeb 2px;
+  border-radius: 5px;
+  width: 40px;
+}
+
+.MyCollectionLovegreen i {
+  width: 30px;
+  margin: 12px auto;
+}
+
+.MyCollectionLovegreen .btn_green a {
+  max-width: 140px;
+  line-height: 10px;
+  margin-left: 10px;
+}
+
+.Ihaveaquestion {
+  width: 100%;
+}
+
+.Ihaveaquestionadd {
+  margin: 20px 20px;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+  min-height: 100px;
+  max-width: 870px;
+}
+
+.IhaveaquestionaddQuestion {
+  border-bottom: solid 3px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.IhaveaquestionaddQuestionimg {
+  border: solid red 3px;
+  width: 70px;
+  height: 65px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.IhaveaquestionaddQuestion h2 {
+  margin: 0 auto;
+}
+
+.Ihaveaquestionadd h3 {
+  text-align: right;
+  max-width: 800px;
+}
+
+.Ihaveaquestionenter {
+  margin: 20px 20px;
+  height: 60px;
+  display: flex;
+}
+
+.Ihaveaquestion input {
+  width: 80%;
+  background-color: #eeebeb;
+  border-radius: 10px;
+  border: none;
+  margin-top: 20px;
+  height: 60px;
+}
+
+.Ihaveaquestionenter .bubble_btnn {
+  margin-top: 10px;
+}
+
+.Ihaveaquestion .bubble_btnn a {
+  max-width: 200px;
+}
+
+.IhaveaquestionaddQuestionadd {
+  display: flex;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.IhaveaquestionaddQuestionaddbg {
+  margin: 0 10px;
+  width: 100%;
+  background-color: #eeebeb;
+  border-radius: 5px;
+}
+
+.IhaveaquestionaddQuestionadd h2 {
+  margin-top: 20px;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.IhaveaquestionaddQuestionadd h3 {
+  margin-right: 10px;
+}
+
+.OrderTracking {
+  display: none;
+}
+
+.MyCollection {
+  display: none;
+}
+
+.Ihaveaquestion {
+  display: none;
 }
 
 section {
