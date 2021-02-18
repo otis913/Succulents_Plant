@@ -60,62 +60,98 @@
       <!-- 內容放這裡 -->
       <div class="membergreen">
         <div class="btn_green">
-          <a id="MemberDiv" class="MemberDiv" style="background-color:#2f4f4f;color: white;">會員中心</a>
-          <a href="OrderTracking.html" id="OrderTrackingDiv" class="OrderTrackingDiv">訂單查詢</a>
+          <a href="MemberCenter.html" id="MemberDiv" class="MemberDiv">會員中心</a>
+          <a id="OrderTrackingDiv" class="OrderTrackingDiv" style="background-color:#2f4f4f;color: white;">訂單查詢</a>
           <a href="MyCollection.html" id="MyCollectionDiv" class="MyCollectionDiv">我的收藏</a>
           <a href="Ihaveaquestion.html" id="IhaveaquestionDiv" class="IhaveaquestionDiv">我有問題</a>
         </div>
       </div>
 
-      <div id="member" class="member">
-        <h1>個人資料</h1>
-        <div class="memberPeopleAvatars">
-          <div class="memberPeopleAvatarsimg"> 
-            <i class="fas fa-camera"><input type="file"></i>
-            <img class="PeopleAvatars" src="img/member/PeopleAvatars.png">
-            <!-- <input class="photo" type="image" src="img/member/photo.png"> -->
-          </div>
-        <ul>
-          <li>姓名: <p></p></li>
-          <li>帳號: <p></p></li>
-          <li>密碼: <input type="password"></li>
-          <li>生日: <p></p></li>
-          <li>電話: <input type="tel"></li>
-          <li>地址: <input type="text" class="add"></li> 
-        </ul>
-      </div>
+      <!-- 所有訂單 -->
+      <div class="OrderTracking">
+        <h1>所有訂單</h1>
+        <table class="OrderTrackingtable">
+          <tr class="OrderTrackingtitle">
+            <td>訂單時間</td>
+            <td>訂單編號</td>
+            <td>付款方式</td>
+            <td>訂單金額</td>
+            <td>訂單狀態</td>
+          </tr>
+          <tr class="OrderTrackingChild">
+            <td>2021/2/3</td>
+            <td>202102031244</td>
+            <td>信用卡</td>
+            <td>$244</td>
+            <td>處理中</td>
+          </tr>
+          <tr>
+            <td class="OrderTrackingcol" colspan="5">訂單內容 <i class="fas fa-plus"></i></td>
+          </tr>
+        </table>
+        <!-- 333333333333 -->
+        <table class="OrderTrackingtable">
+          <tr class="OrderTrackingtitle">
+            <td>訂單時間</td>
+            <td>訂單編號</td>
+            <td>付款方式</td>
+            <td>訂單金額</td>
+            <td>訂單狀態</td>
+          </tr>
+          <tr class="OrderTrackingChild">
+            <td>2021/2/3</td>
+            <td>202102031244</td>
+            <td>信用卡</td>
+            <td>$550</td>
+            <td>已完成</td>
+          </tr>
+          <tr>
+            <td class="OrderTrackingcol" colspan="5">訂單內容 <i class="fas fa-minus"></i></td>
+          </tr>
+          <tr>
+            <td>商品名稱</td>
+            <td></td>
+            <td></td>
+            <td>數量</td>
+            <td>價格</td>
+          </tr>
+          <tr>
+            <td><img src="img/member/smallimg.png"></td>
+            <td colspan="2">
+            <h2>黃金山脈-金晃丸盆栽</h2>
+            <h3>賀卡訂製</h3>
+              <ul>
+                <li>收禮人:小明</li>
+                <li>賀詞內容:生日快樂</li>
+                <li>送禮人資訊:強強</li>
+                <li>賀卡樣式:A.春意盎然</li>
+              </ul>
+            </td>
+            <td>1</td>
+            <td>$550</td>
+          </tr>
+        </table>
 
-        <!-- 綠色bubble按鈕 start -->
-        <div class="bubble_btnn">
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
-            <defs>
-              <filter id="goo">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
-                  result="goo" />
-                <feComposite in="SourceGraphic" in2="goo" />
-              </filter>
-            </defs>
-          </svg>
-
-          <span class="button--bubble__container">
-            <a href="" class="button button--bubble">
-              確認修改
-            </a>
-            <span class="button--bubble__effect-container">
-              <span class="circle top-left"></span>
-              <span class="circle top-left"></span>
-              <span class="circle top-left"></span>
-
-              <span class="button effect-button"></span>
-
-              <span class="circle bottom-right"></span>
-              <span class="circle bottom-right"></span>
-              <span class="circle bottom-right"></span>
-            </span>
-          </span>
-        </div>
-        <!-- 綠色bubble按鈕 end -->
+        <table class="OrderTrackingtable">
+          <tr class="OrderTrackingtitle">
+            <td>訂單時間</td>
+            <td>訂單編號</td>
+            <td>付款方式</td>
+            <td>訂單金額</td>
+            <td>訂單狀態</td>
+          </tr>
+          <tr class="OrderTrackingChild">
+            <td>2021/11/3</td>
+            <td>202102031244</td>
+            <td>信用卡</td>
+            <td>$244</td>
+            <td>已取消</td>
+          </tr>
+          <tr>
+            <td class="OrderTrackingcol" colspan="5">訂單內容 <i class="fas fa-plus"></i></td>
+          </tr>
+        </table>
+        <!-- 333333333333 -->
       </div>
     </div>
     </article>
