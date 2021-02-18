@@ -1,0 +1,29 @@
+diff a/font/HandMake.html b/font/HandMake.html	(rejected hunks)
+@@ -71,15 +71,20 @@
+ 
+           <h1>選擇日期<i class="fas fa-calendar-alt"></i></h1>
+ 
+-          <select name="date" id="" class="custom_select"></select>
++          <select name="date" class="custom_select" id="">
++            <option value="2021/03/01">2021/03/01</option>
++            <option value="2021/04/01">2021/04/01</option>
++            <option value="2021/05/01">2021/05/01</option>
++          </select>
+ 
+           <div class="ex20px"></div>
+-
+-          <h1>選擇人數</h1>
+-          <div class="choseNumber">
+-            <i class="fas fa-minus"></i>
+-            <input type="number" value="1" min="1" class="number_people">
+-            <i class="fas fa-plus"></i>
++          <div class="HM_Number">
++            <h1>選擇人數</h1>
++            <div class="HM_choseNumber">
++              <i class="fas fa-minus"></i>
++              <input type="number" value="1" min="1" class="number_people">
++              <i class="fas fa-plus"></i>
++            </div>
+           </div>
+ 
+           <div class="ex20px"></div>
