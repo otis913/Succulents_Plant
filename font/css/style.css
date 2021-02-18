@@ -383,6 +383,47 @@ table {
 @media screen and (max-width: 768px) {
   .top {
     width: 100vw;
+    position: relative;
+  }
+  .top img {
+    width: 50px;
+    height: 50px;
+    margin-left: 50px;
+  }
+  .top .ham {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 350px;
+    margin-top: 15px;
+  }
+  .top .header_mid {
+    width: 100vw;
+    flex-direction: column;
+    padding: 0;
+    position: absolute;
+    top: -550px;
+    margin-left: 0;
+    background-color: aliceblue;
+  }
+  .top .header_mid li {
+    z-index: 9;
+    width: 100vw;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .top .header_mid li a {
+    display: block;
+    text-align: center;
+    width: 100vw;
+  }
+  .top .header_right {
+    justify-content: unset;
+    margin: 0;
+    position: absolute;
+    top: 2px;
+    right: -40px;
+    display: none;
   }
 }
 
