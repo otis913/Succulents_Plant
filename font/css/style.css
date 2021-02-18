@@ -2883,6 +2883,12 @@ body {
   justify-content: center;
 }
 
+@media (max-width: 990px) {
+  .handmake_section {
+    flex-direction: column;
+  }
+}
+
 .handmake_left {
   background-size: contain;
   font-weight: bold;
@@ -2892,7 +2898,15 @@ body {
 }
 
 .handmake_left h1 {
-  margin: 10px;
+  text-align: left;
+  margin: 10px 0 10px 50px;
+}
+
+@media (max-width: 990px) {
+  .handmake_left {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .handmake_left .handmake_left_class {
@@ -2900,10 +2914,17 @@ body {
   flex-direction: column;
 }
 
+@media (max-width: 990px) {
+  .handmake_left .handmake_left_class {
+    flex-direction: row;
+  }
+}
+
 .handmake_left .handmake_left_class button {
+  width: 70%;
   background-color: transparent;
   border-radius: 5px;
-  margin: 5px 10px;
+  margin: 5px auto;
   color: #fff;
   border: 1.5px solid #fff;
   padding: 5px;
@@ -2922,24 +2943,27 @@ body {
 }
 
 .handmake_left .custom_select {
-  width: 200px;
+  width: auto;
+  padding: 2% 15%;
+  border-radius: 5px;
 }
 
-.handmake_left .choseNumber {
-  margin: 10px;
-}
-
-.handmake_left .choseNumber .number_people {
-  width: 40px;
+.handmake_left .custom_select option {
   text-align: center;
 }
 
-.handmake_left .choseNumber .fa-minus {
+.handmake_left .HM_Number .HM_choseNumber .number_people {
+  width: 20%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.handmake_left .HM_Number .HM_choseNumber .fa-minus {
   margin: 0 10px;
   cursor: pointer;
 }
 
-.handmake_left .choseNumber .fa-plus {
+.handmake_left .HM_Number .HM_choseNumber .fa-plus {
   margin: 0 10px;
   cursor: pointer;
 }
@@ -2954,6 +2978,12 @@ body {
 
 .handmake_left .SignUp {
   margin: 20px;
+}
+
+@media (max-width: 990px) {
+  .handmake_left .SignUp {
+    display: none;
+  }
 }
 
 .handmake_right {
@@ -2979,6 +3009,7 @@ body {
 
 .handmake_right .handmake_right_main p {
   margin: 10px 40px;
+  text-align: left;
 }
 
 .handmake_right .handmake_right_main p:nth-child(2) {
@@ -3003,6 +3034,20 @@ body {
   background-color: #fff;
   border-radius: 10px;
   padding: 10px 0;
+}
+
+.handmake_right .handmake_left_text_RWD {
+  display: none;
+}
+
+.handmake_right .SignUp_RWD {
+  display: none;
+}
+
+@media (max-width: 990px) {
+  .handmake_right .SignUp_RWD {
+    display: block;
+  }
 }
 
 .blogpage02 {

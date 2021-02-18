@@ -19,12 +19,15 @@ body{
   // color:#eeebeb;
 }
 .full_wrapper{
-  // background-image: url(../img/1.jpg);
+ 
 }
 
 .handmake_section{
     display: flex;
     justify-content: center;
+    @include pad{
+      flex-direction: column;
+    }
 }
 
 .handmake_left{
@@ -34,21 +37,29 @@ body{
   border-radius: 10px;
   color:#fff ;
   h1{
-    margin: 10px;
+    text-align: left;
+    margin:10px 0 10px 50px;
   }
-    .handmake_left_class{
+  @include pad{
+    display: flex;
+    flex-direction: column;
+
+  }
+     .handmake_left_class{
       display: flex;
       flex-direction: column;
-     
+      @include pad{
+        flex-direction: row;
+      }
         button {
+          width: 70%;
           background-color:transparent;
           border-radius: 5px;
-          margin: 5px 10px;
+          margin: 5px auto;
           color: #fff;
           border: 1.5px solid #fff;
           padding: 5px;
           font-weight: bold;
-          // width: 200psx;
           cursor: pointer; 
         }
         button:hover{
@@ -63,28 +74,34 @@ body{
       cursor:pointer;
     }
     .custom_select{
-      // margin-left: 10px;
-      width: 200px;
+      width: auto;
+      padding: 2% 15%;
+      border-radius: 5px;
+      option{
+        text-align: center;
+      }
     }
 
-    .choseNumber{
-      // display: flex;
-      margin: 10px;
-        .number_people{
-          width: 40px;
-          text-align: center;
-        }
+    .HM_Number{
+      
+
+      .HM_choseNumber{
         
+        .number_people{
+          width: 20%;
+          text-align: center;          
+          border-radius: 5px;          
+        }
         .fa-minus{
-   
           margin:0 10px;
           cursor:pointer;
         }
         .fa-plus{
-
           margin:0 10px;
           cursor:pointer;
         }
+      }
+        
     }
 
     .handmake_left_text{
@@ -98,6 +115,9 @@ body{
 
     .SignUp{
       margin: 20px;
+      @include pad{
+        display: none;
+      }
     }
 
 }
@@ -105,6 +125,7 @@ body{
 .handmake_right{
   margin-left: 10px;
   color: #2f4f4f;
+  
   h1{
     font-weight: bold;
     margin: 10px;
@@ -120,9 +141,11 @@ body{
   .handmake_right_main{
     padding-left: 50px;
     text-align: left;
-    // color:#eeebeb;
+
     p{
-      margin:10px 40px
+      margin:10px 40px;
+    text-align: left;
+
     }
     p:nth-child(2){
       font-weight: bold;
@@ -145,7 +168,21 @@ body{
     border-radius: 10px;
     padding: 10px 0;
   }
+
+  .handmake_left_text_RWD{
+    display: none;
+
+  }
+  .SignUp_RWD{
+    display: none;
+    @include pad{
+      display: block;
+    }
+  }
+    
 }
+
+
 
 
 
