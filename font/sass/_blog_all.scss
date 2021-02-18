@@ -11,7 +11,7 @@
 }
 
 article{
-    ul{
+    .blogall_ul{
         display: flex;
         width: 800px;
         margin: 0 auto;
@@ -51,7 +51,7 @@ article{
         }
     }
     article{
-        ul{
+        .blogall_ul{
             width: 90vw;
             flex-wrap: wrap;
             .blog_word{
@@ -70,7 +70,7 @@ article{
 
 @media screen and (max-width:768px){
     article{
-        ul{
+        .blogall_ul{
             width: 600px;
         }
     }
