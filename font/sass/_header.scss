@@ -2,11 +2,14 @@
     width: 1920px;
     display: flex;
     margin-bottom: 40px;
+    position: fixed;
+    z-index: 9;
     img{
         width: 100px; 
         height: 100px;
         margin-left: 200px;
         margin-top: 20px;
+        z-index: 9;
     }
     ul{
         display: flex;
@@ -138,4 +141,22 @@
         display: none;
     }
 }
+}
+
+@media screen and (max-width:990px){
+    .top{
+        width: 100vw;
+        img{
+            margin-left: 50px;
+        }
+        ul{
+            margin-left: 50px;
+        }
+        a{
+            width: 100px;
+        }
+    }
+    .header_right{
+        margin-right: 20px;
+    }
 }

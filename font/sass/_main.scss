@@ -22,14 +22,17 @@ $index_fz:(
 }
 //輪播
 nav{
+   
     width:100%;
     margin: 0 auto;
     margin-bottom: 60px;
+    margin-top: 130px;
     // outline: 1px solid red;
     .index_run{
         width: 1200px;
         margin: 0 auto;
         display: flex;
+        padding-top: 200px;
         .show{
             flex-grow: 1;
             flex-shrink: 1;
@@ -361,6 +364,7 @@ article{
         }
         ul{
             display: flex;
+            width: 1000px;
             justify-content: space-between;
             li{
                 img{

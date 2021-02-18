@@ -287,6 +287,8 @@ table {
   width: 1920px;
   display: flex;
   margin-bottom: 40px;
+  position: fixed;
+  z-index: 9;
 }
 
 .top img {
@@ -294,6 +296,7 @@ table {
   height: 100px;
   margin-left: 200px;
   margin-top: 20px;
+  z-index: 9;
 }
 
 .top ul {
@@ -427,16 +430,36 @@ table {
   }
 }
 
+@media screen and (max-width: 990px) {
+  .top {
+    width: 100vw;
+  }
+  .top img {
+    margin-left: 50px;
+  }
+  .top ul {
+    margin-left: 50px;
+  }
+  .top a {
+    width: 100px;
+  }
+  .header_right {
+    margin-right: 20px;
+  }
+}
+
 nav {
   width: 100%;
   margin: 0 auto;
   margin-bottom: 60px;
+  margin-top: 130px;
 }
 
 nav .index_run {
   width: 1200px;
   margin: 0 auto;
   display: flex;
+  padding-top: 200px;
 }
 
 nav .index_run .show {
@@ -783,6 +806,7 @@ article .index_diy .h1_small {
 
 .index_blog article ul {
   display: flex;
+  width: 1000px;
   justify-content: space-between;
 }
 
@@ -2984,6 +3008,7 @@ body {
 .blog_turn {
   width: 100%;
   position: relative;
+  padding-top: 130px;
 }
 
 .blog_turn img {
@@ -3007,6 +3032,7 @@ article p {
 }
 
 .blog_all_top {
+  padding-top: 130px;
   width: 100%;
   position: relative;
 }
