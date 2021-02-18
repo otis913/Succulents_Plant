@@ -3005,6 +3005,133 @@ body {
   padding: 10px 0;
 }
 
+.blogpage02 {
+  width: 100%;
+}
+
+.blogpage021200px {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blogpage02title {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.blogpage02title h1 {
+  font-weight: bold;
+}
+
+.blogpage02titleimg {
+  overflow: hidden;
+  max-width: 800px;
+  height: 400px;
+  margin: 10px auto;
+  border-radius: 40px;
+}
+
+.blogpage02titleimg img {
+  width: 1000px;
+}
+
+.blogpage02title p {
+  text-align: center;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.blogpage02title01 {
+  display: flex;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.blogpage02title01text p {
+  max-width: 500px;
+  margin: 20px 50px;
+  text-align: left;
+}
+
+.blogpage02title01img {
+  overflow: hidden;
+  max-width: 370px;
+  max-height: 250px;
+  border-radius: 40px;
+  order: 2;
+}
+
+.blogpage02title01img img {
+  width: 500px;
+}
+
+.blogpage02title02 {
+  display: flex;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.blogpage02title02 p {
+  max-width: 500px;
+  margin: 20px 50px;
+  text-align: left;
+}
+
+.blogpage02title02img {
+  overflow: hidden;
+  max-width: 370px;
+  max-height: 250px;
+  border-radius: 40px;
+}
+
+.blogpage02title02img img {
+  width: 500px;
+}
+
+@media (max-width: 990px) {
+  .blogpage02 p {
+    font-size: 10px;
+  }
+  .blogpage02 .blogpage02title01 p {
+    margin: 10px 10px;
+  }
+  .blogpage02 .blogpage02title02 p {
+    margin: 10px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blogpage02 .blogpage02title01 {
+    display: block;
+  }
+  .blogpage02title01img {
+    order: 0;
+    margin: 10px auto;
+    max-width: 500px;
+  }
+  .blogpage02title01img img {
+    width: 700px;
+  }
+  .blogpage02 .blogpage02title01text p {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .blogpage02 .blogpage02title02 {
+    display: block;
+  }
+  .blogpage02title02img {
+    margin: 10px auto;
+    max-width: 500px;
+  }
+  .blogpage02title02img img {
+    width: 700px;
+  }
+  .blogpage02 .blogpage02title02text p {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
 .blog_turn {
   width: 100%;
   position: relative;
@@ -4018,6 +4145,375 @@ article ul li {
   background-color: #d9a420;
   color: #2f4f4f;
   border-radius: 5px;
+}
+
+article {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+}
+
+.memberarticle {
+  display: flex;
+  padding-left: 50px;
+  width: 100%;
+}
+
+.membergreen .btn_green a {
+  margin: 20px 0;
+  border: #2f4f4f solid 3px;
+  background-color: #eeebeb;
+  color: #2f4f4f;
+}
+
+.member {
+  margin: 20px 20px;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.member h1 {
+  background-color: #2f4f4f;
+  color: #ffffff;
+  border-radius: 20px;
+  line-height: 3;
+}
+
+.memberPeopleAvatars {
+  max-width: 400px;
+  display: flex;
+  align-items: flex-start;
+  margin: 20px auto;
+}
+
+.memberPeopleAvatarsimg {
+  margin-top: 20px;
+  position: relative;
+}
+
+.memberPeopleAvatarsimg i {
+  z-index: 2;
+  position: absolute;
+  top: 80px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.memberPeopleAvatarsimg i input {
+  z-index: -1;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  bottom: 15px;
+}
+
+.PeopleAvatars {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+.member ul {
+  text-align: left;
+  width: 300px;
+  margin-left: 20px;
+}
+
+.member ul li {
+  margin: 10px 0;
+}
+
+.member .bubble_btnn {
+  margin: 30px 0;
+}
+
+.OrderTracking {
+  margin: 20px 20px;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.OrderTracking h1 {
+  background-color: #2f4f4f;
+  color: #ffffff;
+  border-radius: 20px;
+  line-height: 3;
+}
+
+.OrderTracking table {
+  border: #eeebeb solid 2px;
+  margin: 20px auto;
+  width: 80%;
+}
+
+.OrderTracking .OrderTrackingtitle {
+  background-color: #eeebeb;
+}
+
+.OrderTracking .OrderTrackingChild {
+  border-bottom: #eeebeb dashed 2px;
+}
+
+.OrderTracking td {
+  line-height: 3;
+}
+
+.OrderTracking .OrderTrackingcol {
+  text-align: left;
+  padding: 0 10px;
+}
+
+.OrderTracking td img {
+  max-width: 50px;
+  margin-top: 10px;
+}
+
+.OrderTracking i {
+  cursor: pointer;
+}
+
+.OrderTracking h2 {
+  text-align: left;
+  line-height: 1;
+}
+
+.OrderTracking h3 {
+  text-align: left;
+}
+
+.OrderTracking ul li {
+  text-decoration: none;
+  text-align: left;
+  color: #918f8f;
+  font-size: 10px;
+  max-width: 150px;
+  margin-left: 10px;
+}
+
+.MyCollection {
+  margin: 20px 20px;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.MyCollection h1 {
+  background-color: #2f4f4f;
+  color: #ffffff;
+  border-radius: 20px;
+  line-height: 3;
+}
+
+.MyCollectionPage {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.MyCollectionLove {
+  border: #eeebeb solid 1px;
+  margin: 30px auto;
+}
+
+.MyCollectionLoveimg {
+  margin: 10px 10px;
+}
+
+.MyCollectionLovegreen {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px auto;
+  max-width: 190px;
+}
+
+.MyCollectionLovegreeni {
+  border: solid #eeebeb 2px;
+  border-radius: 5px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.MyCollectionLovegreen i {
+  width: 30px;
+  margin: 12px auto;
+}
+
+.MyCollectionLovegreen .btn_green {
+  max-width: 140px;
+  margin-left: 10px;
+}
+
+.MyCollectionLovegreen .btn_green a {
+  max-width: 140px;
+  line-height: 10px;
+}
+
+.Ihaveaquestion {
+  width: 100%;
+  margin: 0 20px;
+}
+
+.Ihaveaquestionadd {
+  margin: 20px 20px;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+  min-height: 100px;
+  max-width: 870px;
+}
+
+.IhaveaquestionaddQuestion {
+  border-bottom: solid 3px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.IhaveaquestionaddQuestionimg {
+  border: solid red 3px;
+  width: 70px;
+  height: 65px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.IhaveaquestionaddQuestion h2 {
+  margin: 0 auto;
+}
+
+.Ihaveaquestionadd h3 {
+  text-align: right;
+  max-width: 800px;
+}
+
+.Ihaveaquestionenter {
+  margin: 20px 20px;
+  height: 60px;
+  display: flex;
+}
+
+.Ihaveaquestion input {
+  width: 80%;
+  background-color: #eeebeb;
+  border-radius: 10px;
+  border: none;
+  margin-top: 20px;
+  height: 60px;
+}
+
+.Ihaveaquestionenter .bubble_btnn {
+  margin-top: 10px;
+}
+
+.Ihaveaquestion .bubble_btnn a {
+  max-width: 200px;
+}
+
+.IhaveaquestionaddQuestionadd {
+  display: flex;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.IhaveaquestionaddQuestionaddbg {
+  margin: 0 10px;
+  width: 100%;
+  background-color: #eeebeb;
+  border-radius: 5px;
+}
+
+.IhaveaquestionaddQuestionadd h2 {
+  margin-top: 20px;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.IhaveaquestionaddQuestionadd h3 {
+  margin-right: 10px;
+}
+
+.OrderTracking {
+  display: none;
+}
+
+.MyCollection {
+  display: none;
+}
+
+.Ihaveaquestion {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .memberarticle {
+    display: block;
+    font-size: 0.1em;
+  }
+  .memberarticle .bubble_btnn a {
+    max-width: 70px;
+    line-height: 2;
+    font-size: 0.1em;
+  }
+  .membergreen .btn_green {
+    display: flex;
+  }
+  .member {
+    margin-left: -5px;
+  }
+  .memberPeopleAvatars {
+    display: block;
+    width: 100%;
+  }
+  .memberPeopleAvatars .memberPeopleAvatarsimg img {
+    margin: 0 auto;
+  }
+  .memberPeopleAvatars .memberPeopleAvatarsimg i {
+    width: 100%;
+    position: absolute;
+    left: 37px;
+    bottom: 4px;
+  }
+  .memberPeopleAvatarsimg i input {
+    width: 10px;
+    height: 10px;
+    position: relative;
+    top: 8px;
+    right: 14px;
+  }
+  .memberPeopleAvatars ul {
+    margin: 20px auto;
+    max-width: 220px;
+  }
+  .OrderTracking {
+    margin-left: -5px;
+  }
+  .OrderTracking td {
+    line-height: 1;
+  }
+  .MyCollection {
+    margin-left: -5px;
+  }
+  .MyCollection .btn_green {
+    width: 100%;
+  }
+  .MyCollection .btn_green a {
+    max-width: 80px;
+    margin-right: 0.1px;
+  }
+  .Ihaveaquestion {
+    margin-left: -20px;
+  }
 }
 
 section {

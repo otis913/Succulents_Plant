@@ -4,9 +4,6 @@
 
 //手作課程
 //部落格
-article{
-    width: 100%;
-}
 .blogpage02{
     width: 100%;
 }
@@ -28,6 +25,9 @@ article{
     margin: 10px auto;
     border-radius: 40px;
 }
+.blogpage02titleimg img{
+    width: 1000px;
+}
 .blogpage02title p{
     text-align: center;
     max-width: 500px;
@@ -46,8 +46,12 @@ article{
 .blogpage02title01img{
     overflow: hidden;
     max-width: 370px;
-    height: 270px;
+    max-height: 250px;
     border-radius: 40px;
+    order: 2;
+}
+.blogpage02title01img img{
+    width: 500px;
 }
 .blogpage02title02{
     display: flex;
@@ -62,9 +66,62 @@ article{
 .blogpage02title02img{
     overflow: hidden;
     max-width: 370px;
-    height: 270px;
+    max-height: 250px;
     border-radius: 40px;
 }
+.blogpage02title02img img{
+    width: 500px;
+}
+//RWD
+    @media (max-width: 990px) {
+        .blogpage02 p{
+            font-size: 10px;
+        }
+        .blogpage02 .blogpage02title01 p{
+            margin: 10px 10px;
+        }
+        .blogpage02 .blogpage02title02 p{
+            margin: 10px 10px;
+        }
+    }
+  
+    @media (max-width: 768px) {
+        .blogpage02 .blogpage02title01{
+            display: block;
+        }
+        .blogpage02title01img{
+            order: 0;
+            margin: 10px auto;
+            max-width: 500px;
+        }
+        .blogpage02title01img img{
+            width: 700px;
+        }
+        .blogpage02 .blogpage02title01text p{
+            text-align: center;
+             margin: 0 auto;
+        }
+        .blogpage02 .blogpage02title02{
+            display: block;
+        }
+        .blogpage02title02img{
+            margin: 10px auto;
+            max-width: 500px;
+        }
+        .blogpage02title02img img{
+            width: 700px;
+        }
+        .blogpage02 .blogpage02title02text p{
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+  
+    @media (max-width: 414px) {
+    }
+  
+
+
 
 //購物車＆結帳系統
 //會員中心 & 會員登入
