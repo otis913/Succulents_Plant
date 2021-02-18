@@ -7,26 +7,26 @@
 //----------------以上不要動！！，以下開放自己的sass，按照自己的區塊放(可自己更動區塊名字)-------------------------
 @import "sass/header";
 //首頁
-@import"sass/main";
+@import "sass/main";
 //商品頁＆商品內頁
-@import"sass/shop";
-@import"sass/product";
+@import "sass/shop";
+@import "sass/product";
 // //客製化多肉 ＆ 心理測驗
 @import "sass/custom";
 @import "sass/mindtest";
 
 //手作課程
-@import"sass/handmakeStyle";
+@import "sass/handmakeStyle";
 //部落格
-@import"sass/blogpagetwo";
+@import "sass/blogpagetwo";
 @import "sass/blog1";
 @import "sass/blog_all";
 //購物車＆結帳系統
-@import"sass/shopcart";
+@import "sass/shopcart";
 //會員中心 & 會員登入
-@import"sass/MemberCenter";
+@import "sass/MemberCenter";
 //Q&A
-@import"./sass/qa";
+@import "./sass/qa";
 
 //泡泡
 @import "sass/circle";
@@ -101,7 +101,6 @@ article {
 .full_wrapper {
   @include full_wrapper;
 }
-
 
 // footer
 footer {
