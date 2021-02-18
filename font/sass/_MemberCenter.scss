@@ -8,6 +8,9 @@
   article{
     width: 100%;
   }
+  body{
+    width: 100%;
+  }
   .memberarticle{
     display: flex;
     padding-left: 50px;
@@ -16,6 +19,9 @@
   // 個人資料
   .membergreen .btn_green a{
     margin: 20px 0;
+    border: map-get($color, "main_g") solid 3px;
+    background-color: map-get($color, "gray");
+    color: map-get($color, "main_g");
   }
   .member{
     @include memberin;
@@ -30,13 +36,24 @@
     margin: 20px auto;
   }
   .memberPeopleAvatarsimg{
+    margin-top: 20px;
     position: relative; 
   }
   .memberPeopleAvatarsimg i{
+    z-index: 2;
    position: absolute;
-   left: -13px;
-   bottom: 5px;
-   width: 200px;
+   top: 80px;
+   right: 5px;
+   width: 20px;
+   height: 20px;
+   cursor: pointer;
+  }
+  .memberPeopleAvatarsimg i input{
+    z-index: -1;
+  width: 15px;  
+  height: 15px;
+  position: relative;
+  bottom: 15px;
   }
   .PeopleAvatars{
     width: 100px;
@@ -49,7 +66,10 @@
     margin-left: 20px;
   }
   .member ul li{
-    margin: 20px 0;
+    margin: 10px 0;
+  }
+  .member .bubble_btnn{
+    margin: 30px 0;
   }
   // 所有訂單
   .OrderTracking{
@@ -61,6 +81,7 @@
   .OrderTracking table{
     border: map-get($color, "gray") solid 2px;
     margin: 20px auto;
+    width: 80%;
   }
   .OrderTracking .OrderTrackingtitle{
     background-color: map-get($color, "gray");
@@ -69,11 +90,18 @@
     border-bottom: map-get($color, "gray") dashed 2px;
   }
   .OrderTracking td{
-    padding: 0 10px;
     line-height: 3;
   }
+  .OrderTracking .OrderTrackingcol{
+    text-align: left;
+    padding: 0 10px;
+  }
   .OrderTracking td img{
-    width: 50px;
+    max-width: 50px;
+    margin-top: 10px;
+  }
+  .OrderTracking i{
+    cursor: pointer;
   }
   .OrderTracking h2{
     text-align: left;
@@ -118,19 +146,25 @@
     border: solid map-get($color, "gray") 2px;
     border-radius: 5px;
     width: 40px;
+    cursor: pointer;
   }
   .MyCollectionLovegreen i{
     width: 30px;
     margin: 12px auto;
   }
+  .MyCollectionLovegreen .btn_green{
+    max-width: 140px; 
+    margin-left: 10px;
+  }
   .MyCollectionLovegreen .btn_green a{
     max-width: 140px;
     line-height: 10px;
-    margin-left: 10px;
+   
   }
   // 我有問題
   .Ihaveaquestion{
     width: 100%;
+    margin: 0 20px;
   }
   .Ihaveaquestionadd{
     @include memberin;
@@ -198,6 +232,7 @@
     margin-right: 10px;
   }
   // 3333
+ 
   .OrderTracking{
     display: none;
   }
@@ -207,14 +242,72 @@
   .Ihaveaquestion{
     display: none;
   }
-  // 333
 
   //RWD
-  @media (max-width: 990px) {
-  }
 
-  @media (max-width: 768px) {
+    @media (max-width: 990px) {
     }
-
-  @media (max-width: 414px) {
+  
+    @media (max-width: 768px) {
+      .memberarticle{
+        display: block;
+        font-size: 0.1em;
+      }
+      .memberarticle .bubble_btnn a{
+        max-width: 70px;
+        line-height: 2;
+        font-size: 0.1em;
+      }
+      .membergreen .btn_green{
+        display: flex;
+      }
+      .member{
+        margin-left: -5px;
+      }
+      .memberPeopleAvatars{
+        display: block;
+        width: 100%;
+      }
+      .memberPeopleAvatars .memberPeopleAvatarsimg img{
+        margin: 0 auto;
+      }
+      .memberPeopleAvatars .memberPeopleAvatarsimg i{
+        width: 100%;
+        position: absolute;
+        left: 37px;
+        bottom: 4px;
+      }
+      .memberPeopleAvatarsimg i input{
+        width: 10px;
+        height: 10px;
+        position: relative;
+        top: 8px;
+        right: 14px;
+      }
+      .memberPeopleAvatars ul{
+        margin: 20px auto;
+        max-width: 220px;
+      }
+      .OrderTracking{
+        margin-left: -5px;
+      }
+      .OrderTracking td{
+        line-height: 1;
+      }
+      .MyCollection{
+        margin-left: -5px;
+      }
+      .MyCollection .btn_green{
+        width: 100%;
+      }
+      .MyCollection .btn_green a{
+        max-width: 80px;
+        margin-right: 0.1px;
+      }
+      .Ihaveaquestion{
+        margin-left: -20px;
+      }
+    }
+  
+    @media (max-width: 414px) {
     }
