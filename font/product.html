@@ -324,29 +324,45 @@
 
   <!-- Initialize Swiper -->
   <script>
-    var swiper = new Swiper('.swiper-container', {
+
+var swiper = new Swiper('.swiper-container', {
       slidesPerView: 1,
-      spaceBetween: 10,
-      // init: false,
+      spaceBetween: 0,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      keyboard: {
+        enabled: true,
+      },
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
       },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
       breakpoints: {
-        414: {
-          slidesPerView: 4,
-          spaceBetween: 10,
+        428: {
+          slidesPerView: 2,
+          spaceBetween: 0,
         },
         768: {
-          slidesPerView: 4,
-          spaceBetween: 20,
+          slidesPerView: 3,
+          spaceBetween: 0,
         },
+        
         990: {
           slidesPerView: 4,
-          spaceBetween: 20,
+          spaceBetween: 10,
+          slidesPerGroup: 3,
+      
         },
+        
       }
     });
+
 
   </script>
 </body>
