@@ -23,22 +23,6 @@
 </head>
 <body>
 
-    <!-- 目前共用的標籤 
-        body
-        html
-        section
-        article
-        .bread
-        .btn_green
-        .btn_yellow
-        .bubble_btnn
-        .ex
-        footer
-    -->
-
-
-    <!-- section 的範圍為全螢幕，主要用來放background-image的-->
-    <!-- 要新增背景圖請另外加class ex:class="full_wrapper" -->
     <section class="full_wrapper">
 
 
@@ -51,50 +35,6 @@
 
 
 
-
-        <!-- article 的內容的安全範圍(1200px)，每個區塊都用一個article包起來 -->
-        <article>
-            <!-- 內容放這裡 -->
-            <div class="qa" >
-              <img src="img/QA/QA_LOGO.png" alt="">
-            </div>
-            <div class="qaBg">
-              <div class="cancel"></div>
-              <div class="question">
-                <h2>Q:想更換或取消訂單，怎麼辦呢？</h2>
-                <p class="ans">A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
-              </div>
-              <div class="question1">
-                <h2>Q:收到商品了，可以退換貨嗎？</h2>
-                <p class="ans1">A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
-              </div>
-              <div class="question2">
-                <h2>Q:如何查詢我的訂單是否成立</h2>
-                <p class="ans2">A:您可以登入在『會員中心』查詢，在『訂單明細』中，方便您掌握商品狀況！</p>
-              </div>
-              <div class="question3">
-                <h2>Q:是否提供商品保固？</h2>
-                <p class="ans3">A:恕本店不提供保固期，敬請見諒！</p>
-              </div>
-              <div class="question4">
-                <h2>Q:忘記密碼怎麼辦？</h2>
-                <p class="ans4">A:請於“會員登入”頁面，點選“忘記密碼”，填完註冊信箱，會有專人為您服務！</p>
-              </div>
-              <div class="cusQ" id="app">
-                <div class="cusQUS" >{{message}}</div>
-                <div class="answer">we will hope you</div>
-                <div class="adimit" > <input type="text" v-model="message"><button class="btn">送出</button></div>
-              </div>
-              
-            </div>
-          
-
-
-        </article>
-
-
-
-
         <!-- 用來調整上下間隔高度的，高度目前設定為100px，一定要放在section裡 -->
         <div class="ex"></div>
         <div class="ex"></div>
@@ -104,6 +44,51 @@
         <div class="ex"></div> -->
        
     </section>
+
+
+
+
+
+
+     <!-- QA仙人掌開始 -->
+     <section class="qa_pos">
+      <div class="qa_wrapper">
+          <img src="img/QA/QA_LOGO.png" alt="">
+      </div>   
+      
+      <div class="qaBg_wrapper" id="app">
+          <div class="qaBg">
+            <img src="img/QA/QA_close.png" alt="" class="cancel">
+            <ul>
+              <li class="question">
+                  <h2>Q:想更換或取消訂單，怎麼辦呢？</h2>
+                  <p>A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
+              </li>
+              <li class="question">
+                  <h2>Q:想更換或取消訂單，怎麼辦呢？</h2>
+                  <p>A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
+              </li>
+              <li class="question">
+                <h2>Q:想更換或取消訂單，怎麼辦呢？</h2>
+                <p>A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
+              </li>
+
+              <div class="cusQUS" >{{message}}</div>
+              <div class="answer">we will hope you</div>
+            </ul> 
+            
+            <div class="cusQ" >
+                <div class="adimit">
+                  <input type="text" v-model="message">
+                  <button class="btn">送出</button>
+                </div>
+            </div>
+          
+          </div>
+      
+      </div>
+  </section>
+  <!-- QA仙人掌結束 -->
   
 
 

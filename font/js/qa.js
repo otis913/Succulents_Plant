@@ -3,20 +3,9 @@ $(document).ready(function() {
         $(".qa").hide();
         $(".qaBg").toggle();
     })
-    $(".question").click(function(){
-        $(".ans").toggle();      
-    })
-    $(".question1").click(function(){
-        $(".ans1").toggle();      
-    })
-    $(".question2").click(function(){
-        $(".ans2").toggle();      
-    })
-    $(".question3").click(function(){
-        $(".ans3").toggle();      
-    })
-    $(".question4").click(function(){
-        $(".ans4").toggle();      
+    $(".question h2").click(function(){
+        $(this).parent().find('p').slideToggle();
+        $(this).parent().siblings().find('p').slideUp();    
     })
     $(".btn").click(function(){
         $(".answer").show();      
@@ -29,7 +18,8 @@ $(document).ready(function() {
        
     })
     $(".cancel").click(function(){
-        $(".qaBg").hide();      
+        $(".qaBg_wrapper").slideUp(700);  
+        $(".qa_wrapper img").slideDown(700);     
     })
 
 })
