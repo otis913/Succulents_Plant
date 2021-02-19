@@ -53,6 +53,7 @@ article .-heart {
   background-repeat: no-repeat;
   @include mobile() {
     height: 45vh;
+    margin-top: 0;
   }
   @include phone() {
     height: 30vh;

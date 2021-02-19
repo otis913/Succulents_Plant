@@ -97,6 +97,9 @@ article {
   font-size: map-get($fontsize, "mini");
   display: flex;
   margin-top: 130px;
+  @include mobile() {
+    margin-top: 0;
+  }
 }
 
 .full_wrapper {
