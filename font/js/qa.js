@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $(".qa").click(function(){
         $(".qa").hide();
-        $(".qaBg").show();
+        $(".qaBg").toggle();
     })
     $(".question").click(function(){
         $(".ans").toggle();      
