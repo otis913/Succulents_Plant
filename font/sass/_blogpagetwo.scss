@@ -21,21 +21,15 @@
     max-width: 1000px;
     margin: 50px auto;
 }
+.blogpage02title img{
+    width: 100%;
+}
 .blogpage02title h1{
     font-weight: bold;
 }
-.blogpage02titleimg{
-    overflow: hidden;
-    max-width: 800px;
-    height: 400px;
-    margin: 10px auto;
-    border-radius: 40px;
-}
-.blogpage02titleimg img{
-    width: 1000px;
-}
+
 .blogpage02title p{
-    text-align: center;
+    text-align: left;
     max-width: 500px;
     margin: 20px auto;
 }
@@ -44,40 +38,30 @@
     max-width: 1000px;
     margin: 50px auto;
 }
-.blogpage02title01text p{
-    max-width: 500px;
-    margin: 20px 50px;
-    text-align: left;
-}
-.blogpage02title01img{
-    overflow: hidden;
-    max-width: 370px;
-    max-height: 250px;
-    border-radius: 40px;
+.blogpage02title01 img{
+    width: 30%;
     order: 2;
 }
-.blogpage02title01img img{
-    width: 500px;
+.blogpage02title01text p{
+    width: 90%;
+    margin: 20px 0;
+    text-align: left;
 }
 .blogpage02title02{
     display: flex;
     max-width: 1000px;
     margin: 50px auto;
 }
+.blogpage02title02 img{
+    width: 30%;
+}
 .blogpage02title02 p{
-    max-width: 500px;
-    margin: 20px 50px;
+    width: 90%;
+    margin: 20px 0;
+    margin-left: 70px;
     text-align: left;
 }
-.blogpage02title02img{
-    overflow: hidden;
-    max-width: 370px;
-    max-height: 250px;
-    border-radius: 40px;
-}
-.blogpage02title02img img{
-    width: 500px;
-}
+
 //RWD
     @media (max-width: 990px) {
         .blogpage02 p{
@@ -95,14 +79,10 @@
         .blogpage02 .blogpage02title01{
             display: block;
         }
-        .blogpage02title01img{
-            order: 0;
-            margin: 10px auto;
-            max-width: 500px;
+        .blogpage02 .blogpage02title01 img{
+            width: 60%;
         }
-        .blogpage02title01img img{
-            width: 700px;
-        }
+        
         .blogpage02 .blogpage02title01text p{
             text-align: center;
              margin: 0 auto;
@@ -110,13 +90,10 @@
         .blogpage02 .blogpage02title02{
             display: block;
         }
-        .blogpage02title02img{
-            margin: 10px auto;
-            max-width: 500px;
+        .blogpage02 .blogpage02title02 img{
+            width: 60%;
         }
-        .blogpage02title02img img{
-            width: 700px;
-        }
+    
         .blogpage02 .blogpage02title02text p{
             text-align: center;
             margin: 0 auto;
