@@ -15,7 +15,7 @@
 .registered_enter_bg{
     background-color: map-get($color, "main_g");
     color: map-get($color, "white");
-    margin: 100px auto;
+    margin: 5vh auto;
     border-radius: 30px;
     padding-bottom: 30px;
     position: relative;
@@ -40,7 +40,7 @@
     margin: 0 auto;
 }
 .registered_enter_text li{
-    font-size: 20px;
+    font-size: 10px;
     margin: 0 auto;
     width: 100%;
     text-align: left;
@@ -50,12 +50,15 @@
 }
 .registered_enter_text li input{
     width: 100%;
-    font-size: 20px;
+    font-size: 1px;
+}
+.registered_enter_bg .bubble_btnn{
+    margin-top: 16px;
 }
 .registered_enter_bg .bubble_btnn a{
-    font-size: 20px;
-    width: 100%;
-    padding: 10px 20px;
+    font-size: 1px;
+    width: 100px;
+    padding: 5px;
 }
 .registered_enter_registered{
     margin: 0 auto;

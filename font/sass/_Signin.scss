@@ -2,7 +2,7 @@
     position: relative;
 }
 .Signin_enter{
-    width: 60%;
+    width: 50%;
     border-radius: 30px;
     position: fixed;
     top: 0;
@@ -13,9 +13,9 @@
 .Signin_enter_bg{
     background-color: map-get($color, "main_g");
     color: map-get($color, "white");
-    margin: 100px auto;
+    margin: 5vh auto;
     border-radius: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     position: relative;
 }
 .Signin_enter_bg_x{
@@ -26,19 +26,19 @@
     cursor: pointer;
 }
 .Signin_enter_bg_logo{
-    width: 70%;
+    width: 30%;
     margin-top: 50px;
 }
 .Signin_enter_bg a{
     color: map-get($color, "white");
-    font-size: 10px;
+    font-size: 1px;
 }
 .Signin_enter_text{
     width: 70%;
     margin: 0 auto;
 }
 .Signin_enter_text li{
-    font-size: 20px;
+    font-size: 10px;
     margin: 0 auto;
     margin-top: 20px;
     width: 100%;
@@ -49,16 +49,14 @@
 }
 .Signin_enter_text li input{
     width: 100%;
-    font-size: 20px;
+    font-size: 10px;
 }
-.bubble_btnn{
-    margin-top: 30px;
-}
+
 .Signin_enter_bg .bubble_btnn a{
-    font-size: 20px;
-    width: 100%;
-    padding: 20px;
-    margin: 20px auto;
+    font-size: 1px;
+    width: 100px;
+    padding: 5px;
+    margin: 10px auto;
 }
 .Signin_enter_registered{
     margin: 0 auto;
