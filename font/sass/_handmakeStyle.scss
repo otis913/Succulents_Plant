@@ -25,6 +25,11 @@ body{
   // color:#eeebeb;
 }
 
+@mixin HM600RWD {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
 
 .handmake_section{
     display: flex;
@@ -49,19 +54,21 @@ body{
     text-align: left;
     margin:10px 0 10px 50px;
     @include pad{
-      margin: 0 auto;
+      margin: 10px auto;
       text-align: center;
     }
   }
-     .handmake_left_class{
+     .HM_class{
       display: flex;
       flex-direction: column;
-      .handmake_left_class_btn{
+      .HM_class_btn{
         @include pad{
-          flex-direction: column;
+         display: flex;
         }
-      }
-      
+        @include HM600RWD{
+          // display: flex;
+          flex-direction: column;         
+        }
         button {
           width: 70%;
           background-color:transparent;
@@ -82,20 +89,31 @@ body{
           background-color:#fff ;
           color:#2f4f4f ;
         }
+      }
+      
+       
     }
-
+  .HM_date_number{
+    @include pad{
+      display: flex;
+    }
+    @include mobile{
+      flex-direction: column;      
+    }
+    @include HM600RWD(
+      // align-items: stretch;
+      // margin-top:10px;
+      // align-items: flex-end;
+    )
+    
+   
     .fa-calendar-alt{
       margin-left:10px;
       cursor:pointer;
     }
 
     .HM_Date{
-      h1{
-        
-        @include pad{
-          margin: 0 auto;
-        }
-      }
+                
       @include pad{
         margin: 0 auto;
 
@@ -117,19 +135,10 @@ body{
             text-align: center;
           }
         }
-  
-      }
+       }  
     }
-
-    
-    
-
     .HM_Number{
-      h1{
-        @include pad{
-          text-align: center;
-        }
-      }
+
       .HM_choseNumber{
         // @include pad{
         //   display: flex;
@@ -151,6 +160,11 @@ body{
       }
         
     }
+    
+  }
+    
+
+    
 
     .handmake_left_text{
       @include pad{
@@ -176,6 +190,9 @@ body{
 .handmake_right{
   margin-left: 10px;
   color: #2f4f4f;
+  @include pad{
+    margin-top: 10px;
+  }
   
   h1{
     font-weight: bold;
@@ -225,6 +242,13 @@ body{
 
   }
   .SignUp_RWD{
+    display: none;
+    @include pad{
+      display: block;
+
+    }
+  }
+  .handmark_text_RWD{
     display: none;
     @include pad{
       display: block;
