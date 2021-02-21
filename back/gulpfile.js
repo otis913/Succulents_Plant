@@ -11,7 +11,7 @@ const cleanCSS = require('gulp-clean-css');
 var sass = require('gulp-sass');
 const fileinclude = require('gulp-file-include');
 var clean = require('gulp-clean');
-
+var browserSync = require('browser-sync').create();
 
 var sourcemaps = require('gulp-sourcemaps');
 function sassStyle() {
