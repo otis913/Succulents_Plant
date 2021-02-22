@@ -1,3 +1,20 @@
+//購物車側邊欄開啟
+let faShop = document.querySelector('.fa-shopping-basket');
+let order = document.querySelector('.order');
+faShop.addEventListener('click',(e)=>{
+    e.preventDefault();
+    order.style.display="block";
+})
+
+
+//購物車側邊欄關閉
+
+let fawin = document.querySelector('.fa-window-close');
+fawin.addEventListener('click',()=>{
+    order.style.display="none";
+})
+
+
 // 側邊欄
  var app9 = new Vue({
     el:'#app8',
@@ -15,7 +32,7 @@ var app9 = new Vue({
 })
 
 $(document).ready(function() {
-    // 關閉側邊欄位
+    關閉側邊欄位
     $('.fa-times').click(function(){
         // console.log('hide me');
         $('.order').hide();

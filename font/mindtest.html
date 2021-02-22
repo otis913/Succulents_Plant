@@ -208,6 +208,75 @@
 
     <div class="ex"></div>
 
+        <!-- 購物車 側邊欄  開始-->
+        <div class="order">
+          <i class="fas fa-window-close"></i>
+          <h2>購物清單</h2>
+          <div class="orderPith"></div>
+          <div class="order-custom">
+              <i class="fa fa-times" aria-hidden="true"></i>
+              <div class="order_custom_con">
+                  <img src="img/shopcart/assets_5.png" alt="">
+                  <div class="txt">
+                      <h4>黃金山脈-金 晃丸盆栽</h4>
+                      <h2>賀卡訂製</h2>
+                      <p>NT$1850</p>
+                      <div id="app8">
+                          <div class="shop">
+                              <i @click="counter += -1" class="fa fa-minus" aria-hidden="true"></i> 
+                              <div class="counter">{{counter}}</div>
+                              <i @click="counter += 1" class="fa fa-plus" aria-hidden="true"  ></i>          
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="order-custom-pro">
+              <i class="fa fa-times" aria-hidden="true"></i>
+              <div class="order_custom_con_con">
+                  <img src="img/shopcart/assets_5.png" alt="">
+                  <div class="txt">
+                      <h4>客製化多肉</h4>
+                      <h2>賀卡訂製</h2>
+                      <p>NT$1850</p>
+                      <div id="app9">
+                          <div class="shop">
+                              <i @click="counter += -1" class="fa fa-minus" aria-hidden="true"></i> 
+                              <div class="counter">{{counter}}</div>
+                              <i @click="counter += 1" class="fa fa-plus" aria-hidden="true"  ></i>          
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="detail">
+                  <h2>詳細內容</h2>
+                  <p>黃金山脈多肉 x1</p>
+                  <p>黃金山脈多肉 x1</p>
+                  <p>黃金山脈多肉 x1</p>
+                  <p>器皿-水泥器皿 x1</p>
+                  <p>裝飾品-小蘑菇 x1</p>
+              </div>
+              
+          </div>
+          <div class="amount">
+              <h2 class="coin">金額
+                  <p>$3600</p>
+              </h2>
+              <h2 class="sale">優惠
+                  <p>-＄20</p>
+              </h2>
+          </div>
+          <div class="total">
+           <h4>總金額</h4>
+           <p>$3580</p>
+          </div>
+          <a href=""></a>
+          <button class="checkbuy"> <a href="./shopCart.html">確定購買</a></button>
+      </div>
+  
+       <!-- 購物車 側邊欄  結束-->
+  
+   
 
     <!-- QA仙人掌開始，放在footer上面 -->
     <section class="qa_pos">
@@ -306,6 +375,7 @@
     <script src="js/bubblebtn.js"></script>
 
     <!-- 每一個頁面都要引入以下這兩個js -->
+    <script src="./js/shopcart.js"></script>  
     <script src="./js/header.js"></script>
     <script src="./js/qa.js"></script>
 

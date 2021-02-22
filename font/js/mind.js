@@ -167,3 +167,14 @@ function check()
     if(userpage>4)userpage =4;
     if(userpage<0)userpage=0;
 }
+//購物車點擊展開
+// $('.fa-shopping-basket').click(function(){
+//     $('.order').show()
+//     console.log('aaaa');
+// })
+let faShopping= document.querySelector('.fa-shopping-basket');
+let order = document.querySelector('.order');
+faShopping.addEventListener('click',(e)=>{
+    e.preventDefault();
+    order.classList.add('show');
+})

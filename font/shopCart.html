@@ -83,7 +83,7 @@
         <article>
             <!-- 內容放這裡 -->
             <!-- 側邊欄 -->
-            <div class="order">
+            <!-- <div class="order">
                 <button><i class="fa fa-times" aria-hidden="true"></i></button>
                 <h2>購物清單</h2>
                 <div class="orderPith"></div>
@@ -145,7 +145,7 @@
                  <p>$3580</p>
                 </div>
                 <button class="checkbuy">確定購買</button>
-            </div>
+            </div> -->
             <!-- 購物車中間 -->
             <div class="order_center">
               <h2>購物車</h2>
@@ -261,7 +261,8 @@
                  
               </div>
               <div class="the_order1">
-                <button class="conti" >繼續購物</button>
+                 
+                <button class="conti" > <a href="./shop.html">繼續購物</a></button>
                 <button class="next" >下一步</button>
             </div>
 
@@ -329,8 +330,9 @@
             <p class="recieve">已收到您的訂單</p>
             <p class="orderNum">訂單編號：202101242245</p>
             <div class="the_order3">
-                <button class="goShop" >前往商城</button>
-                <button class="goClub" >前往會員中心</button>
+                
+                <button class="goShop" ><a href="./shop.html">前往商城</a></button>
+                <button class="goClub" ><a href="./member.html">前往會員中心</a></button>
             </div>
           </div>
       
@@ -432,7 +434,98 @@
 
   </footer>
   <!-- footer end -->
+    <script>
+     // 側邊欄
+ var app9 = new Vue({
+    el:'#app8',
+    data:{
+       counter:0
+    },
+   
+})
+var app9 = new Vue({
+    el:'#app9',
+    data:{
+       counter:0
+    },
+   
+})
 
+$(document).ready(function() {
+    關閉側邊欄位
+    $('.fa-times').click(function(){
+        // console.log('hide me');
+        $('.order').hide();
+    })
+    // 確定購買
+    $('.checkbuy').click(function(){
+        // console.log('hide me');
+        $('.order').hide();
+        $('.order_center').show();
+    })
+
+})
+
+//計數器的部分
+Vue.component('counter-component', {
+    data: function () {
+        return {
+            counter: 0
+        }
+    },
+    template: `
+    <div>
+    <p >{{ counter }}</p>
+    </div>
+   `
+});
+
+var app = new Vue({
+    el: '#app',
+    data: {
+        counter: 0,
+    }
+})
+var app = new Vue({
+    el: '#app2',
+    data: {
+        counter: 0,
+    }
+})
+var app = new Vue({
+    el: '#app3',
+    data: {
+        counter: 0,
+    }
+})
+// 繼續購物、下一步、上一步、訂單送出
+$(document).ready(function() {
+ 
+    $(".next").click(function(){
+        $(".container2").slideDown("slow");
+        $(".the_order1").hide();
+        $(".reci_title").show();
+        $(".the_order2").show();
+    })
+    $(".pre").click(function(){
+        $(".container2").hide();
+        $(".reci_title").hide();
+        $(".the_order2").hide();
+        $(".the_order1").show();  
+    })
+    $(".cofirm").click(function(){
+        $(".container2").hide();
+        $(".container1").hide();
+        $(".reci_title").hide();
+        $(".the_order2").hide();
+        $(".order_center h2").hide();
+        $(".the_order1").hide();
+        $(".orderForm").show();
+      
+    })
+  })
+
+    </script>
 
 
     <!-- jquery -->
