@@ -21,11 +21,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
 
+    <!-- vue cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js"></script>
+
 
 
 </head>
 
 <body>
+
+    <!-- header開始，要放在body下面 -->
+    <div class="header_bg">
+        <div class="headers">
+            <div class="navs">
+               <a href="./main.html"><img src="img/logo.png" alt=""></a>
+                <ul>
+                    <li><a href="./shop.html">商品專區</a></li>
+                    <li><a href="./custom.html">客製多肉</a></li>
+                    <li><a href="./mindtest.html">心理測驗</a></li>
+                    <li><a href="./HandMake.html">手作課程</a></li>
+                    <li><a href="./blog_all.html">多肉知識</a></li>
+                </ul>
+            </div>  
+            <ol>
+                <li><a href=""><i class="fas fa-shopping-basket"></i></a></li>
+                <li><a href="./member.html"><i class="fas fa-user"></i></a></li>
+            </ol>
+            <div class="ham">
+                <span></span> 
+                <span></span> 
+                <span></span>
+            </div>
+        </div>
+    </div> 
+    <!-- header結束 -->
+
+
+
     <div class="full_wrapper main">
         <!-- 背景泡泡動畫 start 要放在section裡，article外面-->
         <div class="circle_block -left_top">
@@ -39,24 +71,7 @@
         </div>
 
         <!-- 背景泡泡動畫 end-->
-        <!------header----->
-        <div class="top">
-            <!-- <img src="./img/blog1/house.png" alt=""> -->
-            <a href="./main.html"><img src="./img/logo.png" alt=""></a>
-
-            <ul class="header_mid">
-                <li><a href="./shop.html">商品專區</a></li>
-                <li><a href="./custom.html">客製多肉</a></li>
-                <li><a href="./mindtest.html">心理測驗</a></li>
-                <li><a href="./HandMake.html">手作課程</a></li>
-                <li><a href="./blog_all.html">部落格</a></li>
-            </ul>
-            <i class="fas fa-bars fa-2x ham"></i>
-            <ul class="header_right">
-                <li><a href=""><i class="fas fa-cart-plus fa-2x"></i></a></li>
-                <li><a href="./MemberCenter.html"><i class="fas fa-user fa-2x"></i></a></li>
-            </ul>
-        </div>
+     
 
         <!-----------最上面輪播---------->
         <nav>
@@ -311,42 +326,83 @@
         </article>
     </div>
     <div class="ex  main_ex"></div>
+
+    <!-- QA仙人掌開始，放在footer上面 -->
+    <section class="qa_pos">
+        <div class="qa_wrapper">
+            <img src="img/QA/QA_LOGO.png" alt="">
+        </div>   
+        
+        <div class="qaBg_wrapper" id="app">
+            <div class="qaBg">
+              <img src="img/QA/QA_close.png" alt="" class="cancel">
+              <ul>
+                <li class="question">
+                    <h2>Q:想更換或取消訂單，怎麼辦呢？</h2>
+                    <p>A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
+                </li>
+                <li class="question">
+                    <h2>Q:想更換或取消訂單，怎麼辦呢？</h2>
+                    <p>A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
+                </li>
+                <li class="question">
+                  <h2>Q:想更換或取消訂單，怎麼辦呢？</h2>
+                  <p>A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
+                </li>
+  
+                <div class="cusQUS" >{{message}}</div>
+                <div class="answer">we will hope you</div>
+              </ul> 
+              
+              <div class="cusQ" >
+                  <div class="adimit">
+                    <input type="text" v-model="message">
+                    <button class="btn">送出</button>
+                  </div>
+              </div>
+            
+            </div>
+        
+        </div>
+    </section>
+    <!-- QA仙人掌結束 -->
+
     <!-- footer start -->
     <footer>
-        <article>
-            <div class="brand_info">
-                <ul>
-                    <li><a href="">商品專區</a></li>
-                    <li><a href="">客製多肉</a></li>
-                    <li><a href="">心理測驗</a></li>
-                    <li><a href="">手作課程</a></li>
-                    <li><a href="">部落格</a></li>
-                </ul>
+      <article>
+          <div class="brand_info">
+              <ul>
+                  <li><a href="./shop.html">商品專區</a></li>
+                  <li><a href="./custom.html">客製多肉</a></li>
+                  <li><a href="./mindtest.html">心理測驗</a></li>
+                  <li><a href="./HandMake.html">手作課程</a></li>
+                  <li><a href="./blog_all.html">多肉知識</a></li>
+              </ul>    
 
-                <ol>
-                    <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
-                    <li><a href=""><i class="fab fa-youtube"></i></a></li>
-                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                </ol>
+              <ol>
+                  <li><a ref=""><i class="fab fa-facebook-square"></i></a></li>
+                  <li><a ref=""><i class="fab fa-youtube"></i></a></li>
+                  <li><a ref=""><i class="fab fa-twitter"></i></a></li>
+              </ol>
 
-                <p>ⓒ Copyright Shimabara Shokuhin All Rights Reserved. </p>
-            </div>
+              <p>ⓒ Copyright Shimabara Shokuhin All Rights Reserved. </p>
+          </div>
 
-            <div class="line"></div>
+          <div class="line"></div>
 
-            <div class="logo_info">
-                <a href=""><img src="img/icon_logo_footer.png" alt=""></a>
-                <p>tel : 02-2338-8365</p>
-                <p>e-mail : Succulents Monster@gmail.com </p>
-                <p>address : 104 台北市中山區南京東路三段219號</p>
-                <p>open : 週一至週日 11:00 – 18:30</p>
+          <div class="logo_info">
+              <a href="main.html"><img src="img/icon_logo_footer.png" alt=""></a>
+              <p>tel : 02-2338-8365</p>
+              <p>e-mail : Succulents Monster@gmail.com </p>
+              <p>address : 104 台北市中山區南京東路三段219號</p>
+              <p>open : 週一至週日 11:00 – 18:30</p>
 
-            </div>
+          </div>
 
-        </article>
+      </article>
 
-    </footer>
-    <!-- footer end -->
+  </footer>
+  <!-- footer end -->
     <script>
         let hide = document.getElementsByClassName('ham')[0];
         let ul = document.getElementsByClassName('header_mid')[0];
@@ -363,6 +419,10 @@
 
         });
     </script>
+
+    <!-- 每一個頁面都要引入以下這兩個js -->
+    <script src="./js/header.js"></script>
+    <script src="./js/qa.js"></script>
 
 </body>
 

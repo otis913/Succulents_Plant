@@ -25,40 +25,38 @@
 
 <body>
 
-    <!-- 目前共用的標籤 
-        body
-        html
-        section
-        article
-        .bread
-        .btn_green
-        .btn_yellow
-        .bubble_btnn
-        .ex
-        footer
-    -->
+    <!-- header開始，要放在body下面 -->
+    <div class="header_bg">
+        <div class="headers">
+            <div class="navs">
+               <a href="./main.html"><img src="img/logo.png" alt=""></a>
+                <ul>
+                    <li><a href="./shop.html">商品專區</a></li>
+                    <li><a href="./custom.html">客製多肉</a></li>
+                    <li><a href="./mindtest.html">心理測驗</a></li>
+                    <li><a href="./HandMake.html">手作課程</a></li>
+                    <li><a href="./blog_all.html">多肉知識</a></li>
+                </ul>
+            </div>  
+            <ol>
+                <li><a href=""><i class="fas fa-shopping-basket"></i></a></li>
+                <li><a href="./member.html"><i class="fas fa-user"></i></a></li>
+            </ol>
+            <div class="ham">
+                <span></span> 
+                <span></span> 
+                <span></span>
+            </div>
+        </div>
+    </div> 
+    <!-- header結束 -->
+
 
 
     <!-- section 的範圍為全螢幕，主要用來放background-image的-->
     <!-- 要新增背景圖請另外加class ex:class="full_wrapper" -->
     <section class="full_wrapper">
-        <div class="top">
-            <!-- <img src="./img/blog1/house.png" alt=""> -->
-            <a href="./main.html"><img src="./img/logo.png" alt=""></a>
-
-            <ul class="header_mid">
-                <li><a href="./shop.html">商品專區</a></li>
-                <li><a href="./custom.html">客製多肉</a></li>
-                <li><a href="./mindtest.html">心理測驗</a></li>
-                <li><a href="./HandMake.html">手作課程</a></li>
-                <li><a href="./blog_all.html">部落格</a></li>
-            </ul>
-            <i class="fas fa-bars fa-2x ham"></i>
-            <ul class="header_right">
-                <li><a href=""><i class="fas fa-cart-plus fa-2x"></i></a></li>
-                <li><a href="./MemberCenter.html"><i class="fas fa-user fa-2x"></i></a></li>
-            </ul>
-        </div>
+        
         <!-- 麵包屑在這 -->
         <article class="articlebread">
             <div class="bread">
@@ -179,6 +177,10 @@
     <script src="js/bubblebtn.js"></script>
 
     <!-- 自已的js -->
+      <!-- 每一個頁面都要引入以下這兩個js -->
+      <script src="./js/header.js"></script>
+      <script src="./js/qa.js"></script>
+      
     <script src="js/Signin.js"></script>
     <!-- <script src="js/your.js"></script> -->
 </body>
