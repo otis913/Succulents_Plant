@@ -13,49 +13,37 @@
 <body>
   <div class="wrapper">
     @@include('./back_layout/back_header.html')
-
     <div class="section_main">
-
       @@include('./back_layout/back_LeftNavbar.html')
+      <div class="right_main">
 
-      <div class="handClass_manage_main">
-
-        <div class="handClass_manage_information">
-          <table class="table table-bordered table-striped">
-            <button type="button" class="btn btn-primary handClass_inser_btn">新增課程</button>
-            <thead>
-              <tr>
-                <th scope="col">課程編號</th>
-                <th scope="col">課程名稱</th>
-                <th scope="col">課程日期</th>
-                <th scope="col">課程最多人數</th>
-                <th scope="col">課程報名人數</th>
-                <th scope="col">價格</th>
-                <th scope="col">課程狀態</th>
-                <th scope="col">修改或刪除</th>
+        <div class="handClass_content">
+          <h1>課程管理</h1>
+          <div class="bottom_line"></div>
+          <button type="button" class="handClass_inserBtn">新增課程</button>
+          <div class="handClass_table">
+            <table class="table table-striped">
+              <tr class="table-dark">
+                <th>課程編號</th>
+                <th>課程名稱</th>
+                <th>課程日期</th>
+                <th>課程狀態</th>
+                <th>是否編輯</th>
               </tr>
-            </thead>
-            <tbody>
               <tr>
-                <th scope="row">1</th>
+                <th>001</th>
                 <td>手捏陶器+多肉組盆</td>
                 <td>
                   2021/03/30
                 </td>
-                <td>10</td>
-                <td>05</td>
-                <td>2000</td>
                 <td>上架</td>
                 <td>
-                  <button type="button" class="btn btn-success">修改</button>
-                  <button type="button" class="btn btn-danger">刪除</button>
+                  <a href="#">編輯</a>
                 </td>
               </tr>
-
-            </tbody>
-          </table>
+            </table>
+          </div>
         </div>
-
       </div>
     </div>
 

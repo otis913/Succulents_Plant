@@ -13,38 +13,33 @@
 <body>
   <div class="wrapper">
     @@include('./back_layout/back_header.html')
-
     <div class="section_main">
-
       @@include('./back_layout/back_LeftNavbar.html')
+      <div class="right_main">
 
-      <div class="report_main">
-
-
-        <div class="report_information">
-          <table class="table table-bordered table-striped">
-            <thead>
-              <tr>
-                <th scope="col">回報編號</th>
-                <th scope="col">回報日期</th>
-                <th scope="col">會員編號</th>
-                <th scope="col">處理狀態</th>
-                <th scope="col">是否回復</th>
+        <div class="report_content">
+          <h1>訊息管理</h1>
+          <div class="bottom_line"></div>
+          <div class="report_table">
+            <table class="table table-striped">
+              <tr class="table-dark">
+                <th>回報編號</th>
+                <th>回報日期</th>
+                <th>會員編號</th>
+                <th>處理狀態</th>
+                <th>是否回復</th>
               </tr>
-            </thead>
-            <tbody>
               <tr>
-                <th scope="row">1</th>
+                <th>1</th>
                 <td>2021/03/30</td>
                 <td>2021231234</td>
                 <td>還未回覆</td>
                 <td>
-                  <button type="button" class="btn btn-info">回覆</button>
+                  <a href="#">編輯</a>
                 </td>
               </tr>
-
-            </tbody>
-          </table>
+            </table>
+          </div>
         </div>
       </div>
     </div>
