@@ -12,129 +12,78 @@
 
 <body>
   <div class="wrapper">
-    <div class="back_header">
+    <header>
 
+  <img src="./img/logo1.png" alt="">
   <h1>肉多不怪後臺管理</h1>
+  <a href="" class="back_logout">帳號登出</a>
 
-  <input type="button" class="back_signOut_btn" name="" id="" value="帳號登出" />
-</div>
-
+</header>
     <div class="section_main">
-
-      <div class="list">
-  <ul>
-    <li><a href="./member_manage.html">會員管理</a></li>
-
-  </ul>
-
-  <ul>
-    <li><a href="./order_manage.html">訂單管理</a></li>
-  </ul>
-
-  <ul>
-    <a href="#productSubmenu" data-toggle="collapse" aria-expanded="false">商品管理</a>
-    <ol class="collapse list-unstyled" id="productSubmenu">
+      <div class="left_list">
+  <div class="left_btn">
+    <ul>
       <li>
-        <a href="./porduct_manage.html">查看商品</a>
+        <a href="./member_manage.html">會員管理</a>
       </li>
       <li>
-        <a href="./porduct_manage.html">新增商品</a>
-      </li>
-    </ol>
-  </ul>
-
-  <ul>
-    <a href="#classSubmenu" data-toggle="collapse" aria-expanded="false">課程管理</a>
-    <ol class="collapse list-unstyled" id="classSubmenu">
-      <li>
-        <a href="./handClass_manage.html">查看課程</a>
+        <a href="./order_manage.html">訂單管理</a>
       </li>
       <li>
-        <a href="./handClass_manage.html">新增課程</a>
-      </li>
-    </ol>
-  </ul>
-
-  <ul>
-    <a href="#customSubmenu" data-toggle="collapse" aria-expanded="false">客製多肉管理</a>
-    <ol class="collapse list-unstyled" id="customSubmenu">
-      <li>
-        <a href="./Custom_manage.html">查看客製多肉內容</a>
+        <a href="./porduct_manage.html">商品管理</a>
       </li>
       <li>
-        <a href="./Custom_manage.html">新增客製多肉內容</a>
-      </li>
-    </ol>
-  </ul>
-
-  <ul>
-    <a href="#knowledgemenu" data-toggle="collapse" aria-expanded="false">知識文章</a>
-    <ol class="collapse list-unstyled" id="knowledgemenu">
-      <li>
-        <a href="./knowledge_manage.html">查看文章</a>
+        <a href="./handClass_manage.html">課程管理</a>
       </li>
       <li>
-        <a href="./knowledge_manage.html">新增文章</a>
+        <a href="./custom_manage.html">客製多肉管理</a>
       </li>
-    </ol>
-  </ul>
-
-  <ul>
-    <li>
-      <a href="./report_manage.html">回報訊息管理</a>
-    </li>
-  </ul>
+      <li>
+        <a href="./knowledge_manage.html">知識文章</a>
+      </li>
+      <li>
+        <a href="./report_manage.html">回報訊息管理</a>
+      </li>
+    </ul>
+  </div>
 </div>
+      <div class="right_main">
 
-      <div class="order_main">
-
-        <table class="table table-bordered table-striped">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">訂單編號</th>
-              <th scope="col">收件人姓名</th>
-              <th scope="col">收件人手機</th>
-              <th scope="col">收件人地址</th>
-              <th scope="col">訂單日期</th>
-              <th scope="col">付款方式</th>
-              <th scope="col">信用卡號</th>
-              <th scope="col">訂單付款狀態</th>
-              <th scope="col">訂單狀態</th>
-              <th scope="col">會員編號</th>
-              <th scope="col">修改訂單狀態</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">112312312</th>
-              <td>蘇帥政</td>
-              <td>0123456789</td>
-              <td>新北市XXXXXXXXXXXXXX</td>
-              <td>2020/01/30</td>
-              <td>信用卡付款</td>
-              <td>1122-3344-5566-7788</td>
-              <td>已結帳</td>
-              <td>送貨中</td>
-              <td>0001</td>
-              <td>
-                <button type="button" class="btn btn-success">修改</button>
-              </td>
-            </tr>
-
-          </tbody>
-        </table>
-
+        <div class="order_content">
+          <h1>訂單管理</h1>
+          <div class="bottom_line"></div>
+          <div class="order_table">
+            <table class="table table-striped">
+              <tr class="table-dark">
+                <th>訂單編號</th>
+                <th>會員編號</th>
+                <th>訂單日期</th>
+                <th>付款方式</th>
+                <th>訂單付款狀態</th>
+                <th>訂單狀態</th>
+                <th>修改訂單狀態</th>
+              </tr>
+              <tr>
+                <th>112312312</th>
+                <th>001</th>
+                <td>2020/01/30</td>
+                <td>信用卡付款</td>
+                <td>已結帳</td>
+                <td>送貨中</td>
+                <td>
+                  <a href="#">編輯</a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
       </div>
-
-
-
-    </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-      crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
