@@ -12,118 +12,70 @@
 
 <body>
   <div class="wrapper">
-    <div class="back_header">
+    <header>
 
+  <img src="./img/logo1.png" alt="">
   <h1>肉多不怪後臺管理</h1>
+  <a href="" class="back_logout">帳號登出</a>
 
-  <input type="button" class="back_signOut_btn" name="" id="" value="帳號登出" />
-</div>
-
+</header>
     <div class="section_main">
-
-      <div class="list">
-  <ul>
-    <li><a href="./member_manage.html">會員管理</a></li>
-
-  </ul>
-
-  <ul>
-    <li><a href="./order_manage.html">訂單管理</a></li>
-  </ul>
-
-  <ul>
-    <a href="#productSubmenu" data-toggle="collapse" aria-expanded="false">商品管理</a>
-    <ol class="collapse list-unstyled" id="productSubmenu">
+      <div class="left_list">
+  <div class="left_btn">
+    <ul>
       <li>
-        <a href="./porduct_manage.html">查看商品</a>
+        <a href="./member_manage.html">會員管理</a>
       </li>
       <li>
-        <a href="./porduct_manage.html">新增商品</a>
-      </li>
-    </ol>
-  </ul>
-
-  <ul>
-    <a href="#classSubmenu" data-toggle="collapse" aria-expanded="false">課程管理</a>
-    <ol class="collapse list-unstyled" id="classSubmenu">
-      <li>
-        <a href="./handClass_manage.html">查看課程</a>
+        <a href="./order_manage.html">訂單管理</a>
       </li>
       <li>
-        <a href="./handClass_manage.html">新增課程</a>
-      </li>
-    </ol>
-  </ul>
-
-  <ul>
-    <a href="#customSubmenu" data-toggle="collapse" aria-expanded="false">客製多肉管理</a>
-    <ol class="collapse list-unstyled" id="customSubmenu">
-      <li>
-        <a href="./Custom_manage.html">查看客製多肉內容</a>
+        <a href="./porduct_manage.html">商品管理</a>
       </li>
       <li>
-        <a href="./Custom_manage.html">新增客製多肉內容</a>
-      </li>
-    </ol>
-  </ul>
-
-  <ul>
-    <a href="#knowledgemenu" data-toggle="collapse" aria-expanded="false">知識文章</a>
-    <ol class="collapse list-unstyled" id="knowledgemenu">
-      <li>
-        <a href="./knowledge_manage.html">查看文章</a>
+        <a href="./handClass_manage.html">課程管理</a>
       </li>
       <li>
-        <a href="./knowledge_manage.html">新增文章</a>
+        <a href="./custom_manage.html">客製多肉管理</a>
       </li>
-    </ol>
-  </ul>
-
-  <ul>
-    <li>
-      <a href="./report_manage.html">回報訊息管理</a>
-    </li>
-  </ul>
+      <li>
+        <a href="./knowledge_manage.html">知識文章</a>
+      </li>
+      <li>
+        <a href="./report_manage.html">回報訊息管理</a>
+      </li>
+    </ul>
+  </div>
 </div>
+      <div class="right_main">
 
-      <div class="handClass_manage_main">
-
-        <div class="handClass_manage_information">
-          <table class="table table-bordered table-striped">
-            <button type="button" class="btn btn-primary handClass_inser_btn">新增課程</button>
-            <thead>
-              <tr>
-                <th scope="col">課程編號</th>
-                <th scope="col">課程名稱</th>
-                <th scope="col">課程日期</th>
-                <th scope="col">課程最多人數</th>
-                <th scope="col">課程報名人數</th>
-                <th scope="col">價格</th>
-                <th scope="col">課程狀態</th>
-                <th scope="col">修改或刪除</th>
+        <div class="handClass_content">
+          <h1>課程管理</h1>
+          <div class="bottom_line"></div>
+          <button type="button" class="handClass_inserBtn">新增課程</button>
+          <div class="handClass_table">
+            <table class="table table-striped">
+              <tr class="table-dark">
+                <th>課程編號</th>
+                <th>課程名稱</th>
+                <th>課程日期</th>
+                <th>課程狀態</th>
+                <th>是否編輯</th>
               </tr>
-            </thead>
-            <tbody>
               <tr>
-                <th scope="row">1</th>
+                <th>001</th>
                 <td>手捏陶器+多肉組盆</td>
                 <td>
                   2021/03/30
                 </td>
-                <td>10</td>
-                <td>05</td>
-                <td>2000</td>
                 <td>上架</td>
                 <td>
-                  <button type="button" class="btn btn-success">修改</button>
-                  <button type="button" class="btn btn-danger">刪除</button>
+                  <a href="#">編輯</a>
                 </td>
               </tr>
-
-            </tbody>
-          </table>
+            </table>
+          </div>
         </div>
-
       </div>
     </div>
 

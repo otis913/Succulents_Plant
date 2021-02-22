@@ -13,147 +13,47 @@
 <body>
   <div class="wrapper">
     @@include('./back_layout/back_header.html')
-
     <div class="section_main">
-
       @@include('./back_layout/back_LeftNavbar.html')
+      <div class="right_main">
 
-      <div class="member_main">
-
-        <div class="search_name">
-          <form>
-            <h1>姓名搜尋</h1>
-            <input type="text">
-            <input type="submit" value="搜尋">
-          </form>
-        </div>
-
-        <div class="member_information">
-          <table class="table table-bordered table-striped">
-            <thead>
-              <tr>
-                <th scope="col">會員編號</th>
-                <th scope="col">會員帳號</th>
-                <th scope="col">會員密碼</th>
-                <th scope="col">會員姓名</th>
-                <th scope="col">會員手機</th>
-                <th scope="col">會員地址</th>
-                <th scope="col">會員生日</th>
-                <th scope="col">帳號狀態</th>
-                <th scope="col">是否停權</th>
+        <div class="member_content">
+          <h1>會員管理</h1>
+          <div class="bottom_line"></div>
+          <h2>姓名搜尋</h2>
+          <input type="text" class="search_text">
+          <input type="submit" class="search_btn" value="search">
+          <div class="member_table">
+            <table class="table table-striped">
+              <tr class="table-dark">
+                <th>會員編號</th>
+                <th>會員帳號</th>
+                <th>會員姓名</th>
+                <th>帳號狀態</th>
+                <th>是否編輯</th>
               </tr>
-            </thead>
-            <tbody>
-              <!-- <tr>
-                <th scope="col">會員編號</th>
-                <th scope="col">會員帳號</th>
-                <th scope="col">會員密碼</th>
-                <th scope="col">會員姓名</th>
-                <th scope="col">會員手機</th>
-                <th scope="col">會員地址</th>
-                <th scope="col">會員生日</th>
-                <th scope="col">帳號狀態</th>
-                <th scope="col">是否停權</th>
-              </tr> -->
               <tr>
-                <th scope="row">0001</th>
+                <th>0001</th>
                 <td>123@gmail.com</td>
-                <td>qazwsx778</td>
                 <td>江美璿</td>
-                <td>0123456789</td>
-                <td>新北市XXXXXXXXXX</td>
-                <td>1990/01/01</td>
                 <td>正常</td>
                 <td>
-                  <button type="button" class="btn btn-success">恢復</button>
-                  <button type="button" class="btn btn-danger">停權</button>
+                  <a href="#">編輯</a>
                 </td>
               </tr>
-              <tr>
-                <th scope="row">0002</th>
-                <td>123@gmail.com</td>
-                <td>qazwsx778</td>
-                <td>蘇帥政</td>
-                <td>0123456789</td>
-                <td>新北市XXXXXXXXXX</td>
-                <td>1990/01/01</td>
-                <td>正常</td>
-                <td>
-                  <button type="button" class="btn btn-success">恢復</button>
-                  <button type="button" class="btn btn-danger">停權</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">0003</th>
-                <td>123@gmail.com</td>
-                <td>qazwsx778</td>
-                <td>黃型閎</td>
-                <td>0123456789</td>
-                <td>新北市XXXXXXXXXX</td>
-                <td>1990/01/01</td>
-                <td>正常</td>
-                <td>
-                  <button type="button" class="btn btn-success">恢復</button>
-                  <button type="button" class="btn btn-danger">停權</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">0004</th>
-                <td>123@gmail.com</td>
-                <td>qazwsx778</td>
-                <td>莊酷麟</td>
-                <td>0123456789</td>
-                <td>新北市XXXXXXXXXX</td>
-                <td>1990/01/01</td>
-                <td>正常</td>
-                <td>
-                  <button type="button" class="btn btn-success">恢復</button>
-                  <button type="button" class="btn btn-danger">停權</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">0005</th>
-                <td>123@gmail.com</td>
-                <td>qazwsx778</td>
-                <td>李帥慶</td>
-                <td>0123456789</td>
-                <td>新北市XXXXXXXXXX</td>
-                <td>1990/01/01</td>
-                <td>停用</td>
-                <td>
-                  <button type="button" class="btn btn-success">恢復</button>
-                  <button type="button" class="btn btn-danger">停權</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">0006</th>
-                <td>123@gmail.com</td>
-                <td>qazwsx778</td>
-                <td>林帥哲</td>
-                <td>0123456789</td>
-                <td>新北市XXXXXXXXXX</td>
-                <td>1990/01/01</td>
-                <td>正常</td>
-                <td>
-                  <button type="button" class="btn btn-success">恢復</button>
-                  <button type="button" class="btn btn-danger">停權</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            </table>
+          </div>
         </div>
 
       </div>
 
     </div>
-
-  </div>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>

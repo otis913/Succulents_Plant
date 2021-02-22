@@ -1,125 +1,343 @@
 @import "./reset";
+@import "./sassMix";
 
 body{
   background-image: url(../img/gray_bg.png);
 }
+
+header{
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  font-weight: bold;
+    img{
+      display: block;
+      width: 50px;
+      height: 50px;        
+      margin-top: 20px;
+      margin-left: 2vw;
+    }
+    h1{
+        font-size: 2rem;
+        color: #d0c3a3;
+        line-height: 100px;
+        margin-left: 20px;
+    }
+    a{
+        font-size: 15px;
+        font-weight: bold;
+        color: #d0c3a3;
+        line-height: 100px;
+        margin-left: auto;
+        margin-right: 50px;
+    }
+    a:hover{
+      color: #d87680;
+      text-decoration: none;
+
+    }
+}
+
 .wrapper{
   width: 1200px;
   margin:0 auto;
  }
 .section_main{
   display: flex;
-  justify-content: center;
+  margin-left: 20px;
+  margin-top: 20px;
 }
-
-.member_main{
+.left_list{
   
-}
-
-.list{
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-  margin-right: 20px;
-  margin-top: 40px;
-  color:#ffff;
-}
-
-.list a{
-    background-color: #2f4f4f;
-    color: #eeebeb;
-    display: block;
-    text-align: center;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 5px;
-    font-weight: bold; 
-}
-
-.list a:hover{
-  text-decoration: none;
-}
-
-ul{
-  overflow: hidden; 
-}
-ul>a:nth-child(1):hover{
-  background-color: #d0c3a3;
-  color:  #2f4f4f;
-
-}
-
-.list ol a{
-    background-color: #eeebeb;
-    color: #979f77;
+  .left_btn{
+    ul{
+        li{
+            margin-bottom: 15px;
+            a{
+                display: block;
+                text-align: center;
+                width: 150px;
+                height: 50px;
+                line-height: 50px;
+                background-color: #2f4f4f;
+                font-size: 20px;
+                text-decoration: none;
+                border: 1px solid #eeebeb; 
+                border-radius: 10px;
+                font-weight: bold;
+                color: #d0c3a3;
+            }
+            a:hover{
+                color: #2f4f4f;
+                background-color: #d0c3a3;
+                font-weight: bold;
+            }
+      }
+    }
   }
-  .list ol a:hover{
-    color:#d9a420;
-   }
-.back_header{
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
+}
+.right_main{
+ margin-left: 20px;
+}
+
+
+  
+
+// --------------------------客製多肉
+.Custom_content{
+  color:#000 ;
   h1{
-    font-weight: bold;
-    color:#2f4f4f;
-    font-size:25px;
-    margin-right: 50px;
+    @include h1();
   }
-  .back_signOut_btn{
-    background-color: #2f4f4f;
-    border-radius: 5px;
-    margin: 5px;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 5px;
-    font-weight: bold;
-    width: 100px;
-    cursor: pointer;
+  .bottom_line{
+    @include bottom_line(150px);
   }
-  :hover{
-    background-color: #d0c3a3;
-    color: #2f4f4f;    
-  }
-  
-}
-.wrapper .btn-primary{
-  margin-bottom: 10px;
-}
 
-
-// 會員管理中心
-
-.member_main{
-  margin: 25px;
-  .search_name{
-    display: flex;
-    justify-content: space-between;
-    h1{
-      margin-left: 20px;
-    }
-    input{
-      margin:10px 10px;
-    }
+  .Custom_table{
+   table{
+     width: 1000px;
+     font-size: 20px;
+     tr{
+       th{
+        text-align: center;
+       }
+       td{
+        text-align: center;
+        img{
+          display: block;
+          width: 100px;
+        }      
+        a{
+          @include a();
+          :hover{
+            color: #d87680;
+          }
+        }   
+       }
+     }
+   }
   }
 }
 
-// 商品管理
-.back_product_img{
-  display: block;
-  width: 50px;
+// --------------------------課程管理
+.handClass_inserBtn{
+  @include inserBtn();
 }
 
-// 手作課程
+.handClass_content{
+  color:#000 ;
+  h1{
+    @include h1();
+  }
+  .bottom_line{
+    @include bottom_line(150px);
+  }
+  .handClass_table{
+   table{
+     width: 1000px;
+     font-size: 20px;
+     tr{
+       th{
+        text-align: center;
+       }
+       td{
+        text-align: center;     
+        a{
+          @include a();
+          :hover{
+            color: #d87680;
+          }
+        }   
+       }
+     }
+   }
+  }
+}
+// --------------------------文章管理
+.knowledge_inserBtn{
+  @include inserBtn();
+}
+.knowledge_content{
+  color:#000 ;
+  h1{
+    @include h1();
+  }
+  .bottom_line{
+    @include bottom_line(150px);
+  }
+  .knowledge_table{
+   table{
+     width: 1000px;
+     font-size: 20px;
+     tr{
+       th{
+        text-align: center;
+       }
+       td{
+        text-align: center; 
+        img{
+          display: block;
+          width: 100px;
+        }     
+        a{
+          @include a();
+          :hover{
+            color: #d87680;
+          }
+        }   
+       }
+     }
+   }
+  }
+}
+// --------------------------會員管理
+.member_content{
+  color:#000 ;
+  h1{
+    @include h1();
+  }
+  .bottom_line{
+    @include bottom_line(150px);
+  }
+
+  h2{
+    font-size: 20px;
+    margin-bottom: 5px;
+
+  }
+  .search_text{
+    margin-bottom: 10px;
+  }
+  .member_table{
+   table{
+     width: 1000px;
+     font-size: 20px;
+     tr{
+       th{
+        text-align: center;
+       }
+       td{
+        text-align: center;     
+        a{
+          @include a();
+          :hover{
+            color: #d87680;
+          }
+        }   
+       }
+     }
+   }
+  }
+}
+ 
+// --------------------------訂單管理
+.order_content{
+  color:#000 ;
+  h1{
+    @include h1();
+  }
+  .bottom_line{
+    @include bottom_line(150px);
+  }
+  .order_table{
+   table{
+     width: 1000px;
+     font-size: 20px;
+     tr{
+       th{
+        text-align: center;
+       }
+       td{
+        text-align: center;     
+        a{
+          @include a();
+          :hover{
+            color: #d87680;
+          }
+        }   
+       }
+     }
+   }
+  }
+}
+//-------------------------- 商品管理
+.product_inserBtn{
+  @include inserBtn();
+}
+
+.product_content{
+  color:#000 ;
+  h1{
+    @include h1();
+  }
+  .bottom_line{
+    @include bottom_line(150px);
+  }
+  .product_table{
+   table{
+     width: 1000px;
+     font-size: 20px;
+     tr{
+       th{
+        text-align: center;
+       }
+       td{
+        text-align: center; 
+        img{
+          display: block;
+          width: 100px;
+        }    
+        a{
+          @include a();
+          :hover{
+            color: #d87680;
+          }
+        }   
+       }
+     }
+   }
+  }
+}
+// --------------------------訊息管理
+.report_content{
+  color:#000 ;
+  h1{
+    @include h1();
+  }
+  .bottom_line{
+    @include bottom_line(150px);
+  }
+  .report_table{
+   table{
+     width: 1000px;
+     font-size: 20px;
+     tr{
+       th{
+        text-align: center;
+       }
+       td{
+        text-align: center;     
+        a{
+          @include a();
+          :hover{
+            color: #d87680;
+          }
+        }   
+       }
+     }
+   }
+  }
+}
 
 
-//知識文章
-.knowledge_img{
-  display: block;
-  width: 100px;
-}
-// 客製多肉
-.back_custom_img{
-  display: block;
-  width: 100px;
-}
+
+
+
+
+
+
+
+
+
+
