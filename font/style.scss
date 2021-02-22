@@ -3,33 +3,47 @@
 @import "sass/var";
 //這個是bubble_btn的css，記得html要引用bubble_btn動畫效果的js & TweenMax
 @import "sass/bubblebtn";
+//泡泡
+@import "sass/circle";
 
 //----------------以上不要動！！，以下開放自己的sass，按照自己的區塊放(可自己更動區塊名字)-------------------------
-@import "sass/header";
+
+@import "sass/headers"; //header用這個
+// @import "sass/header";
 //首頁
 @import "sass/main";
+
 //商品頁＆商品內頁
 @import "sass/shop";
 @import "sass/product";
+
 // //客製化多肉 ＆ 心理測驗
 @import "sass/custom";
 @import "sass/mindtest";
 
 //手作課程
 @import "sass/handmakeStyle";
+
 //部落格
 @import "sass/blogpagetwo";
 @import "sass/blog1";
 @import "sass/blog_all";
+
 //購物車＆結帳系統
 @import "sass/shopcart";
-//會員中心 & 會員登入
+
+//會員中心
+@import "sass/mem";
+
+// 會員登入
 @import "sass/MemberCenter";
+
 //Q&A
 @import "./sass/qa";
 
-//泡泡
-@import "sass/circle";
+
+
+
 //----------------共用scss開始-------------------------
 *,
 *:before,
@@ -96,7 +110,7 @@ article {
   float: left;
   font-size: map-get($fontsize, "mini");
   display: flex;
-  margin-top: 130px;
+  // margin-top: 130px;
   @include mobile() {
     margin-top: 0;
   }
