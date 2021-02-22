@@ -3,17 +3,17 @@
     position: relative;
     padding-top: 130px;
     img{
-        width: 100%;
-        height: 500px;
+        width: 100vw;
+        height: auto;
     }
     h1{
         font-size: 32px;
         font-weight: bold;
-       
         position: absolute;
-        top:50%;
+        top:65%;
         left: 50%;
         transform: translate(-50%, -50%);
+    
     }
 }
 
@@ -22,5 +22,34 @@ article{
         font-size: 16px;
         text-align: center;
         margin-top: 40px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .blog_turn{
+        padding-top: 0;
+        h1{
+            text-align: center;
+            font-size: 16px;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width:414px){
+    .blog_turn{
+        padding-top: 0;
+        h1{
+            text-align: center;
+            font-size: 12px;
+            top: 50%;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
     }
 }
