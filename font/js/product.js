@@ -31,11 +31,13 @@ $(document).ready(function () {
 
   // 賀卡
   $(`#product_card_check`).click(function (e) {
-    if ($(`#product_card_check`).prop(`checked`)) {
-      $(`.product_card`).removeClass(`-off`);
-    } else {
-      $(`.product_card`).addClass(`-off`);
-    }
+    $(`.product_card`).toggleClass("-off");
+
+    // if ($(`#product_card_check`).prop(`checked`)) {
+    //   $(`.product_card`).removeClass(`-off`);
+    // } else {
+    //   $(`.product_card`).addClass(`-off`);
+    // }
   });
 
   // 賀卡樣式

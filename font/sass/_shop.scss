@@ -309,18 +309,18 @@ article .pro_bread {
   &_new,
   &_hot {
     font-size: map-get($fontsize, "small");
-    background-color: #fff;
+    color: #fff;
     opacity: 0.7;
     padding: 5px;
     position: absolute;
   }
   &_new {
-    color: map-get($color, "pink");
+    background: map-get($color, "pink");
     top: 10px;
     left: 120px;
   }
   &_hot {
-    color: map-get($color, "yellow");
+    background: map-get($color, "yellow");
     top: 10px;
     left: 20px;
   }
