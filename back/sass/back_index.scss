@@ -87,6 +87,8 @@ header{
 // --------------------------客製多肉
 .Custom_content{
   color:#000 ;
+  overflow:visible;
+  height: auto;
   h1{
     @include h1();
   }
@@ -127,6 +129,8 @@ header{
 
 .handClass_content{
   color:#000 ;
+  overflow:visible;
+  height: auto;
   h1{
     @include h1();
   }
@@ -160,6 +164,8 @@ header{
 }
 .knowledge_content{
   color:#000 ;
+  overflow:visible;
+  height: auto;
   h1{
     @include h1();
   }
@@ -194,6 +200,8 @@ header{
 // --------------------------會員管理
 .member_content{
   color:#000 ;
+  overflow:visible;
+  height: auto;
   h1{
     @include h1();
   }
@@ -234,6 +242,8 @@ header{
 // --------------------------訂單管理
 .order_content{
   color:#000 ;
+  overflow:visible;
+  height: auto;
   h1{
     @include h1();
   }
@@ -268,6 +278,8 @@ header{
 
 .product_content{
   color:#000 ;
+  overflow:visible;
+  height: auto;
   h1{
     @include h1();
   }
@@ -302,6 +314,8 @@ header{
 // --------------------------訊息管理
 .report_content{
   color:#000 ;
+    overflow:visible;
+    height: auto;
   h1{
     @include h1();
   }

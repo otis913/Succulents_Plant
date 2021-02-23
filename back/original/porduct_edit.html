@@ -17,33 +17,50 @@
       @@include('./back_layout/back_LeftNavbar.html')
       <div class="right_main">
 
-        <div class="report_content">
-          <h1>訊息管理</h1>
+        <div class="product_content">
+          <h1>商品管理</h1>
           <div class="bottom_line"></div>
-          <div class="report_table">
+          <button type="button" class="product_inserBtn">新增商品</button>
+          <div class="product_table">
             <table class="table table-striped">
               <tr class="table-dark">
-                <th>回報編號</th>
-                <th>回報日期</th>
-                <th>會員編號</th>
-                <th>處理狀態</th>
-                <th>是否回覆</th>
+                <th>商品編號</th>
+                <th>商品類別</th>
+                <th>商品名稱</th>
+                <th>商品大小</th>
+                <th>商品敘述</th>
+                <th>商品價格</th>
+                <th>商品庫存量</th>
+                <th>商品圖片01</th>
+                <th>商品圖片02</th>
+                <th>商品圖片03</th>
+                <th>商品圖片04</th>
+                <th>商品狀態</th>
+                <th>商品標籤選擇</th>
+                <th>是否編輯</th>
               </tr>
               <tr>
-                <th>1</th>
-                <td>2021/03/30</td>
-                <td>2021231234</td>
-                <td>還未回覆</td>
+                <th scope="row">111232312</th>
+                <td>植物</td>
+                <td>仙人掌</td>
+                <td>20cm*20cm</td>
+                <td>20</td>
                 <td>
-                  <a href="#">回覆</a>
+                  <img class="back_product_img" src="./img/product_big.png" alt="">
+                </td>
+                <td>上架</td>
+                <td>
+                  <a href="#">編輯</a>
                 </td>
               </tr>
             </table>
+
           </div>
+          <a href="">回上一頁</a>
         </div>
       </div>
     </div>
-
+  </div>
 
   </div>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
