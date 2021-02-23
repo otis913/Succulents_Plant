@@ -17,99 +17,69 @@
       @@include('./back_layout/back_LeftNavbar.html')
       <div class="right_main">
 
-        <div class="product_content">
-          <h1>商品編輯</h1>
+        <div class="knowledge_content">
+          <h1>文章新增</h1>
           <div class="bottom_line"></div>
-          <button type="button" class="product_inserBtn">新增商品</button>
-          <div class="product_Edittable">
+          <button type="button" class="knowledge_inserBtn">新增文章</button>
+          <div class="knowledge_Edittable">
             <form action="">
               <table class="table table-striped">
                 <tr>
-                  <td>商品編號</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>商品類別</td>
+                  <td>文章版型</td>
                   <td>
-                    <select class="productNew_type" name="" id="">
-                      <option value="">植物</option>
-                      <option value="">裝飾物</option>
-                      <option value="">盆器</option>
-                      <option value="">賀卡</option>
-                      <option value="">課程</option>
-                    </select>
+                    <input type="radio" checked>版型1
+                    <input type="radio">版型2
                   </td>
                 </tr>
                 <tr>
-                  <td>商品名稱</td>
+                  <td>文章外顯示圖片</td>
+                  <td>
+                    <input type="file" id="article_pictitle">
+                  </td>
+                </tr>
+                <tr>
+                  <td>文章標題</td>
                   <td>
                     <input type="text" />
                   </td>
                 </tr>
                 <tr>
-                  <td>商品大小</td>
-                  <td>
-                    <input type="text" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>商品敘述</td>
+                  <td>內文01</td>
                   <td>
                     <textarea name="" id="input" class="form-control" rows="3" required="required">
                     </textarea>
                   </td>
                 </tr>
                 <tr>
-                  <td>商品價格</td>
+                  <td>內文02</td>
                   <td>
-                    <input type="text" />
+                    <textarea name="" id="input" class="form-control" rows="3" required="required">
+                    </textarea>
                   </td>
                 </tr>
                 <tr>
-                  <td>商品庫存量</td>
+                  <td>內文03</td>
                   <td>
-                    <input type="text" />
+                    <textarea name="" id="input" class="form-control" rows="3" required="required">
+                    </textarea>
                   </td>
                 </tr>
                 <tr>
-                  <td>商品圖片01</td>
+                  <td>圖片01</td>
                   <td>
-                    <input type="file" id="product_pic01">
+                    <input type="file" id="article_pic01">
                   </td>
                 </tr>
                 <tr>
-                  <td>商品圖片02</td>
+                  <td>圖片02</td>
                   <td>
-                    <input type="file" id="product_pic02">
+                    <input type="file" id="article_pic02">
                   </td>
                 </tr>
                 <tr>
-                  <td>商品圖片03</td>
+                  <td>圖片03</td>
                   <td>
-                    <input type="file" id="product_pic03">
-                  </td>
-                </tr>
-                <tr>
-                  <td>商品圖片04</td>
-                  <td>
-                    <input type="file" id="product_pic04">
-                  </td>
-                </tr>
-                <tr>
-                  <td>商品狀態</td>
-                  <td>
-                    <input type="radio" checked>上架
-                    <input type="radio">下架
-                  </td>
-                </tr>
-                <tr>
-                  <td>商品標籤選擇</td>
-                  <td>
-                    <select class="productNew_tag" name="" id="">
-                      <option value="">新上市</option>
-                      <option value="">熱門商品</option>
-                      <option value="">客製類</option>
-                    </select>
+                    <input type="file" id="article_pic03">
                   </td>
                 </tr>
               </table>
@@ -120,8 +90,6 @@
         </div>
       </div>
     </div>
-  </div>
-
   </div>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
