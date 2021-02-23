@@ -177,10 +177,13 @@ article .pro_bread {
   // display: block;
   justify-content: space-between;
 
+  @media (max-width: 428px) {
+    display: block;
+  }
+
   @include phone() {
     // flex-direction: column;
     // align-items: flex-start;
-    display: block;
 
     &_select {
       text-align: left;
@@ -193,11 +196,18 @@ article .pro_bread {
     margin-right: 20px;
     outline: none;
     font-size: map-get($fontsize, "normall");
-    @include phone() {
+
+    @media (max-width: 428px) {
       width: 100%;
       margin-bottom: 20px;
       margin-right: 0;
     }
+
+    // @include phone() {
+    //   width: 100%;
+    //   margin-bottom: 20px;
+    //   margin-right: 0;
+    // }
     // float: left;
   }
   form {
@@ -214,7 +224,8 @@ article .pro_bread {
     background-color: map-get($color, "gray2");
     border: 1px solid #444444;
     padding: 10px;
-    @include phone() {
+
+    @media (max-width: 428px) {
       width: 100%;
     }
   }
@@ -226,7 +237,8 @@ article .pro_bread {
     background-color: map-get($color, "gray2");
     transform: translate(-35px);
     outline: none;
-    @include phone() {
+
+    @media (max-width: 428px) {
       position: absolute;
       top: 0;
       right: 0;
@@ -250,9 +262,13 @@ article .pro_bread {
     width: 50%;
   }
 
-  @include phone() {
+  @media (max-width: 428px) {
     width: 100%;
   }
+
+  // @include phone() {
+  //   width: 100%;
+  // }
 
   &_tag {
     @include flex;
