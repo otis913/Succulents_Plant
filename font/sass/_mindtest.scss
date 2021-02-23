@@ -1,34 +1,96 @@
+
+
 .mindtest_wrapper{
     background-image: url(../img/mind/mind_iconbg.png),url(../img/gray_bg.png);
     background-repeat: no-repeat,no-repeat;
     background-position:  center center,center center;
     background-size: cover,cover;
     background-attachment: fixed;
-    width: 100vw;
-    height: 100vh;
-    
-    /* top: 0;
-    left: 0; */
 }
 
+// .mind_wrapper{
+//     background-image: url(../img/mind/mind_bg_1.png),url(../img/mind/mind_bg_2.png);
+//     background-repeat: no-repeat,no-repeat;
+//     background-position:  center center,center center;
+//     background-size: 900px,900px;
+//     height: 900px;
+//     @include phone{
+//         background-size: 700px,700px;
+//         height: auto;
+
+//     }
+// }
+
 .mind_wrapper{
-    background-image: url(../img/mind/mind_bg_1.png),url(../img/mind/mind_bg_2.png);
-    background-repeat: no-repeat,no-repeat;
-    background-position:  center center,center center;
-    background-size: 900px,900px;
-    height: 850px;
+    position: relative;
+    padding: 50px 0;
 }
+
+.mind_circle{
+    width: 750px;
+    height: 750px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotate(10deg);
+    background:rgba(255,255,255,.6);
+    border-radius: 61% 39% 65% 35% / 39% 59% 41% 61%  ;
+    z-index: -1;
+    animation: cc 8s linear infinite;
+    @include mobile{
+        overflow: hidden;
+        width: 500px;
+        height: 500px;
+        transform: rotate(10deg) scale(1.5);
+    }
+    @include phone{
+        width: 400px;
+        height: 400px;
+    }
+
+}
+
+.-bigbig{
+    opacity: 0.5;
+    transform: rotate(0deg) scale(1.05);
+    @include mobile{
+        transform: rotate(0deg) scale(1.6);
+    }
+}
+
+@keyframes cc {
+    0%{border-radius: 61% 39% 65% 35% / 39% 59% 41% 61% ;}
+    25%{border-radius: 58% 40% 52% 48% / 35% 48% 52% 65% ;}
+    50%{border-radius: 47% 57% 46% 54% / 47% 39% 61% 53% ;}
+    75%{border-radius: 64% 36% 62% 38% / 34% 65% 35% 66%  ;}
+    100%{border-radius: 61% 39% 65% 35% / 39% 59% 41% 61% ;}
+    
+}
+
 
 .mind_wrapper h1{
     font-size: 26px;
     font-weight: 700;
     margin-top: 10px;
+    @include mobile{
+        font-size: 22px;
+    }
 }
 
 .mind_ques{
     padding: 100px 0;
+    // z-index: 2;
     /* height: 800px; */
 }
+
+.mind_reoutter{
+    padding: 0 0 100px;
+}
+
+
 
 .mind_answer,.mind_result{
     max-width: 650px;
@@ -38,18 +100,44 @@
     align-items: center;
 }
 
+.mind_result{
+    margin: 100px auto 50px;
+    @include mobile{
+        flex-direction: column;
+        margin: 0px auto 20px;
+    }
+    @include phone{
+        flex-direction: column;
+        margin: 0px auto;
+    }
+}
+
 .mind_block{
     border: 1px solid #eeebeb;
     border-radius: 10px;
     padding: 20px;
     cursor: pointer;
+    @include mobile{
+        width: 50%;
+        margin: 0 2%;
+    }
 }
 
 .mind_block img,.mind_reblock img{
     display: block;
     width: 240px;
     margin-bottom: 30px;
+    @include mobile{
+        width: 100%;
+    }
    
+}
+
+.mind_reblock img{
+    @include mobile{
+        width: 200px;
+        margin-bottom: 0;
+    }
 }
 
 .mind_block:hover{
@@ -104,6 +192,23 @@
 .mind_btn{
     display: flex;
     justify-content: center;
+    @include phone{
+        flex-direction: column;
+        margin-top: 60px;
+    }
+}
+
+.mind_btn .bubble_btnn{
+    @include phone{
+        margin: 15px auto;
+    }
+
+}
+
+.mind_btn .button,.mind_btn .button_y{
+    @include phone{
+        width: 350px;
+    }
 }
 
 .mind_btn .btn_green{
@@ -111,10 +216,3 @@
 
 }
 
-.-nono{
-    display: none;
-}
-
-.-upup{
-    z-index: 1;
-}

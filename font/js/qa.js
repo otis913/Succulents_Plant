@@ -1,7 +1,7 @@
 $(document).ready(function() {
-    $(".qa_wrapper").click(function(){
-        $(this).find("img").slideUp(700);
-        $(".qaBg_wrapper").slideDown(700);
+    $(".qa").click(function(){
+        $(".qa").hide();
+        $(".qaBg").toggle();
     })
     $(".question h2").click(function(){
         $(this).parent().find('p').slideToggle();

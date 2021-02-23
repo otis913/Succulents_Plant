@@ -12,6 +12,9 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+    
+     <!-- vue cdn  -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js"></script>
 
     <!-- aos動畫效果 -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -37,25 +40,34 @@
     
 </head>
 <body>
+    <!-- header開始，要放在body下面 -->
+    <div class="header_bg">
+        <div class="headers">
+            <div class="navs">
+               <a href="./main.html"><img src="img/logo.png" alt=""></a>
+                <ul>
+                    <li><a href="./shop.html">商品專區</a></li>
+                    <li><a href="./custom.html">客製多肉</a></li>
+                    <li><a href="./mindtest.html">心理測驗</a></li>
+                    <li><a href="./HandMake.html">手作課程</a></li>
+                    <li><a href="./blog_all.html">多肉知識</a></li>
+                </ul>
+            </div>  
+            <ol>
+                <li><a href=""><i class="fas fa-shopping-basket"></i></a></li>
+                <li><a href="./member.html"><i class="fas fa-user"></i></a></li>
+            </ol>
+            <div class="ham">
+                <span></span> 
+                <span></span> 
+                <span></span>
+            </div>
+        </div>
+    </div> 
+    <!-- header結束 -->
 
-    <!-- 目前共用的標籤 
-        body
-        html
-        section
-        article
-        .bread
-        .btn_green
-        .btn_yellow
-        .bubble_btnn
-        .ex
-        footer
-    -->
-
-
-    <!-- section 的範圍為全螢幕，主要用來放background-image的-->
-    <!-- 要新增背景圖請另外加class ex:class="full_wrapper" -->
     <section class="full_wrapper">
-
+        <div class="ex"></div> <!-- 用這個來推header的間隔 -->
 
         <!-- 麵包屑在這 -->
         <article>
@@ -71,7 +83,7 @@
         <article>
             <!-- 內容放這裡 -->
             <!-- 側邊欄 -->
-            <div class="order">
+            <!-- <div class="order">
                 <button><i class="fa fa-times" aria-hidden="true"></i></button>
                 <h2>購物清單</h2>
                 <div class="orderPith"></div>
@@ -133,7 +145,7 @@
                  <p>$3580</p>
                 </div>
                 <button class="checkbuy">確定購買</button>
-            </div>
+            </div> -->
             <!-- 購物車中間 -->
             <div class="order_center">
               <h2>購物車</h2>
@@ -249,7 +261,8 @@
                  
               </div>
               <div class="the_order1">
-                <button class="conti" >繼續購物</button>
+                 
+                <button class="conti" > <a href="./shop.html">繼續購物</a></button>
                 <button class="next" >下一步</button>
             </div>
 
@@ -317,8 +330,9 @@
             <p class="recieve">已收到您的訂單</p>
             <p class="orderNum">訂單編號：202101242245</p>
             <div class="the_order3">
-                <button class="goShop" >前往商城</button>
-                <button class="goClub" >前往會員中心</button>
+                
+                <button class="goShop" ><a href="./shop.html">前往商城</a></button>
+                <button class="goClub" ><a href="./member.html">前往會員中心</a></button>
             </div>
           </div>
       
@@ -339,42 +353,179 @@
     
 
 
+    <!-- QA仙人掌開始，放在footer上面 -->
+    <section class="qa_pos">
+        <div class="qa_wrapper">
+            <img src="img/QA/QA_LOGO.png" alt="">
+        </div>   
+        
+        <div class="qaBg_wrapper" id="app">
+            <div class="qaBg">
+              <img src="img/QA/QA_close.png" alt="" class="cancel">
+              <ul>
+                <li class="question">
+                    <h2>Q:想更換或取消訂單，怎麼辦呢？</h2>
+                    <p>A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
+                </li>
+                <li class="question">
+                    <h2>Q:想更換或取消訂單，怎麼辦呢？</h2>
+                    <p>A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
+                </li>
+                <li class="question">
+                  <h2>Q:想更換或取消訂單，怎麼辦呢？</h2>
+                  <p>A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
+                </li>
+  
+                <div class="cusQUS" >{{message}}</div>
+                <div class="answer">we will hope you</div>
+              </ul> 
+              
+              <div class="cusQ" >
+                  <div class="adimit">
+                    <input type="text" v-model="message">
+                    <button class="btn">送出</button>
+                  </div>
+              </div>
+            
+            </div>
+        
+        </div>
+    </section>
+    <!-- QA仙人掌結束 -->
+  
+
+
+
+    
+
+    <!-- footer start -->
     <footer>
-        <article>
-            <div class="brand_info">
-                <ul>
-                    <li><a href="">商品專區</a></li>
-                    <li><a href="">客製多肉</a></li>
-                    <li><a href="">心理測驗</a></li>
-                    <li><a href="">手作課程</a></li>
-                    <li><a href="">部落格</a></li>
-                </ul>    
+      <article>
+          <div class="brand_info">
+              <ul>
+                  <li><a href="./shop.html">商品專區</a></li>
+                  <li><a href="./custom.html">客製多肉</a></li>
+                  <li><a href="./mindtest.html">心理測驗</a></li>
+                  <li><a href="./HandMake.html">手作課程</a></li>
+                  <li><a href="./blog_all.html">多肉知識</a></li>
+              </ul>    
 
-                <ol>
-                    <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
-                    <li><a href=""><i class="fab fa-youtube"></i></a></li>
-                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                </ol>
+              <ol>
+                  <li><a ref=""><i class="fab fa-facebook-square"></i></a></li>
+                  <li><a ref=""><i class="fab fa-youtube"></i></a></li>
+                  <li><a ref=""><i class="fab fa-twitter"></i></a></li>
+              </ol>
 
-                <p>ⓒ Copyright Shimabara Shokuhin All Rights Reserved. </p>
-            </div>
+              <p>ⓒ Copyright Shimabara Shokuhin All Rights Reserved. </p>
+          </div>
 
-            <div class="line"></div>
+          <div class="line"></div>
 
-            <div class="logo_info">
-                <a href=""><img src="img/icon_logo_footer.png" alt=""></a>
-                <p>tel : 02-2338-8365</p>
-                <p>e-mail : Succulents Monster@gmail.com </p>
-                <p>address : 104 台北市中山區南京東路三段219號</p>
-                <p>open : 週一至週日 11:00 – 18:30</p>
+          <div class="logo_info">
+              <a href="main.html"><img src="img/icon_logo_footer.png" alt=""></a>
+              <p>tel : 02-2338-8365</p>
+              <p>e-mail : Succulents Monster@gmail.com </p>
+              <p>address : 104 台北市中山區南京東路三段219號</p>
+              <p>open : 週一至週日 11:00 – 18:30</p>
 
-            </div>
+          </div>
 
-        </article>
+      </article>
 
-    </footer>
-    <!-- footer end -->
+  </footer>
+  <!-- footer end -->
+    <script>
+     // 側邊欄
+ var app9 = new Vue({
+    el:'#app8',
+    data:{
+       counter:0
+    },
+   
+})
+var app9 = new Vue({
+    el:'#app9',
+    data:{
+       counter:0
+    },
+   
+})
 
+$(document).ready(function() {
+    關閉側邊欄位
+    $('.fa-times').click(function(){
+        // console.log('hide me');
+        $('.order').hide();
+    })
+    // 確定購買
+    $('.checkbuy').click(function(){
+        // console.log('hide me');
+        $('.order').hide();
+        $('.order_center').show();
+    })
+
+})
+
+//計數器的部分
+Vue.component('counter-component', {
+    data: function () {
+        return {
+            counter: 0
+        }
+    },
+    template: `
+    <div>
+    <p >{{ counter }}</p>
+    </div>
+   `
+});
+
+var app = new Vue({
+    el: '#app',
+    data: {
+        counter: 0,
+    }
+})
+var app = new Vue({
+    el: '#app2',
+    data: {
+        counter: 0,
+    }
+})
+var app = new Vue({
+    el: '#app3',
+    data: {
+        counter: 0,
+    }
+})
+// 繼續購物、下一步、上一步、訂單送出
+$(document).ready(function() {
+ 
+    $(".next").click(function(){
+        $(".container2").slideDown("slow");
+        $(".the_order1").hide();
+        $(".reci_title").show();
+        $(".the_order2").show();
+    })
+    $(".pre").click(function(){
+        $(".container2").hide();
+        $(".reci_title").hide();
+        $(".the_order2").hide();
+        $(".the_order1").show();  
+    })
+    $(".cofirm").click(function(){
+        $(".container2").hide();
+        $(".container1").hide();
+        $(".reci_title").hide();
+        $(".the_order2").hide();
+        $(".order_center h2").hide();
+        $(".the_order1").hide();
+        $(".orderForm").show();
+      
+    })
+  })
+
+    </script>
 
 
     <!-- jquery -->
@@ -387,7 +538,8 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script src="js/bubblebtn.js"></script>
 
-    <!-- 自已的js -->
-    <!-- <script src="js/your.js"></script> -->
+    <!-- 每一個頁面都要引入以下這兩個js -->
+    <script src="./js/header.js"></script>
+    <script src="./js/qa.js"></script>
 </body>
 </html>

@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>部落格文章1</title>
+    <title>自己的頁面</title>
+
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
-        integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-    </link>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous"></link>
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,21 +17,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js"></script>
 
     <!-- aos動畫效果 -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- bubble_btn動畫效果 -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-    <script src="js/bubblebtn.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
-
-
+    <!-- 自己的css -->
+    <link rel="stylesheet" href="css/style.css">
+    
 </head>
-
 <body>
-    <!-- header開始，要放在body下面 -->
-    <div class="header_bg">
+    
+      <!-- header開始，要放在body下面 -->
+      <div class="header_bg">
         <div class="headers">
             <div class="navs">
                <a href="./main.html"><img src="img/logo.png" alt=""></a>
@@ -59,50 +51,27 @@
     </div> 
     <!-- header結束 -->
 
-    <div class="full_wrapper">
+
+    <section class="full_wrapper">
 
         <div class="ex"></div> <!-- 用這個來推header的間隔 -->
 
+        <!-- 麵包屑在這 -->
         <article>
             <div class="bread">
-                <a href="">首頁</a> > <a href="">部落格</a>
+               <a href="">首頁</a> > <a href="">心理測驗</a>
             </div>
         </article>
 
-        <article>
-            <img src="./img/blog1/blogall1.png" alt="">
-            <p class="blog1_p">新的年度的起始，<br>
-                你會做些什麼事讓自己今年順利平安呢？<br>
-                到廟裡拜拜？請熟識的老師指點一番？<br>
-                <br>
-                或者身上配戴幸運小物？<br>
-                隨著 2021
-                年的到來，你有想過玩植物也能增加自己的好運嗎？園藝<br>是一門人類古老的技藝，除了近代時常說的心理層面的園藝治療之外<br>，現在科學上也佐證了園藝能夠讓自己心情更愉悅，保持正能量與好心情<br>，必能吸引更多的好運在身旁。
-            </p>
-        </article>
-        <article>
-            <img src="./img/blog1/blogall2.png" alt="">
-            <p class="blog1_p">新的年度的起始，<br>
-                你會做些什麼事讓自己今年順利平安呢？<br>
-                到廟裡拜拜？請熟識的老師指點一番？<br>
-                <br>
-                或者身上配戴幸運小物？<br>
-                隨著 2021
-                年的到來，你有想過玩植物也能增加自己的好運嗎？園藝<br>是一門人類古老的技藝，除了近代時常說的心理層面的園藝治療之外<br>，現在科學上也佐證了園藝能夠讓自己心情更愉悅，保持正能量與好心情<br>，必能吸引更多的好運在身旁。
-            </p>
-        </article>
-        <article>
-            <img src="./img/blog1/blogall3.png" alt="">
-            <p class="blog1_p">新的年度的起始，<br>
-                你會做些什麼事讓自己今年順利平安呢？<br>
-                到廟裡拜拜？請熟識的老師指點一番？<br>
-                <br>
-                或者身上配戴幸運小物？<br>
-                隨著 2021
-                年的到來，你有想過玩植物也能增加自己的好運嗎？園藝<br>是一門人類古老的技藝，除了近代時常說的心理層面的園藝治療之外<br>，現在科學上也佐證了園藝能夠讓自己心情更愉悅，保持正能量與好心情<br>，必能吸引更多的好運在身旁。
-            </p>
-        </article>
-    </div>
+
+        <div class="ex"></div>
+        <div class="ex"></div>
+        <div class="ex"></div>
+        <div class="ex"></div>             
+        <div class="ex"></div>
+        <div class="ex"></div>
+       
+    </section>
 
 
 
@@ -187,26 +156,21 @@
 
   </footer>
   <!-- footer end -->
-    <script>
-        let hide = document.getElementsByClassName('ham')[0];
-        let ul = document.getElementsByClassName('header_mid')[0];
-
-        document.addEventListener("click", function (e) {
-            if (e.target.closest('.ham')) {
-
-                ul.style.top = "80px";
-            } else {
-                ul.style.top = "-550px";
-            }
 
 
 
-        });
-    </script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- aos動畫效果 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- bubble_btn動畫效果 -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="js/bubblebtn.js"></script>
+
     <!-- 每一個頁面都要引入以下這兩個js -->
     <script src="./js/header.js"></script>
     <script src="./js/qa.js"></script>
-
 </body>
-
 </html>
