@@ -12,45 +12,13 @@
 
 <body>
   <div class="wrapper">
-    <header>
-
-  <img src="./img/logo1.png" alt="">
-  <h1>肉多不怪後臺管理</h1>
-  <a href="" class="back_logout">帳號登出</a>
-
-</header>
+    @@include('./back_layout/back_header.html')
     <div class="section_main">
-      <div class="left_list">
-  <div class="left_btn">
-    <ul>
-      <li>
-        <a href="./member_manage.html">會員管理</a>
-      </li>
-      <li>
-        <a href="./order_manage.html">訂單管理</a>
-      </li>
-      <li>
-        <a href="./porduct_manage.html">商品管理</a>
-      </li>
-      <li>
-        <a href="./handClass_manage.html">課程管理</a>
-      </li>
-      <li>
-        <a href="./custom_manage.html">客製多肉管理</a>
-      </li>
-      <li>
-        <a href="./knowledge_manage.html">知識文章</a>
-      </li>
-      <li>
-        <a href="./report_manage.html">回報訊息管理</a>
-      </li>
-    </ul>
-  </div>
-</div>
+      @@include('./back_layout/back_LeftNavbar.html')
       <div class="right_main">
 
         <div class="knowledge_content">
-          <h1>知識文章管理</h1>
+          <h1>知識文章</h1>
           <div class="bottom_line"></div>
           <button type="button" class="knowledge_inserBtn">新增文章</button>
           <div class="knowledge_table">
@@ -70,7 +38,7 @@
                 </td>
                 <td>種植多肉的十個必須要知道的事情</td>
                 <td>
-                  <a href="#">編輯</a>
+                  <a href="./knowledge_edit.html">編輯</a>
                 </td>
               </tr>
             </table>

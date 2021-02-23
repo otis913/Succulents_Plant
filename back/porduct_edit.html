@@ -12,9 +12,41 @@
 
 <body>
   <div class="wrapper">
-    @@include('./back_layout/back_header.html')
+    <header>
+
+  <img src="./img/logo1.png" alt="">
+  <h1>肉多不怪後臺管理</h1>
+  <a href="" class="back_logout">帳號登出</a>
+
+</header>
     <div class="section_main">
-      @@include('./back_layout/back_LeftNavbar.html')
+      <div class="left_list">
+  <div class="left_btn">
+    <ul>
+      <li>
+        <a href="./member_M.html">會員管理</a>
+      </li>
+      <li>
+        <a href="./order_M.html">訂單管理</a>
+      </li>
+      <li>
+        <a href="./porduct_M.html">商品管理</a>
+      </li>
+      <li>
+        <a href="./handClass_M.html">課程管理</a>
+      </li>
+      <li>
+        <a href="./custom_M.html">客製多肉</a>
+      </li>
+      <li>
+        <a href="./knowledge_M.html">知識文章</a>
+      </li>
+      <li>
+        <a href="./report_M.html">回報訊息</a>
+      </li>
+    </ul>
+  </div>
+</div>
       <div class="right_main">
 
         <div class="product_content">
@@ -98,7 +130,7 @@
                 <td>商品狀態</td>
                 <td>
                   <input type="radio" checked>上架
-                  <input type="radio">下架
+                  <input type="radio" checked>下架
                 </td>
               </tr>
               <tr>

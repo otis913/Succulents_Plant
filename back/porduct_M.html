@@ -11,42 +11,78 @@
 </head>
 
 <body>
-
   <div class="wrapper">
-    @@include('./back_layout/back_header.html')
+    <header>
+
+  <img src="./img/logo1.png" alt="">
+  <h1>肉多不怪後臺管理</h1>
+  <a href="" class="back_logout">帳號登出</a>
+
+</header>
     <div class="section_main">
-      @@include('./back_layout/back_LeftNavbar.html')
+      <div class="left_list">
+  <div class="left_btn">
+    <ul>
+      <li>
+        <a href="./member_M.html">會員管理</a>
+      </li>
+      <li>
+        <a href="./order_M.html">訂單管理</a>
+      </li>
+      <li>
+        <a href="./porduct_M.html">商品管理</a>
+      </li>
+      <li>
+        <a href="./handClass_M.html">課程管理</a>
+      </li>
+      <li>
+        <a href="./custom_M.html">客製多肉</a>
+      </li>
+      <li>
+        <a href="./knowledge_M.html">知識文章</a>
+      </li>
+      <li>
+        <a href="./report_M.html">回報訊息</a>
+      </li>
+    </ul>
+  </div>
+</div>
       <div class="right_main">
 
-        <div class="Custom_content">
+        <div class="product_content">
           <h1>商品管理</h1>
           <div class="bottom_line"></div>
-          <div class="Custom_table">
+          <button type="button" class="product_inserBtn">新增商品</button>
+          <div class="product_table">
             <table class="table table-striped">
-              <tr>
+              <tr class="table-dark">
+                <th>商品編號</th>
                 <th>商品類別</th>
                 <th>商品名稱</th>
+                <th>商品庫存量</th>
                 <th>商品圖片01</th>
                 <th>商品狀態</th>
                 <th>是否編輯</th>
               </tr>
               <tr>
-                <th>植物</th>
+                <th scope="row">111232312</th>
+                <td>植物</td>
                 <td>仙人掌</td>
+                <td>20</td>
                 <td>
-                  <img class="back_custom_img" src="./img/product_big.png" alt="">
+                  <img class="back_product_img" src="./img/product_big.png" alt="">
                 </td>
                 <td>上架</td>
                 <td>
-                  <a href="#">編輯</a>
+                  <a href="./porduct_edit.html">編輯</a>
                 </td>
               </tr>
             </table>
           </div>
         </div>
       </div>
-
     </div>
+  </div>
 
   </div>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
