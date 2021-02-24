@@ -5,19 +5,19 @@
     // $sql = "SELECT * FROM member WHERE Name = '".$account."' and PWD = '".$pwd."' ";  //作業
     
 
-    // $sql = 'SELECT e.member_id, e.name, e.account, e.password, e.email, e.level, e.blacklist, e.introduction, count(d.work_id),e.join_date
+    // $sql = 'SELECT 
+    //          e.member_id, e.name, e.account, e.password, e.email, 
+    //          e.level, e.blacklist, e.introduction, count(d.work_id),
+    //          e.join_date
     //         FROM 
     //             member e
     //             join work d
     //                 on e.member_id = d.member_id
     //         group by member_id';
 
-    $sql = 'SELECT e.*, count(d.work_id)
+    $sql = 'SELECT *, 
             FROM 
-                member e
-                left join work d
-                    on e.member_id = d.member_id
-            group by member_id';
+                MEMBER;
   
 
     $statement = $pdo->prepare($sql);    
@@ -32,45 +32,23 @@
             <th>會員帳號</th>
             <th>會員姓名</th>
             <th>帳號狀態</th>
-            <th>是否編輯</th>
+            <th>創建時間</th>
+            <th>停權與否</th>
           </tr>";
     
     foreach($data as $index => $row){
         echo "<tr class='table-light'><td>".$row["member_id"]."</td>";
-        echo "<td>".$row["name"]."</td>";
-        echo "<td>".$row["account"]."</td>";
-        echo "<td>".$row["password"]."</td>";
-        echo "<td>".$row["email"]."</td>";
+        echo "<td>".$row["memberNO"]."</td>";
+        echo "<td>".$row["memberAccount"]."</td>";
+        echo "<td>".$row["memberName"]."</td>";
+        echo "<td>".$row["memberStatus"]."</td>";
+        echo "<td>".$row["memberDate"]."</td>";
 
-        $level=$row["level"];
-        switch ($level) {
-            case "1":
-                $level = '高級會員';
-            break;
-            case "2":
-                $level = '普通會員';
-            break;
-            default:
-                $level = '錯誤';
-        };
-        echo "<td>".$level."</td>";
-
-        $blacklist=$row["blacklist"];
-        switch ($blacklist) {
-            case "1":
-                $blacklist = '黑名單';
-            break;
-            case "2":
-                $blacklist = '白名單';
-            break;
-            default:
-                $level = '錯誤';
-        };
-        echo "<td>".$blacklist."</td>";
-
-        echo "<td>".$row["introduction"]."</td>";
-        echo "<td>".$row["count(d.work_id)"]."</td>";
-        echo "<td>".$row["join_date"]."</td>";
-        echo "<td width='40'><a href=''>編輯</a></td></tr>";
+        echo "
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+            <label class="custom-control-label" for="customSwitch1"></label>
+        </div></td>
+        </tr>";
     }
 ?>

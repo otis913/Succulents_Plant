@@ -15,9 +15,39 @@
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+  <!-- JQ cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </script>
 
   <link rel="stylesheet" href="./css/back_index.css">
   <title>肉多不怪會員管理中心</title>
+  <script>
+    // $(document).ready(function () {
+    //   $('.leftBtn').click(function () {
+    //     $(this).remove();
+    //   });
+    // });
+
+    $(document).ready(function () {
+      $('left_btn').click(function (e) {
+        e.preventDefault();
+        $('leftBtn').addclass('a_click');
+        $(this).addClass("a_click");
+      });
+    });
+
+    // $(document).ready(function () {
+    //   $(`.shop_mainfilter>li>a`).click(function (e) {
+    //     e.preventDefault();
+    //     $(`.shop_mainfilter>li>a`).removeClass("-shop-click");
+    //     $(`.shop_childfilter>li>a`).removeClass("-shop-click");
+
+    //     // $(`.shop_childfilter`).removeClass(`-show-flex`);
+    //     $(`.shop_childfilter`).addClass("-off");
+
+    //     $(this).addClass("-shop-click");
+    //   });
+  </script>
 </head>
 
 <body>
@@ -26,36 +56,34 @@
     <div class="section_main">
       @@include('./back_layout/back_LeftNavbar.html')
       <div class="right_main">
-
-        <div class="handClass_content">
-          <h1>課程管理</h1>
-          <div class="bottom_line"></div>
-          <div class="handClass_table">
-            <form action="">
-              <table class="table table-striped">
-                <tr class="table-dark">
-                  <th>課程編號</th>
-                  <th>課程名稱</th>
-                  <th>課程價格</th>
-                  <th>詳細資料</th>
-                  <th>是否編輯</th>
-                </tr>
-                <tr>
-                  <th>001</th>
-                  <td>手捏陶器+多肉組盆</td>
-                  <td>1688</td>
-                  <td>
-                    <i class="fas fa-minus "></i>
-                    <i class="fas fa-plus"></i>
-                  </td>
-                  <td>
-                    <a href="./handClass_edit.html">編輯</a>
-                  </td>
-                </tr>
-              </table>
-            </form>
-          </div>
+        <h1>課程管理</h1>
+        <div class="bottom_line"></div>
+        <div class="handClass_table">
+          <form action="">
+            <table class="table table-striped">
+              <tr class="table-dark">
+                <th>課程編號</th>
+                <th>課程名稱</th>
+                <th>課程價格</th>
+                <th>詳細資料</th>
+                <th>是否編輯</th>
+              </tr>
+              <tr>
+                <th>001</th>
+                <td>手捏陶器+多肉組盆</td>
+                <td>1688</td>
+                <td>
+                  <i class="fas fa-minus "></i>
+                  <i class="fas fa-plus"></i>
+                </td>
+                <td>
+                  <a href="./handClass_edit.html">編輯</a>
+                </td>
+              </tr>
+            </table>
+          </form>
         </div>
+
       </div>
     </div>
 

@@ -24,61 +24,58 @@
   <div class="left_btn">
     <ul>
       <li>
-        <a href="./member_M.html">會員管理</a>
+        <a class="leftBtn" href="./member_M.html">會員管理</a>
       </li>
       <li>
-        <a href="./order_M.html">訂單管理</a>
+        <a class="leftBtn" href="./order_M.html">訂單管理</a>
       </li>
       <li>
-        <a href="./porduct_M.html">商品管理</a>
+        <a class="leftBtn" href="./porduct_M.html">商品管理</a>
       </li>
       <li>
-        <a href="./handClass_M.html">課程管理</a>
+        <a class="leftBtn" href="./handClass_M.html">課程管理</a>
       </li>
       <li>
-        <a href="./knowledge_M.html">知識文章</a>
+        <a class="leftBtn" href="./knowledge_M.html">知識文章</a>
       </li>
       <li>
-        <a href="./report_M.html">回報訊息</a>
+        <a class="leftBtn" href="./report_M.html">回報訊息</a>
       </li>
     </ul>
   </div>
 </div>
       <div class="right_main">
+        <h1>訂單管理</h1>
+        <div class="bottom_line"></div>
+        <div class="order_table">
+          <table class="table table-striped">
+            <tr class="table-dark">
+              <th>訂單編號</th>
+              <th>會員編號</th>
+              <th>訂單日期</th>
+              <th>付款方式</th>
+              <th>訂單付款狀態</th>
+              <th>訂單狀態</th>
+              <th>修改訂單狀態</th>
+            </tr>
+            <tr>
+              <th>112312312</th>
+              <th>001</th>
+              <td>2020/01/30</td>
+              <td>信用卡付款</td>
+              <td>已結帳</td>
+              <td>送貨中</td>
+              <td>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                  <label class="custom-control-label" for="customSwitch1"></label>
+                </div>
+              </td>
+            </tr>
+          </table>
 
-        <div class="order_content">
-          <h1>訂單管理</h1>
-          <div class="bottom_line"></div>
-          <div class="order_table">
-            <table class="table table-striped">
-              <tr class="table-dark">
-                <th>訂單編號</th>
-                <th>會員編號</th>
-                <th>訂單日期</th>
-                <th>付款方式</th>
-                <th>訂單付款狀態</th>
-                <th>訂單狀態</th>
-                <th>修改訂單狀態</th>
-              </tr>
-              <tr>
-                <th>112312312</th>
-                <th>001</th>
-                <td>2020/01/30</td>
-                <td>信用卡付款</td>
-                <td>已結帳</td>
-                <td>送貨中</td>
-                <td>
-                  <div class="custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                    <label class="custom-control-label" for="customSwitch1"></label>
-                  </div>
-                </td>
-              </tr>
-            </table>
-            <!-- <input type="button" value="取消" />
-            <input type="button" value="確定" /> -->
-          </div>
         </div>
+
       </div>
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

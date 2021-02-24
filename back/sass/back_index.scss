@@ -73,20 +73,16 @@ header{
                 background-color: #d0c3a3;
                 font-weight: bold;
             }
-      }
+          }
+          .a_click{
+            background-color: #d9a420;
+          }
     }
   }
 }
 .right_main{
   width: 85%;
- margin-left: 20px;
-}
-
-
-  
-
-// --------------------------客製多肉
-.Custom_content{
+  margin-left: 20px;
   color:#000 ;
   overflow:visible;
   height: auto;
@@ -96,16 +92,21 @@ header{
   .bottom_line{
     @include bottom_line(200px);
   }
+}
 
+
+// --------------------------客製多肉
   .Custom_table{
    table{
      font-size: 20px;
      tr{
        th{
-        text-align: center;
+        text-align: left; 
+        margin: 10px;
        }
        td{
-        text-align: center;
+        text-align: left; 
+        margin: 10px;
         img{
           display: block;
           width: 100px;
@@ -120,7 +121,7 @@ header{
      }
    }
   }
-}
+
 
 // --------------------------課程管理
 .handClass_inserBtn{
@@ -128,17 +129,6 @@ header{
   @include inserBtnH();
   @include inserBtn();
 }
-
-.handClass_content{
-  color:#000 ;
-  overflow:visible;
-  height: auto;
-  h1{
-    @include h1();
-  }
-  .bottom_line{
-    @include bottom_line(200px);
-  }
   .handClass_table{
    table{
      font-size: 20px;
@@ -147,38 +137,7 @@ header{
         text-align: center;
        }
        td{
-        text-align: center;     
-        a{
-          @include a();
-          :hover{
-            color: #d87680;
-          }
-        }   
-       }
-     }
-   }
-  }
-}
-// --------------------------課程編輯
-.handClass_content{
-  color:#000 ;
-  overflow:visible;
-  height: auto;
-  h1{
-    @include h1();
-  }
-  .bottom_line{
-    @include bottom_line(200px);
-  }
-  .handClass_table{
-   table{
-     font-size: 20px;
-     tr{
-       th{
-        text-align: center;
-       }
-       td{
-        text-align: center;     
+        text-align: center; 
         a{
           @include a();
           :hover{
@@ -188,12 +147,44 @@ header{
         .fas{
           cursor: pointer;
           margin-right: 5px;
-        }   
+        }     
        }
      }
    }
   }
-}
+
+// --------------------------課程編輯
+
+  .handClass_Edittable{
+   table{
+     font-size: 20px;
+     tr{
+       th{
+        text-align: center;
+       }
+       td{
+        text-align: left; 
+        margin: 10px;   
+        a{
+          @include a();
+          :hover{
+            color: #d87680;
+          }
+        } 
+       }
+     }
+   }
+   .cancel_check{
+      display: flex;
+      justify-content: center;
+      input{
+        @include inserBtn();
+        @include inserBtnH();
+        margin: 10px;
+      }
+    }
+  }
+
 
 // --------------------------文章管理
 .knowledge_inserBtn{
@@ -201,16 +192,7 @@ header{
   @include inserBtnH();
   @include inserBtn();
 }
-.knowledge_content{
-  color:#000 ;
-  overflow:visible;
-  height: auto;
-  h1{
-    @include h1();
-  }
-  .bottom_line{
-    @include bottom_line(200px);
-  }
+
   .knowledge_table{
    table{
      font-size: 20px;
@@ -219,7 +201,8 @@ header{
         text-align: center;
        }
        td{
-        text-align: center; 
+        text-align: left; 
+        margin: 10px;
         img{
           display: block;
           width: 100px;
@@ -234,29 +217,20 @@ header{
      }
    }
   }
-}
+
 // --------------------------文章編輯
 .knowledge_inserBtn{
   @include a();
   @include inserBtnH();
   @include inserBtn();
 }
-.knowledge_content{
-  color:#000 ;
-  overflow:visible;
-  height: auto;
-  h1{
-    @include h1();
-  }
-  .bottom_line{
-    @include bottom_line(200px);
-  }
   .knowledge_Edittable{
    table{
      font-size: 20px;
      tr{
        td{
-        text-align: center; 
+        text-align: left; 
+        margin: 10px;
         img{
           display: block;
           width: 100px;
@@ -267,34 +241,27 @@ header{
        }
      }
    }
-   a{
-    @include a();
-    :hover{
-      color: #d87680;
+    .cancel_check{
+      display: flex;
+      justify-content: center;
+      input{
+        @include inserBtn();
+        @include inserBtnH();
+        margin: 10px;
+      }
     }
-  }   
-  }
-}
-// --------------------------會員管理
-.member_content{
-  color:#000 ;
-  overflow:visible;
-  height: auto;
-  h1{
-    @include h1();
-  }
-  .bottom_line{
-    @include bottom_line(200px);
   }
 
+// --------------------------會員管理
+.search_name{
   h2{
     font-size: 20px;
     margin-bottom: 5px;
-
   }
   .search_text{
     margin-bottom: 10px;
   }
+}  
   .member_table{
    table{
      font-size: 20px;
@@ -303,7 +270,8 @@ header{
         text-align: center;
        }
        td{
-        text-align: center;     
+        text-align: left; 
+        margin: 10px;    
         a{
           @include a();
           :hover{
@@ -314,19 +282,10 @@ header{
      }
    }
   }
-}
+
  
 // --------------------------訂單管理
-.order_content{
-  color:#000 ;
-  overflow:visible;
-  height: auto;
-  h1{
-    @include h1();
-  }
-  .bottom_line{
-    @include bottom_line(200px);
-  }
+
   .order_table{
    table{
      font-size: 20px;
@@ -335,7 +294,8 @@ header{
         text-align: center;
        }
        td{
-        text-align: center;     
+        text-align: left; 
+        margin: 10px;    
         a{
           @include a();
           :hover{
@@ -346,24 +306,13 @@ header{
      }
    }
   }
-}
+
 //-------------------------- 商品管理
 .product_inserBtn{
   @include a();
   @include inserBtnH();
   @include inserBtn();
 }
-
-.product_content{
-  color:#000 ;
-  overflow:visible;
-  height: auto;
-  h1{
-    @include h1();
-  }
-  .bottom_line{
-    @include bottom_line(200px);
-  }
   .product_table{
    table{
      font-size: 20px;
@@ -372,7 +321,8 @@ header{
         text-align: center;
        }
        td{
-        text-align: center; 
+        text-align: left; 
+        margin: 10px; 
         img{
           display: block;
           width: 100px;
@@ -385,27 +335,50 @@ header{
         }   
        }
      }
-   }
+   }  
   }
-}
 // --------------------------商品編輯
 .product_inserBtn{
   @include a();
   @include inserBtnH();
   @include inserBtn();
 }
-
-.product_content{
-  color:#000 ;
-  overflow:visible;
-  height: auto;
-  h1{
-    @include h1();
-  }
-  .bottom_line{
-    @include bottom_line(200px);
-  }
   .product_Edittable{
+   table{
+     font-size: 20px;
+     margin: 0 auto;
+     tr{
+       td{        
+        text-align: left; 
+        margin: 10px;
+        img{
+          display: block;
+          width: 100px;
+        }    
+        textarea{
+          overflow:visible;
+        }   
+       }
+     }
+   }
+   .cancel_check{
+    display: flex;
+    justify-content: center;
+    input{
+      @include inserBtn();
+      @include inserBtnH();
+      margin: 10px;
+    }
+  }
+}
+
+// --------------------------商品新增
+.product_inserBtn{
+  @include a();
+  @include inserBtnH();
+  @include inserBtn();
+}
+  .product_Newtable{
    table{
      font-size: 20px;
      margin: 0 auto;
@@ -424,26 +397,20 @@ header{
        }
      }
    }
-   a{
-    @include a();
-    margin: 10px;
-   }
+   .cancel_check{
+    display: flex;
+    justify-content: center;
+    input{
+      @include inserBtn();
+      @include inserBtnH();
+      margin: 10px;
+    }
   }
 }
 
 
 
 // --------------------------訊息管理
-.report_content{
-  color:#000 ;
-    overflow:visible;
-    height: auto;
-  h1{
-    @include h1();
-  }
-  .bottom_line{
-    @include bottom_line(200px);
-  }
   .report_table{
    table{
      font-size: 20px;
@@ -463,19 +430,9 @@ header{
      }
    }
   }
-}
+
 // --------------------------訊息回覆
 
-.report_content{
-  color:#000 ;
-    overflow:visible;
-    height: auto;
-  h1{
-    @include h1();
-  }
-  .bottom_line{
-    @include bottom_line(200px);
-  }
   .report_Edittable{
    table{
      font-size: 20px;
@@ -484,12 +441,22 @@ header{
         text-align: center;
        }
        td{
-        text-align: center;     
+        text-align: left; 
+        margin: 10px; 
        }
      }
-   }
+    }
+    .cancel_check{
+      display: flex;
+      justify-content: center;
+      input{
+        @include inserBtn();
+        @include inserBtnH();
+        margin: 10px;
+      }
+    }
   }
-}
+
 
 
 
