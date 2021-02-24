@@ -38,4 +38,8 @@ $(document).ready(function () {
       $(this).addClass("-heart");
     }
   });
+
+  $(`.shop_pagination>li>a`).click(function (e) {
+    e.preventDefault();
+  });
 });

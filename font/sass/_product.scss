@@ -111,16 +111,19 @@ article .-pro-bb {
   &_new,
   &_hot {
     font-size: map-get($fontsize, "small");
+    color: #fff;
     padding: 5px;
     border: 1px solid;
     margin: 0 5px;
     margin-bottom: 20px;
   }
   &_new {
-    color: map-get($color, "pink");
+    // color: map-get($color, "pink");
+    background: map-get($color, "pink");
   }
   &_hot {
-    color: map-get($color, "yellow");
+    // color: map-get($color, "yellow");
+    background: map-get($color, "yellow");
   }
 }
 
@@ -171,6 +174,7 @@ article .-pro-bb {
 .product_card {
   display: flex;
   flex-direction: column;
+  transition: 0.5s;
   // display: none;
   input {
     padding: 5px 10px;
