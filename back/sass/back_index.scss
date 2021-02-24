@@ -124,6 +124,7 @@ header{
 
 // --------------------------課程管理
 .handClass_inserBtn{
+  @include a();
   @include inserBtnH();
   @include inserBtn();
 }
@@ -158,8 +159,45 @@ header{
    }
   }
 }
+// --------------------------課程編輯
+.handClass_content{
+  color:#000 ;
+  overflow:visible;
+  height: auto;
+  h1{
+    @include h1();
+  }
+  .bottom_line{
+    @include bottom_line(200px);
+  }
+  .handClass_table{
+   table{
+     font-size: 20px;
+     tr{
+       th{
+        text-align: center;
+       }
+       td{
+        text-align: center;     
+        a{
+          @include a();
+          :hover{
+            color: #d87680;
+          }
+        }
+        .fas{
+          cursor: pointer;
+          margin-right: 5px;
+        }   
+       }
+     }
+   }
+  }
+}
+
 // --------------------------文章管理
 .knowledge_inserBtn{
+  @include a();
   @include inserBtnH();
   @include inserBtn();
 }
@@ -199,6 +237,7 @@ header{
 }
 // --------------------------文章編輯
 .knowledge_inserBtn{
+  @include a();
   @include inserBtnH();
   @include inserBtn();
 }
@@ -310,9 +349,9 @@ header{
 }
 //-------------------------- 商品管理
 .product_inserBtn{
-  @include inserBtn();
+  @include a();
   @include inserBtnH();
-
+  @include inserBtn();
 }
 
 .product_content{
@@ -351,9 +390,9 @@ header{
 }
 // --------------------------商品編輯
 .product_inserBtn{
-  @include inserBtn();
+  @include a();
   @include inserBtnH();
-  
+  @include inserBtn();
 }
 
 .product_content{
@@ -425,7 +464,32 @@ header{
    }
   }
 }
+// --------------------------訊息回覆
 
+.report_content{
+  color:#000 ;
+    overflow:visible;
+    height: auto;
+  h1{
+    @include h1();
+  }
+  .bottom_line{
+    @include bottom_line(200px);
+  }
+  .report_Edittable{
+   table{
+     font-size: 20px;
+     tr{
+       th{
+        text-align: center;
+       }
+       td{
+        text-align: center;     
+       }
+     }
+   }
+  }
+}
 
 
 

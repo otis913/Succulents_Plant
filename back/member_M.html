@@ -36,9 +36,6 @@
         <a href="./handClass_M.html">課程管理</a>
       </li>
       <li>
-        <a href="./custom_M.html">客製多肉</a>
-      </li>
-      <li>
         <a href="./knowledge_M.html">知識文章</a>
       </li>
       <li>
@@ -56,29 +53,33 @@
           <input type="text" class="search_text">
           <input type="submit" class="search_btn" value="search">
           <div class="member_table">
-            <table class="table table-striped">
-              <tr class="table-dark">
-                <th>會員編號</th>
-                <th>會員帳號</th>
-                <th>會員姓名</th>
-                <th>帳號狀態</th>
-                <th>創建時間</th>
-                <th>停權與否</th>
-              </tr>
-              <tr>
-                <th>0001</th>
-                <td>123@gmail.com</td>
-                <td>江美璿</td>
-                <td>正常</td>
-                <td>2020/01/01</td>
-                <td>
-                  <select name="" id="">
-                    <option value="">停權</option>
-                    <option value="">恢復</option>
-                  </select>
-                </td>
-              </tr>
-            </table>
+            <form action="">
+              <table class="table table-striped">
+                <tr class="table-dark">
+                  <th>會員編號</th>
+                  <th>會員帳號</th>
+                  <th>會員姓名</th>
+                  <th>帳號狀態</th>
+                  <th>創建時間</th>
+                  <th>停權與否</th>
+                </tr>
+                <tr>
+                  <th>0001</th>
+                  <td>123@gmail.com</td>
+                  <td>江美璿</td>
+                  <td>正常</td>
+                  <td>2020/01/01</td>
+                  <td>
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                      <label class="custom-control-label" for="customSwitch1"></label>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <!-- <input type="button" value="取消" />
+              <input type="button" value="確定" /> -->
+            </form>
           </div>
         </div>
       </div>

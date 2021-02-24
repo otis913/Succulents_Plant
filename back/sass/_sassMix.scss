@@ -32,13 +32,13 @@
   background-color: #d0c3a3;
   color: #2f4f4f;
   font-size: 15px;
-  font-weight: bold;
-  
+  font-weight: bold;  
 }
 @mixin inserBtnH {
   &:hover{  
     background-color: #d9a420;
     color:#2f4f4f;
+    text-decoration: none;
   }
 
 }

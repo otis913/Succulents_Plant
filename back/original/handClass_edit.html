@@ -12,77 +12,49 @@
 
 <body>
   <div class="wrapper">
-    <header>
-
-  <img src="./img/logo1.png" alt="">
-  <h1>肉多不怪後臺管理</h1>
-  <a href="" class="back_logout">帳號登出</a>
-
-</header>
+    @@include('./back_layout/back_header.html')
     <div class="section_main">
-      <div class="left_list">
-  <div class="left_btn">
-    <ul>
-      <li>
-        <a href="./member_M.html">會員管理</a>
-      </li>
-      <li>
-        <a href="./order_M.html">訂單管理</a>
-      </li>
-      <li>
-        <a href="./porduct_M.html">商品管理</a>
-      </li>
-      <li>
-        <a href="./handClass_M.html">課程管理</a>
-      </li>
-      <li>
-        <a href="./knowledge_M.html">知識文章</a>
-      </li>
-      <li>
-        <a href="./report_M.html">回報訊息</a>
-      </li>
-    </ul>
-  </div>
-</div>
+      @@include('./back_layout/back_LeftNavbar.html')
       <div class="right_main">
 
-        <div class="report_content">
-          <h1>訊息管理</h1>
+        <div class="handClass_content">
+          <h1>課程管理</h1>
           <div class="bottom_line"></div>
-          <div class="report_Edittable">
+          <div class="handClass_Edittable">
             <form action="">
               <table class="table table-striped">
-                <tr>
-                  <td>回報編號</td>
-                  <td></td>
+                <tr class="table-dark">
+                  <td>課程編號</td>
                 </tr>
                 <tr>
-                  <td>會員編號</td>
-                  <td></td>
+                  <td>課程名稱</td>
+                  <input type="text" />
                 </tr>
                 <tr>
-                  <td>回報日期</td>
-                  <td></td>
+                  <td>課程敘述</td>
+                  <input type="text" />
                 </tr>
                 <tr>
-                  <td>回報內文</td>
-                  <td></td>
+                  <td>課程價錢</td>
+                  <input type="text" />
                 </tr>
                 <tr>
-                  <td>回覆內文</td>
-                  <td>
-                    <textarea name="" id="input" class="form-control" rows="3" required="required">
-                    </textarea>
-                  </td>
+                  <td>最多人數</td>
+                  <input type="text" />
+                </tr>
+                <tr>
+                  <td>課程日期</td>
+                  <input type="text" />
                 </tr>
               </table>
-              <input type="buttom" value="取消" />
-              <input type="buttom" value="確定" />
+              <input type="button" value="取消" />
+              <input type="button" value="確定" />
             </form>
           </div>
         </div>
       </div>
     </div>
+
 
 
   </div>
