@@ -1,15 +1,16 @@
 @import "./reset";
 @import "./sassMix";
-
+@import "./sassVar";
 body{
   background-image: url(../img/gray_bg.png);
+  cursor: default;
 }
 
 header{
   display: flex;
   width: 100%;
   height: 100px;
-  background-color: #fff;
+  background-color: map-get($color, "white");
   font-weight: bold;
     img{
       display: block;
@@ -20,20 +21,20 @@ header{
     }
     h1{
         font-size: 2rem;
-        color: #d0c3a3;
+        color: map-get($color, "gold");
         line-height: 100px;
         margin-left: 20px;
     }
     a{
         font-size: 15px;
         font-weight: bold;
-        color: #d0c3a3;
+        color: map-get($color, "gold");
         line-height: 100px;
         margin-left: auto;
         margin-right: 50px;
     }
     a:hover{
-      color: #d87680;
+      color: map-get($color, "pink");
       text-decoration: none;
 
     }
@@ -60,22 +61,24 @@ header{
                 width: 150px;
                 height: 50px;
                 line-height: 50px;
-                background-color: #2f4f4f;
+                background-color: map-get($color, "main_g");
                 font-size: 20px;
                 text-decoration: none;
                 border: 1px solid #eeebeb; 
                 border-radius: 10px;
                 font-weight: bold;
-                color: #d0c3a3;
+                color: map-get($color, "gold");
             }
             a:hover{
-                color: #2f4f4f;
-                background-color: #d0c3a3;
-                font-weight: bold;
+              background-color: map-get($color, "gold");
+              color:map-get($color, "main_g");
+              font-weight: bold;
             }
           }
           .a_click{
-            background-color: #d9a420;
+            background-color: map-get($color, "gold");
+            color:map-get($color, "main_g");
+
           }
     }
   }
@@ -114,7 +117,7 @@ header{
         a{
           @include a();
           :hover{
-            color: #d87680;
+            background-color: map-get($color, "pink");
           }
         }   
        }
@@ -141,7 +144,7 @@ header{
         a{
           @include a();
           :hover{
-            color: #d87680;
+            background-color: map-get($color, "pink");
           }
         }
         .fas{
@@ -168,7 +171,7 @@ header{
         a{
           @include a();
           :hover{
-            color: #d87680;
+            background-color: map-get($color, "pink");
           }
         } 
        }
@@ -210,7 +213,7 @@ header{
         a{
           @include a();
           :hover{
-            color: #d87680;
+            background-color: map-get($color, "pink");
           }
         }   
        }
@@ -275,7 +278,7 @@ header{
         a{
           @include a();
           :hover{
-            color: #d87680;
+            background-color: map-get($color, "pink");
           }
         }   
        }
@@ -299,7 +302,7 @@ header{
         a{
           @include a();
           :hover{
-            color: #d87680;
+            background-color: map-get($color, "pink");
           }
         }   
        }
@@ -330,7 +333,7 @@ header{
         a{
           @include a();
           :hover{
-            color: #d87680;
+            background-color: map-get($color, "pink");
           }
         }   
        }
@@ -423,7 +426,7 @@ header{
         a{
           @include a();
           :hover{
-            color: #d87680;
+            background-color: map-get($color, "pink");
           }
         }   
        }

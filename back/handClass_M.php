@@ -1,3 +1,13 @@
+<?php
+  include('./conSql.php');
+
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,69 +31,14 @@
 
   <link rel="stylesheet" href="./css/back_index.css">
   <title>肉多不怪會員管理中心</title>
-  <script>
-    // $(document).ready(function () {
-    //   $('.leftBtn').click(function () {
-    //     $(this).remove();
-    //   });
-    // });
-
-    $(document).ready(function () {
-      $('left_btn').click(function (e) {
-        e.preventDefault();
-        $('leftBtn').addclass('a_click');
-        $(this).addClass("a_click");
-      });
-    });
-
-    // $(document).ready(function () {
-    //   $(`.shop_mainfilter>li>a`).click(function (e) {
-    //     e.preventDefault();
-    //     $(`.shop_mainfilter>li>a`).removeClass("-shop-click");
-    //     $(`.shop_childfilter>li>a`).removeClass("-shop-click");
-
-    //     // $(`.shop_childfilter`).removeClass(`-show-flex`);
-    //     $(`.shop_childfilter`).addClass("-off");
-
-    //     $(this).addClass("-shop-click");
-    //   });
-  </script>
+  <script src="./js/leftbar.js"></script>
 </head>
 
 <body>
   <div class="wrapper">
-    <header>
-
-  <img src="./img/logo1.png" alt="">
-  <h1>肉多不怪後臺管理</h1>
-  <a href="" class="back_logout">帳號登出</a>
-
-</header>
+    @@include('./back_layout/back_header.html')
     <div class="section_main">
-      <div class="left_list">
-  <div class="left_btn">
-    <ul>
-      <li>
-        <a class="leftBtn" href="./member_M.html">會員管理</a>
-      </li>
-      <li>
-        <a class="leftBtn" href="./order_M.html">訂單管理</a>
-      </li>
-      <li>
-        <a class="leftBtn" href="./porduct_M.html">商品管理</a>
-      </li>
-      <li>
-        <a class="leftBtn" href="./handClass_M.html">課程管理</a>
-      </li>
-      <li>
-        <a class="leftBtn" href="./knowledge_M.html">知識文章</a>
-      </li>
-      <li>
-        <a class="leftBtn" href="./report_M.html">回報訊息</a>
-      </li>
-    </ul>
-  </div>
-</div>
+      @@include('./back_layout/back_LeftNavbar.html')
       <div class="right_main">
         <h1>課程管理</h1>
         <div class="bottom_line"></div>

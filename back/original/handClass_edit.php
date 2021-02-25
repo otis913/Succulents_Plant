@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./css/back_index.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </script>
+  <script src="./js/leftbar.js"></script>
 
   <title>肉多不怪會員管理中心</title>
 </head>

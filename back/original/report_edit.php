@@ -7,7 +7,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/back_index.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </script>
   <title>肉多不怪會員管理中心</title>
+  <script src="./js/leftbar.js"></script>
 </head>
 
 <body>
@@ -18,25 +22,38 @@
       <div class="right_main">
         <h1>訊息管理</h1>
         <div class="bottom_line"></div>
-        <div class="report_table">
-          <table class="table table-striped">
-            <tr class="table-dark">
-              <th>回報編號</th>
-              <th>回報日期</th>
-              <th>會員編號</th>
-              <th>處理狀態</th>
-              <th>是否回復</th>
-            </tr>
-            <tr>
-              <th>1</th>
-              <td>2021/03/30</td>
-              <td>2021231234</td>
-              <td>還未回覆</td>
-              <td>
-                <a href="./report_edit.html">編輯</a>
-              </td>
-            </tr>
-          </table>
+        <div class="report_Edittable">
+          <form action="">
+            <table class="table table-striped">
+              <tr>
+                <td>回報編號</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>會員編號</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>回報日期</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>回報內文</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>回覆內文</td>
+                <td>
+                  <textarea name="" id="input" class="form-control" rows="3" required="required">
+                    </textarea>
+                </td>
+              </tr>
+            </table>
+            <div class="cancel_check">
+              <input type="button" value="取消" />
+              <input type="button" value="確定" />
+            </div>
+          </form>
         </div>
       </div>
     </div>

@@ -7,7 +7,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/back_index.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </script>
   <title>肉多不怪會員管理中心</title>
+  <script src="./js/leftbar.js"></script>
+
 </head>
 
 <body>
@@ -18,12 +23,16 @@
       <div class="right_main">
 
         <div class="knowledge_content">
-          <h1>文章新增</h1>
+          <h1>文章編輯</h1>
           <div class="bottom_line"></div>
           <a class="knowledge_inserBtn" href="./knowledge_creat.html">新增文章</a>
           <div class="knowledge_Edittable">
             <form action="">
               <table class="table table-striped">
+                <tr>
+                  <td>文章編號</td>
+                  <td></td>
+                </tr>
                 <tr>
                   <td>文章版型</td>
                   <td>

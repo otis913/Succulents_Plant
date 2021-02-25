@@ -7,7 +7,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/back_index.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </script>
   <title>肉多不怪會員管理中心</title>
+  <script src="./js/leftbar.js"></script>
 </head>
 
 <body>
@@ -16,33 +20,32 @@
     <div class="section_main">
       @@include('./back_layout/back_LeftNavbar.html')
       <div class="right_main">
-        <h1>知識文章</h1>
+        <h1>訊息管理</h1>
         <div class="bottom_line"></div>
-        <a class="knowledge_inserBtn" href="./knowledge_creat.html">新增文章</a>
-        <div class="knowledge_table">
+        <div class="report_table">
           <table class="table table-striped">
             <tr class="table-dark">
-              <th>文章編號</th>
-              <th>文章版型</th>
-              <th>文章外顯示圖片</th>
-              <th>文章標題</th>
-              <th>是否修改</th>
+              <th>回報編號</th>
+              <th>回報日期</th>
+              <th>會員編號</th>
+              <th>處理狀態</th>
+              <th>是否回復</th>
             </tr>
             <tr>
               <th>1</th>
-              <td>1</td>
+              <td>2021/03/30</td>
+              <td>2021231234</td>
+              <td>還未回覆</td>
               <td>
-                <img class="knowledge_img" src="./img/product_big.png" alt="">
-              </td>
-              <td>種植多肉的十個必須要知道的事情</td>
-              <td>
-                <a href="./knowledge_edit.html">編輯</a>
+                <a href="./report_edit.html">編輯</a>
               </td>
             </tr>
           </table>
         </div>
       </div>
     </div>
+
+
   </div>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

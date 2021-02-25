@@ -1,3 +1,13 @@
+<?php
+  include('./conSql.php');
+
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,8 +16,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
+    integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+  </link>
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+  <!-- JQ cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </script>
+
   <link rel="stylesheet" href="./css/back_index.css">
   <title>肉多不怪會員管理中心</title>
+  <script src="./js/leftbar.js"></script>
 </head>
 
 <body>
@@ -16,43 +40,37 @@
     <div class="section_main">
       @@include('./back_layout/back_LeftNavbar.html')
       <div class="right_main">
-        <h1>訊息管理</h1>
+        <h1>課程管理</h1>
         <div class="bottom_line"></div>
-        <div class="report_Edittable">
+        <div class="handClass_table">
           <form action="">
             <table class="table table-striped">
-              <tr>
-                <td>回報編號</td>
-                <td></td>
+              <tr class="table-dark">
+                <th>課程編號</th>
+                <th>課程名稱</th>
+                <th>課程價格</th>
+                <th>詳細資料</th>
+                <th>是否編輯</th>
               </tr>
               <tr>
-                <td>會員編號</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>回報日期</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>回報內文</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>回覆內文</td>
+                <th>001</th>
+                <td>手捏陶器+多肉組盆</td>
+                <td>1688</td>
                 <td>
-                  <textarea name="" id="input" class="form-control" rows="3" required="required">
-                    </textarea>
+                  <i class="fas fa-minus "></i>
+                  <i class="fas fa-plus"></i>
+                </td>
+                <td>
+                  <a href="./handClass_edit.html">編輯</a>
                 </td>
               </tr>
             </table>
-            <div class="cancel_check">
-              <input type="button" value="取消" />
-              <input type="button" value="確定" />
-            </div>
           </form>
         </div>
+
       </div>
     </div>
+
 
 
   </div>
