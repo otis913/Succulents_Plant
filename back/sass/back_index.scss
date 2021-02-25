@@ -271,11 +271,12 @@ header{
      font-size: 20px;
      tr{
        th{
-        text-align: center;
+        text-align: center; 
+        // margin: 10px;  
        }
        td{
-        text-align: left; 
-        margin: 10px;    
+        text-align: center; 
+        // margin: 10px;    
         a{
           @include a();
           :hover{

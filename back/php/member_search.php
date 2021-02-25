@@ -15,7 +15,7 @@
     //                 on e.member_id = d.member_id
     //         group by member_id';
 
-    $sql = 'SELECT *, 
+    $sql = 'SELECT *
             FROM 
             SUCCULENTS_PLANT.MEMBER';
   
@@ -37,11 +37,23 @@
           </tr>";
     
     foreach($data as $index => $row){
-        echo "<tr class='table-light'><td>".$row["member_id"]."</td>";
-        echo "<td>".$row["memberNO"]."</td>";
+        echo "<tr class='table-light'>
+              <td>".$row["memberNO"]."</td>";
         echo "<td>".$row["memberAccount"]."</td>";
         echo "<td>".$row["memberName"]."</td>";
-        echo "<td>".$row["memberStatus"]."</td>";
+
+        $memberStatus=$row["memberStatus"];
+        switch ($memberStatus) {
+            case "0":
+                $memberStatus = '停權';
+            break;
+            case "1":
+                $memberStatus = '正常';
+            break;
+            default:
+                $memberStatus = '錯誤';
+        };
+        echo "<td>".$memberStatus."</td>";
         echo "<td>".$row["memberDate"]."</td>";
         echo "<td>
             <div class='custom-control custom-switch'>
