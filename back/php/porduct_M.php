@@ -24,37 +24,50 @@
         echo "<tr class='table-light'>
               <td>".$row["productNO"]."</td>";
 
-        // $productType=$row["productType"];
-        // switch ($productType) {
-        //     case "0":
-        //         $productType = '植物';
-        //     break;
-        //     case "1":
-        //         $productType = '裝飾品';
-        //     break;
-        //     case "2":
-        //         $productType = '器皿';
-        //     break;    
-        //     case "3":
-        //         $productType = '賀卡';
-        //     break;
-        //     case "4":
-        //         $productType = '客製植物';
-        //     break;
-        //     case "5":
-        //         $productType = '課程';
-        //     break;
-        //     default:
-        //         $productType = '錯誤';
-        // };
-        // echo "<td>".$productType."</td>";
+        $productType=$row["productType"];
+        switch ($productType) {
+            case "0":
+                $productType = '植物';
+            break;
+            case "1":
+                $productType = '裝飾品';
+            break;
+            case "2":
+                $productType = '器皿';
+            break;    
+            case "3":
+                $productType = '賀卡';
+            break;
+            case "4":
+                $productType = '客製植物';
+            break;
+            case "5":
+                $productType = '課程';
+            break;
+            default:
+                $productType = '錯誤';
+        };
+        echo "<td>".$productType."</td>";
 
         echo "<td>".$row["productName"]."</td>";
         echo "<td>".$row["productNumber"]."</td>";
         echo "<td>".$row["productImg01"]."</td>";
-        echo "<td>".$row["productStatus"]."</td>";       
+
+        $productStatus=$row["productStatus"];
+        switch ($productStatus) {
+            case "0":
+                $productStatus = '上架';
+            break;
+            case "1":
+                $productStatus = '下架';
+            break;
+            default:
+                $productStatus = '錯誤';
+        };
+        echo "<td>".$productStatus."</td>";
+
         echo "<td>
-                <a href="./porduct_edit.html">編輯</a>
+                <a href='./porduct_edit.html'>編輯</a>
               </td>
         </tr>";
     }

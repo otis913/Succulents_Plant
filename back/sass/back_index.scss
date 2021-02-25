@@ -167,8 +167,7 @@ header{
         text-align: center;
        }
        td{
-        text-align: left; 
-        margin: 10px;   
+        text-align: center;  
         a{
           @include a();
           :hover{
@@ -205,8 +204,7 @@ header{
         text-align: center;
        }
        td{
-        text-align: left; 
-        margin: 10px;
+        text-align: center;
         img{
           display: block;
           width: 100px;
@@ -233,8 +231,7 @@ header{
      font-size: 20px;
      tr{
        td{
-        text-align: left; 
-        margin: 10px;
+        text-align: center;
         img{
           display: block;
           width: 100px;
@@ -299,8 +296,7 @@ header{
         text-align: center;
        }
        td{
-        text-align: left; 
-        margin: 10px;    
+        text-align: center; 
         a{
           @include a();
           :hover{
@@ -326,8 +322,7 @@ header{
         text-align: center;
        }
        td{
-        text-align: left; 
-        margin: 10px; 
+        text-align: center;
         img{
           display: block;
           width: 100px;
@@ -354,8 +349,7 @@ header{
      margin: 0 auto;
      tr{
        td{        
-        text-align: left; 
-        margin: 10px;
+        text-align: center;
         img{
           display: block;
           width: 100px;
@@ -389,8 +383,7 @@ header{
      margin: 0 auto;
      tr{
        td{        
-        text-align: left; 
-        margin: 10px;
+        text-align: center;
 
         img{
           display: block;
@@ -446,8 +439,7 @@ header{
         text-align: center;
        }
        td{
-        text-align: left; 
-        margin: 10px; 
+        text-align: center;
        }
      }
     }

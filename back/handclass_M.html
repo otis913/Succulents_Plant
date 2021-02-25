@@ -62,25 +62,15 @@
         <div class="handClass_table">
           <form action="">
             <table class="table table-striped">
-              <!-- <tr class="table-dark">
+              <tr class="table-dark">
                 <th>課程編號</th>
                 <th>課程名稱</th>
                 <th>課程價格</th>
                 <th>詳細資料</th>
                 <th>是否編輯</th>
               </tr>
-              <td>
-                <?=$row["handClassNO"] ?>
-              </td>
-              <td>
-                <?=$row["handClassName"] ?>
-              </td>
-              <td>
-                <?=$row["handClassPrice"] ?>
-              </td>
-              <td>
-                <?=$row["handClassContent"] ?>
-              </td> -->
+
+
             </table>
           </form>
         </div>
@@ -102,7 +92,7 @@
       //Typing your code...
       $.ajax({
         method: "POST",
-        url: "./php/HMclass.php",
+        url: "./php/handclass_M.php",
         data: {
           Name: str
         },
