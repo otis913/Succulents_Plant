@@ -17,7 +17,7 @@
 
     $sql = 'SELECT *, 
             FROM 
-                MEMBER;
+            SUCCULENTS_PLANT.MEMBER';
   
 
     $statement = $pdo->prepare($sql);    
@@ -43,12 +43,11 @@
         echo "<td>".$row["memberName"]."</td>";
         echo "<td>".$row["memberStatus"]."</td>";
         echo "<td>".$row["memberDate"]."</td>";
-
-        echo "
-        <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="customSwitch1">
-            <label class="custom-control-label" for="customSwitch1"></label>
-        </div></td>
-        </tr>";
+        echo "<td>
+            <div class='custom-control custom-switch'>
+                <input type='checkbox' class='custom-control-input' id='customSwitch1'>
+                <label class='custom-control-label' for='customSwitch1'></label>
+            </div>
+        </td>";
     }
 ?>

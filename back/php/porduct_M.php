@@ -23,7 +23,36 @@
     foreach($data as $index => $row){
         echo "<tr class='table-light'>
               <td>".$row["productNO"]."</td>";
-        echo "<td>".$row["productType"]."</td>";
+
+        // echo "<td>".$row["productType"]."</td>";
+
+        $productType=$row["productType"];
+        switch ($productType) {
+            case "0":
+                $productType = '植物';
+            break;
+            case "1":
+                $productType = '裝飾品';
+            break;
+            case "2":
+                $productType = '器皿';
+            break;    
+            case "3":
+                $productType = '賀卡';
+            break;
+            case "4":
+                $productType = '客製植物';
+            break;
+            case "5":
+                $productType = '課程';
+            break;
+            default:
+                $productType = '錯誤';
+        };
+        echo "<td>".$productType."</td>";
+
+
+
         echo "<td>".$row["productName"]."</td>";
         echo "<td>".$row["productNumber"]."</td>";
         echo "<td>".$row["productImg01"]."</td>";
