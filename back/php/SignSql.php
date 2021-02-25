@@ -3,7 +3,7 @@
        //MySQL相關資訊
        $db_host = "localhost";
        $db_user = "root";
-       $db_pass = "0000";
+       $db_pass = "00000";
        $db_select = "SUCCULENTS_PLANT";
 
        // $db_host = "10.2.0.115";

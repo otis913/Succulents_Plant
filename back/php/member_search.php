@@ -1,5 +1,5 @@
 <?php
-    include('./conSql.php');
+    include('./SignSql.php');
 
     // $sql = "SELECT * FROM member";
     // $sql = "SELECT * FROM member WHERE Name = '".$account."' and PWD = '".$pwd."' ";  //作業
