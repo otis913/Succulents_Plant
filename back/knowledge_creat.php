@@ -4,55 +4,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/back_index.css">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+  </link>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  </script>
-  <title>肉多不怪會員管理中心</title>
-  <script src="./js/leftbar.js"></script>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+  <!-- JQ cdn -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js' integrity='sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==' crossorigin='anonymous'></script>
+
+  <title>肉多不怪文章管理</title>
+
 </head>
 
-<body onload="doQuery()">
+<!-- <body onload="doQuery()"> -->
+
+<body>
   <div class="wrapper">
-    <header>
-      <img src="./img/logo1.png" alt="">
-      <h1>肉多不怪後臺管理</h1>
-      <a href="" class="back_logout">帳號登出</a>
+  <header>
+      <?php
+        include("./php/header.php");
+        ?>
     </header>
     <div class="section_main">
-      <div class="left_list">
-        <div class="left_btn">
-          <ul>
-            <li>
-              <a class="leftBtn" href="./member_M.html">會員管理</a>
-            </li>
-            <li>
-              <a class="leftBtn" href="./order_M.html">訂單管理</a>
-            </li>
-            <li>
-              <a class="leftBtn" href="./porduct_M.html">商品管理</a>
-            </li>
-            <li>
-              <a class="leftBtn" href="./handClass_M.html">課程管理</a>
-            </li>
-            <li>
-              <a class="leftBtn" href="./knowledge_M.html">知識文章</a>
-            </li>
-            <li>
-              <a class="leftBtn" href="./report_M.html">回報訊息</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <?php
+        include("./php/lefterBar.php");
+        ?>
       <div class="right_main">
 
         <div class="knowledge_content">
           <h1>文章新增</h1>
           <div class="bottom_line"></div>
-          <a class="knowledge_inserBtn" href="./knowledge_creat.html">新增文章</a>
-          <div class="knowledge_Edittable">
+          <a class="inserBtn knowledge_inserBtn" href="./knowledge_creat.html">新增文章</a>
+          <div class="table_div table_div_knowCreat">
             <form action="">
               <table class="table table-striped">
                 <tr>
@@ -124,12 +112,6 @@
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-    crossorigin="anonymous"></script>
 
   <script>
     function doQuery(str) {
@@ -141,16 +123,17 @@
           Name: str
         },
         dataType: "text",
-        success: function (response) {
+        success: function(response) {
           //更新html內容
           document.getElementsByClassName('table')[0].innerHTML = response;
         },
-        error: function (exception) {
+        error: function(exception) {
           alert("發生錯誤: " + exception.status);
         }
       });
     }
   </script>
+  <script src="./js/leftbar.js"></script>
 </body>
 
 </html>

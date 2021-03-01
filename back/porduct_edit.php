@@ -7,52 +7,47 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/back_index.css">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
+    integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+  </link>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  </script>
-  <title>肉多不怪會員管理中心</title>
-  <script src="./js/leftbar.js"></script>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+  <!-- JQ cdn -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js'
+    integrity='sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=='
+    crossorigin='anonymous'></script>
+  <title>肉多不怪商品管理</title>
+
 </head>
 
-<body onload="doQuery()">
+<!-- <body onload="doQuery()"> -->
+
+<body>
   <div class="wrapper">
-    <header>
-      <img src="./img/logo1.png" alt="">
-      <h1>肉多不怪後臺管理</h1>
-      <a href="" class="back_logout">帳號登出</a>
+  <header>
+      <?php
+        include("./php/header.php");
+        ?>
     </header>
     <div class="section_main">
-      <div class="left_list">
-        <div class="left_btn">
-          <ul>
-            <li>
-              <a class="leftBtn" href="./member_M.html">會員管理</a>
-            </li>
-            <li>
-              <a class="leftBtn" href="./order_M.html">訂單管理</a>
-            </li>
-            <li>
-              <a class="leftBtn" href="./porduct_M.html">商品管理</a>
-            </li>
-            <li>
-              <a class="leftBtn" href="./handClass_M.html">課程管理</a>
-            </li>
-            <li>
-              <a class="leftBtn" href="./knowledge_M.html">知識文章</a>
-            </li>
-            <li>
-              <a class="leftBtn" href="./report_M.html">回報訊息</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <?php
+        include("./php/lefterBar.php");
+        ?>
       <div class="right_main">
-        <h1>商品新增</h1>
+        <h1>商品編輯</h1>
         <div class="bottom_line"></div>
         <a class="product_inserBtn" href="./product_creat.html">新增商品</a>
-        <div class="product_Newtable">
+        <div class="product_Edittable">
           <form action="">
             <table class="table table-striped">
+              <tr>
+                <td>商品編號</td>
+                <td></td>
+              </tr>
               <tr>
                 <td>商品類別</td>
                 <td>
@@ -61,6 +56,7 @@
                     <option value="">裝飾物</option>
                     <option value="">盆器</option>
                     <option value="">賀卡</option>
+                    <option value="">課程</option>
                   </select>
                 </td>
               </tr>
@@ -148,20 +144,12 @@
   </div>
 
   </div>
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-    crossorigin="anonymous"></script>
-
-
   <script>
     function doQuery(str) {
       //Typing your code...
       $.ajax({
         method: "POST",
-        url: "./php/product_cerat.php",
+        url: "./php/porduct_edit.php",
         data: {
           Name: str
         },
@@ -176,6 +164,7 @@
       });
     }
   </script>
+  <script src="./js/leftbar.js"></script>
 </body>
 
 </html>

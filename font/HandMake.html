@@ -8,8 +8,7 @@
 
   <!-- font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
-    integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
   </link>
 
   <!-- google fonts -->
@@ -31,32 +30,33 @@
 
   <div class="header_bg">
     <div class="headers">
-        <div class="navs">
-           <a href="./main.html"><img src="img/logo.png" alt=""></a>
-            <ul>
-                <li><a href="./shop.html">商品專區</a></li>
-                <li><a href="./custom.html">客製多肉</a></li>
-                <li><a href="./mindtest.html">心理測驗</a></li>
-                <li><a href="./HandMake.html">手作課程</a></li>
-                <li><a href="./blog_all.html">多肉知識</a></li>
-            </ul>
-        </div>  
-        <ol>
-            <li><a href=""><i class="fas fa-shopping-basket"></i></a></li>
-            <li><a href="./member.html"><i class="fas fa-user"></i></a></li>
-        </ol>
-        <div class="ham">
-            <span></span> 
-            <span></span> 
-            <span></span>
-        </div>
+      <div class="navs">
+        <a href="./main.html"><img src="img/logo.png" alt=""></a>
+        <ul>
+          <li><a href="./shop.html">商品專區</a></li>
+          <li><a href="./custom.html">客製多肉</a></li>
+          <li><a href="./mindtest.html">心理測驗</a></li>
+          <li><a href="./HandMake.html">手作課程</a></li>
+          <li><a href="./blog_all.html">多肉知識</a></li>
+        </ul>
+      </div>
+      <ol>
+        <li><a href=""><i class="fas fa-shopping-basket"></i></a></li>
+        <li><a href="./member.html"><i class="fas fa-user"></i></a></li>
+      </ol>
+      <div class="ham">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-</div> 
-<!-- header結束 -->
+  </div>
+  <!-- header結束 -->
 
-  
+
   <section class="full_wrapper">
-    <div class="ex"></div> <!-- 用這個來推header的間隔 -->
+    <div class="ex"></div>
+    <!-- 用這個來推header的間隔 -->
     <!-- 麵包屑在這 -->
     <article>
       <div class="bread">
@@ -86,6 +86,7 @@
 
             <div class="HM_Date ">
               <h1>選擇日期<i class="fas fa-calendar-alt "></i></h1>
+
               <div class="HM_Date_select">
                 <select name="date" class="custom_select " id="">
                   <option value="2021/03/01">2021/03/01</option>
@@ -105,14 +106,10 @@
             </div>
           </div>
 
-
-
           <div class="handmake_left_text ex20px">
             <h1>尚於<span>10</span>人可報名</h1>
             <h1>課程費用<span>$2800</span>/人</h1>
           </div>
-
-
 
           <!-- 黃色bubble按鈕 start -->
           <div class="bubble_btnn SignUp">
@@ -133,15 +130,15 @@
               </a>
               <span class="button--bubble__effect-container">
                 <span class="circle top-left"></span>
-                <span class="circle top-left"></span>
-                <span class="circle top-left"></span>
+            <span class="circle top-left"></span>
+            <span class="circle top-left"></span>
 
-                <span class="button effect-button"></span>
+            <span class="button effect-button"></span>
 
-                <span class="circle bottom-right"></span>
-                <span class="circle bottom-right"></span>
-                <span class="circle bottom-right"></span>
-              </span>
+            <span class="circle bottom-right"></span>
+            <span class="circle bottom-right"></span>
+            <span class="circle bottom-right"></span>
+            </span>
             </span>
           </div>
           <!-- 黃色bubble按鈕 end -->
@@ -197,15 +194,15 @@
               </a>
               <span class="button--bubble__effect-container">
                 <span class="circle top-left"></span>
-                <span class="circle top-left"></span>
-                <span class="circle top-left"></span>
+            <span class="circle top-left"></span>
+            <span class="circle top-left"></span>
 
-                <span class="button effect-button"></span>
+            <span class="button effect-button"></span>
 
-                <span class="circle bottom-right"></span>
-                <span class="circle bottom-right"></span>
-                <span class="circle bottom-right"></span>
-              </span>
+            <span class="circle bottom-right"></span>
+            <span class="circle bottom-right"></span>
+            <span class="circle bottom-right"></span>
+            </span>
             </span>
           </div>
           <!-- 黃色bubble按鈕 end -->
@@ -227,159 +224,159 @@
   </section>
 
 
-    <!-- 購物車 側邊欄  開始-->
-    <div class="order">
-      <i class="fas fa-window-close"></i>
-      <h2>購物清單</h2>
-      <div class="orderPith"></div>
-      <div class="order-custom">
-          <i class="fa fa-times" aria-hidden="true"></i>
-          <div class="order_custom_con">
-              <img src="img/shopcart/assets_5.png" alt="">
-              <div class="txt">
-                  <h4>黃金山脈-金 晃丸盆栽</h4>
-                  <h2>賀卡訂製</h2>
-                  <p>NT$1850</p>
-                  <div id="app8">
-                      <div class="shop">
-                          <i @click="counter += -1" class="fa fa-minus" aria-hidden="true"></i> 
-                          <div class="counter">{{counter}}</div>
-                          <i @click="counter += 1" class="fa fa-plus" aria-hidden="true"  ></i>          
-                      </div>
-                  </div>
-              </div>
+  <!-- 購物車 側邊欄  開始-->
+  <div class="order">
+    <i class="fas fa-window-close"></i>
+    <h2>購物清單</h2>
+    <div class="orderPith"></div>
+    <div class="order-custom">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <div class="order_custom_con">
+        <img src="img/shopcart/assets_5.png" alt="">
+        <div class="txt">
+          <h4>黃金山脈-金 晃丸盆栽</h4>
+          <h2>賀卡訂製</h2>
+          <p>NT$1850</p>
+          <div id="app8">
+            <div class="shop">
+              <i @click="counter += -1" class="fa fa-minus" aria-hidden="true"></i>
+              <div class="counter">{{counter}}</div>
+              <i @click="counter += 1" class="fa fa-plus" aria-hidden="true"></i>
+            </div>
           </div>
+        </div>
       </div>
-      <div class="order-custom-pro">
-          <i class="fa fa-times" aria-hidden="true"></i>
-          <div class="order_custom_con_con">
-              <img src="img/shopcart/assets_5.png" alt="">
-              <div class="txt">
-                  <h4>客製化多肉</h4>
-                  <h2>賀卡訂製</h2>
-                  <p>NT$1850</p>
-                  <div id="app9">
-                      <div class="shop">
-                          <i @click="counter += -1" class="fa fa-minus" aria-hidden="true"></i> 
-                          <div class="counter">{{counter}}</div>
-                          <i @click="counter += 1" class="fa fa-plus" aria-hidden="true"  ></i>          
-                      </div>
-                  </div>
-              </div>
+    </div>
+    <div class="order-custom-pro">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <div class="order_custom_con_con">
+        <img src="img/shopcart/assets_5.png" alt="">
+        <div class="txt">
+          <h4>客製化多肉</h4>
+          <h2>賀卡訂製</h2>
+          <p>NT$1850</p>
+          <div id="app9">
+            <div class="shop">
+              <i @click="counter += -1" class="fa fa-minus" aria-hidden="true"></i>
+              <div class="counter">{{counter}}</div>
+              <i @click="counter += 1" class="fa fa-plus" aria-hidden="true"></i>
+            </div>
           </div>
-          <div class="detail">
-              <h2>詳細內容</h2>
-              <p>黃金山脈多肉 x1</p>
-              <p>黃金山脈多肉 x1</p>
-              <p>黃金山脈多肉 x1</p>
-              <p>器皿-水泥器皿 x1</p>
-              <p>裝飾品-小蘑菇 x1</p>
-          </div>
-          
+        </div>
       </div>
-      <div class="amount">
-          <h2 class="coin">金額
-              <p>$3600</p>
-          </h2>
-          <h2 class="sale">優惠
-              <p>-＄20</p>
-          </h2>
+      <div class="detail">
+        <h2>詳細內容</h2>
+        <p>黃金山脈多肉 x1</p>
+        <p>黃金山脈多肉 x1</p>
+        <p>黃金山脈多肉 x1</p>
+        <p>器皿-水泥器皿 x1</p>
+        <p>裝飾品-小蘑菇 x1</p>
       </div>
-      <div class="total">
-       <h4>總金額</h4>
-       <p>$3580</p>
-      </div>
-      <a href=""></a>
-      <button class="checkbuy"> <a href="./shopCart.html">確定購買</a></button>
+
+    </div>
+    <div class="amount">
+      <h2 class="coin">金額
+        <p>$3600</p>
+      </h2>
+      <h2 class="sale">優惠
+        <p>-＄20</p>
+      </h2>
+    </div>
+    <div class="total">
+      <h4>總金額</h4>
+      <p>$3580</p>
+    </div>
+    <a href=""></a>
+    <button class="checkbuy"> <a href="./shopCart.html">確定購買</a></button>
   </div>
 
-   <!-- 購物車 側邊欄  結束-->
+  <!-- 購物車 側邊欄  結束-->
 
 
 
 
 
- <!-- QA仙人掌開始，放在footer上面 -->
- <section class="qa_pos">
-  <div class="qa_wrapper">
+  <!-- QA仙人掌開始，放在footer上面 -->
+  <section class="qa_pos">
+    <div class="qa_wrapper">
       <img src="img/QA/QA_LOGO.png" alt="">
-  </div>   
-  
-  <div class="qaBg_wrapper" id="app">
+    </div>
+
+    <div class="qaBg_wrapper" id="app">
       <div class="qaBg">
         <img src="img/QA/QA_close.png" alt="" class="cancel">
         <ul>
           <li class="question">
-              <h2>Q:想更換或取消訂單，怎麼辦呢？</h2>
-              <p>A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
+            <h2>Q:想更換或取消訂單，怎麼辦呢？</h2>
+            <p>A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
           </li>
           <li class="question">
-              <h2>Q:想更換或取消訂單，怎麼辦呢？</h2>
-              <p>A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
+            <h2>Q:想更換或取消訂單，怎麼辦呢？</h2>
+            <p>A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
           </li>
           <li class="question">
             <h2>Q:想更換或取消訂單，怎麼辦呢？</h2>
             <p>A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
           </li>
 
-          <div class="cusQUS" >{{message}}</div>
+          <div class="cusQUS">{{message}}</div>
           <div class="answer">we will hope you</div>
-        </ul> 
-        
-        <div class="cusQ" >
-            <div class="adimit">
-              <input type="text" v-model="message">
-              <button class="btn">送出</button>
-            </div>
+        </ul>
+
+        <div class="cusQ">
+          <div class="adimit">
+            <input type="text" v-model="message">
+            <button class="btn">送出</button>
+          </div>
         </div>
-      
+
       </div>
-  
-  </div>
-</section>
-<!-- QA仙人掌結束 -->
+
+    </div>
+  </section>
+  <!-- QA仙人掌結束 -->
 
 
 
 
 
 
-<!-- footer start -->
-<footer>
-<article>
-    <div class="brand_info">
+  <!-- footer start -->
+  <footer>
+    <article>
+      <div class="brand_info">
         <ul>
-            <li><a href="./shop.html">商品專區</a></li>
-            <li><a href="./custom.html">客製多肉</a></li>
-            <li><a href="./mindtest.html">心理測驗</a></li>
-            <li><a href="./HandMake.html">手作課程</a></li>
-            <li><a href="./blog_all.html">多肉知識</a></li>
-        </ul>    
+          <li><a href="./shop.html">商品專區</a></li>
+          <li><a href="./custom.html">客製多肉</a></li>
+          <li><a href="./mindtest.html">心理測驗</a></li>
+          <li><a href="./HandMake.html">手作課程</a></li>
+          <li><a href="./blog_all.html">多肉知識</a></li>
+        </ul>
 
         <ol>
-            <li><a ref=""><i class="fab fa-facebook-square"></i></a></li>
-            <li><a ref=""><i class="fab fa-youtube"></i></a></li>
-            <li><a ref=""><i class="fab fa-twitter"></i></a></li>
+          <li><a ref=""><i class="fab fa-facebook-square"></i></a></li>
+          <li><a ref=""><i class="fab fa-youtube"></i></a></li>
+          <li><a ref=""><i class="fab fa-twitter"></i></a></li>
         </ol>
 
         <p>ⓒ Copyright Shimabara Shokuhin All Rights Reserved. </p>
-    </div>
+      </div>
 
-    <div class="line"></div>
+      <div class="line"></div>
 
-    <div class="logo_info">
+      <div class="logo_info">
         <a href="main.html"><img src="img/icon_logo_footer.png" alt=""></a>
         <p>tel : 02-2338-8365</p>
         <p>e-mail : Succulents Monster@gmail.com </p>
         <p>address : 104 台北市中山區南京東路三段219號</p>
         <p>open : 週一至週日 11:00 – 18:30</p>
 
-    </div>
+      </div>
 
-</article>
+    </article>
 
-</footer>
-<!-- footer end -->
+  </footer>
+  <!-- footer end -->
 
 
 

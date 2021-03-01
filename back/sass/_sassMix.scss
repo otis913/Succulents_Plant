@@ -1,25 +1,8 @@
-@mixin marginAuto($w:null){
-  margin: 0 auto;
-  width: $w; 
-}
-
-@mixin buttons(){
-  background-color:#2f4f4f;
-  border-radius: 5px;     
-  margin: 5px;
-  // font-size: $h3;
-  color:#fff;
-  border: 1px solid #fff;
-  padding: 5px;
-  font-weight: bold;
-  width: 200px;
-  cursor:pointer;
-}
-
+@import "./sassVar";
 @mixin a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
+  display: block;
+  text-align: center;
+  text-decoration: none;
 }
 
 @mixin inserBtn() {
@@ -27,25 +10,25 @@
   height: 50px;
   line-height: 50px;
   text-align: center;
-  border-radius: 5px; 
+  border-radius: 5px;
   margin-bottom: 10px;
-  background-color: #d0c3a3;
-  color: #2f4f4f;
+  background-color: map-get($color, "gold");
+  color: map-get($color, "main_g");
   font-size: 15px;
-  font-weight: bold;  
+  font-weight: bold;
 }
-@mixin inserBtnH {
-  &:hover{  
-    background-color: #d9a420;
-    color:#2f4f4f;
+
+@mixin inserBtnH() {
+  &:hover {
+    background-color: map-get($color, "yellow");
+    color: map-get($color, "main_g");
     text-decoration: none;
   }
-
 }
 
 @mixin h1() {
   font-size: 30px;
-  color:#2f4f4f;
+  color: #2f4f4f;
   margin-bottom: 5px;
 }
 
