@@ -51,7 +51,7 @@ foreach ($data as $index => $row) {
 
     echo "<td>" . $row["productName"] . "</td>";
     echo "<td>" . $row["productNumber"] . "</td>";
-    echo "<td>" . $row["productImg01"] . "</td>";
+    echo '<td ><img src="./img/' . $row['productImg01'] . '"></td>';
 
     $productStatus = $row["productStatus"];
     switch ($productStatus) {

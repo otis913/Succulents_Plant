@@ -28,7 +28,6 @@
   $sql = "SELECT * 
           FROM SUCCULENTS_PLANT.PRODUCT ";
 
-
   //執行 
   // $statement = $Util->getPDO()->prepare($sql);
 
@@ -39,7 +38,7 @@
   // $statement->execute();
   // $data = $statement->fetchAll();
 
-  $statement->bindValue(1, $_GET["productType"]);
+  // $statement->bindValue(1, $_GET["productType"]);
   $statement->execute();
   $cate_data = $statement->fetchAll();
 
@@ -65,37 +64,18 @@
       <div class="right_main">
         <h1>商品新增</h1>
         <div class="bottom_line"></div>
-        <a class="product_inserBtn" href="./product_creat.php">新增商品</a>
+
         <div class="table_div table_div_productNew">
-          <!-- <form method="post" action="ProductCreateR.php" enctype="multipart/form-data">         -->
           <form method="post" action="./php/product_creat_ajx.php" enctype="multipart/form-data">
             <table class="table table-striped">
               <tr>
                 <td>商品類別</td>
                 <td>
-                  <select class="productNew_type" name="productN_Type" id="productN_Type">
+                  <select class="productNew_type" name="productType" id="productType">
                     <option value="">請選擇</option>
-
-
-                    <?php
-                    foreach ($cate_data as $index => $row) {
-                      $productType = $row["productType"];
-                      // switch ($productType) {
-                      //   case "0":
-                      //     $productType = '植物';
-                      //     break;
-                      //   case "1":
-                      //     $productType = '裝飾品';
-                      //     break;
-                      //   case "2":
-                      //     $productType = '器皿';
-                      //     break;
-                      //   default:
-                      //     $productType = '錯誤';
-                      // };
-                      echo "<option value=''>" . $row["productDes"] . "</option>";
-                    }
-                    ?>
+                    <option value="0">植物</option>
+                    <option value="1">裝飾品</option>
+                    <option value="2">器皿</option>
                   </select>
                 </td>
               </tr>
@@ -157,8 +137,8 @@
               <tr>
                 <td>商品狀態</td>
                 <td>
-                  <input type="radio" name="productStatus" value="1" checked />上架
-                  <input type="radio" name="productStatus" value="2" />下架
+                  <input type="radio" name="productStatus" value="0" checked />上架
+                  <input type="radio" name="productStatus" value="1" />下架
                 </td>
               </tr>
               <!-- <tr>
@@ -183,7 +163,7 @@
   </div>
 
   </div>
-  <script type="text/javascript">
+  <script>
     function doSubmit() {
       if (document.getElementById('productType').value == '') {
         alert("請選擇[分類]");
