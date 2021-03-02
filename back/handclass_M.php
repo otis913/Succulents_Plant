@@ -27,12 +27,12 @@
   <div class="wrapper">
     <header>
       <?php
-      include("./php/header.php");
+      include("./layout/header.php");
       ?>
     </header>
     <div class="section_main">
       <?php
-      include("./php/lefterBar.php");
+      include("./layout/lefterBar.php");
       ?>
 
       <div class="right_main">
@@ -108,7 +108,7 @@
       //Typing your code...
       $.ajax({
         method: "POST",
-        url: "./php/handclass_M_ajx.php",
+        url: "./handclass_M_ajx.php",
         data: {
           Name: str
         },

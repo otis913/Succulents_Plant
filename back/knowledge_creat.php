@@ -21,18 +21,16 @@
 
 </head>
 
-<!-- <body onload="doQuery()"> -->
-
 <body>
   <div class="wrapper">
     <header>
       <?php
-      include("./php/header.php");
+      include("./layout/header.php");
       ?>
     </header>
     <div class="section_main">
       <?php
-      include("./php/lefterBar.php");
+      include("./layout/lefterBar.php");
       ?>
       <div class="right_main">
 

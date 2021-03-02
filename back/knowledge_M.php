@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
   </link>
-
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
@@ -18,21 +17,19 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js' integrity='sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==' crossorigin='anonymous'></script>
   </script>
   <title>肉多不怪文章管理</title>
-
 </head>
 
 <body onload="doQuery()">
-
   <!-- <body> -->
   <div class="wrapper">
     <header>
       <?php
-      include("./php/header.php");
+      include("./layout/header.php");
       ?>
     </header>
     <div class="section_main">
       <?php
-      include("./php/lefterBar.php");
+      include("./layout/lefterBar.php");
       ?>
       <div class="right_main">
         <h1>知識文章</h1>
@@ -69,7 +66,7 @@
       //Typing your code...
       $.ajax({
         method: "POST",
-        url: "./php/knowledge_M_ajx.php",
+        url: "./knowledge_M_ajx.php",
         data: {
           Name: str
         },

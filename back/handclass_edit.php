@@ -18,37 +18,14 @@
 
   <link rel="stylesheet" href="./css/back_index.css">
 
-  <style>
-    .a {
-      font-weight: bolder;
-    }
-  </style>
 
   <title>肉多不怪課程管理</title>
 </head>
 
 <?php
-include("./php/fileImg.php");
+include("./fileImg.php");
 $file = new fileImg();
-include("./php/SignSql.php");
-
-// //建立SQL---->產品----------------------
-// $sql = "SELECT * FROM ec_products WHERE ID = ?";
-// //執行
-// $statement = $Util->getPDO()->prepare($sql);
-// //給值
-// $statement->bindValue(1, $_GET["PID"]);
-// $statement->execute();
-// $data = $statement->fetchAll();
-
-// //建立SQL---->產品分類------------------
-// $sql = "SELECT * 
-//         FROM ec_category WHERE Status = 2 ORDER BY ID DESC";
-// //執行
-// $statement = $Util->getPDO()->prepare($sql);
-// //給值
-// $statement->execute();
-// $cate_data = $statement->fetchAll();
+include("./SignSql.php");
 
 //建立SQL---->
 $sql = "SELECT * 
@@ -61,38 +38,26 @@ $statement->bindValue(1, $_GET["PID"]);
 $statement->execute();
 $data = $statement->fetchAll();
 
-//建立SQL---->
-
-// $sql = "SELECT * 
-//         FROM HANDCLASS 
-//         -- WHERE handClassNO = 1";
-// //執行
-// $statement = $pdo->prepare($sql);
-// //給值
-// $statement->execute();
-// $cate_data = $statement->fetchAll();
-
 
 ?>
 
-<!-- <body onload="doQuery()"> -->
 
 <body>
   <div class="wrapper">
     <header>
       <?php
-      include("./php/header.php");
+      include("./header.php");
       ?>
     </header>
     <div class="section_main">
       <?php
-      include("./php/lefterBar.php");
+      include("./lefterBar.php");
       ?>
       <div class="right_main">
         <h1>課程編輯</h1>
         <div class="bottom_line"></div>
         <div class="table_div table_div_handEdit">
-          <form method="post" action="./php/handclass_edit.ajx.php" enctype="multipart/form-data">
+          <form method="post" action="./handclass_edit.ajx.php" enctype="multipart/form-data">
             <?php
             foreach ($data as $index => $row) {
 
@@ -139,7 +104,7 @@ $data = $statement->fetchAll();
               ?>
               </table>
               <div class="cancel_check">
-                <input type="button" name="cancel" id="cancel" value="取消" onclick="javascript:history.go(-2);">
+                <input type="button" name="cancel" id="cancel" value="取消" onclick="javascript:history.go(-1);">
                 <input type="submit" name="submitBtn" id="submitBtn" value="確定" onclick="return doSubmit();">
               </div>
           </form>

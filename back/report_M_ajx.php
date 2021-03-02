@@ -1,28 +1,11 @@
 <?php
     include('./SignSql.php');
 
-    // $sql = "SELECT * FROM member";
-    // $sql = "SELECT * FROM member WHERE Name = '".$account."' and PWD = '".$pwd."' ";  //作業
-    
-
-    // $sql = 'SELECT 
-    //          e.member_id, e.name, e.account, e.password, e.email, 
-    //          e.level, e.blacklist, e.introduction, count(d.work_id),
-    //          e.join_date
-    //         FROM 
-    //             member e
-    //             join work d
-    //                 on e.member_id = d.member_id
-    //         group by member_id';
-
     $sql = 'select *
-    from RETURN_QUESTION';
+    from RETURN_QUESTION';  
 
-  
-
-    $statement = $pdo->prepare($sql);    
+    $statement = $pdo->prepare($sql);   
     $statement->execute();  
-
 
     //抓出全部且依照順序封裝成一個二維陣列
     $data = $statement->fetchAll();
@@ -58,4 +41,3 @@
               <a href='./report_edit.html'>編輯</a>
               </td>";
     }
-?>

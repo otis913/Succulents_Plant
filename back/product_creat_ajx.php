@@ -53,7 +53,7 @@ if ($_FILES["productImg01"]["error"] > 0) {
     //header("Location: Index.php");
 
 
-    echo "<script>alert('新增成功!'); location.href = '../product_creat.php';</script>";
+    echo "<script>alert('新增成功!'); location.href = './product_creat.php';</script>";
   } else {
     echo "拷貝/移動上傳圖片失敗";
   }
