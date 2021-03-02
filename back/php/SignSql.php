@@ -8,10 +8,6 @@ $db_user = "root";
 $db_pass = "00000";
 $db_select = "SUCCULENTS_PLANT";
 
-// $db_host = "10.2.0.115";
-// $db_user = "test";
-// $db_pass = "password";
-// $db_select = "pdo";
 //建立資料庫連線物件
 $dsn = "mysql:host=" . $db_host . ";dbname=" . $db_select;
 

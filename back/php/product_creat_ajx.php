@@ -3,10 +3,16 @@ include("./fileImg.php");
 $file = new fileImg();
 include("./SignSql.php");
 
-//先判斷圖片是否上傳成功?
+
+$sql = "SELECT *
+        FROM SUCCULENTS_PLANT.PPRODUCT";
+
+$statement = $pdo->prepare($sql);
+//先判斷圖片是否上傳成功? 
 if ($_FILES["productImg01"]["error"] > 0) {
-  // echo "上傳失敗: 錯誤代碼" . $_FILES["productImg01"]["error"];
+  echo "上傳失敗: 錯誤代碼" . $_FILES["productImg01"]["error"];
 } else {
+
   //Server上的暫存檔路徑含檔名
   $filePath_Temp = $_FILES["productImg01"]["tmp_name"];
 
@@ -24,22 +30,11 @@ if ($_FILES["productImg01"]["error"] > 0) {
     $productPrice = $_POST["productPrice"];
     $productNumber = $_POST["productNumber"];
     $productStatus = $_POST["productStatus"];   //狀態 1:下架, 2:上架
+    $productImg01 = $_POST["productImg01"];
 
-    //建立SQL
-    // $sql = "INSERT INTO 
-    //           ec_products
-    //           (CateID, ProductName, Price, 
-    //         Status, 
-    //           PictureName, 
-    //           CreateDate) 
-    //         VALUES (?,?,?,?,?,
-    //         NOW())";
-
-    $sql = "INSERT INTO 
-        SUCCULENTS_PLANT.PRODUCT,
-        (productType, productName, productSize, productDes, 
-        productPrice, productNumber, PictureName, CreateDate) 
-      VALUES (?,?,?,?,?,?,?,?)";
+    $sql = "INSERT INTO `SUCCULENTS_PLANT`.`PRODUCT`
+            (`productType`,`productName`,`productSize`,`productDes`,`productPrice`, `productNumber`,`productImg01`) 
+            VALUES (  ?,  ?,  ?,  ?,  ?,  ?,  ? )";
 
     //執行
     $statement = $pdo->prepare($sql);
@@ -51,12 +46,13 @@ if ($_FILES["productImg01"]["error"] > 0) {
     $statement->bindValue(4, $productDes);
     $statement->bindValue(5, $productPrice);
     $statement->bindValue(6, $productNumber);
-    $statement->bindValue(7, $productStatus);
-    $statement->bindValue(8, $_FILES["productImg01"]["name"]);
+    $statement->bindValue(7, $_FILES["productImg01"]["name"]);
     $statement->execute();
 
     //導頁
     //header("Location: Index.php");
+
+
     echo "<script>alert('新增成功!'); location.href = '../product_creat.php';</script>";
   } else {
     echo "拷貝/移動上傳圖片失敗";
