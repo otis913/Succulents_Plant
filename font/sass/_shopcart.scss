@@ -14,9 +14,6 @@
     }
 }
 
-* {
-    // outline: 1px solid red;
-}
 .hide{
     display: none;
 }
@@ -26,6 +23,7 @@
 //側邊欄
 .order {
     // outline: 1px solid red;
+    padding: 20px 0;
     position: fixed;
     right: 0;
     top: 0;
@@ -44,8 +42,11 @@
     }
     .fa-window-close {
         color:  #d9a420;
-        // outline: 1px solid red;
-        margin-left: 32vh
+        font-size: 32px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
     }
     button {
         background-color: #d9a420;
@@ -65,11 +66,17 @@
         color: white;
         margin-top: 2vh;
     }
+    .order_wrapper{
+        // outline: 1px solid green;
+        height: 60vh;
+        overflow-y: scroll;
+    }
     .order-custom {
         // outline: 1px solid red;
         width: 90%;
-        height: 18vh;
-        margin: 5vh auto 0;
+        // height: 18vh;
+        padding-bottom: 20px;
+        margin: 20px auto;
         border-radius: 8px;
         background-color: rgb(255, 255, 255);
         .fa-times {
@@ -82,7 +89,7 @@
             width: 100%;
             display: flex;
             justify-content: space-around;
-            align-items: center;
+            align-items: flex-start;
 
             img {
                 width: 100px;
@@ -92,7 +99,7 @@
                 }
             }
             .txt {
-                height: 12vh;
+                // height: 12vh;
                 // outline: 1px solid red;
                 font-size: 12px;
                 width: 12vw;
@@ -113,7 +120,7 @@
                     color: #2f4f4f;
                 }
                 h2 {
-                    color: #eeebeb;
+                    color: #999;
                     margin-top: 1vh;
                 }
                 p {
@@ -203,13 +210,12 @@
         }
     }
     .order-custom-pro {
-        // outline: 1px solid red;
         width: 90%;
-        height: 35vh;
-        margin: 5vh auto 0;
+        // height: 35vh;
+        margin: 20px auto;
         border-radius: 8px;
         background-color: rgb(255, 255, 255);
-        overflow: scroll;
+        padding-bottom: 20px;
         .fa-times {
             // outline: 1px solid red;
             float: right;
@@ -233,7 +239,7 @@
                 }
             }
             .txt {
-                height: 12vh;
+                // height: 12vh;
                 // outline: 1px solid red;
                 font-size: 12px;
                 width: 12vw;
@@ -253,7 +259,7 @@
                     color: #2f4f4f;
                 }
                 h2 {
-                    color: #eeebeb;
+                    color: #999;
                     margin-top: 1vh;
                 }
                 p {

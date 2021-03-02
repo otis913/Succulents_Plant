@@ -20,6 +20,21 @@ $index_fz: (
   font-size: map-get($index_fz, p);
   text-align: center;
 }
+
+.-pconly{
+  display: block;
+  @include pad {
+    display: none;
+  }
+}
+
+.-mbonly{
+  display: none;
+  @include pad {
+    display: block;
+  }
+}
+
 //輪播
 nav {
   width: 100%;
@@ -140,12 +155,21 @@ article {
         }
     }
     .main_about_bg{
-    
       background-image: url("../img/background.png");
       background-size: 120%;
       height: 80vw;
       background-repeat: no-repeat;
       background-position:center center;
+      @include pad{
+        background-size: 160%;
+        height: 125vw;
+      }
+      @include mobile{
+        height: 160vw;
+      }
+      @include phone{
+        height: 215vw;
+      }
     article{
 
       .index_about {
@@ -565,13 +589,7 @@ article {
         display: flex;
         .index_about_word{
           margin: 0;
-          // padding-left: 60px;
-          img{
-            // margin-right: 135px;
-          }
-        }
-        img{
-        }     
+        } 
         .main_about_diy{
           width: 800px;
         }
@@ -757,7 +775,7 @@ article {
     display: none;
   }
   .index_blog {
-    background-size: 130vw;
+    background-size: 260vh;
  }
 
 }
