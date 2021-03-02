@@ -21,17 +21,27 @@
   <?php
   include("./php/SignSql.php");
 
+  //建立SQL
+  // $sql = "SELECT * FROM ec_category WHERE ID = ?";
+
   // 建立SQL
   $sql = "SELECT * 
-  FROM SUCCULENTS_PLANT.PRODUCT ";
+          FROM SUCCULENTS_PLANT.PRODUCT ";
 
-  // 執行
+
+  //執行 
+  // $statement = $Util->getPDO()->prepare($sql);
+
   $statement = $pdo->prepare($sql);
 
-  // 給值
+  //給值
+  // $statement->bindValue(1, $_GET["CID"]);
+  // $statement->execute();
+  // $data = $statement->fetchAll();
+
+  $statement->bindValue(1, $_GET["productType"]);
   $statement->execute();
   $cate_data = $statement->fetchAll();
-
 
   ?>
   <title>肉多不怪商品管理</title>
@@ -65,23 +75,25 @@
                 <td>
                   <select class="productNew_type" name="productN_Type" id="productN_Type">
                     <option value="">請選擇</option>
+
+
                     <?php
                     foreach ($cate_data as $index => $row) {
                       $productType = $row["productType"];
-                      switch ($productType) {
-                        case "0":
-                          $productType = '植物';
-                          break;
-                        case "1":
-                          $productType = '裝飾品';
-                          break;
-                        case "2":
-                          $productType = '器皿';
-                          break;
-                        default:
-                          $productType = '錯誤';
-                      };
-                      echo "<option value=''>" . $row["productName"] . "</option>";
+                      // switch ($productType) {
+                      //   case "0":
+                      //     $productType = '植物';
+                      //     break;
+                      //   case "1":
+                      //     $productType = '裝飾品';
+                      //     break;
+                      //   case "2":
+                      //     $productType = '器皿';
+                      //     break;
+                      //   default:
+                      //     $productType = '錯誤';
+                      // };
+                      echo "<option value=''>" . $row["productDes"] . "</option>";
                     }
                     ?>
                   </select>
@@ -145,8 +157,8 @@
               <tr>
                 <td>商品狀態</td>
                 <td>
-                  <input type="radio" name="productStatus" value="2" checked />上架
-                  <input type="radio" name="productStatus" value="1" />下架
+                  <input type="radio" name="productStatus" value="1" checked />上架
+                  <input type="radio" name="productStatus" value="2" />下架
                 </td>
               </tr>
               <!-- <tr>

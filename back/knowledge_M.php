@@ -23,21 +23,21 @@
 
 <body onload="doQuery()">
 
-<!-- <body> -->
+  <!-- <body> -->
   <div class="wrapper">
-  <header>
+    <header>
       <?php
-        include("./php/header.php");
-        ?>
+      include("./php/header.php");
+      ?>
     </header>
     <div class="section_main">
-       <?php
-        include("./php/lefterBar.php");
-        ?>
+      <?php
+      include("./php/lefterBar.php");
+      ?>
       <div class="right_main">
         <h1>知識文章</h1>
         <div class="bottom_line"></div>
-        <a class="inserBtn knowledge_inserBtn" href="./knowledge_creat.html">新增文章</a>
+        <a class="inserBtn knowledge_inserBtn" href="./knowledge_creat.php">新增文章</a>
         <div class="table_div table_div_know">
           <table class="table table-striped">
             <tr class="table-dark">

@@ -21,31 +21,30 @@ echo "<tr class='table-dark'>
           </tr>";
 
 foreach ($data as $index => $row) {
-      echo "<tr class='table-light'>
+  echo "<tr class='table-light'>
                   <td>" . $row["handClassNO"] . "</td>";
-      echo "<td>" . $row["handClassName"] . "</td>";
-      echo "<td>" . $row["handClassPrice"] . "</td>";
-      echo "<td>
+  echo "<td>" . $row["handClassName"] . "</td>";
+  echo "<td>" . $row["handClassPrice"] . "</td>";
+  echo "<td>
                   <i class='fas fa-minus hand_hide'></i>" . "<i class='fas fa-plus hand_show'></i>
                   </td>";
-      echo "<td>
-                  <div class='custom-control custom-switch'>
-                      <input type='checkbox' class='custom-control-input' id='customSwitch1'>
-                      <label class='custom-control-label' for='customSwitch1'></label>
-                  </div>
-                  </td>
-                  </tr>";
+  echo "<td>
+           
+        <a href='./handclass_edit.php?PID=<?=" . $row['handClassNO'] . " ?>'>編輯</a>
+                                          
+        </td>
+      </tr>";
 
-      echo "<tr class='hand_content'>
+  echo "<tr class='hand_content'>
                     <td>" . $row['handClassNO'] .
-            "</td>";
-      "<td class='table__hideText'>                  
+    "</td>";
+  "<td class='table__hideText'>                  
                     <ol>
                     <li>" . $row['handClassContent'] . "</li>
                     </ol>
                   </td>";
-      echo  "<td>" . $row['handClassPrice'] . "</td>";
-      echo  "<td class='table__hideText'>
+  echo  "<td>" . $row['handClassPrice'] . "</td>";
+  echo  "<td class='table__hideText'>
                   <ul>
                     <li>" . $row['handClassDate'] . "</li>      
                     </ul>

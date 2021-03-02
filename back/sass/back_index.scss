@@ -48,6 +48,11 @@ header {
   display: flex;
   margin-left: 20px;
   margin-top: 20px;
+  #submitBtn {
+    @include a();
+    @include inserBtn();
+    @include inserBtnH();
+  }
 }
 
 .left_list {

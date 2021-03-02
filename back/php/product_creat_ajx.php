@@ -36,21 +36,23 @@ if ($_FILES["productImg01"]["error"] > 0) {
     //         NOW())";
 
     $sql = "INSERT INTO 
-        SUCCULENTS_PLANT.PRODUCT
+        SUCCULENTS_PLANT.PRODUCT,
         (productType, productName, productSize, productDes, 
         productPrice, productNumber, PictureName, CreateDate) 
-      VALUES (?,?,?,?,?,?,?,? NOW())";
+      VALUES (?,?,?,?,?,?,?,?)";
 
     //執行
     $statement = $pdo->prepare($sql);
 
     //給值
-    $statement->bindValue(2, $productType);
-    $statement->bindValue(3, $ProductName);
-    $statement->bindValue(4, $productSize);
-    $statement->bindValue(5, $productDes);
-    $statement->bindValue(6, $productPrice);
-    $statement->bindValue(7, $_FILES["ProductImage"]["name"]);
+    $statement->bindValue(1, $productType);
+    $statement->bindValue(2, $productName);
+    $statement->bindValue(3, $productSize);
+    $statement->bindValue(4, $productDes);
+    $statement->bindValue(5, $productPrice);
+    $statement->bindValue(6, $productNumber);
+    $statement->bindValue(7, $productStatus);
+    $statement->bindValue(8, $_FILES["productImg01"]["name"]);
     $statement->execute();
 
     //導頁

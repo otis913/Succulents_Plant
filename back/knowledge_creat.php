@@ -25,15 +25,15 @@
 
 <body>
   <div class="wrapper">
-  <header>
+    <header>
       <?php
-        include("./php/header.php");
-        ?>
+      include("./php/header.php");
+      ?>
     </header>
     <div class="section_main">
       <?php
-        include("./php/lefterBar.php");
-        ?>
+      include("./php/lefterBar.php");
+      ?>
       <div class="right_main">
 
         <div class="knowledge_content">
@@ -46,65 +46,65 @@
                 <tr>
                   <td>文章版型</td>
                   <td>
-                    <input type="radio" checked>版型1
-                    <input type="radio">版型2
+                    <input type="radio" name="knowledgeType" value="1" checked />版型1
+                    <input type="radio" name="knowledgeType" value="2" />版型2
                   </td>
                 </tr>
                 <tr>
                   <td>文章外顯示圖片</td>
                   <td>
-                    <input type="file" id="article_pictitle">
+                    <input type="file" id="knowledgeTypeOutPic" name="knowledgeTypeOutPic" />
                   </td>
                 </tr>
                 <tr>
                   <td>文章標題</td>
                   <td>
-                    <input type="text" />
+                    <input type="text" id="knowledgeTypeTitle" name="knowledgeTypeTitle" />
                   </td>
                 </tr>
                 <tr>
                   <td>內文01</td>
                   <td>
-                    <textarea name="" id="input" class="form-control" rows="3" required="required">
+                    <textarea name="knowledgeTypeContent01" id="knowledgeTypeContent01" class="" rows="3" required="required">
                     </textarea>
                   </td>
                 </tr>
                 <tr>
                   <td>內文02</td>
                   <td>
-                    <textarea name="" id="input" class="form-control" rows="3" required="required">
+                    <textarea name="knowledgeTypeContent02" id="knowledgeTypeContent02" class="" rows="3">
                     </textarea>
                   </td>
                 </tr>
                 <tr>
                   <td>內文03</td>
                   <td>
-                    <textarea name="" id="input" class="form-control" rows="3" required="required">
-                    </textarea>
+                    <textarea name="knowledgeTypeContent03" id="knowledgeTypeContent03" class="" rows="3">
+                  </textarea>
                   </td>
                 </tr>
                 <tr>
                   <td>圖片01</td>
                   <td>
-                    <input type="file" id="article_pic01">
+                    <input type="file" id="knowledgeTypeContentPic01" name="knowledgeTypeContentPic01" />
                   </td>
                 </tr>
                 <tr>
                   <td>圖片02</td>
                   <td>
-                    <input type="file" id="article_pic02">
+                    <input type="file" id="knowledgeTypeContentPic02" name="knowledgeTypeContentPic02" />
                   </td>
                 </tr>
                 <tr>
                   <td>圖片03</td>
                   <td>
-                    <input type="file" id="article_pic03">
+                    <input type="file" id="knowledgeTypeContentPic03" name="knowledgeTypeContentPic03" />
                   </td>
                 </tr>
               </table>
               <div class="cancel_check">
-                <input type="button" value="取消" />
-                <input type="button" value="確定" />
+                <input type="button" name="cancel" id="cancel" value="取消" onclick="javascript:history.go(-1);">
+                <input type="submit" name="submitBtn" id="submitBtn" value="確定" onclick="return doSubmit();">
               </div>
             </form>
           </div>
@@ -112,27 +112,41 @@
       </div>
     </div>
   </div>
+  <script type="text/javascript">
+    function doSubmit() {
+      if (document.getElementById('knowledgeTypeTitle').value == '') {
+        alert("請填寫[文章標題]");
+        return false;
+      }
+      if (document.getElementById('knowledgeTypeContent01').value == '') {
+        alert("請填寫[文章內容01]");
+        return false;
+      }
 
-  <script>
-    function doQuery(str) {
-      //Typing your code...
-      $.ajax({
-        method: "POST",
-        url: "./php/handclass.php",
-        data: {
-          Name: str
-        },
-        dataType: "text",
-        success: function(response) {
-          //更新html內容
-          document.getElementsByClassName('table')[0].innerHTML = response;
-        },
-        error: function(exception) {
-          alert("發生錯誤: " + exception.status);
+      //判斷Status(radio button)是否有值?
+      var isChecked = false;
+      var obj = document.getElementsByName('knowledgeType');
+      for (var i = 0; i < obj.length; i++) {
+        if (obj[i].checked) {
+          isChecked = true;
         }
-      });
+      }
+      if (!isChecked) {
+        alert("請選擇[文章版型]");
+        return false;
+      }
+
+      if (document.getElementById('knowledgeTypeOutPic').value == '') {
+        alert("請選擇[外顯示圖片]");
+        return false;
+      }
+      if (document.getElementById('knowledgeTypeContentPic01').value == '') {
+        alert("請選擇[內文圖片01]");
+        return false;
+      }
     }
   </script>
+
   <script src="./js/leftbar.js"></script>
 </body>
 

@@ -1,3 +1,51 @@
+<?php
+include("./php/fileImg.php");
+$file = new fileImg();
+include("./php/SignSql.php");
+
+// //建立SQL---->產品----------------------
+// $sql = "SELECT * FROM ec_products WHERE ID = ?";
+// //執行
+// $statement = $Util->getPDO()->prepare($sql);
+// //給值
+// $statement->bindValue(1, $_GET["PID"]);
+// $statement->execute();
+// $data = $statement->fetchAll();
+
+// //建立SQL---->產品分類------------------
+// $sql = "SELECT * 
+//         FROM ec_category WHERE Status = 2 ORDER BY ID DESC";
+// //執行
+// $statement = $Util->getPDO()->prepare($sql);
+// //給值
+// $statement->execute();
+// $cate_data = $statement->fetchAll();
+
+//建立SQL---->
+$sql = "SELECT * 
+        FROM HANDCLASS 
+        WHERE handClassNO = ?";
+//執行
+$statement = $pdo->prepare($sql);
+//給值
+$statement->bindValue(1, $_GET["PID"]);
+$statement->execute();
+$data = $statement->fetchAll();
+
+//建立SQL---->產品分類------------------
+
+$sql = "SELECT * 
+        FROM HANDCLASS 
+        -- WHERE handClassNO = 1";
+//執行
+$statement = $pdo->prepare($sql);
+//給值
+$statement->execute();
+$cate_data = $statement->fetchAll();
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,6 +65,8 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js' integrity='sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==' crossorigin='anonymous'></script>
 
   <link rel="stylesheet" href="./css/back_index.css">
+
+
 
   <title>肉多不怪課程管理</title>
 </head>
@@ -38,45 +88,60 @@
         <h1>課程編輯</h1>
         <div class="bottom_line"></div>
         <div class="table_div table_div_handEdit">
-          <form action="">
+          <form method="post" action="./php/handclass_edit.ajx.php" enctype="multipart/form-data">
+            <!-- <?php
+                  foreach ($data as $index => $row) {
+
+                  ?> -->
             <table class="table table-striped">
               <tr class="table-dark">
+                <!-- <?php
+                      foreach ($cate_data as $index2 => $row2) {
+
+
+                      ?> -->
                 <td>課程編號</td>
+                <td></td>
               </tr>
               <tr>
                 <td>課程名稱</td>
                 <td>
-                  <input type="text" />
+                  <input type="text" id="handClassName" name="handClassName" value="<?= $row["handClassName"] ?>" />
                 </td>
               </tr>
               <tr>
                 <td>課程敘述</td>
                 <td>
-                  <input type="text" />
+                  <input type="text" id="handClassContent" name="handClassContent" value="<?= $row["handClassContent"] ?>" />
                 </td>
               </tr>
               <tr>
                 <td>課程價錢</td>
                 <td>
-                  <input type="text" />
+                  <input type="text" id="handClassPrice" name="handClassPrice" value="<?= $row['handClassPrice'] ?>" />
                 </td>
               </tr>
               <tr>
                 <td>最多人數</td>
                 <td>
-                  <input type="text" />
+                  <input type="text" id="handClassPeople" name="handClassPeople" value="<?= $row["handClassPeople"] ?>" />
                 </td>
               </tr>
               <tr>
                 <td>課程日期</td>
                 <td>
-                  <input type="text" />
+                  <input type="text" id="handClassDate" name="handClassDate" value="<?= $row["handClassDate"] ?>" />
                 </td>
               </tr>
+
+          <?php
+                      }
+                    }
+          ?>
             </table>
             <div class="cancel_check">
-              <input type="button" value="取消" />
-              <input type="button" value="確定" />
+              <input type="button" name="cancel" id="cancel" value="取消" onclick="javascript:history.go(-1);">
+              <!-- <input type="submit" name="submitBtn" id="submitBtn" value="確定" onclick="return doSubmit();"> -->
             </div>
           </form>
         </div>

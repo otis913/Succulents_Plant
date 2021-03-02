@@ -22,15 +22,15 @@ $(document).ready(() => {
   //   $('.hand_content').slideDown();
   // });
 
-  var hand_hide = document.getElementsByClassName('hand_hide');
-  var hand_show = document.getElementsByClassName('hand_show');
+  // var hand_hide = document.getElementsByClassName('hand_hide');
+  // var hand_show = document.getElementsByClassName('hand_show');
 
-  console.log(typeof(hand_hide));
-  console.log(hand_show);
+  // console.log(typeof(hand_hide));
+  // console.log(hand_show);
 
-  hand_hide.addEventListener("click", () => {
-    console.log(456);
-  });
+  // hand_hide.addEventListener("click", () => {
+  //   console.log(456);
+  // });
 
   // $('.hand_hide:first-child').click(() => {
   //   console.log(456);
