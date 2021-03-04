@@ -57,231 +57,162 @@
   <!-- header結束 -->
 
 
-  <section>
+  <section >
 
     <div class="ex"></div>
 
     <article>
-      <div class="bread">
-        <a href="">首頁</a> > <a href="">心理測驗</a>
-      </div>
+        <div class="bread">
+           <a href="">首頁</a> > <a href="">心理測驗</a>
+        </div>
     </article>
 
-    <article class="mind_wrapper">
+    <article class="mind_wrapper" >
       <div class="mind_circle"></div>
       <div class="mind_circle -bigbig"></div>
-      <div class="mind_ques" id="mind_ques">
-        <h1 id="queston">Q1:終於放假了，你會想開啟<br>什麼樣的休閒模式</h1>
+        <div class="mind_ques" id="mind_ques">
+            <h1 id="queston">Q1:終於放假了，通常會去戶外走走<br>還是在家軟爛?</h1>
+            
+            <div class="mind_answer">
+                <div class="mind_block" id="answerA">
+                    <img src="img/mind/mind_Q1_1.png" alt="" id="AnswerAimg">
+                </div>
+                <div class="mind_block" id="answerB">
+                    <img src="img/mind/mind_Q1_2.png" alt="" id="AnswerBimg">
+                </div>
 
-        <div class="mind_answer">
-          <div class="mind_block" id="answerA">
-            <img src="img/custom/custom_01.png" alt="" id="AnswerAimg">家裡
-          </div>
-          <div class="mind_block" id="answerB">
-            <img src="img/custom/custom_01.png" alt="" id="AnswerBimg">戶外
-          </div>
+            </div>
 
+            <!-- bubble按鈕 start -->
+            <div class="bubble_btnn -nono" id="answerBack">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+                  <defs>
+                    <filter id="goo">
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                      <feComposite in="SourceGraphic" in2="goo"/>
+                    </filter>
+                  </defs>
+                </svg>
+                
+                <span class="button--bubble__container">
+                  <a ref="" class="button button--bubble">
+                    回上一題
+                  </a>
+                  <span class="button--bubble__effect-container">
+                    <span class="circle top-left"></span>
+                    <span class="circle top-left"></span>
+                    <span class="circle top-left"></span>
+                
+                    <span class="button effect-button"></span>
+                
+                    <span class="circle bottom-right"></span>
+                    <span class="circle bottom-right"></span>
+                    <span class="circle bottom-right"></span>
+                  </span>
+                </span>
+            </div>
+            <!-- bubble按鈕 end -->
         </div>
 
-        <!-- bubble按鈕 start -->
-        <div class="bubble_btnn -nono" id="answerBack">
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
-            <defs>
-              <filter id="goo">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
-                  result="goo" />
-                <feComposite in="SourceGraphic" in2="goo" />
-              </filter>
-            </defs>
-          </svg>
+        <div class="mind_ques -nono mind_reoutter" id="result" >
+            <div class="mind_result">
+                <div class="mind_reblock">
+                    <img src="" alt="" id="reImg">
+                </div>
+                
+                <div class="mind_reblock">
+                    <p class="mind_tag" >仙人掌科</p>
 
-          <span class="button--bubble__container">
-            <a ref="" class="button button--bubble">
-              回上一題
-            </a>
-            <span class="button--bubble__effect-container">
-              <span class="circle top-left"></span>
-              <span class="circle top-left"></span>
-              <span class="circle top-left"></span>
+                    <h2 id="tit">像是<b>芍藥丸</b>一樣的你...</h2>
+                    <p class="mind_title">坦蕩直率，逆境中創造奇蹟</p>
 
-              <span class="button effect-button"></span>
+                    <hr>
 
-              <span class="circle bottom-right"></span>
-              <span class="circle bottom-right"></span>
-              <span class="circle bottom-right"></span>
-            </span>
-          </span>
-        </div>
-        <!-- bubble按鈕 end -->
-      </div>
+                    <p class="mind_say"></p>
+                </div>
+            </div>
+            
+            <div class="mind_btn">
 
-      <div class="mind_ques -nono mind_reoutter" id="result">
-        <div class="mind_result">
-          <div class="mind_reblock">
-            <img src="" alt="" id="reImg">
-          </div>
+                <!-- bubble按鈕 start -->
+                <div class="bubble_btnn" id="reStart">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+                      <defs>
+                        <filter id="goo">
+                          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                          <feComposite in="SourceGraphic" in2="goo"/>
+                        </filter>
+                      </defs>
+                    </svg>
+                    
+                    <span class="button--bubble__container">
+                      <a ref="" class="button button--bubble">
+                        重新測驗
+                      </a>
+                      <span class="button--bubble__effect-container">
+                        <span class="circle top-left"></span>
+                        <span class="circle top-left"></span>
+                        <span class="circle top-left"></span>
+                    
+                        <span class="button effect-button"></span>
+                    
+                        <span class="circle bottom-right"></span>
+                        <span class="circle bottom-right"></span>
+                        <span class="circle bottom-right"></span>
+                      </span>
+                    </span>
+                </div>
+                <!-- bubble按鈕 end -->
 
-          <div class="mind_reblock">
-            <p class="mind_tag">仙人掌科</p>
-
-            <h2 id="tit">像是<b>芍藥丸</b>一樣的你...</h2>
-            <p class="mind_title">坦蕩直率，逆境中創造奇蹟</p>
-
-            <hr>
-
-            <p class="mind_say"></p>
-          </div>
-        </div>
-
-        <div class="mind_btn">
-
-          <!-- bubble按鈕 start -->
-          <div class="bubble_btnn" id="reStart">
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
-              <defs>
-                <filter id="goo">
-                  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
-                    result="goo" />
-                  <feComposite in="SourceGraphic" in2="goo" />
-                </filter>
-              </defs>
-            </svg>
-
-            <span class="button--bubble__container">
-              <a ref="" class="button button--bubble">
-                重新測驗
-              </a>
-              <span class="button--bubble__effect-container">
-                <span class="circle top-left"></span>
-                <span class="circle top-left"></span>
-                <span class="circle top-left"></span>
-
-                <span class="button effect-button"></span>
-
-                <span class="circle bottom-right"></span>
-                <span class="circle bottom-right"></span>
-                <span class="circle bottom-right"></span>
-              </span>
-            </span>
-          </div>
-          <!-- bubble按鈕 end -->
-
-          <!-- bubble按鈕 start -->
-          <div class="bubble_btnn">
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
-              <defs>
-                <filter id="goo">
-                  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
-                    result="goo" />
-                  <feComposite in="SourceGraphic" in2="goo" />
-                </filter>
-              </defs>
-            </svg>
-
-            <span class="button--bubble__container">
-              <a ref="" class="button_y button--bubble">
-                前往商城
-              </a>
-              <span class="button--bubble__effect-container">
-                <span class="circle top-left"></span>
-                <span class="circle top-left"></span>
-                <span class="circle top-left"></span>
-
-                <span class="button effect-button"></span>
-
-                <span class="circle bottom-right"></span>
-                <span class="circle bottom-right"></span>
-                <span class="circle bottom-right"></span>
-              </span>
-            </span>
-          </div>
-          <!-- bubble按鈕 end -->
+                <!-- bubble按鈕 start -->
+                <div class="bubble_btnn">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+                      <defs>
+                        <filter id="goo">
+                          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                          <feComposite in="SourceGraphic" in2="goo"/>
+                        </filter>
+                      </defs>
+                    </svg>
+                    
+                    <span class="button--bubble__container">
+                      <a ref="" class="button_y button--bubble">
+                        前往商城
+                      </a>
+                      <span class="button--bubble__effect-container">
+                        <span class="circle top-left"></span>
+                        <span class="circle top-left"></span>
+                        <span class="circle top-left"></span>
+                    
+                        <span class="button effect-button"></span>
+                    
+                        <span class="circle bottom-right"></span>
+                        <span class="circle bottom-right"></span>
+                        <span class="circle bottom-right"></span>
+                      </span>
+                    </span>
+                </div>
+                <!-- bubble按鈕 end -->
+               
+            </div>
 
         </div>
-
-      </div>
-
+        
 
     </article>
+    
 
-
-
-  </section>
+    
+</section>
 
 
 
   <div class="ex"></div>
 
-  <!-- 購物車 側邊欄  開始-->
-  <div class="order">
-    <i class="fas fa-window-close"></i>
-    <h2>購物清單</h2>
-    <div class="orderPith"></div>
-    <div class="order-custom">
-      <i class="fa fa-times" aria-hidden="true"></i>
-      <div class="order_custom_con">
-        <img src="img/shopcart/assets_5.png" alt="">
-        <div class="txt">
-          <h4>黃金山脈-金 晃丸盆栽</h4>
-          <h2>賀卡訂製</h2>
-          <p>NT$1850</p>
-          <div id="app8">
-            <div class="shop">
-              <i @click="counter += -1" class="fa fa-minus" aria-hidden="true"></i>
-              <div class="counter">{{counter}}</div>
-              <i @click="counter += 1" class="fa fa-plus" aria-hidden="true"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="order-custom-pro">
-      <i class="fa fa-times" aria-hidden="true"></i>
-      <div class="order_custom_con_con">
-        <img src="img/shopcart/assets_5.png" alt="">
-        <div class="txt">
-          <h4>客製化多肉</h4>
-          <h2>賀卡訂製</h2>
-          <p>NT$1850</p>
-          <div id="app9">
-            <div class="shop">
-              <i @click="counter += -1" class="fa fa-minus" aria-hidden="true"></i>
-              <div class="counter">{{counter}}</div>
-              <i @click="counter += 1" class="fa fa-plus" aria-hidden="true"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="detail">
-        <h2>詳細內容</h2>
-        <p>黃金山脈多肉 x1</p>
-        <p>黃金山脈多肉 x1</p>
-        <p>黃金山脈多肉 x1</p>
-        <p>器皿-水泥器皿 x1</p>
-        <p>裝飾品-小蘑菇 x1</p>
-      </div>
-
-    </div>
-    <div class="amount">
-      <h2 class="coin">金額
-        <p>$3600</p>
-      </h2>
-      <h2 class="sale">優惠
-        <p>-＄20</p>
-      </h2>
-    </div>
-    <div class="total">
-      <h4>總金額</h4>
-      <p>$3580</p>
-    </div>
-    <a href=""></a>
-    <button class="checkbuy"> <a href="./shopCart.html">確定購買</a></button>
-  </div>
-
-  <!-- 購物車 側邊欄  結束-->
+  
 
 
 
