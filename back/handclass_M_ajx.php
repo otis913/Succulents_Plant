@@ -30,7 +30,7 @@ foreach ($data as $index => $row) {
                   </td>";
   echo "<td>
            
-        <a href='./handclass_edit.php?PID=" . $row['handClassNO'] . "'>編輯</a>
+        <a href='./handclass_edit.php?ID=" . $row['handClassNO'] . "'>編輯</a>
                                           
         </td>
       </tr>";
@@ -48,6 +48,6 @@ foreach ($data as $index => $row) {
                   <ul>
                     <li>" . $row['handClassDate'] . "</li>      
                     </ul>
-                   </td>
+                   </td> 
                    </tr>";
 }

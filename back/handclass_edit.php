@@ -34,24 +34,21 @@ $sql = "SELECT *
 //執行
 $statement = $pdo->prepare($sql);
 //給值
-$statement->bindValue(1, $_GET["PID"]);
+$statement->bindValue(1, $_GET["ID"]);
 $statement->execute();
 $data = $statement->fetchAll();
-
-
 ?>
-
 
 <body>
   <div class="wrapper">
     <header>
       <?php
-      include("./header.php");
+      include("./layout/header.php");
       ?>
     </header>
     <div class="section_main">
       <?php
-      include("./lefterBar.php");
+      include("./layout/lefterBar.php");
       ?>
       <div class="right_main">
         <h1>課程編輯</h1>
@@ -60,7 +57,6 @@ $data = $statement->fetchAll();
           <form method="post" action="./handclass_edit.ajx.php" enctype="multipart/form-data">
             <?php
             foreach ($data as $index => $row) {
-
             ?>
               <table class="table table-striped">
                 <tr class="table-dark">
@@ -76,7 +72,7 @@ $data = $statement->fetchAll();
                 <tr>
                   <td>課程敘述</td>
                   <td>
-                    <input type="text" id="handClassContent" name="handClassContent" value="<?= $row["handClassContent"] ?>" />
+                    <textarea name="handClassContent" id="handClassContent" cols="30" rows="10"><?= $row["handClassContent"] ?></textarea>
                   </td>
                 </tr>
                 <tr>

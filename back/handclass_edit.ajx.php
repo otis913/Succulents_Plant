@@ -32,4 +32,4 @@ $statement->execute();
 
 //導頁
 //header("Location: Index.php");    
-echo "<script>alert('" . $message . "'); location.href = '../handclass_edit.php';</script>";
+echo "<script>alert('" . $message . "'); location.href = './handclass_M.php';</script>";

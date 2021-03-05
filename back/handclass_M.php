@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
   </link>
-
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
@@ -85,7 +84,7 @@
                     <li>2021/03/11</li>
                     <li>2021/03/09</li>
                     <li>2021/03/10</li>
-                    <li>2021/03/11</li>
+                    <li>2021/03/11</li> 
                     <li>2021/03/09</li>
                     <li>2021/03/10</li>
                     <li>2021/03/11</li>

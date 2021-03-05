@@ -19,6 +19,18 @@
 
   <title>肉多不怪文章管理</title>
 
+  <?php
+  include("./SignSql.php");
+  // 建立SQL
+  $sql = 'SELECT *
+            FROM KNOWLEDGE';
+  $statement = $pdo->prepare($sql);
+
+  $statement->execute();
+  $cate_data = $statement->fetchAll();
+
+  ?>
+
 </head>
 
 <body>
@@ -37,9 +49,8 @@
         <div class="knowledge_content">
           <h1>文章新增</h1>
           <div class="bottom_line"></div>
-          <a class="inserBtn knowledge_inserBtn" href="./knowledge_creat.html">新增文章</a>
           <div class="table_div table_div_knowCreat">
-            <form action="">
+            <form method="post" action="./knowledge_creat_ajx.php" enctype="multipart/form-data">
               <table class="table table-striped">
                 <tr>
                   <td>文章版型</td>
@@ -51,52 +62,52 @@
                 <tr>
                   <td>文章外顯示圖片</td>
                   <td>
-                    <input type="file" id="knowledgeTypeOutPic" name="knowledgeTypeOutPic" />
+                    <input type="file" id="knowledgeOutPic" name="knowledgeOutPic" />
                   </td>
                 </tr>
                 <tr>
                   <td>文章標題</td>
                   <td>
-                    <input type="text" id="knowledgeTypeTitle" name="knowledgeTypeTitle" />
+                    <input type="text" id="knowledgeTitle" name="knowledgeTitle" />
                   </td>
                 </tr>
                 <tr>
                   <td>內文01</td>
                   <td>
-                    <textarea name="knowledgeTypeContent01" id="knowledgeTypeContent01" class="" rows="3" required="required">
+                    <textarea name="knowledgeContent01" id="knowledgeContent01" class="" rows="3">
                     </textarea>
                   </td>
                 </tr>
                 <tr>
                   <td>內文02</td>
                   <td>
-                    <textarea name="knowledgeTypeContent02" id="knowledgeTypeContent02" class="" rows="3">
+                    <textarea name="knowledgeContent02" id="knowledgeContent02" class="" rows="3">
                     </textarea>
                   </td>
                 </tr>
                 <tr>
                   <td>內文03</td>
                   <td>
-                    <textarea name="knowledgeTypeContent03" id="knowledgeTypeContent03" class="" rows="3">
+                    <textarea name="knowledgeContent03" id="knowledgeContent03" class="" rows="3">
                   </textarea>
                   </td>
                 </tr>
                 <tr>
                   <td>圖片01</td>
                   <td>
-                    <input type="file" id="knowledgeTypeContentPic01" name="knowledgeTypeContentPic01" />
+                    <input type="file" id="knowledgeContentPic01" name="knowledgeContentPic01" />
                   </td>
                 </tr>
                 <tr>
                   <td>圖片02</td>
                   <td>
-                    <input type="file" id="knowledgeTypeContentPic02" name="knowledgeTypeContentPic02" />
+                    <input type="file" id="knowledgeContentPic02" name="knowledgeContentPic02" />
                   </td>
                 </tr>
                 <tr>
                   <td>圖片03</td>
                   <td>
-                    <input type="file" id="knowledgeTypeContentPic03" name="knowledgeTypeContentPic03" />
+                    <input type="file" id="knowledgeContentPic03" name="knowledgeContentPic03" />
                   </td>
                 </tr>
               </table>
@@ -110,13 +121,13 @@
       </div>
     </div>
   </div>
-  <script type="text/javascript">
+  <script>
     function doSubmit() {
-      if (document.getElementById('knowledgeTypeTitle').value == '') {
+      if (document.getElementById('knowledgeTitle').value == '') {
         alert("請填寫[文章標題]");
         return false;
       }
-      if (document.getElementById('knowledgeTypeContent01').value == '') {
+      if (document.getElementById('knowledgeContent01').value == '') {
         alert("請填寫[文章內容01]");
         return false;
       }
@@ -134,14 +145,11 @@
         return false;
       }
 
-      if (document.getElementById('knowledgeTypeOutPic').value == '') {
+      if (document.getElementById('knowledgeOutPic').value == '') {
         alert("請選擇[外顯示圖片]");
         return false;
       }
-      if (document.getElementById('knowledgeTypeContentPic01').value == '') {
-        alert("請選擇[內文圖片01]");
-        return false;
-      }
+
     }
   </script>
 

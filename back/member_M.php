@@ -75,7 +75,7 @@
                 //Typing your code...
                 $.ajax({
                     method: "POST",
-                    url: "./member_search_ajx.php",
+                    url: "./member_M_ajx.php",
                     data: {
                         Name: str
                     },

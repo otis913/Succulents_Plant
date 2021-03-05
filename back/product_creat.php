@@ -18,7 +18,7 @@
   <title>肉多不怪商品管理</title>
 
   <?php
-  include("./php/SignSql.php");
+  include("./SignSql.php");
   // 建立SQL
   $sql = "SELECT * 
           FROM SUCCULENTS_PLANT.PRODUCT ";
@@ -49,16 +49,19 @@
         <div class="bottom_line"></div>
 
         <div class="table_div table_div_productNew">
-          <form method="post" action="./php/product_creat_ajx.php" enctype="multipart/form-data">
+          <form method="post" action="./product_creat_ajx.php" enctype="multipart/form-data">
             <table class="table table-striped">
               <tr>
                 <td>商品類別</td>
                 <td>
                   <select class="productNew_type" name="productType" id="productType">
                     <option value="">請選擇</option>
-                    <option value="0">植物</option>
-                    <option value="1">裝飾品</option>
-                    <option value="2">器皿</option>
+                    <option value="0">景天科</option>
+                    <option value="1">仙人掌科</option>
+                    <option value="2">百合科</option>
+                    <option value="3">菊科</option>
+                    <option value="4">飾品</option>
+                    <option value="5">器皿</option>
                   </select>
                 </td>
               </tr>
