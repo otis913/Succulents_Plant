@@ -3,24 +3,24 @@ var userpage =0;
 
 var QArray = [
     {
-        AnswerAimg:'img/custom/custom_01.png',
-        AnswerBimg:'img/custom/custom_01.png',
-        Questionstring:'Q1:終於放假了，你會想開啟 \n 什麼樣的休閒模式',
+        AnswerAimg:'img/mind/mind_Q1_1.png',
+        AnswerBimg:'img/mind/mind_Q1_2.png',
+        Questionstring:'Q1:終於放假了，通常會去戶外走走 \n 還是在家軟爛?',
     },
     {
-        AnswerAimg:'img/custom/custom_02.png',
-        AnswerBimg:'img/custom/custom_02.png',
-        Questionstring:'Q2:hana2',
+        AnswerAimg:'img/mind/mind_Q2_1.png',
+        AnswerBimg:'img/mind/mind_Q2_2.png',
+        Questionstring:'Q2:哇!今天天氣真好 \n 你希望哪一種太陽出現在天上?',
     },
     {
-        AnswerAimg:'img/custom/custom_03.png',
-        AnswerBimg:'img/custom/custom_03.png',
-        Questionstring:'Q3:hana3',
+        AnswerAimg:'img/mind/mind_Q3_1.png',
+        AnswerBimg:'img/mind/mind_Q3_2.png',
+        Questionstring:'Q3:餓了三天三夜 \n 第一口想吃到哪種食物? ',
     },
     {
-        AnswerAimg:'img/custom/custom_02.png',
-        AnswerBimg:'img/custom/custom_02.png',
-        Questionstring:'Q4:hana4',
+        AnswerAimg:'img/mind/mind_Q4_1.png',
+        AnswerBimg:'img/mind/mind_Q4_2.png',
+        Questionstring:'Q4:比起慵懶的貓咪 \n 更喜歡活潑又好動的狗狗？',
     },
 ];
 
@@ -28,18 +28,18 @@ var ReArray = [
     {
         result_img:'img/mind/mind_plant_01.png',
         result_tag:'仙人掌科',
-        result_tit:'像是<b>芍藥丸</b>一樣的你...',
+        result_tit:'像是<b>緋花玉</b>一樣的你...',
         result_txt:'坦蕩直率，逆境中創造奇蹟',
         result_say:`你現在是該加油的時候了，放手去做吧！
-        不要考慮太多，跌倒了也要馬上站起來，繼續往前走，
-        得到的收穫會比你預期的還要意想不到，
+        不要考慮太多，跌倒了也要馬上站起來，
+        繼續往前走，得到的收穫會比你預期的還要意想不到，
         在新的一年努力的挑戰自己，心靈跟身靈都會獲得更多能量喔。
         `,
     },
     {
         result_img:'img/mind/mind_plant_02.png',
         result_tag:'景天科',
-        result_tit:'像是<b>藍石蓮</b>一樣的你...',
+        result_tit:'像是<b>白牡丹</b>一樣的你...',
         result_txt:'玲瓏細緻，優雅並且獨特',
         result_say:`是不是在擔心自己的未來呢？
         不必過份的擔憂，順其自然吧，
@@ -53,20 +53,17 @@ var ReArray = [
     {
         result_img:'img/mind/mind_plant_03.png',
         result_tag:'百合科',
-        result_tit:'像是<b>銀月</b>一樣的你...',
+        result_tit:'像是<b>九輪塔</b>一樣的你...',
         result_txt:'沈靜溫柔，獨自在自己世界裡沈醉',
-        result_say:`你現在的狀況有一點點點疲累，需要休息一下或是變換氣氛，
-        在這個快節奏的生活中，每天工作是做不完的，
-        一直在尋找未來的方向，所以當你累的時候，
-        別太強迫自己，好好的休息一下，
-        才能有更好的精神去做事，
-        可以出去散散心，旅遊、運動，或是好好的大睡一覺。
+        result_say:`你現在的狀況有一點點點疲累，需要休息一下或是變換氣氛，在這個快節奏的生活中，每天工作是做不完的，
+        一直在尋找未來的方向，所以當你累的時候，別太強迫自己，好好的休息一下，
+        才能有更好的精神去做事，可以出去散散心，旅遊、運動，或是好好的大睡一覺。
         `,
     },
     {
         result_img:'img/mind/mind_plant_04.png',
         result_tag:'菊科',
-        result_tit:'像是<b>九輪塔</b>一樣的你...',
+        result_tit:'像是<b>綠之鈴</b>一樣的你...',
         result_txt:'純樸率真，暗藏野性的力量',
         result_say:`你現在的心理壯況有一點急躁，
         需要更小心謹慎，做事情不要太匆匆忙忙，
@@ -167,14 +164,3 @@ function check()
     if(userpage>4)userpage =4;
     if(userpage<0)userpage=0;
 }
-//購物車點擊展開
-// $('.fa-shopping-basket').click(function(){
-//     $('.order').show()
-//     console.log('aaaa');
-// })
-let faShopping= document.querySelector('.fa-shopping-basket');
-let order = document.querySelector('.order');
-faShopping.addEventListener('click',(e)=>{
-    e.preventDefault();
-    order.classList.add('show');
-})

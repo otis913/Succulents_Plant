@@ -55,7 +55,7 @@
 
 .-bigbig{
     opacity: 0.5;
-    transform: rotate(0deg) scale(1.05);
+    transform: rotate(0deg) scale(1.07);
     @include mobile{
         transform: rotate(0deg) scale(1.6);
     }
@@ -67,9 +67,7 @@
     50%{border-radius: 47% 57% 46% 54% / 47% 39% 61% 53% ;}
     75%{border-radius: 64% 36% 62% 38% / 34% 65% 35% 66%  ;}
     100%{border-radius: 61% 39% 65% 35% / 39% 59% 41% 61% ;}
-    
 }
-
 
 .mind_wrapper h1{
     font-size: 26px;
@@ -126,7 +124,7 @@
 .mind_block img,.mind_reblock img{
     display: block;
     width: 240px;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     @include mobile{
         width: 100%;
     }
