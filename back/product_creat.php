@@ -55,13 +55,13 @@
                 <td>商品類別</td>
                 <td>
                   <select class="productNew_type" name="productType" id="productType">
-                    <option value="">請選擇</option>
-                    <option value="0">景天科</option>
-                    <option value="1">仙人掌科</option>
-                    <option value="2">百合科</option>
-                    <option value="3">菊科</option>
-                    <option value="4">飾品</option>
-                    <option value="5">器皿</option>
+                    <option value="0">請選擇</option>
+                    <option value="1">景天科</option>
+                    <option value="2">仙人掌科</option>
+                    <option value="3">百合科</option>
+                    <option value="4">菊科</option>
+                    <option value="5">飾品</option>
+                    <option value="6">器皿</option>
                   </select>
                 </td>
               </tr>
@@ -115,16 +115,10 @@
                 </td>
               </tr>
               <tr>
-                <td>商品圖片04</td>
-                <td>
-                  <input type="file" id="productImg04" name="productImg04" />
-                </td>
-              </tr>
-              <tr>
                 <td>商品狀態</td>
                 <td>
-                  <input type="radio" name="productStatus" value="0" checked />上架
-                  <input type="radio" name="productStatus" value="1" />下架
+                  <input type="radio" name="productStatus" value="1" checked />上架
+                  <input type="radio" name="productStatus" value="2" />下架
                 </td>
               </tr>
               <!-- <tr>

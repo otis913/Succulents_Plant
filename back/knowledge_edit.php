@@ -18,13 +18,13 @@
 
   //建立SQL---->
   $sql = 'SELECT *
-            from KNOWLEDGE;
-            where knowledgeNO = ? ';
+            from KNOWLEDGE
+            where knowledgeNO = ?';
 
   //執行
   $statement = $pdo->prepare($sql);
   //給值
-  $statement->bindValue(1, $_GET["ID"]);
+  $statement->bindValue(1, $_GET["PID"]);
   $statement->execute();
   $data = $statement->fetchAll();
 
@@ -57,6 +57,7 @@
                   <tr>
                     <td>文章編號</td>
                     <td><?= $row["knowledgeNO"] ?></td>
+                    <input type="hidden" name="knowledgeNO" value="<?= $_GET["PID"] ?>" />
                   </tr>
                   <tr>
                     <td>文章版型</td>
@@ -88,25 +89,25 @@
                   <tr>
                     <td>文章標題</td>
                     <td>
-                      <input type="text" id="knowledgeTitle" name="knowledgeTitle" value="<?= $row["knowledgeTitle"] ?>" />
+                      <input type="text" name="knowledgeTitle" value="<?= $row["knowledgeTitle"] ?>" />
                     </td>
                   </tr>
                   <tr>
                     <td>內文01</td>
                     <td>
-                      <textarea name="" id="knowledgeContent01" class="form-control" rows="3" required="required"><?= $row["knowledgeContent01"] ?></textarea>
+                      <textarea name="knowledgeContent01" class="form-control" rows="3" required="required"><?= $row["knowledgeContent01"] ?></textarea>
                     </td>
                   </tr>
                   <tr>
                     <td>內文02</td>
                     <td>
-                      <textarea name="" id="knowledgeContent02" class="form-control" rows="3"><?= $row["knowledgeContent02"] ?></textarea>
+                      <textarea name="knowledgeContent02" class="form-control" rows="3"><?= $row["knowledgeContent02"] ?></textarea>
                     </td>
                   </tr>
                   <tr>
                     <td>內文03</td>
                     <td>
-                      <textarea name="" id="knowledgeContent03" class="form-control" rows="3"><?= $row["knowledgeContent03"] ?></textarea>
+                      <textarea name="knowledgeContent03" class="form-control" rows="3"><?= $row["knowledgeContent03"] ?></textarea>
                     </td>
                   </tr>
                   <tr>

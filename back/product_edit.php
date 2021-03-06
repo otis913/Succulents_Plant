@@ -34,16 +34,7 @@ $statement->bindValue(1, $_GET["PID"]);
 $statement->execute();
 $data = $statement->fetchAll();
 
-// -----------------------
-$sql = "SELECT * 
-        FROM SUCCULENTS_PLANT.PRODUCT
-        WHERE productType = 0||1||2||3||4||5||6";
 
-//執行
-$statement = $pdo->prepare($sql);
-//給值
-$statement->execute();
-$Type_data = $statement->fetchAll();
 ?>
 
 <body>
@@ -70,45 +61,19 @@ $Type_data = $statement->fetchAll();
               <table class="table table-striped">
                 <tr>
                   <td>商品編號</td>
+                  <input type="hidden" name="productNO" value="<?= $row["productNO"] ?>" />
                   <td><?= $row["productNO"] ?></td>
                 </tr>
                 <tr>
                   <td>商品類別</td>
                   <td>
                     <select class="productNew_type" name="productType" id="productType">
-                      <?php
-                      foreach ($Type_data as $index2 => $row2) {
-                        $selected = "";
-                        if ($row["productType"] == $row2["productType"]) {
-                          $selected = "selected";
-                        }
-                        switch ($selected) {
-                          case "0":
-                            $selected = "景天科";
-                            break;
-                          case "1":
-                            $selected = '仙人掌科';
-                            break;
-                          case "2":
-                            $selected = '百合科';
-                            break;
-                          case "3":
-                            $selected = '菊科';
-                            break;
-                          case "4":
-                            $selected = '飾品';
-                            break;
-                          case "5":
-                            $selected = '器皿';
-                            break;
-                          default:
-                            $selected = '錯誤';
-                        }
-                      ?>
-                        <option value="<?= $row2["productNO"] ?>" <?= $selected ?>><?= $row2["productType"] ?></option>
-                      <?php
-                      };
-                      ?>
+                      <option value="1">景天科</option>
+                      <option value="2">仙人掌科</option>
+                      <option value="3">百合科</option>
+                      <option value="4">菊科</option>
+                      <option value="5">飾品</option>
+                      <option value="6">器皿</option>
                     </select>
                   </td>
                 </tr>
@@ -146,8 +111,9 @@ $Type_data = $statement->fetchAll();
                 <tr>
                   <td>商品圖片01</td>
                   <td>
-                    <input type="file" id="productImg01" name="productImg01" />
+                    <input type="file" name="productNew01" />
                     <img src="./img/<?= $row["productImg01"] ?>" alt="">
+                    <input type="hidden" name="productImg01" value="<?= $row["productImg01"] ?>" />
                   </td>
                 </tr>
                 <!--<tr>
@@ -215,30 +181,30 @@ $Type_data = $statement->fetchAll();
   <script>
     function doSubmit() {
       if (document.getElementById('productType').value == '') {
-        alert("請填寫課程名稱");
+        alert("請填寫商品類別");
         return false;
       }
       if (document.getElementById('productName').value == '') {
-        alert("請填寫課程敘述");
+        alert("請填寫商品名稱");
         return false;
       }
       if (document.getElementById('productSize').value == '') {
-        alert("請填寫課程金額");
-        return false;
+        alert("請填寫商品大小); 
+          return false;
+        }
+        if (document.getElementById('productDes').value == '') {
+          alert("請填寫商品敘述");
+          return false;
+        }
+        if (document.getElementById('productNumber').value == '') {
+          alert("請填寫商品數量");
+          return false;
+        }
+        if (document.getElementById('productPrice').value == '') {
+          alert("請填寫商品價錢");
+          return false;
+        }
       }
-      if (document.getElementById('productDes').value == '') {
-        alert("請填寫最多上課人數");
-        return false;
-      }
-      if (document.getElementById('productNumber').value == '') {
-        alert("請填寫上課日期");
-        return false;
-      }
-      if (document.getElementById('productPrice').value == '') {
-        alert("請填寫上課日期");
-        return false;
-      }
-    }
   </script>
   <script src="./js/leftbar.js"></script>
 </body>

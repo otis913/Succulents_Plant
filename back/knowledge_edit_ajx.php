@@ -6,29 +6,33 @@ include("./SignSql.php");
 //取得POST過來的值
 
 // $knowledgeTypeOutPic = $_POST["knowledgeTypeOutPic"];
+
 $knowledgeType = $_POST["knowledgeType"];
-$knowledgeTypeTitle = $_POST["knowledgeTypeTitle"];
-$knowledgeTypeContent01 = $_POST["knowledgeTypeContent01"];
-$knowledgeTypeContent02 = $_POST["knowledgeTypeContent02"];
-$knowledgeTypeContent03 = $_POST["knowledgeTypeContent03"];
+$knowledgeTitle = $_POST["knowledgeTitle"];
+$knowledgeContent01 = $_POST["knowledgeContent01"];
+$knowledgeContent02 = $_POST["knowledgeContent02"];
+$knowledgeContent03 = $_POST["knowledgeContent03"];
+$knowledgeNO = $_POST["knowledgeNO"];
 
 //返回訊息文字
 $message = "修改成功!";
 
 //建立SQL
-$sql = "UPDATE KNOWLEDGETYPE 
+$sql = "UPDATE KNOWLEDGE
             set 
-            knowledgeType = ?, knowledgeTypeTitle = ?, knowledgeTypeContent01 = ?, knowledgeTypeContent02 = ?,  knowledgeTypeContent03 = ?";
+            knowledgeType = ?, knowledgeTitle = ?, knowledgeContent01 = ?, knowledgeContent02 = ?,  knowledgeContent03 = ?
+            where knowledgeNO = ?";
 
 //執行
 $statement = $pdo->prepare($sql);
 
 //給值    
 $statement->bindValue(1, $knowledgeType);
-$statement->bindValue(1, $knowledgeTypeTitle);
-$statement->bindValue(2, $knowledgeTypeContent01);
-$statement->bindValue(3, $knowledgeTypeContent02);
-$statement->bindValue(4, $knowledgeTypeContent03);
+$statement->bindValue(2, $knowledgeTitle);
+$statement->bindValue(3, $knowledgeContent01);
+$statement->bindValue(4, $knowledgeContent02);
+$statement->bindValue(5, $knowledgeContent03);
+$statement->bindValue(6, $knowledgeNO);
 $statement->execute();
 
 //導頁

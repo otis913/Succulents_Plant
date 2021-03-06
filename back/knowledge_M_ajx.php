@@ -25,7 +25,7 @@ foreach ($data as $index => $row) {
       echo "<td>" . "<img src='./img/" . $row["knowledgeOutPic"] . " '> " . "</td>";
       echo "<td>" . $row["knowledgeTitle"] . "</td>";
       echo "<td>
-              <a href='./knowledge_edit.php?ID=" . $row['knowledgeNO'] . "'>編輯</a>            
+              <a href='./knowledge_edit.php?PID=" . $row['knowledgeNO'] . "'>編輯</a>            
         </td>
               </td>
         </tr>";

@@ -76,17 +76,15 @@
           <div class="HM_class">
             <h1>選擇課程</h1>
             <div class="HM_class_btn">
-              <button>手捏陶 + 多肉組盆</button>
-              <button>手捏陶 + 多肉組盆</button>
-              <button>手捏陶 + 多肉組盆</button>
+              <button class="HDclass01">手捏陶器 + 多肉組盆</button>
+              <button class="HDclass02">諧意繪泥 & 療癒植栽</button>
+              <button class="HDclass03">室內多肉照顧課</button>
             </div>
           </div>
 
           <div class="HM_date_number">
-
             <div class="HM_Date ">
               <h1>選擇日期<i class="fas fa-calendar-alt "></i></h1>
-
               <div class="HM_Date_select">
                 <select name="date" class="custom_select " id="">
                   <option value="2021/03/01">2021/03/01</option>
@@ -394,6 +392,33 @@
   <script src="./js/shopcart.js"></script>
   <script src="./js/header.js"></script>
   <script src="./js/qa.js"></script>
+
+  <script>
+    //頁面載入
+    function doQuery(str) {
+      //Typing your code...
+      $.ajax({
+        method: "POST",
+        url: "./handmake.php",
+        data: {
+          Name: str
+        },
+        dataType: "text",
+        success: function(response) {
+          //更新html內容
+          document.getElementsByClassName('table')[0].innerHTML = response;
+          document.getElementsByClassName()[0].innerHTML = response;
+        },
+        error: function(exception) {
+          alert("發生錯誤: " + exception.status);
+        }
+      });
+    }
+
+    $('.HDclass01').on('click'.function(e) {
+
+    });
+  </script>
 </body>
 
 </html>

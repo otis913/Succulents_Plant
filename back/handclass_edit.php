@@ -34,7 +34,7 @@ $sql = "SELECT *
 //執行
 $statement = $pdo->prepare($sql);
 //給值
-$statement->bindValue(1, $_GET["ID"]);
+$statement->bindValue(1, $_GET["PID"]);
 $statement->execute();
 $data = $statement->fetchAll();
 ?>
@@ -62,6 +62,7 @@ $data = $statement->fetchAll();
                 <tr class="table-dark">
                   <td>課程編號</td>
                   <td><?= $row["handClassNO"] ?></td>
+                  <input type="hidden" name="handClassNO" value="<?= $_GET["PID"] ?>" />
                 </tr>
                 <tr>
                   <td>課程名稱</td>
