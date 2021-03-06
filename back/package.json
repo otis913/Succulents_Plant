@@ -15,10 +15,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "node-sass": "^5.0.0"
   },
-  "scripts": {
-    "刪除舊的html": "gulp clean",
-    "產生新的html": "gulp html"
-  },
+  "scripts": {},
   "author": "",
   "license": "ISC"
 }
