@@ -68,7 +68,7 @@
 
 
     <!-- article 的內容的安全範圍(1200px)，每個區塊都用一個article包起來 -->
-    <article>
+    <article class="article">
       <div class="handmake_section ex20px">
 
         <div class="handmake_left ex20px">
@@ -223,7 +223,7 @@
 
 
   <!-- 購物車 側邊欄  開始-->
-  <div class="order">
+  <!-- <div class="order">
     <i class="fas fa-window-close"></i>
     <h2>購物清單</h2>
     <div class="orderPith"></div>
@@ -286,7 +286,7 @@
     </div>
     <a href=""></a>
     <button class="checkbuy"> <a href="./shopCart.html">確定購買</a></button>
-  </div>
+  </div> -->
 
   <!-- 購物車 側邊欄  結束-->
 
@@ -333,9 +333,6 @@
     </div>
   </section>
   <!-- QA仙人掌結束 -->
-
-
-
 
 
 
@@ -406,8 +403,7 @@
         dataType: "text",
         success: function(response) {
           //更新html內容
-          document.getElementsByClassName('table')[0].innerHTML = response;
-          document.getElementsByClassName()[0].innerHTML = response;
+          document.getElementsByClassName('article')[0].innerHTML = response;
         },
         error: function(exception) {
           alert("發生錯誤: " + exception.status);
