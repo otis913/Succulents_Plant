@@ -87,31 +87,31 @@
               <tr>
                 <td>商品價格</td>
                 <td>
-                  <input type="text" id="productPrice" name="productPrice" />
+                  <input type="text" name="productPrice" />
                 </td>
               </tr>
               <tr>
                 <td>商品庫存量</td>
                 <td>
-                  <input type="text" id="productNumber" name="productNumber" />
+                  <input type="text" name="productNumber" />
                 </td>
               </tr>
               <tr>
                 <td>商品圖片01</td>
                 <td>
-                  <input type="file" id="productImg01" name="productImg01" />
+                  <input type="file" name="file[]" />
                 </td>
               </tr>
               <tr>
                 <td>商品圖片02</td>
                 <td>
-                  <input type="file" id="productImg02" name="productImg02" />
+                  <input type="file" name="file[]" />
                 </td>
               </tr>
               <tr>
                 <td>商品圖片03</td>
                 <td>
-                  <input type="file" id="productImg03" name="productImg03" />
+                  <input type="file" name="file[]" />
                 </td>
               </tr>
               <tr>

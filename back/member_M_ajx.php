@@ -12,7 +12,7 @@ $statement->execute();
 $data = $statement->fetchAll();
 
 echo "<tr class='table-dark'>
-            <th>會員編號</th>
+            <th>會員編號</th> 
             <th>會員帳號</th>
             <th>會員姓名</th>
             <th>帳號狀態</th>
@@ -41,8 +41,8 @@ foreach ($data as $index => $row) {
     echo "<td>" . $row["memberDate"] . "</td>";
     echo "<td>
             <div class='custom-control custom-switch'>
-                <input type='checkbox' class='custom-control-input ' id='customSwitch1'>
+                <input type='checkbox' class='custom-control-input' id='customSwitch1'>
                 <label class='custom-control-label' for='customSwitch1'></label>
-            </div>
+            </div>    
         </td>";
 }

@@ -36,11 +36,11 @@
 			<div class="right_main">
 				<h1>會員管理</h1>
 				<div class="bottom_line"></div>
-				<div class="search_name">
+				<!-- <div class="search_name">
 					<h2>姓名搜尋</h2>
 					<input type="text" class="search_text">
 					<input type="submit" class="search_btn" value="search">
-				</div>
+				</div> -->
 				<div class="table_div table_div_member">
 					<form action="">
 						<table class="table table-striped">
