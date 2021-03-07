@@ -52,7 +52,7 @@
             </div>  
             <ol>
                 <li><a href=""><i class="fas fa-shopping-basket"></i></a></li>
-                <li><a href="./member.html"><i class="fas fa-user"></i></a></li>
+                <li><a href="./custom.html"><i class="fas fa-user"></i></a></li>
             </ol>
             <div class="ham">
                 <span></span> 
