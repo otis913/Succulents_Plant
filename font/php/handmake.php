@@ -22,7 +22,7 @@ $data = $statement->fetchAll();
 // ---------------------------------------
 foreach ($data as $index => $row) {
 
-  echo "<div class='handmake_section ex20px'>
+  echo "<div id='appHD' class='handmake_section ex20px'>
   <div class='handmake_left ex20px'>
     <div class='HM_class'>
       <h1>選擇課程</h1>
@@ -48,9 +48,9 @@ foreach ($data as $index => $row) {
       <div class='HM_Number'>
         <h1>選擇人數</h1>
         <div class='HM_choseNumber'>
-          <i class='fas fa-minus'></i>
+          <@click='addNUM' i class='fas fa-minus'></@>
           <input type='number' value='1' min='1' class='number_people'>
-          <i class='fas fa-plus'></i>
+          <@click='lessNUm' i class='fas fa-plus'></@click=>
         </div>
       </div>
     </div>
