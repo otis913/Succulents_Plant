@@ -13,7 +13,7 @@ $pdo = new PDO($dsn, $db_user, $db_pass);
 // ---------------------------------------
 $sql = 'SELECT *
      from HANDCLASS
-     where handClassNO = 1';
+     where handClassNO = 3';
 
 $statement = $pdo->prepare($sql);
 
@@ -38,9 +38,9 @@ foreach ($data as $index => $row) {
         <h1>選擇日期</h1>
         <div class='HM_Date_select'>
           <select name='handClassDate' class='custom_select ' id=''>
-          <option name='handClassDate' value='2021/4/8'>2021/4/8</option>
-          <option name='handClassDate' value='2021/4/12'>2021/4/12</option>
-          <option name='handClassDate' value='2021/4/24'>2021/4/24</option>
+          <option name='handClassDate' value='2021/4/01'>2021/4/01</option>
+          <option name='handClassDate' value=2021/4/11''>2021/4/11</option>
+          <option name='handClassDate' value='2021/4/28'>2021/4/28</option>
           </select>
         </div>
       </div>
@@ -126,7 +126,7 @@ foreach ($data as $index => $row) {
     </div>
 
     <!-- 黃色bubble按鈕 start -->
-    <div class='bubble_btnn SignUp_RWD '>
+    <div class='bubble_btnn SignUp_RWD'>
       <svg xmlns='http://www.w3.org/2000/svg' version='1.1' class='goo'>
         <defs>
           <filter id='goo'>
