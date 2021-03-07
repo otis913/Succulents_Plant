@@ -27,8 +27,9 @@
 
 </head>
 
-<body onload="doQuery()">
-  <!-- <body> -->
+<!-- <body onload="doQuery()"> -->
+
+<body>
 
   <div class="header_bg">
     <div class="headers">
@@ -390,79 +391,79 @@
 
   <script>
     //頁面載入
-    function doQuery(str) {
-      //Typing your code...
-      $.ajax({
-        method: "POST",
-        url: "./php/handmake.php",
-        data: {
-          Name: str
-        },
-        dataType: "text",
-        success: function(response) {
-          //更新html內容
-          document.getElementsByClassName('article')[0].innerHTML = response;
-        },
-        error: function(exception) {
-          alert("發生錯誤: " + exception.status);
-        }
-      });
-    }
+    // function doQuery(str) {
+    //   //Typing your code...
+    //   $.ajax({
+    //     method: "POST",
+    //     url: "./php/handmake.php",
+    //     data: {
+    //       Name: str
+    //     },
+    //     dataType: "text",
+    //     success: function(response) {
+    //       //更新html內容
+    //       document.getElementsByClassName('article')[0].innerHTML = response;
+    //     },
+    //     error: function(exception) {
+    //       alert("發生錯誤: " + exception.status);
+    //     }
+    //   });
+    // }
 
-    $('.article').on('click', '.HDclass01', (e) => {
-      // console.log(e);
-      $.ajax({
-        method: "POST",
-        url: "./php/handmake.php",
-        data: {
-          // Name: str
-        },
-        dataType: "text",
-        success: function(response) {
-          //更新html內容
-          document.getElementsByClassName('article')[0].innerHTML = response;
-        },
-        error: function(exception) {
-          alert("發生錯誤: " + exception.status);
-        }
-      });
-    })
-    $('.article').on('click', '.HDclass02', (e) => {
-      // console.log(e);
-      $.ajax({
-        method: "POST",
-        url: "./php/HDclass02.php",
-        data: {
-          // Name: str
-        },
-        dataType: "text",
-        success: function(response) {
-          //更新html內容
-          document.getElementsByClassName('article')[0].innerHTML = response;
-        },
-        error: function(exception) {
-          alert("發生錯誤: " + exception.status);
-        }
-      });
-    })
-    $('.article').on('click', '.HDclass03', (e) => {
-      // console.log(e);
-      $.ajax({
-        method: "POST",
-        url: "./php/HDclass03.php",
-        data: {
-          // Name: str
-        },
-        dataType: "text",
-        success: function(response) {
-          //更新html內容
-          document.getElementsByClassName('article')[0].innerHTML = response;
-        },
-        error: function(exception) {
-          alert("發生錯誤: " + exception.status);
-        }
-      });
-    })
+    // $('.article').on('click', '.HDclass01', (e) => {
+    //   // console.log(e);
+    //   $.ajax({
+    //     method: "POST",
+    //     url: "./php/handmake.php",
+    //     data: {
+    //       // Name: str
+    //     },
+    //     dataType: "text",
+    //     success: function(response) {
+    //       //更新html內容
+    //       document.getElementsByClassName('article')[0].innerHTML = response;
+    //     },
+    //     error: function(exception) {
+    //       alert("發生錯誤: " + exception.status);
+    //     }
+    //   });
+    // })
+    // $('.article').on('click', '.HDclass02', (e) => {
+    //   // console.log(e);
+    //   $.ajax({
+    //     method: "POST",
+    //     url: "./php/HDclass02.php",
+    //     data: {
+    //       // Name: str
+    //     },
+    //     dataType: "text",
+    //     success: function(response) {
+    //       //更新html內容
+    //       document.getElementsByClassName('article')[0].innerHTML = response;
+    //     },
+    //     error: function(exception) {
+    //       alert("發生錯誤: " + exception.status);
+    //     }
+    //   });
+    // })
+    // $('.article').on('click', '.HDclass03', (e) => {
+    //   // console.log(e);
+    //   $.ajax({
+    //     method: "POST",
+    //     url: "./php/HDclass03.php",
+    //     data: {
+    //       // Name: str
+    //     },
+    //     dataType: "text",
+    //     success: function(response) {
+    //       //更新html內容
+    //       document.getElementsByClassName('article')[0].innerHTML = response;
+    //     },
+    //     error: function(exception) {
+    //       alert("發生錯誤: " + exception.status);
+    //     }
+    //   });
+    // })
 
     new Vue({
       el: '#appHD',
@@ -471,15 +472,89 @@
       },
       method: {
         addNUM() {
-          this.number += 1;
+          // this.number += 1;
+          console.log(123);
         },
         lessNUm() {
-          this.number -= 1;
+          // this.number -= 1;
+          console.log(123);
         },
       },
-      computed: {
+      computed: {},
+      mounted() {
+        $.ajax({
+          method: "POST",
+          url: "./php/handmake.php",
+          data: {
+            // Name: str
+          },
+          dataType: "text",
+          success: function(response) {
+            //更新html內容
+            document.getElementsByClassName('article')[0].innerHTML = response;
+          },
+          error: function(exception) {
+            alert("發生錯誤: " + exception.status);
+          },
+        });
 
-      }
+        $('.article').on('click', '.HDclass01', (e) => {
+          // console.log(e);
+          $.ajax({
+            method: "POST",
+            url: "./php/handmake.php",
+            data: {
+              // Name: str
+            },
+            dataType: "text",
+            success: function(response) {
+              //更新html內容
+              document.getElementsByClassName('article')[0].innerHTML = response;
+            },
+            error: function(exception) {
+              alert("發生錯誤: " + exception.status);
+            }
+          });
+        })
+
+        $('.article').on('click', '.HDclass02', (e) => {
+          // console.log(e);
+          $.ajax({
+            method: "POST",
+            url: "./php/HDclass02.php",
+            data: {
+              // Name: str
+            },
+            dataType: "text",
+            success: function(response) {
+              //更新html內容
+              document.getElementsByClassName('article')[0].innerHTML = response;
+            },
+            error: function(exception) {
+              alert("發生錯誤: " + exception.status);
+            }
+          });
+        })
+
+        $('.article').on('click', '.HDclass03', (e) => {
+          // console.log(e);
+          $.ajax({
+            method: "POST",
+            url: "./php/HDclass03.php",
+            data: {
+              // Name: str
+            },
+            dataType: "text",
+            success: function(response) {
+              //更新html內容
+              document.getElementsByClassName('article')[0].innerHTML = response;
+            },
+            error: function(exception) {
+              alert("發生錯誤: " + exception.status);
+            }
+          });
+        })
+      },
     });
   </script>
 

@@ -38,7 +38,8 @@ if ($_FILES["knowledgeTypeOutPic"]["error"] > 0) {
     $knowledgeTypeContent03 = $_POST["knowledgeTypeContent03"];
 
     $sql = "INSERT INTO 'KNOWLEDGE'
-            ('knowledgeType','knowledgeTypeTitle','knowledgeTypeContent01', 'knowledgeTypeContent02', 'knowledgeTypeContent03', 'knowledgeTypeOutPic') 
+            ('knowledgeType','knowledgeTypeTitle','knowledgeTypeContent01', 'knowledgeTypeContent02', 
+            'knowledgeTypeContent03', 'knowledgeTypeOutPic') 
             VALUES (  ?,  ?,  ?,  ?,  ?,  ? )";
 
     // $sql = "INSERT INTO 'SUCCULENTS_PLANT'.'KNOWLEDGE','SUCCULENTS_PLANT'.'KNOWLEDGETYPE'

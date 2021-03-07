@@ -27,7 +27,7 @@ foreach ($data as $index => $row) {
     <div class='HM_class'>
       <h1>選擇課程</h1>
       <div class='HM_class_btn'>
-        <button class='HDclass01'>手捏陶器 + 多肉組盆</button>
+        <button class='HDclass01' :click>手捏陶器 + 多肉組盆</button>
         <button class='HDclass02'>諧意繪泥 & 療癒植栽</button>
         <button class='HDclass03'>室內多肉照顧課</button>
       </div>
@@ -48,9 +48,9 @@ foreach ($data as $index => $row) {
       <div class='HM_Number'>
         <h1>選擇人數</h1>
         <div class='HM_choseNumber'>
-          <@click='addNUM' i class='fas fa-minus'></@>
+          <i class='fas fa-minus' @click='addNUM'></i>
           <input type='number' value='1' min='1' class='number_people'>
-          <@click='lessNUm' i class='fas fa-plus'></@click=>
+          <i class='fas fa-plus' @click='lessNUm'></i>
         </div>
       </div>
     </div>
