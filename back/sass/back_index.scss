@@ -169,29 +169,35 @@ header {
   h1 {
     @include h1();
     text-align: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    font-weight: bold;
   }
   form {
     margin: 0 auto;
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid map-get($color, "gold");
+    background-color: map-get($color, "main_g");
   }
 }
 
 .Sign_table {
-  margin: 0 auto;
-  tr {
-    margin: 10px;
-  }
+  margin: 10px auto;
+  color: map-get($color, "gray");
+  tr {}
   td {
-    margin: 10px;
+    padding: 5px;
   }
 }
 
 .sign {
   @include inserBtn();
   @include inserBtnH();
-  width: 100px;
+  width: 60px;
   height: 40px;
   line-height: 40px;
-  margin: 0 auto;
+  margin: 5px 110px 20px;
 }
 
 // --------------------------課程管理

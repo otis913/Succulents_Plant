@@ -13,7 +13,8 @@ $productPrice = $_POST["productPrice"];
 $productNumber = $_POST["productNumber"];
 $productStatus = $_POST["productStatus"];
 $productImg01 = $_POST["productImg01"];
-// $productImg01 = "";
+$productImg02 = $_POST["productImg02"];
+$productImg03 = $_POST["productImg03"];
 
 //echo $productImg01;
 //exit();
