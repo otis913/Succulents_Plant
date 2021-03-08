@@ -51,6 +51,5 @@ for ($i = 0; $i < count($filePath_arr); $i++) {
   $statement->bindValue(9, $_FILES["filePath_arr[$i]"]["name"]);
   $statement->bindValue(10, $_FILES["filePath_arr[$i]"]["name"]);
   $statement->execute();
-
-  echo "<script>alert('新增成功!'); location.href = './product_M.php';</script>";
 }
+echo "<script>alert('新增成功!'); location.href = './product_M.php';</script>";

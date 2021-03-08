@@ -40,13 +40,13 @@ include('./loginCheck.php');
         <a class="inserBtn knowledge_inserBtn" href="./knowledge_creat.php">新增文章</a>
         <div class="table_div table_div_know">
           <table class="table table-striped">
-            <tr class="table-dark">
+            <!-- <tr class="table-dark">
               <th>文章編號</th>
               <th>文章版型</th>
               <th>文章外顯示圖片</th>
               <th>文章標題</th>
               <th>是否修改</th>
-            </tr>
+            </tr> -->
             <!-- <tr>
               <th>1</th>
               <td>1</td>
