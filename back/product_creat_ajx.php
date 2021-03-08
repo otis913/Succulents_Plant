@@ -1,7 +1,7 @@
 <?php
 include('./loginCheck.php');
-include("./fileImg.php");
-$file = new fileImg();
+// include("./fileImg.php");
+// $file = new fileImg();
 
 $sql = "SELECT *
         FROM SUCCULENTS_PLANT.PPRODUCT";
@@ -9,16 +9,29 @@ $sql = "SELECT *
 $statement = $pdo->prepare($sql);
 
 //Server上的暫存檔路徑含檔名
-$filePath_arr = $_FILES["file"]["name"];
-$fileTmpName_arr = $_FILES["file"]["tmp_name"];
+// $fileName_arr = $_FILES["file"]["name"];
+// $fileTmpName_arr = $_FILES["file"]["tmp_name"];
+if ($_FILES["newPic01"]["error"] > 0) {
 
-for ($i = 0; $i < count($filePath_arr); $i++) {
+  $fileName01 = $_FILES["newPic01"]["name"];
+  $fileTmpName01 = $_FILES["newPic01"]["tmp_name"];
 
-  //Server上的暫存檔路徑含檔名
-  $filePath_Temp = $fileTmpName_arr[$i];
+  $fileName02 = $_FILES["newPic02"]["name"];
+  $fileTmpName02 = $_FILES["newPic02"]["tmp_name"];
+
+  $fileName03 = $_FILES["newPic03"]["name"];
+  $fileTmpName03 = $_FILES["newPic03"]["tmp_name"];
+
+  $filePath_Temp1 = $fileTmpName01;
+  $filePath_Temp2 = $fileTmpName02;
+  $filePath_Temp3 = $fileTmpName03;
+
   //檔案最終存放位置
   $ServerRoot = $_SERVER["DOCUMENT_ROOT"];
-  $filePath = $ServerRoot . "./20210225/back/img/" . $filePath_arr[$i];
+  // $filePath = $ServerRoot . "./20210225/back/img/" . $fileName_arr[$i];
+  $filePath = $ServerRoot . "./20210225/back/img/" . $fileName01;
+  $filePath = $ServerRoot . "./20210225/back/img/" . $fileName02;
+  $filePath = $ServerRoot . "./20210225/back/img/" . $fileName03;
 
   //將暫存檔搬移到正確位置
   move_uploaded_file($filePath_Temp, $filePath);
@@ -33,9 +46,9 @@ for ($i = 0; $i < count($filePath_arr); $i++) {
   $productStatus = $_POST["productStatus"];
 
   $sql = "INSERT INTO `SUCCULENTS_PLANT`.`PRODUCT`
-            (`productType`,`productName`,`productSize`,`productDes`,`productPrice`,
-              `productNumber`,`productStatus`,`productImg01`,`productImg02`,`productImg03`) 
-            VALUES (  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?)";
+                  (`productType`,`productName`,`productSize`,`productDes`,`productPrice`,
+                    `productNumber`,`productStatus`,`productImg01`,`productImg02`,`productImg03`) 
+                  VALUES (  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?)";
   //執行
   $statement = $pdo->prepare($sql);
 
@@ -47,9 +60,12 @@ for ($i = 0; $i < count($filePath_arr); $i++) {
   $statement->bindValue(5, $productPrice);
   $statement->bindValue(6, $productNumber);
   $statement->bindValue(7, $productStatus);
-  $statement->bindValue(8, $_FILES["filePath_arr[$i]"]["name"]);
-  $statement->bindValue(9, $_FILES["filePath_arr[$i]"]["name"]);
-  $statement->bindValue(10, $_FILES["filePath_arr[$i]"]["name"]);
+  $statement->bindValue(8, $_FILES["newPic01"]["name"]);
+  $statement->bindValue(9, $_FILES["newPic02"]["name"]);
+  $statement->bindValue(10, $_FILES["newPic03"]["name"]);
   $statement->execute();
+  // }
+  echo "<script>alert('新增成功!'); location.href = './product_M.php';</script>";
+} else {
+  echo "移動上傳圖片01失敗";
 }
-echo "<script>alert('新增成功!'); location.href = './product_M.php';</script>";
