@@ -1,3 +1,6 @@
+<?php
+include('./loginCheck.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,37 +21,13 @@
 
   <link rel="stylesheet" href="./css/back_index.css">
 
-  <style>
-    .a {
-      font-weight: bolder;
-    }
-  </style>
 
   <title>肉多不怪課程管理</title>
 </head>
 
 <?php
-include("./php/fileImg.php");
+include("./fileImg.php");
 $file = new fileImg();
-include("./php/SignSql.php");
-
-// //建立SQL---->產品----------------------
-// $sql = "SELECT * FROM ec_products WHERE ID = ?";
-// //執行
-// $statement = $Util->getPDO()->prepare($sql);
-// //給值
-// $statement->bindValue(1, $_GET["PID"]);
-// $statement->execute();
-// $data = $statement->fetchAll();
-
-// //建立SQL---->產品分類------------------
-// $sql = "SELECT * 
-//         FROM ec_category WHERE Status = 2 ORDER BY ID DESC";
-// //執行
-// $statement = $Util->getPDO()->prepare($sql);
-// //給值
-// $statement->execute();
-// $cate_data = $statement->fetchAll();
 
 //建立SQL---->
 $sql = "SELECT * 
@@ -60,47 +39,32 @@ $statement = $pdo->prepare($sql);
 $statement->bindValue(1, $_GET["PID"]);
 $statement->execute();
 $data = $statement->fetchAll();
-
-//建立SQL---->
-
-// $sql = "SELECT * 
-//         FROM HANDCLASS 
-//         -- WHERE handClassNO = 1";
-// //執行
-// $statement = $pdo->prepare($sql);
-// //給值
-// $statement->execute();
-// $cate_data = $statement->fetchAll();
-
-
 ?>
-
-<!-- <body onload="doQuery()"> -->
 
 <body>
   <div class="wrapper">
     <header>
       <?php
-      include("./php/header.php");
+      include("./layout/header.php");
       ?>
     </header>
     <div class="section_main">
       <?php
-      include("./php/lefterBar.php");
+      include("./layout/lefterBar.php");
       ?>
       <div class="right_main">
         <h1>課程編輯</h1>
         <div class="bottom_line"></div>
         <div class="table_div table_div_handEdit">
-          <form method="post" action="./php/handclass_edit.ajx.php" enctype="multipart/form-data">
+          <form method="post" action="./handclass_edit.ajx.php" enctype="multipart/form-data">
             <?php
             foreach ($data as $index => $row) {
-
             ?>
               <table class="table table-striped">
                 <tr class="table-dark">
                   <td>課程編號</td>
                   <td><?= $row["handClassNO"] ?></td>
+                  <input type="hidden" name="handClassNO" value="<?= $_GET["PID"] ?>" />
                 </tr>
                 <tr>
                   <td>課程名稱</td>
@@ -111,7 +75,7 @@ $data = $statement->fetchAll();
                 <tr>
                   <td>課程敘述</td>
                   <td>
-                    <input type="text" id="handClassContent" name="handClassContent" value="<?= $row["handClassContent"] ?>" />
+                    <textarea name="handClassContent" id="handClassContent" cols="30" rows="10"><?= $row["handClassContent"] ?></textarea>
                   </td>
                 </tr>
                 <tr>
@@ -139,7 +103,7 @@ $data = $statement->fetchAll();
               ?>
               </table>
               <div class="cancel_check">
-                <input type="button" name="cancel" id="cancel" value="取消" onclick="javascript:history.go(-2);">
+                <input type="button" name="cancel" id="cancel" value="取消" onclick="javascript:history.go(-1);">
                 <input type="submit" name="submitBtn" id="submitBtn" value="確定" onclick="return doSubmit();">
               </div>
           </form>

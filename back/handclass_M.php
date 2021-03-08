@@ -1,3 +1,6 @@
+<?php
+include('./loginCheck.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +12,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
   </link>
-
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
@@ -27,12 +29,12 @@
   <div class="wrapper">
     <header>
       <?php
-      include("./php/header.php");
+      include("./layout/header.php");
       ?>
     </header>
     <div class="section_main">
       <?php
-      include("./php/lefterBar.php");
+      include("./layout/lefterBar.php");
       ?>
 
       <div class="right_main">
@@ -48,7 +50,7 @@
                 <th>課程編號</th>
                 <th>課程名稱</th>
                 <th>課程價格</th>
-                <th>詳細資料</th>
+                <th>客滿人數</th>
                 <th>是否編輯</th>
               </tr>
               <!-- <tr>
@@ -85,7 +87,7 @@
                     <li>2021/03/11</li>
                     <li>2021/03/09</li>
                     <li>2021/03/10</li>
-                    <li>2021/03/11</li>
+                    <li>2021/03/11</li> 
                     <li>2021/03/09</li>
                     <li>2021/03/10</li>
                     <li>2021/03/11</li>
@@ -108,7 +110,7 @@
       //Typing your code...
       $.ajax({
         method: "POST",
-        url: "./php/handclass_M_ajx.php",
+        url: "./handclass_M_ajx.php",
         data: {
           Name: str
         },

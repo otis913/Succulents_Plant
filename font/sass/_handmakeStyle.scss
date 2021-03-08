@@ -131,6 +131,13 @@ body {
 .HM_Number {}
 
 .HM_choseNumber {
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
   .number_people {
     width: 20%;
     text-align: center;
@@ -153,13 +160,6 @@ body {
   }
   h1:nth-child(2) {
     color: map-get($color, "gold");
-  }
-}
-
-.SignUp {
-  margin: 20px;
-  @include pad {
-    display: none;
   }
 }
 
@@ -215,6 +215,13 @@ body {
 
 .handmake_left_text_RWD {
   display: none;
+}
+
+.SignUp {
+  display: block;
+  @include pad {
+    display: none;
+  }
 }
 
 .SignUp_RWD {

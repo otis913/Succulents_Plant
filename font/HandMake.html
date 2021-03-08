@@ -17,14 +17,17 @@
 
   <!-- vue cdn  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js"></script>
-
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js' integrity='sha512-o9SZrtqlGkpa7EF+dDrNjEdRFFYhymlrBzDKpolHNolxsyx0IcXAbEm9i1e8QpoiMgEdKZVtY8XiK1t8i6jVDA==' crossorigin='anonymous'></script> -->
   <!-- aos動畫效果 -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- 自己的css -->
   <link rel="stylesheet" href="./css/style.css">
 
+
 </head>
+
+<!-- <body onload="doQuery()"> -->
 
 <body>
 
@@ -60,98 +63,93 @@
     <!-- 麵包屑在這 -->
     <article>
       <div class="bread">
-        <a href="./main.html">首頁</a> > <a href="">心理測驗</a>
+        <a href="./main.html">首頁</a> > <a href="./HandMake.html">手作課程</a>
       </div>
     </article>
 
 
-
-
     <!-- article 的內容的安全範圍(1200px)，每個區塊都用一個article包起來 -->
-    <article>
-      <div class="handmake_section ex20px">
-
-        <div class="handmake_left ex20px">
-
-          <div class="HM_class">
-            <h1>選擇課程</h1>
-            <div class="HM_class_btn">
-              <button>手捏陶 + 多肉組盆</button>
-              <button>手捏陶 + 多肉組盆</button>
-              <button>手捏陶 + 多肉組盆</button>
-            </div>
-          </div>
-
-          <div class="HM_date_number">
-
-            <div class="HM_Date ">
-              <h1>選擇日期<i class="fas fa-calendar-alt "></i></h1>
-
-              <div class="HM_Date_select">
-                <select name="date" class="custom_select " id="">
-                  <option value="2021/03/01">2021/03/01</option>
-                  <option value="2021/04/01">2021/04/01</option>
-                  <option value="2021/05/01">2021/05/01</option>
-                </select>
+    <div id="appHD">
+      <article class="article">
+        <!-- <div class="handmake_section ex20px">
+          <div class="handmake_left ex20px">
+            <div class="HM_class">
+              <h1>選擇課程</h1>
+              <div class="HM_class_btn">
+                <button class="HDclass01">手捏陶器 + 多肉組盆</button>
+                <button class="HDclass02">諧意繪泥 & 療癒植栽</button>
+                <button class="HDclass03">室內多肉照顧課</button>
               </div>
             </div>
-
-            <div class="HM_Number ">
-              <h1>選擇人數</h1>
-              <div class="HM_choseNumber ">
-                <i class="fas fa-minus"></i>
-                <input type="number" value="1" min="1" class="number_people">
-                <i class="fas fa-plus"></i>
+  
+            <div class="HM_date_number">
+              <div class="HM_Date ">
+                <h1>選擇日期<i class="fas fa-calendar-alt "></i></h1>
+                <div class="HM_Date_select">
+                  <select name="date" class="custom_select " id="">
+                    <option value="2021/03/01">2021/03/01</option>
+                    <option value="2021/04/01">2021/04/01</option>
+                    <option value="2021/05/01">2021/05/01</option>
+                  </select>
+                </div>
+              </div>
+  
+              <div class="HM_Number ">
+                <h1>選擇人數</h1>
+                <div class="HM_choseNumber ">
+                  <i class="fas fa-minus"></i>
+                  <input type="number" value="1" min="1" class="number_people">
+                  <i class="fas fa-plus"></i>
+                </div>
               </div>
             </div>
-          </div>
+  
+            <div class="handmake_left_text ex20px">
+              <h1>尚於<span>10</span>人可報名</h1>
+              <h1>課程費用<span>$2800</span>/人</h1>
+            </div>
+  
+             黃色bubble按鈕 start -->
+        <!-- <div class="bubble_btnn SignUp">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+                <defs>
+                  <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                      result="goo" />
+                    <feComposite in="SourceGraphic" in2="goo" />
+                  </filter>
+                </defs>
+              </svg>
+  
+              <span class="button--bubble__container">
+                <a href="" class="button_y button--bubble">
+                  確認報名
+                </a>
+                <span class="button--bubble__effect-container">
+                  <span class="circle top-left"></span>
+              <span class="circle top-left"></span>
+              <span class="circle top-left"></span>
+  
+              <span class="button effect-button"></span>
+  
+              <span class="circle bottom-right"></span>
+              <span class="circle bottom-right"></span>
+              <span class="circle bottom-right"></span>
+              </span>
+              </span>
+            </div>
+            黃色bubble按鈕 end -->
 
-          <div class="handmake_left_text ex20px">
-            <h1>尚於<span>10</span>人可報名</h1>
-            <h1>課程費用<span>$2800</span>/人</h1>
-          </div>
+        <!-- </div> -->
 
-          <!-- 黃色bubble按鈕 start -->
-          <div class="bubble_btnn SignUp">
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
-              <defs>
-                <filter id="goo">
-                  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
-                    result="goo" />
-                  <feComposite in="SourceGraphic" in2="goo" />
-                </filter>
-              </defs>
-            </svg>
-
-            <span class="button--bubble__container">
-              <a href="" class="button_y button--bubble">
-                確認報名
-              </a>
-              <span class="button--bubble__effect-container">
-                <span class="circle top-left"></span>
-            <span class="circle top-left"></span>
-            <span class="circle top-left"></span>
-
-            <span class="button effect-button"></span>
-
-            <span class="circle bottom-right"></span>
-            <span class="circle bottom-right"></span>
-            <span class="circle bottom-right"></span>
-            </span>
-            </span>
-          </div>
-          <!-- 黃色bubble按鈕 end -->
-
-        </div>
-
-        <div class="handmake_right ">
+        <!-- <div class="handmake_right ">
           <img src="./img/handclass/HandMake_title.png" alt="">
           <div class="handmake_right_main">
             <h1>開課時間/地點</h1>
             <p>2021/2/8,2/12,2/24</p>
             <p>台北市大安區金山南路二段123巷50號</p>
-
+  
             <h1>課程介紹</h1>
             <ul>
               <li>1.從盆器設計,釉色挑選,多肉植物,每一個步驟都可以參與製作</li>
@@ -169,51 +167,50 @@
               </div>
             </div>
           </div>
-
+  
           <div class="handmake_left_text handmark_text_RWD ex20px">
             <h1>尚於<span>10</span>人可報名</h1>
             <h1>課程費用<span>$2800</span>/人</h1>
           </div>
-
-          <!-- 黃色bubble按鈕 start -->
-          <div class="bubble_btnn SignUp_RWD">
+  
+          黃色bubble按鈕 start -->
+        <!-- <div class="bubble_btnn SignUp_RWD">
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
-              <defs>
-                <filter id="goo">
-                  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
-                    result="goo" />
-                  <feComposite in="SourceGraphic" in2="goo" />
-                </filter>
-              </defs>
-            </svg>
-
+                <defs>
+                  <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                      result="goo" />
+                    <feComposite in="SourceGraphic" in2="goo" />
+                  </filter>
+                </defs>
+              </svg>
+  
             <span class="button--bubble__container">
-              <a href="" class="button_y button--bubble">
-                確認報名
-              </a>
-              <span class="button--bubble__effect-container">
-                <span class="circle top-left"></span>
+                <a href="" class="button_y button--bubble">
+                  確認報名
+                </a>
+                <span class="button--bubble__effect-container">
+                  <span class="circle top-left"></span>
             <span class="circle top-left"></span>
             <span class="circle top-left"></span>
-
+  
             <span class="button effect-button"></span>
-
+  
             <span class="circle bottom-right"></span>
             <span class="circle bottom-right"></span>
             <span class="circle bottom-right"></span>
             </span>
             </span>
           </div>
-          <!-- 黃色bubble按鈕 end -->
-
+          黃色bubble按鈕 end 
         </div>
+        </div>  -->
+
+      </article>
 
 
-
-      </div>
-
-    </article>
+    </div>
 
 
 
@@ -225,7 +222,7 @@
 
 
   <!-- 購物車 側邊欄  開始-->
-  <div class="order">
+  <!-- <div class="order">
     <i class="fas fa-window-close"></i>
     <h2>購物清單</h2>
     <div class="orderPith"></div>
@@ -288,7 +285,7 @@
     </div>
     <a href=""></a>
     <button class="checkbuy"> <a href="./shopCart.html">確定購買</a></button>
-  </div>
+  </div> -->
 
   <!-- 購物車 側邊欄  結束-->
 
@@ -335,9 +332,6 @@
     </div>
   </section>
   <!-- QA仙人掌結束 -->
-
-
-
 
 
 
@@ -394,6 +388,177 @@
   <script src="./js/shopcart.js"></script>
   <script src="./js/header.js"></script>
   <script src="./js/qa.js"></script>
+
+  <script>
+    //頁面載入
+    // function doQuery(str) {
+    //   //Typing your code...
+    //   $.ajax({
+    //     method: "POST",
+    //     url: "./php/handmake.php",
+    //     data: {
+    //       Name: str
+    //     },
+    //     dataType: "text",
+    //     success: function(response) {
+    //       //更新html內容
+    //       document.getElementsByClassName('article')[0].innerHTML = response;
+    //     },
+    //     error: function(exception) {
+    //       alert("發生錯誤: " + exception.status);
+    //     }
+    //   });
+    // }
+
+    // $('.article').on('click', '.HDclass01', (e) => {
+    //   // console.log(e);
+    //   $.ajax({
+    //     method: "POST",
+    //     url: "./php/handmake.php",
+    //     data: {
+    //       // Name: str
+    //     },
+    //     dataType: "text",
+    //     success: function(response) {
+    //       //更新html內容
+    //       document.getElementsByClassName('article')[0].innerHTML = response;
+    //     },
+    //     error: function(exception) {
+    //       alert("發生錯誤: " + exception.status);
+    //     }
+    //   });
+    // })
+    // $('.article').on('click', '.HDclass02', (e) => {
+    //   // console.log(e);
+    //   $.ajax({
+    //     method: "POST",
+    //     url: "./php/HDclass02.php",
+    //     data: {
+    //       // Name: str
+    //     },
+    //     dataType: "text",
+    //     success: function(response) {
+    //       //更新html內容
+    //       document.getElementsByClassName('article')[0].innerHTML = response;
+    //     },
+    //     error: function(exception) {
+    //       alert("發生錯誤: " + exception.status);
+    //     }
+    //   });
+    // })
+    // $('.article').on('click', '.HDclass03', (e) => {
+    //   // console.log(e);
+    //   $.ajax({
+    //     method: "POST",
+    //     url: "./php/HDclass03.php",
+    //     data: {
+    //       // Name: str
+    //     },
+    //     dataType: "text",
+    //     success: function(response) {
+    //       //更新html內容
+    //       document.getElementsByClassName('article')[0].innerHTML = response;
+    //     },
+    //     error: function(exception) {
+    //       alert("發生錯誤: " + exception.status);
+    //     }
+    //   });
+    // })
+
+    new Vue({
+      el: '#appHD',
+      data: {
+        number: 0,
+      },
+      method: {
+        addNUM() {
+          // this.number += 1;
+          console.log(123);
+        },
+        lessNUm() {
+          // this.number -= 1;
+          console.log(123);
+        },
+      },
+      computed: {},
+      mounted() {
+        $.ajax({
+          method: "POST",
+          url: "./php/handmake.php",
+          data: {
+            // Name: str
+          },
+          dataType: "text",
+          success: function(response) {
+            //更新html內容
+            document.getElementsByClassName('article')[0].innerHTML = response;
+          },
+          error: function(exception) {
+            alert("發生錯誤: " + exception.status);
+          },
+        });
+
+        $('.article').on('click', '.HDclass01', (e) => {
+          // console.log(e);
+          $.ajax({
+            method: "POST",
+            url: "./php/handmake.php",
+            data: {
+              // Name: str
+            },
+            dataType: "text",
+            success: function(response) {
+              //更新html內容
+              document.getElementsByClassName('article')[0].innerHTML = response;
+            },
+            error: function(exception) {
+              alert("發生錯誤: " + exception.status);
+            }
+          });
+        })
+
+        $('.article').on('click', '.HDclass02', (e) => {
+          // console.log(e);
+          $.ajax({
+            method: "POST",
+            url: "./php/HDclass02.php",
+            data: {
+              // Name: str
+            },
+            dataType: "text",
+            success: function(response) {
+              //更新html內容
+              document.getElementsByClassName('article')[0].innerHTML = response;
+            },
+            error: function(exception) {
+              alert("發生錯誤: " + exception.status);
+            }
+          });
+        })
+
+        $('.article').on('click', '.HDclass03', (e) => {
+          // console.log(e);
+          $.ajax({
+            method: "POST",
+            url: "./php/HDclass03.php",
+            data: {
+              // Name: str
+            },
+            dataType: "text",
+            success: function(response) {
+              //更新html內容
+              document.getElementsByClassName('article')[0].innerHTML = response;
+            },
+            error: function(exception) {
+              alert("發生錯誤: " + exception.status);
+            }
+          });
+        })
+      },
+    });
+  </script>
+
+
 </body>
 
 </html>

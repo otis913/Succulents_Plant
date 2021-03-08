@@ -1,3 +1,6 @@
+<?php
+include('./loginCheck.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,76 +9,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/back_index.css">
-
   <!-- font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
   </link>
-
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
   <!-- JQ cdn -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js' integrity='sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==' crossorigin='anonymous'></script>
+  <title>肉多不怪商品管理</title>
 
   <?php
-  include("./php/SignSql.php");
-
-  //建立SQL
-  // $sql = "SELECT * FROM ec_category WHERE ID = ?";
 
   // 建立SQL
   $sql = "SELECT * 
           FROM SUCCULENTS_PLANT.PRODUCT ";
 
-  //執行 
-  // $statement = $Util->getPDO()->prepare($sql);
-
   $statement = $pdo->prepare($sql);
-
-  //給值
-  // $statement->bindValue(1, $_GET["CID"]);
-  // $statement->execute();
-  // $data = $statement->fetchAll();
 
   // $statement->bindValue(1, $_GET["productType"]);
   $statement->execute();
   $cate_data = $statement->fetchAll();
 
   ?>
-  <title>肉多不怪商品管理</title>
-
-
 </head>
-
 <!-- <body onload="doQuery()"> -->
 
 <body>
   <div class="wrapper">
     <header>
       <?php
-      include("./php/header.php");
+      include("./layout/header.php");
       ?>
     </header>
     <div class="section_main">
       <?php
-      include("./php/lefterBar.php");
+      include("./layout/lefterBar.php");
       ?>
       <div class="right_main">
         <h1>商品新增</h1>
         <div class="bottom_line"></div>
 
         <div class="table_div table_div_productNew">
-          <form method="post" action="./php/product_creat_ajx.php" enctype="multipart/form-data">
+          <form method="post" action="./product_creat_ajx.php" enctype="multipart/form-data">
             <table class="table table-striped">
               <tr>
                 <td>商品類別</td>
                 <td>
                   <select class="productNew_type" name="productType" id="productType">
-                    <option value="">請選擇</option>
-                    <option value="0">植物</option>
-                    <option value="1">裝飾品</option>
-                    <option value="2">器皿</option>
+                    <option value="0">請選擇</option>
+                    <option value="1">景天科</option>
+                    <option value="2">仙人掌科</option>
+                    <option value="3">百合科</option>
+                    <option value="4">菊科</option>
+                    <option value="5">飾品</option>
+                    <option value="6">器皿</option>
                   </select>
                 </td>
               </tr>
@@ -101,44 +90,38 @@
               <tr>
                 <td>商品價格</td>
                 <td>
-                  <input type="text" id="productPrice" name="productPrice" />
+                  <input type="text" name="productPrice" />
                 </td>
               </tr>
               <tr>
                 <td>商品庫存量</td>
                 <td>
-                  <input type="text" id="productNumber" name="productNumber" />
+                  <input type="text" name="productNumber" />
                 </td>
               </tr>
               <tr>
                 <td>商品圖片01</td>
                 <td>
-                  <input type="file" id="productImg01" name="productImg01" />
+                  <input type="file" name="file[]" />
                 </td>
               </tr>
               <tr>
                 <td>商品圖片02</td>
                 <td>
-                  <input type="file" id="productImg02" name="productImg02" />
+                  <input type="file" name="file[]" />
                 </td>
               </tr>
               <tr>
                 <td>商品圖片03</td>
                 <td>
-                  <input type="file" id="productImg03" name="productImg03" />
-                </td>
-              </tr>
-              <tr>
-                <td>商品圖片04</td>
-                <td>
-                  <input type="file" id="productImg04" name="productImg04" />
+                  <input type="file" name="file[]" />
                 </td>
               </tr>
               <tr>
                 <td>商品狀態</td>
                 <td>
-                  <input type="radio" name="productStatus" value="0" checked />上架
-                  <input type="radio" name="productStatus" value="1" />下架
+                  <input type="radio" name="productStatus" value="1" checked />上架
+                  <input type="radio" name="productStatus" value="2" />下架
                 </td>
               </tr>
               <!-- <tr>
