@@ -1,5 +1,5 @@
 <?php
-include('./SignSql.php');
+include('./loginCheck.php');
 
 $sql = 'SELECT *
             FROM 

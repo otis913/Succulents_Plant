@@ -1,3 +1,6 @@
+<?php
+include('./loginCheck.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +23,6 @@
   <title>肉多不怪文章管理</title>
 
   <?php
-  include("./SignSql.php");
   // 建立SQL
   $sql = 'SELECT *
             FROM KNOWLEDGE';

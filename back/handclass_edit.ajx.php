@@ -1,4 +1,5 @@
 <?php
+include('./loginCheck.php');
 include("./fileImg.php");
 $file = new fileImg();
 include("./SignSql.php");

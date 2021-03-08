@@ -1,3 +1,6 @@
+<?php
+include('./loginCheck.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +24,6 @@
 <?php
 include("./fileImg.php");
 $file = new fileImg();
-include("./SignSql.php");
 
 //建立SQL---->
 $sql = "SELECT * 

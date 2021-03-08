@@ -131,6 +131,13 @@ body {
 .HM_Number {}
 
 .HM_choseNumber {
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
   .number_people {
     width: 20%;
     text-align: center;

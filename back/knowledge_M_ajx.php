@@ -1,6 +1,5 @@
 <?php
-include('./SignSql.php');
-
+include('./loginCheck.php');
 $sql = 'SELECT *              
             from KNOWLEDGE';
 

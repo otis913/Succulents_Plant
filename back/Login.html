@@ -5,11 +5,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./css/back_index.css">
+
   <title>肉多不怪後臺管理登入</title>
 </head>
 
 <body>
-
+  <div class="Sign_div">
+    <h1>肉多不怪後臺管理登入</h1>
+    <form action="./loginBack.php" method="POST">
+      <table class="table Sign_table">
+        <tr>
+          <td>帳號:</td>
+        </tr>
+        <tr>
+          <td>
+            <input class="account" name="account" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>密碼:</td>
+        </tr>
+        <tr>
+          <td>
+            <input class="password" name="password" type="password">
+          </td>
+        </tr>
+      </table>
+      <input type="submit" name="submitBtn" value="登入" class="sign">
+    </form>
+  </div>
 </body>
 
 </html>

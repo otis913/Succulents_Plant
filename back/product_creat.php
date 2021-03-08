@@ -1,3 +1,6 @@
+<?php
+include('./loginCheck.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +21,7 @@
   <title>肉多不怪商品管理</title>
 
   <?php
-  include("./SignSql.php");
+
   // 建立SQL
   $sql = "SELECT * 
           FROM SUCCULENTS_PLANT.PRODUCT ";
