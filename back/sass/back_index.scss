@@ -216,6 +216,14 @@ header {
   margin: 5px 5px 20px;
 }
 
+.fa {
+  float: right;
+  margin-left: -25px;
+  margin-top: -25px;
+  position: relative;
+  z-index: 2;
+}
+
 // --------------------------課程管理
 .table_hand {
   th {}
