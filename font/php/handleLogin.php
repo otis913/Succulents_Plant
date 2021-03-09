@@ -48,3 +48,5 @@ $sql ="select * from MEMBER where memberAccount= '$account' and memberPassword='
 
 
 ?>
+
+SELECT * FROM ORDER full join MEMBER on ORDER.FK_ORDER_memberNO= MEMBER.memberNO;

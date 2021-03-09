@@ -9,47 +9,47 @@ $memberNO = $_SESSION["memberNO"];
 // echo "123=".$memberNO;
 // exit();
 
-$sql = 'SELECT * FROM `MEMBER` where memberNO ='.$memberNO;
+$sql = 'SELECT * FROM `MEMBER` where memberNO =' . $memberNO;
 $result = $conn->query($sql);
-$row = $result ->fetch_assoc();  
-
+$row = $result->fetch_assoc();
 
 ?>
 
 <!-- 訂單詳細資料   -->
-
+<!-- $sql2 == 處理orderNO -->
 <?php
-$sql2 = 'SELECT * FROM `ORDER`';
+$memberNO = $_SESSION["memberNO"];
+$sql2 = 'SELECT * FROM `ORDER` where FK_ORDER_memberNO = '.$memberNO;
 $result2 = $conn->query($sql2);
-$row2 = $result2 ->fetch_assoc();  
+$row2 = $result2->fetch_assoc();
 
 // 處理詳細資料的變數部分- 付款方式 paymethod
 $row2Method = $row2['orderMethod'];
-$row2Methodstr=(string)$row2Method; 
+$row2Methodstr = (string)$row2Method;
 $type = $row2Methodstr;
-switch($type){
+switch ($type) {
     case '0';
-    $paymethod = '貨到付款';
-    break;
+        $paymethod = '貨到付款';
+        break;
     case '1';
-    $paymethod = '信用卡';
-    break;
+        $paymethod = '信用卡';
+        break;
 }
 // 處理詳細資料的變數部分- 訂單狀態
 // 0取消訂單1訂單處理中2訂單完成
-$orderStatus = $row2['orderStatus'];
-$orderStatus=(string)$orderStatus; 
+$orderStatus = $row2['orederStatus'];
+$orderStatus = (string)$orderStatus;
 $type = $orderStatus;
-switch($type){
+switch ($type) {
     case '0';
-    $status = '取消訂單';
-    break;
+        $status = '取消訂單';
+        break;
     case '1';
-    $status = '訂單處理中';
-    break;
+        $status = '訂單處理中';
+        break;
     case '2';
-    $status = '訂單完成';
-    break;
+        $status = '訂單完成';
+        break;
 }
 
 
@@ -59,26 +59,19 @@ switch($type){
 
 <!-- 商品詳細資料  begain-->
 
-<?php
 
-    $sql3 = 'SELECT * FROM `PRODUCT` where productNO =2  ';
-    $result3 = $conn->query($sql3);
-    while ($row3 = $result3->fetch_assoc()) {
-          echo  $row3['productName'];
-        
-        // print_r($row3['productName']);
-      }
 
-?>
+
 <!-- 商品詳細資料 end -->
 
 <!-- 卡片詳細資料 -->
 
 <?php
+$memberNO = $_SESSION["memberNO"];
 
-$sql4 = 'SELECT * FROM `CARD`';
+$sql4 = 'SELECT * FROM `CARD` where FK_CARD_memberNO = '.$memberNO;
 $result4 = $conn->query($sql4);
-$row4 = $result4 ->fetch_assoc();  
+$row4 = $result4->fetch_assoc();
 
 ?>
 
@@ -163,7 +156,7 @@ $row4 = $result4 ->fetch_assoc();
                 <li>訂單查詢</li>
                 <li>我的收藏</li>
                 <li>我有問題</li>
-                
+
             </ul>
 
             <!-- 右邊內容區塊 -->
@@ -199,7 +192,7 @@ $row4 = $result4 ->fetch_assoc();
                                 <input type="button" class="save keydown" value='儲存' onclick="ChangeDisabled(2)">
 
                             </div>
-                        
+
                             <div class="mem_wrp ">
                                 <label for="">電話：</label>
                                 <input type="text" value="<?php echo $row['memberCellPhone'] ?> " class="TetstText" id='phone' disabled name="phone">
@@ -225,7 +218,7 @@ $row4 = $result4 ->fetch_assoc();
 
 
                 <!-- 訂單查詢 -->
-            
+
                 <div class="center_wrapper">
                     <h1>訂單查詢</h1>
                     <div class="center_contain">
@@ -235,11 +228,11 @@ $row4 = $result4 ->fetch_assoc();
                         <!-- 情況2 訂單進來了 -->
                         <div class="mem_order">
                             <form action="./update.php" method="POST">
-        
+
                                 <ul class="mem_order_top">
                                     <li class="mem_time">
                                         <div class="tit">訂單時間</div>
-                                        <span name="orderTime" ><?php echo $row2['orderDate'] ?></span>
+                                        <span name="orderTime"><?php echo $row2['orderDate'] ?></span>
                                     </li>
 
                                     <li class="mem_no">
@@ -249,7 +242,7 @@ $row4 = $result4 ->fetch_assoc();
 
                                     <li class="mem_pay">
                                         <div class="tit">付款方式</div>
-                                        <span name="orderMethods"><?php echo $paymethod?></span>
+                                        <span name="orderMethods"><?php echo $paymethod ?></span>
                                     </li>
 
                                     <li class="mem_totle">
@@ -270,220 +263,116 @@ $row4 = $result4 ->fetch_assoc();
                             <div class="mem_open">訂單明細 <i class="fas fa-plus"></i></div>
                             <form action="">
 
-                            <div class="order_list_wrapper">
-                                <ol>
-                                    <li>商品名稱</li>
-                                    <li>數量</li>
-                                    <li>價格</li>
-                                    <li>評價</li>
-                                </ol>
-                                 <!-- 賀卡訂製 -->
-                                <ul class="mem_order_list">
-                                    <li class="pro_list">
-                                        <div class="list_column">
-                                            <img src="img/PeopleAvatars.png" alt="">
-                                            <div class="pro_item">
-                                                <span><?php echo $row3['productName'] ?></span>
-                                                <span>賀卡訂製</span>
-                                                <dl>
-                                                    <dt>收禮人：<span><?php echo $row4['cardReceivePople'] ?></span> </dt>
-                                                    <dt>賀詞內容：<span><?php echo $row4['cardContentText'] ?></span> </dt>
-                                                    <dt>送禮人：<span><?php echo $row4['cardSendPople'] ?></dd> </span>
-                                                    <dt>賀卡樣式：<span>A.春意盎然</span> </dt>
-                                                </dl>
+                                <div class="order_list_wrapper">
+                                    <ol>
+                                        <li>商品名稱</li>
+                                        <li>數量</li>
+                                        <li>價格</li>
+                                        <!-- <li>評價</li> -->
+                                    </ol>
+                                    <?php
+
+
+                                    ?>
+                                    <!-- 賀卡訂製 -->
+                                    <ul class="mem_order_list">
+                                        <li class="pro_list">
+                                            <div class="list_column">
+                                                <img src="img/PeopleAvatars.png" alt="">
+                                                <div class="pro_item">
+                                                    <span>
+                                                        <?php 
+                                                         $memberNO = $_SESSION["memberNO"];
+                                                         $sql_product = 'Select o.*,d.*,p.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `product` p on d.FK_ORDER_DETAIL_productNO = p.productNO where FK_ORDER_memberNO ='.$memberNO;
+                                                         $result = $conn->query($sql_product);
+                                                         $row_product = $result ->fetch_assoc();
+                                                         echo $row_product['productName'];
+                                                        ?>
+                                                    </span>
+                                                    <span>賀卡訂製</span>
+                                                    <dl>
+                                                        <dt>收禮人：<span><?php echo $row4['cardReceivePople'] ?></span> </dt>
+                                                        <dt>賀詞內容：<span><?php echo $row4['cardContentText'] ?></span> </dt>
+                                                        <dt>送禮人：<span><?php echo $row4['cardSendPople'] ?></dd> </span>
+                                                        <dt>賀卡樣式：<span>A.春意盎然</span> </dt>
+                                                    </dl>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <span>1</span>
-                                        <span>$5500</span>
-                                        <span><i class="fas fa-star"></i></span>
-                                    </li>
-                                </ul>
-                                <!-- 客製化多肉 -->
-                                <ul class="mem_order_list">
-                                    <li class="pro_list">
-                                        <div class="list_column">
-                                            <img src="img/PeopleAvatars.png" alt="">
-                                            <div class="pro_item">
-                                                
-                                                <span>
-                                                 <?php
-                                                   $sql3 = 'SELECT * FROM `PRODUCT` where productNO =2  ';
-                                                   $result3 = $conn->query($sql3);
-                                                   while ($row3 = $result3->fetch_assoc()) {
-                                                         echo  $row3['productName'];
-                                                       
-                                                       // print_r($row3['productName']);
-                                                     }
-                                                 
-                                                 ?>
-                                                </span>
-                                                <span>賀卡訂製</span>
-                                                <dl>
-                                                    <dt>收禮人：<span><?php echo $row4['cardReceivePople'] ?></span> </dt>
-                                                    <dt>賀詞內容：<span><?php echo $row4['cardContentText'] ?></span> </dt>
-                                                    <dt>送禮人：<span><?php echo $row4['cardSendPople'] ?></dd> </span>
-                                                    <dt>賀卡樣式：<span>A.春意盎然</span> </dt>
-                                                </dl>
+                                            <span>1</span>
+                                            <span><?php echo $row_product['productPrice']?></span>
+                                        </li>
+                                    </ul>
+                                    <!-- 手作課程 -->
+
+                                    <ul class="mem_order_list">
+                                        <li class="pro_list">
+                                            <div class="list_column">
+                                                <img src="img/PeopleAvatars.png" alt="">
+                                                <div class="pro_item">
+                                                    <span>
+                                                        <?php
+                                                        $memberNO = $_SESSION["memberNO"];
+                                                        $sql_class = 'Select o.*,d.*,h.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `HANDCLASS` h on d.FK_ORDER_DETAIL_handClassNO = h.handClassNO where FK_ORDER_memberNO = '.$memberNO;
+                                                        $result_class = $conn->query($sql_class);
+                                                        if ($result_class) {
+                                                            while ($row_class = $result_class->fetch_assoc()) {
+                                                                echo   $row_class['handClassName'];
+                                                            }
+                                                        } else {
+                                                            echo 'error=' . $conn->error;
+                                                        }
+
+                                                        ?>
+                                                    </span>
+
+                                                    <span>課程日期：
+                                                        <?php
+                                                            $memberNO = $_SESSION["memberNO"];
+                                                            $sql_class = 'Select o.*,d.*,h.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `HANDCLASS` h on d.FK_ORDER_DETAIL_handClassNO = h.handClassNO where FK_ORDER_memberNO = '.$memberNO;
+                                                            $result_class = $conn->query($sql_class);
+                                                            if ($result_class) {
+                                                                while ($row_class = $result_class->fetch_assoc()) {
+                                                                    echo   $row_class['handClassDate'];
+                                                                }
+                                                            } else {
+                                                                echo 'error=' . $conn->error;
+                                                            }
+
+                                                        ?>
+
+
+                                                    </span>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <span>1</span>
-                                        <span>$5500</span>
-                                        <span><i class="fas fa-star"></i></span>
-                                    </li>
-                                </ul>
-                                <!-- 手作課程 -->
-                                <ul class="mem_order_list">
-                                    <li class="pro_list">
-                                        <div class="list_column">
-                                            <img src="img/PeopleAvatars.png" alt="">
-                                            <div class="pro_item">
-                                                <span><?php echo $row3['productName'] ?></span>
-                                                <span>賀卡訂製</span>
-                                                <dl>
-                                                    <dt>收禮人：<span><?php echo $row4['cardReceivePople'] ?></span> </dt>
-                                                    <dt>賀詞內容：<span><?php echo $row4['cardContentText'] ?></span> </dt>
-                                                    <dt>送禮人：<span><?php echo $row4['cardSendPople'] ?></dd> </span>
-                                                    <dt>賀卡樣式：<span>A.春意盎然</span> </dt>
-                                                </dl>
-                                            </div>
-                                        </div>
-                                        <span>1</span>
-                                        <span>$5500</span>
-                                        <span><i class="fas fa-star"></i></span>
-                                    </li>
-                                </ul>
-                            </div>
+                                            <span>1</span>
+                                            <span>
+
+                                                <?php
+                                                        $memberNO = $_SESSION["memberNO"];
+                                                        $sql_class = 'Select o.*,d.*,h.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `HANDCLASS` h on d.FK_ORDER_DETAIL_handClassNO = h.handClassNO where FK_ORDER_memberNO = '.$memberNO;
+                                                        $result_class = $conn->query($sql_class);
+                                                        if ($result_class) {
+                                                            while ($row_class = $result_class->fetch_assoc()) {
+                                                                echo   $row_class['handClassPrice'];
+                                                            }
+                                                        } else {
+                                                            echo 'error=' . $conn->error;
+                                                        }
+
+
+                                                ?>
+
+                                            </span>
+                                            <!-- <span><i class="fas fa-star"></i></span> -->
+                                        </li>
+                                    </ul>
+                                </div>
 
                             </form>
 
                         </div>
                         <!-- 情況2結束 訂單進來了 -->
-                        <!-- 情況2 訂單進來了 -->
-                        <div class="mem_order">
-                            <form action="./update.php" method="POST">
-        
-                                <ul class="mem_order_top">
-                                    <li class="mem_time">
-                                        <div class="tit">訂單時間</div>
-                                        <span name="orderTime" ><?php echo $row2['orderDate'] ?></span>
-                                    </li>
-
-                                    <li class="mem_no">
-                                        <div class="tit">訂單編號</div>
-                                        <span name="orderNo"><?php echo $row2['orderNO'] ?></span>
-                                    </li>
-
-                                    <li class="mem_pay">
-                                        <div class="tit">付款方式</div>
-                                        <span name="orderMethods"><?php echo $paymethod?></span>
-                                    </li>
-
-                                    <li class="mem_totle">
-                                        <div class="tit">訂單金額</div>
-                                        <span name="orderMoney"><?php echo $row2['orderTotal'] ?></span>
-                                    </li>
-
-                                    <li class="mem_status">
-                                        <div class="tit">訂單狀態</div>
-                                        <span name="orderStatus"><?php echo $status ?></span>
-                                    </li>
-
-                                </ul>
-
-                            </form>
-
-
-                            <div class="mem_open">訂單明細 <i class="fas fa-plus"></i></div>
-                            <form action="">
-
-                            <div class="order_list_wrapper">
-                                <ol>
-                                    <li>商品名稱</li>
-                                    <li>數量</li>
-                                    <li>價格</li>
-                                    <li>評價</li>
-                                </ol>
-                                 <!-- 賀卡訂製 -->
-                                <ul class="mem_order_list">
-                                    <li class="pro_list">
-                                        <div class="list_column">
-                                            <img src="img/PeopleAvatars.png" alt="">
-                                            <div class="pro_item">
-                                                <span><?php echo $row3['productName'] ?></span>
-                                                <span>賀卡訂製</span>
-                                                <dl>
-                                                    <dt>收禮人：<span><?php echo $row4['cardReceivePople'] ?></span> </dt>
-                                                    <dt>賀詞內容：<span><?php echo $row4['cardContentText'] ?></span> </dt>
-                                                    <dt>送禮人：<span><?php echo $row4['cardSendPople'] ?></dd> </span>
-                                                    <dt>賀卡樣式：<span>A.春意盎然</span> </dt>
-                                                </dl>
-                                            </div>
-                                        </div>
-                                        <span>1</span>
-                                        <span>$5500</span>
-                                        <span><i class="fas fa-star"></i></span>
-                                    </li>
-                                </ul>
-                                <!-- 客製化多肉 -->
-                                <ul class="mem_order_list">
-                                    <li class="pro_list">
-                                        <div class="list_column">
-                                            <img src="img/PeopleAvatars.png" alt="">
-                                            <div class="pro_item">
-                                                
-                                                <span>
-                                                 <?php
-                                                   $sql3 = 'SELECT * FROM `PRODUCT` where productNO =2  ';
-                                                   $result3 = $conn->query($sql3);
-                                                   while ($row3 = $result3->fetch_assoc()) {
-                                                         echo  $row3['productName'];
-                                                       
-                                                       // print_r($row3['productName']);
-                                                     }
-                                                 
-                                                 ?>
-                                                </span>
-                                                <span>賀卡訂製</span>
-                                                <dl>
-                                                    <dt>收禮人：<span><?php echo $row4['cardReceivePople'] ?></span> </dt>
-                                                    <dt>賀詞內容：<span><?php echo $row4['cardContentText'] ?></span> </dt>
-                                                    <dt>送禮人：<span><?php echo $row4['cardSendPople'] ?></dd> </span>
-                                                    <dt>賀卡樣式：<span>A.春意盎然</span> </dt>
-                                                </dl>
-                                            </div>
-                                        </div>
-                                        <span>1</span>
-                                        <span>$5500</span>
-                                        <span><i class="fas fa-star"></i></span>
-                                    </li>
-                                </ul>
-                                <!-- 手作課程 -->
-                                <ul class="mem_order_list">
-                                    <li class="pro_list">
-                                        <div class="list_column">
-                                            <img src="img/PeopleAvatars.png" alt="">
-                                            <div class="pro_item">
-                                                <span><?php echo $row3['productName'] ?></span>
-                                                <span>賀卡訂製</span>
-                                                <dl>
-                                                    <dt>收禮人：<span><?php echo $row4['cardReceivePople'] ?></span> </dt>
-                                                    <dt>賀詞內容：<span><?php echo $row4['cardContentText'] ?></span> </dt>
-                                                    <dt>送禮人：<span><?php echo $row4['cardSendPople'] ?></dd> </span>
-                                                    <dt>賀卡樣式：<span>A.春意盎然</span> </dt>
-                                                </dl>
-                                            </div>
-                                        </div>
-                                        <span>1</span>
-                                        <span>$5500</span>
-                                        <span><i class="fas fa-star"></i></span>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            </form>
-
-                        </div>
-                        <!-- 情況2結束 訂單進來了 -->
+                      
                     </div>
 
                 </div>
