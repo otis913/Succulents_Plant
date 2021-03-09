@@ -191,13 +191,29 @@ header {
   }
 }
 
-.sign {
+.sign_div {
+  display: flex;
+  justify-content: center;
+}
+
+.to_index {
+  @include a();
   @include inserBtn();
   @include inserBtnH();
-  width: 60px;
+  width: 80px;
   height: 40px;
   line-height: 40px;
-  margin: 5px 110px 20px;
+  margin: 5px 5px 20px;
+}
+
+.sign {
+  @include a();
+  @include inserBtn();
+  @include inserBtnH();
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px 5px 20px;
 }
 
 // --------------------------課程管理
