@@ -2,7 +2,7 @@
 
 $db_host = "localhost";
 $db_user = "root";
-$db_pass = "00000";
+$db_pass = "password";
 $db_select = "SUCCULENTS_PLANT";
 
 //建立資料庫連線物件

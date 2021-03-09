@@ -15,11 +15,16 @@ article{
         display: flex;
         width: 1200px;
         margin: 0 auto;
-        
+        cursor: pointer;
         margin-bottom: 30px;
         flex-wrap: wrap;
         .blog_word{
-            background-color: #ffffff;
+            padding: 5px 5px 15px;
+            background-color: rgba($color: white, $alpha: 0.4);
+            &:hover{
+            background-color: rgba($color: white, $alpha: 1);
+            transition: 0.5s;
+            }
             img{
                 width: 350px;
                 height: 350px;
@@ -37,7 +42,7 @@ article{
             }
 
         }
-        li{
+        a{
             margin-left: 30px;
             margin-top: 30px;
         }

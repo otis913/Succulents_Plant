@@ -34,7 +34,7 @@
 
 </head>
 
-<body>
+<body onload="blogQuery()">
     <!-- header開始，要放在body下面 -->
     <div class="header_bg">
         <div class="headers">
@@ -68,77 +68,13 @@
         </div>
         <article>
             <div class="bread">
-                <a href="./main.html">首頁</a> > <a href="">部落格</a>
+                <a href="./main.html">首頁</a> > <a>多肉知識總攬</a>
             </div>
         </article>
-        <article>
-            <ul class="blogall_ul">
-                <li>
-                    <div class="blog_word">
-                        <img src="./img/blog1/blog01.png" alt="">
-                        <h1>2021/1/21</h1>
-                        <p>Jaguar & Land Rover<br>的聖誕禮物</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="blog_word">
-                        <img src="./img/blog1/blog01.png" alt="">
-                        <h1>2021/1/21</h1>
-                        <p>Jaguar & Land Rover<br>的聖誕禮物</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="blog_word">
-                        <img src="./img/blog1/blog01.png" alt="">
-                        <h1>2021/1/21</h1>
-                        <p>Jaguar & Land Rover<br>的聖誕禮物</p>
-                    </div>
-                </li>
+        <article class="article">
+            <div class='blogall_ul'>
 
-                <li>
-                    <div class="blog_word">
-                        <img src="./img/blog1/blog01.png" alt="">
-                        <h1>2021/1/21</h1>
-                        <p>Jaguar & Land Rover<br>的聖誕禮物</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="blog_word">
-                        <img src="./img/blog1/blog01.png" alt="">
-                        <h1>2021/1/21</h1>
-                        <p>Jaguar & Land Rover<br>的聖誕禮物</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="blog_word">
-                        <img src="./img/blog1/blog01.png" alt="">
-                        <h1>2021/1/21</h1>
-                        <p>Jaguar & Land Rover<br>的聖誕禮物</p>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="blog_word">
-                        <img src="./img/blog1/blog01.png" alt="">
-                        <h1>2021/1/21</h1>
-                        <p>Jaguar & Land Rover<br>的聖誕禮物</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="blog_word">
-                        <img src="./img/blog1/blog01.png" alt="">
-                        <h1>2021/1/21</h1>
-                        <p>Jaguar & Land Rover<br>的聖誕禮物</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="blog_word">
-                        <img src="./img/blog1/blog01.png" alt="">
-                        <h1>2021/1/21</h1>
-                        <p>Jaguar & Land Rover<br>的聖誕禮物</p>
-                    </div>
-                </li>
-            </ul>
+            </div>
         </article>
 
         <div class="ex"></div>
@@ -301,6 +237,25 @@
     <script src="./js/shopcart.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/qa.js"></script>
+    <script>
+        function blogQuery(blog_all) {
+            $.ajax({
+                method: "POST",
+                url: "./php/blog_all.php",
+                data: {
+                title: blog_all
+                },
+                dataType: "text",
+                success: function(response) {
+                //更新html內容
+                document.getElementsByClassName('blogall_ul')[0].innerHTML = response;
+                },
+                error: function(exception) {
+                alert("發生錯誤: " + exception.status);
+                }
+            });
+        }
+    </script>
 
 </body>
 
