@@ -32,7 +32,7 @@
 
 </head>
 
-<body>
+<body onload="blog1Query()">
     <!-- header開始，要放在body下面 -->
     <div class="header_bg">
         <div class="headers">
@@ -61,47 +61,18 @@
 
     <div class="full_wrapper">
 
-        <div class="ex"></div> <!-- 用這個來推header的間隔 -->
+        <div class="ex"></div> <!--用這個來推header的間隔-->
 
         <article>
             <div class="bread">
-                <a href="">首頁</a> > <a href="">部落格</a>
+                <a href="./main.html">首頁<a> > <a href="blog_all.html">多肉知識</a> > <a>植物教學＆養護介紹</a>
             </div>
         </article>
 
-        <article>
-            <img src="./img/blog1/blogall1.png" alt="">
-            <p class="blog1_p">新的年度的起始，<br>
-                你會做些什麼事讓自己今年順利平安呢？<br>
-                到廟裡拜拜？請熟識的老師指點一番？<br>
-                <br>
-                或者身上配戴幸運小物？<br>
-                隨著 2021
-                年的到來，你有想過玩植物也能增加自己的好運嗎？園藝<br>是一門人類古老的技藝，除了近代時常說的心理層面的園藝治療之外<br>，現在科學上也佐證了園藝能夠讓自己心情更愉悅，保持正能量與好心情<br>，必能吸引更多的好運在身旁。
-            </p>
+        <article class="article">
+
         </article>
-        <article>
-            <img src="./img/blog1/blogall2.png" alt="">
-            <p class="blog1_p">新的年度的起始，<br>
-                你會做些什麼事讓自己今年順利平安呢？<br>
-                到廟裡拜拜？請熟識的老師指點一番？<br>
-                <br>
-                或者身上配戴幸運小物？<br>
-                隨著 2021
-                年的到來，你有想過玩植物也能增加自己的好運嗎？園藝<br>是一門人類古老的技藝，除了近代時常說的心理層面的園藝治療之外<br>，現在科學上也佐證了園藝能夠讓自己心情更愉悅，保持正能量與好心情<br>，必能吸引更多的好運在身旁。
-            </p>
-        </article>
-        <article>
-            <img src="./img/blog1/blogall3.png" alt="">
-            <p class="blog1_p">新的年度的起始，<br>
-                你會做些什麼事讓自己今年順利平安呢？<br>
-                到廟裡拜拜？請熟識的老師指點一番？<br>
-                <br>
-                或者身上配戴幸運小物？<br>
-                隨著 2021
-                年的到來，你有想過玩植物也能增加自己的好運嗎？園藝<br>是一門人類古老的技藝，除了近代時常說的心理層面的園藝治療之外<br>，現在科學上也佐證了園藝能夠讓自己心情更愉悅，保持正能量與好心情<br>，必能吸引更多的好運在身旁。
-            </p>
-        </article>
+        <div class="ex"></div>
     </div>
 
 
@@ -187,26 +158,29 @@
 
   </footer>
   <!-- footer end -->
-    <script>
-        let hide = document.getElementsByClassName('ham')[0];
-        let ul = document.getElementsByClassName('header_mid')[0];
-
-        document.addEventListener("click", function (e) {
-            if (e.target.closest('.ham')) {
-
-                ul.style.top = "80px";
-            } else {
-                ul.style.top = "-550px";
-            }
-
-
-
-        });
-    </script>
+   
     <!-- 每一個頁面都要引入以下這兩個js -->
     <script src="./js/header.js"></script>
     <script src="./js/qa.js"></script>
-
+    <script>
+        function blog1Query() {
+            $.ajax({
+                method: "POST",
+                url: "./php/blog_1.php",
+                data: {
+                // title: blog_1
+                },
+                dataType: "text",
+                success: function(response) {
+                //更新html內容
+                document.getElementsByClassName('article')[0].innerHTML = response;
+                },
+                error: function(exception) {
+                alert("發生錯誤: " + exception.status);
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

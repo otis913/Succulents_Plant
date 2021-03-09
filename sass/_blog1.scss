@@ -25,6 +25,14 @@ article{
     }
 }
 
+.blog_wrapper{
+    max-width: 800px;
+    width: 100%;
+    img{
+        border-radius: 30px;
+    }
+}
+
 @media screen and (max-width:768px){
     .blog_turn{
         padding-top: 0;
