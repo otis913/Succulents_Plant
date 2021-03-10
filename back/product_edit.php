@@ -118,24 +118,22 @@ $data = $statement->fetchAll();
                     <input type="hidden" name="productImg01" value="<?= $row["productImg01"] ?>" />
                   </td>
                 </tr>
-                <!--<tr>
+                <tr>
                   <td>商品圖片02</td>
                   <td>
-                    <input type="text" id="productImg02" name="productImg02" value="<?= $row["productImg02"] ?>" />
+                    <input type="file" name="productNew02" />
+                    <img src="./img/<?= $row["productImg02"] ?>" alt="">
+                    <input type="hidden" name="productImg02" value="<?= $row["productImg02"] ?>" />
                   </td>
                 </tr>
                 <tr>
                   <td>商品圖片03</td>
                   <td>
-                    <input type="text" id="productImg03" name="productImg03" value="<?= $row["productImg03"] ?>" />
+                    <input type="file" name="productNew03" />
+                    <img src="./img/<?= $row["productImg03"] ?>" alt="">
+                    <input type="hidden" name="productImg03" value="<?= $row["productImg03"] ?>" />
                   </td>
                 </tr>
-                <tr>
-                  <td>商品圖片04</td>
-                  <td>
-                    <input type="text" id="productImg04" name="productImg04" value="<?= $row["productImg04"] ?>" />
-                  </td>
-                </tr> -->
                 <tr>
                   <td>商品狀態</td>
                   <td>

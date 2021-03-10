@@ -64,52 +64,52 @@ include('./loginCheck.php');
                 <tr>
                   <td>文章外顯示圖片</td>
                   <td>
-                    <input type="file" id="knowledgeOutPic" name="knowledgeOutPic" />
+                    <input type="file" name="knowledgeOutPic" />
                   </td>
                 </tr>
                 <tr>
                   <td>文章標題</td>
                   <td>
-                    <input type="text" id="knowledgeTitle" name="knowledgeTitle" />
+                    <input type="text" name="knowledgeTitle" />
                   </td>
                 </tr>
                 <tr>
                   <td>內文01</td>
                   <td>
-                    <textarea name="knowledgeContent01" id="knowledgeContent01" class="" rows="3">
+                    <textarea name="knowledgeContent01" class="" rows="3">
                     </textarea>
                   </td>
                 </tr>
                 <tr>
                   <td>內文02</td>
                   <td>
-                    <textarea name="knowledgeContent02" id="knowledgeContent02" class="" rows="3">
+                    <textarea name="knowledgeContent02" class="" rows="3">
                     </textarea>
                   </td>
                 </tr>
                 <tr>
                   <td>內文03</td>
                   <td>
-                    <textarea name="knowledgeContent03" id="knowledgeContent03" class="" rows="3">
+                    <textarea name="knowledgeContent03" class="" rows="3">
                   </textarea>
                   </td>
                 </tr>
                 <tr>
                   <td>圖片01</td>
                   <td>
-                    <input type="file" id="knowledgeContentPic01" name="knowledgeContentPic01" />
+                    <input type="file" name="newPic01" />
                   </td>
                 </tr>
                 <tr>
                   <td>圖片02</td>
                   <td>
-                    <input type="file" id="knowledgeContentPic02" name="knowledgeContentPic02" />
+                    <input type="file" name="newPic02" />
                   </td>
                 </tr>
                 <tr>
                   <td>圖片03</td>
                   <td>
-                    <input type="file" id="knowledgeContentPic03" name="knowledgeContentPic03" />
+                    <input type="file" name="newPic03" />
                   </td>
                 </tr>
               </table>

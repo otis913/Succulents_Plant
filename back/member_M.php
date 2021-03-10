@@ -48,14 +48,15 @@ include('./loginCheck.php');
 				<div class="table_div table_div_member">
 					<form action="">
 						<table class="table table-striped">
-							<tr class="table-dark">
+							<!-- <tr class="table-dark">
 								<th>會員編號</th>
 								<th>會員帳號</th>
 								<th>會員姓名</th>
 								<th>帳號狀態</th>
 								<th>創建時間</th>
 								<th>停權與否</th>
-							</tr>
+							</tr> -->
+
 						</table>
 					</form>
 				</div>

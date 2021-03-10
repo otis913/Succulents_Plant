@@ -12,5 +12,5 @@ function clearSession()
 clearSession();
 echo "<script>
         alert('登出成功!'); 
-        location.href = '../font/index.html';
+        location.href = '../index.html';
       </script>";

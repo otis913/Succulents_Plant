@@ -69,31 +69,31 @@ $data = $statement->fetchAll();
                 <tr>
                   <td>課程名稱</td>
                   <td>
-                    <input type="text" id="handClassName" name="handClassName" value="<?= $row["handClassName"] ?>" />
+                    <input type="text" name="handClassName" value="<?= $row["handClassName"] ?>" />
                   </td>
                 </tr>
                 <tr>
                   <td>課程敘述</td>
                   <td>
-                    <textarea name="handClassContent" id="handClassContent" cols="30" rows="10"><?= $row["handClassContent"] ?></textarea>
+                    <textarea name="handClassContent" cols="30" rows="10"><?= $row["handClassContent"] ?></textarea>
                   </td>
                 </tr>
                 <tr>
                   <td>課程價錢</td>
                   <td>
-                    <input type="text" id="handClassPrice" name="handClassPrice" value="<?= $row['handClassPrice'] ?>" />
+                    <input type="text" name="handClassPrice" value="<?= $row['handClassPrice'] ?>" />
                   </td>
                 </tr>
                 <tr>
                   <td>最多人數</td>
                   <td>
-                    <input type="text" id="handClassPeople" name="handClassPeople" value="<?= $row["handClassPeople"] ?>" />
+                    <input type="text" name="handClassPeople" value="<?= $row["handClassPeople"] ?>" />
                   </td>
                 </tr>
                 <tr>
                   <td>課程日期</td>
                   <td>
-                    <input type="text" id="handClassDate" name="handClassDate" value="<?= $row["handClassDate"] ?>" />
+                    <input type="text" name="handClassDate" value="<?= $row["handClassDate"] ?>" />
                   </td>
                 </tr>
 
