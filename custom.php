@@ -297,7 +297,10 @@
             <div class="c_lightbox" id="cus_box2">
                 <i class="fas fa-times"></i>
                 <p style="font-weight: 700;">賀卡訂製</p>
-
+                <?php
+                if(!isset($_POST['submit'])){
+                //如果沒有表單提交，顯示一個表單
+                ?>
                 <form action="" method="post">
                     <ul>
                         <li>
@@ -337,38 +340,47 @@
                         
                     </ul>   
                     <input type="submit" name="submit" value="確認送出" class="c_submit" /> 
-                </form>  
-                  
-                <!-- <div class="c_btn_wra">
-                    <div class="bubble_btnn">
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
-                          <defs>
-                            <filter id="goo">
-                              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-                              <feComposite in="SourceGraphic" in2="goo"/>
-                            </filter>
-                          </defs>
-                        </svg>
-                        
-                        <span class="button--bubble__container">
-                          <a href="" class="button button--bubble">
-                            確認送出
-                          </a>
-                          <span class="button--bubble__effect-container">
-                            <span class="circle top-left"></span>
-                            <span class="circle top-left"></span>
-                            <span class="circle top-left"></span>
-                        
-                            <span class="button effect-button"></span>
-                        
-                            <span class="circle bottom-right"></span>
-                            <span class="circle bottom-right"></span>
-                            <span class="circle bottom-right"></span>
-                          </span>
-                        </span>
-                    </div>
-                </div> -->
+                </form>    
+                <?php
+                }
+                else
+                {
+                //如果提交了表單
+                //資料庫連線引數
+                $host = "localhost";
+                $user = "root";
+                $pass = "";
+                $db = "test";
+                // 何問起 hovertree.com
+                //取得表單中的值，檢查表單中的值是否符合標準，並做適當轉義，防止SQL注入
+                $country = ($_POST['cardReceivePeople']);
+               // mysql_escape_string($_POST['country']);
+                $animal = ($_POST['cardContentText']);
+              //  mysql_escape_string($_POST['animal']);
+                $cname = ($_POST['cardSendPeople']);
+                $ctype = ($_POST['cardTYPE']);
+              //  mysql_escape_string($_POST['cname']);
+              //實例化mysqli(資料庫路徑, 登入帳號, 登入密碼, 資料庫)
+                $connect = new mysqli($host, $user, $pass, $db);
+                
+                if ($connect->connect_error) {
+                    die("連線失敗: " . $connect->connect_error);
+                }
+                echo "連線成功";
+
+                $connect->query("SET NAMES 'utf8'");
+                
+                $insertSql = "INSERT INTO card (cardTYPE,cardReceivePeople, cardContentText, cardSendPeople,memberNO,productNO) VALUES ('$ctype','$country','$animal', '$cname',22,33)";
+                $status = $connect->query($insertSql);
+                
+                if ($status) {
+                    echo '新增成功';
+                } else {
+                    echo "錯誤: " . $insertSql . "<br>" . $connect->error;
+                }
+                }
+                ?>
+                
 
             </div>
         </div>
@@ -379,7 +391,79 @@
     </section>
 
 
-        
+
+    <!-- footer start -->
+    <!-- <div class="plant_info">
+        <img src="img/icon_plant_footer.png" alt="">
+    </div> -->
+
+        <!-- 購物車 側邊欄  開始-->
+        <div class="order">
+            <i class="fas fa-window-close"></i>
+            <h2>購物清單</h2>
+            <div class="orderPith"></div>
+            <div class="order-custom">
+                <i class="fa fa-times" aria-hidden="true"></i>
+                <div class="order_custom_con">
+                    <img src="img/shopcart/assets_5.png" alt="">
+                    <div class="txt">
+                        <h4>黃金山脈-金 晃丸盆栽</h4>
+                        <h2>賀卡訂製</h2>
+                        <p>NT$1850</p>
+                        <div id="app8">
+                            <div class="shop">
+                                <i @click="counter += -1" class="fa fa-minus" aria-hidden="true"></i> 
+                                <div class="counter">{{counter}}</div>
+                                <i @click="counter += 1" class="fa fa-plus" aria-hidden="true"  ></i>          
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-custom-pro">
+                <i class="fa fa-times" aria-hidden="true"></i>
+                <div class="order_custom_con_con">
+                    <img src="img/shopcart/assets_5.png" alt="">
+                    <div class="txt">
+                        <h4>客製化多肉</h4>
+                        <h2>賀卡訂製</h2>
+                        <p>NT$1850</p>
+                        <div id="app9">
+                            <div class="shop">
+                                <i @click="counter += -1" class="fa fa-minus" aria-hidden="true"></i> 
+                                <div class="counter">{{counter}}</div>
+                                <i @click="counter += 1" class="fa fa-plus" aria-hidden="true"  ></i>          
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail">
+                    <h2>詳細內容</h2>
+                    <p>黃金山脈多肉 x1</p>
+                    <p>黃金山脈多肉 x1</p>
+                    <p>黃金山脈多肉 x1</p>
+                    <p>器皿-水泥器皿 x1</p>
+                    <p>裝飾品-小蘑菇 x1</p>
+                </div>
+                
+            </div>
+            <div class="amount">
+                <h2 class="coin">金額
+                    <p>$3600</p>
+                </h2>
+                <h2 class="sale">優惠
+                    <p>-＄20</p>
+                </h2>
+            </div>
+            <div class="total">
+             <h4>總金額</h4>
+             <p>$3580</p>
+            </div>
+            <a href=""></a>
+            <button class="checkbuy"> <a href="./shopCart.html">確定購買</a></button>
+        </div>
+    
+         <!-- 購物車 側邊欄  結束-->
 
    <!-- QA仙人掌開始 -->
    <section class="qa_pos">
