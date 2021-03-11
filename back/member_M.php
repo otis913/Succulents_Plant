@@ -82,16 +82,15 @@ include('./loginCheck.php');
 							let switch_input_td = switch_input_div.parentElement;
 							let Member_creatDate = switch_input_td.previousElementSibling;
 							let Member_status = Member_creatDate.previousElementSibling;
-							// console.log(Member_status.closest('tr'));
 							let tr = Member_status.closest('tr');
 							let member_id = tr.querySelector('.memberNO').innerText;
-
+							console.log();
 							if (target.checked == true) {
 								Member_status.innerText = '停權';
 								Member_status.setAttribute('name', 'memberStatus');
 								Member_status.setAttribute('value', '0');
-								let status = tr.querySelector('.Member_status').innerText;
-								console.log(status);
+								// let status = tr.querySelector('.Member_status').innerText;
+								// console.log(status);
 								// function changeSt() {
 								// 	$.ajax({
 								// 		method: "POST",
