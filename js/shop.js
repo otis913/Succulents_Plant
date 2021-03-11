@@ -55,6 +55,9 @@ $(document).ready(function () {
     }
   });
 
+  //  購物車抓localStorage
+  // let ss = JSON.parse(localStorage.getItem("itemStorage"));
+  // console.log(ss.length);
   // $(".shop_btn").on("click", function (e) {
   // e.preventDefault();
   // alert("已成功加入購物車");
