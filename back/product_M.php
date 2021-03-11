@@ -77,7 +77,7 @@ include('./loginCheck.php');
         method: "POST",
         url: "./product_M_ajx.php",
         data: {
-          Name: str
+
         },
         dataType: "text",
         success: function(response) {

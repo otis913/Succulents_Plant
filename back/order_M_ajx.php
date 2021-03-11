@@ -73,10 +73,11 @@ foreach ($data as $index => $row) {
     echo "<td>" . $orderPayStatus . "</td>";
 
     echo "<td>
-              <div class='custom-control custom-switch'>
-                  <input type='checkbox' class='custom-control-input' id='customSwitch1'>
-                  <label class='custom-control-label' for='customSwitch1'></label>
-              </div>
-              </td>
+            <select name='orederStatus' >
+                <option value='1'>訂單處理中</option>
+                <option value='2'>訂單處理中</option>
+                <option value='3'></option>
+            </select>
+         </td>
         </tr>";
 }

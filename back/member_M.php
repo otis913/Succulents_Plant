@@ -76,65 +76,90 @@ include('./loginCheck.php');
 						//更新html內容
 						document.getElementsByClassName('table')[0].innerHTML = response;
 						// ----------------------
+						for (let i = 0; i < 10; i++) {
+							let swinput = document.getElementById(`customSwitch${i}`);
+							let Member_status_text = document.getElementsByClassName('Member_status')[i].textContent;
+							// console.log(Member_status_text);
+							if (Member_status_text == "正常") {
+								swinput.checked = false;
+							}
+							if (Member_status_text == "停權") {
+								swinput.checked = true;
+							}
+						}
+
 						document.body.addEventListener('click', (e) => {
 							let target = e.target;
 							let switch_input_div = target.parentElement;
 							let switch_input_td = switch_input_div.parentElement;
 							let Member_creatDate = switch_input_td.previousElementSibling;
 							let Member_status = Member_creatDate.previousElementSibling;
+
 							let tr = Member_status.closest('tr');
-							// let member_id = tr.querySelector('.memberNO').innerText;
-							console.log(tr);
+							let member_id = tr.querySelector('.memberNO').innerText;
+
+							// console.log(Member_status);
+							// console.log(member_id);
+
 							if (target.checked == true) {
 								Member_status.innerText = '停權';
-								Member_status.setAttribute('name', 'memberStatus');
 								Member_status.setAttribute('value', '0');
 								// let status = tr.querySelector('.Member_status').innerText;
-								console.log(status);
-								// function changeSt() {
-								// 	$.ajax({
-								// 		method: "POST",
-								// 		url: "./member_StChange.php",
-								// 		data: {
-								// 			Name: Member_status.value,
-								// 		},
-								// 		dataType: "html",
-								// 		success: function(response) {
-								// 			//更新html內容
-								// 			document.getElementsByClassName('Member_status')[0].innerHTML = response;
-								// 		},
-								// 		error: function(exception) {
-								// 			alert("發生錯誤: " + exception.status);
-								// 		}
-								// 	});
-								// };
-								// changeSt();
+								// let Member_status_number = Member_status.getAttribute('value');
+								let status_stop = Member_status.getAttribute('value');
+
+								function changeSt() {
+									$.ajax({
+										method: "POST",
+										url: "./member_Stop.php",
+										data: {
+											'status_stop': status_stop,
+											'memberNO': member_id
+										},
+										dataType: "html",
+										success: function(response) {
+											//更新html內容
+											document.getElementsByClassName('Member_status').innerHTML = response;
+										},
+										error: function(exception) {
+											alert("發生錯誤: " + exception.status);
+										}
+									});
+								};
+								changeSt();
 							}
 							if (target.checked == false) {
 								Member_status.innerText = '正常';
-								Member_status.setAttribute('name', 'memberStatus');
 								Member_status.setAttribute('value', '1');
-								// let status = tr.querySelector('.Member_status').innerText;
-								// console.log(status);
-							} else {
-								console.log("else");
+								let status_start = Member_status.getAttribute('value');
+
+								function changeSt() {
+									$.ajax({
+										method: "POST",
+										url: "./member_Start.php",
+										data: {
+											'status_start': status_start,
+											'memberNO': member_id
+										},
+										dataType: "html",
+										success: function(response) {
+											//更新html內容
+											document.getElementsByClassName('Member_status').innerHTML = response;
+										},
+										error: function(exception) {
+											alert("發生錯誤: " + exception.status);
+										}
+									});
+								};
+								changeSt();
 							}
 						});
-
 					},
 					error: function(exception) {
 						alert("發生錯誤: " + exception.status);
 					}
 				});
 			}
-
-			// var cusSwitch = document.getElementById('customSwitch1');
-			// console.log(cusSwitch);
-
-			// cusSwitch.addEventListener('click', () => {
-			// 	console.log(123);
-
-			// });
 		</script>
 
 		<script src="./js/leftbar.js"></script>
