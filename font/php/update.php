@@ -2,50 +2,49 @@
 
 //========================================
 
-require_once('./conn.php');
-//==========================================
+$server_name = 'localhost';
+$username = 'albert_huang';
+$password = 'albert';
+$db_name = 'SUCCULENTS_PLANT';
+
+$conn = new mysqli($server_name, $username, $password, $db_name);
+
+if (!empty($conn->connect_error)) {
+    die('資料庫連線錯誤:' . $conn->connect_error);
+}
+
+$conn->query('SET NAMES UTF8');
+$conn->query('SET time_zone ="+8:00"');
+//=========================================
+// $memberNO = $_SESSION["memberNO"];
 $pass =$_POST['pass'];
 $phone =$_POST['phone'];
 $address =$_POST['address'];
-$orderNo =$_POST['orderNo'];
-$orderMethods =$_POST['orderMethods'];
-$orderMoney =$_POST['orderMoney'];
-$orderStatus =$_POST['orderStatus'];
-
+// echo $memberNO;
+// echo $pass;
+// echo $phone;
+// echo $address;
 
 if($pass){
-    $sql ="update member set memberPassword='$pass'";
+    session_start();
+    $memberNO = $_SESSION["memberNO"];
+    $sql ="update member set memberPassword='$pass' where memberNO = '$memberNO '";
 
 }
 if($phone){
-    $sql ="update member set memberCellPhone='$phone'";
+    session_start();
+    $memberNO = $_SESSION["memberNO"];
+    $sql ="update member set memberCellPhone='$phone'where memberNO = '$memberNO ' ";
 }
 if($address){
-    $sql ="update member set memberAddress='$address'";
+    session_start();
+    $memberNO = $_SESSION["memberNO"];
+    $sql ="update member set memberAddress='$address' where memberNO = '$memberNO '";
 }
-// if($orderTime){
-//     $sql ="update member set memberPassword='$orderTime'";
 
-// }
-if($orderNo){
-    $sql ="update ORDER set orderNO='$orderNo'";
-}
-if($orderMethods){
-    $sql ="update ORDER set orderMethod='$orderMethods' ";
-}
-if($orderMoney){
-    $sql ="update ORDER set orderTotal='$orderMoney'";
-}
-// if($orderMethods){
-//     $sql ="update ORDER set orderMethod='$orderMethods'";
-// }
 
-// $sql ="update member set memberPassword='$pass',memberCellPhone='$phone',memberAddress='$address'";
 $result = $conn->query($sql);
 if($result){
     header('Location:../member.php');
-}else{
-    header('Location:../member.php');
 }
-
 ?>

@@ -15,6 +15,7 @@ if(!empty($conn->connect_error)){
 $conn->query('SET NAMES UTF8');
 $conn->query('SET time_zone ="+8:00"');
 
+// ============================================================
 if (
     empty($_POST['name']) ||
     empty($_POST['account']) ||
@@ -48,7 +49,7 @@ if(!$result){
 echo '新增成功';
 
 
-header("Location:../login.php")
+// header("Location:../login.php")
 
 ?>
 
