@@ -29,7 +29,7 @@ if ($_FILES["newPic01"]["error"] > 0) {
   //檔案最終存放位置
   $ServerRoot = $_SERVER["DOCUMENT_ROOT"];
   // $filePath = $ServerRoot . "./20210225/back/img/" . $fileName_arr[$i];
-  $filePath = $ServerRoot . "./20210225/back/img/" . $fileName01;
+  $filePath = $ServerRoot . "./20210225/ba/img/" . $fileName01;
   $filePath = $ServerRoot . "./20210225/back/img/" . $fileName02;
   $filePath = $ServerRoot . "./20210225/back/img/" . $fileName03;
 

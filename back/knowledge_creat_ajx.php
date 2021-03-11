@@ -1,7 +1,5 @@
 <?php
 include('./loginCheck.php');
-include("./fileImg.php");
-$file = new fileImg();
 
 $sql = "SELECT * 
         FROM KNOWLEDGE";

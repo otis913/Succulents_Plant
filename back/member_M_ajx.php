@@ -9,6 +9,7 @@ $sql = 'SELECT *
 $statement = $pdo->prepare($sql);
 $statement->execute();
 
+
 //抓出全部且依照順序封裝成一個二維陣列
 $data = $statement->fetchAll();
 
@@ -27,23 +28,23 @@ foreach ($data as $index => $row) {
     echo "<td>" . $row["memberAccount"] . "</td>";
     echo "<td>" . $row["memberName"] . "</td>";
 
-    $memberStatus = $row["memberStatus"];
-    switch ($memberStatus) {
+    $memberStatus_N = $row["memberStatus"];
+    switch ($memberStatus_N) {
         case "0":
-            $memberStatus = '停權';
+            $memberStatus_N = '停權';
             break;
         case "1":
-            $memberStatus = '正常';
+            $memberStatus_N = '正常';
             break;
         default:
-            $memberStatus = '錯誤';
+            $memberStatus_N = '錯誤';
     };
-    echo "<td>" . $memberStatus . "</td>";
+    echo "<td class='Member_status' name='memberStatus' value='" . $row["memberStatus"] . "' >" . $memberStatus_N . "</td>";
     echo "<td>" . $row["memberDate"] . "</td>";
     echo "<td>
-            <div class='custom-control custom-switch'>
-                <input type='checkbox' class='custom-control-input' id='customSwitch1'>
-                <label class='custom-control-label' for='customSwitch1'></label>
-            </div>    
-        </td>";
+        <div class='custom-control custom-switch'>
+            <input type='checkbox' class='custom-control-input' id='customSwitch" . $index . "' >
+            <label class='custom-control-label' for='customSwitch" . $index . "'></label>
+        </div>    
+    </td>";
 }

@@ -75,7 +75,7 @@ include('./loginCheck.php');
 						data: {
 							Name: str
 						},
-						dataType: "text",
+						dataType: "html",
 						success: function(response) {
 							//更新html內容
 							document.getElementsByClassName('table')[0].innerHTML = response;

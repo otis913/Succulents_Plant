@@ -154,9 +154,13 @@ header {
   }
 }
 
+// .table td, .table th
 .table {
   tr {
     font-weight: bold;
+  }
+  td {
+    border-top: none;
   }
   img {
     margin: 0 auto;
@@ -187,8 +191,16 @@ header {
   color: map-get($color, "gray");
   tr {}
   td {
-    padding: 5px;
+    padding: 5px 35px;
   }
+}
+
+.account {}
+
+.password {}
+
+.toggle_iconP {
+  margin-left: 3px;
 }
 
 .sign_div {
@@ -214,14 +226,6 @@ header {
   height: 40px;
   line-height: 40px;
   margin: 5px 5px 20px;
-}
-
-.fa {
-  float: right;
-  margin-left: -25px;
-  margin-top: -25px;
-  position: relative;
-  z-index: 2;
 }
 
 // --------------------------課程管理

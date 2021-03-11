@@ -71,7 +71,7 @@
     <!-- article 的內容的安全範圍(1200px)，每個區塊都用一個article包起來 -->
     <div id="appHD">
       <article class="article">
-        <!-- <div class="handmake_section ex20px">
+        <div class="handmake_section ex20px">
           <div class="handmake_left ex20px">
             <div class="HM_class">
               <h1>選擇課程</h1>
@@ -81,7 +81,7 @@
                 <button class="HDclass03">室內多肉照顧課</button>
               </div>
             </div>
-  
+
             <div class="HM_date_number">
               <div class="HM_Date ">
                 <h1>選擇日期<i class="fas fa-calendar-alt "></i></h1>
@@ -93,7 +93,7 @@
                   </select>
                 </div>
               </div>
-  
+
               <div class="HM_Number ">
                 <h1>選擇人數</h1>
                 <div class="HM_choseNumber ">
@@ -103,14 +103,14 @@
                 </div>
               </div>
             </div>
-  
+
             <div class="handmake_left_text ex20px">
-              <h1>尚於<span>10</span>人可報名</h1>
+              <h1>尚於<span></span>人可報名</h1>
               <h1>課程費用<span>$2800</span>/人</h1>
             </div>
-  
-             黃色bubble按鈕 start -->
-        <!-- <div class="bubble_btnn SignUp">
+
+            <!-- 黃色bubble按鈕 start -->
+            <div class="bubble_btnn SignUp">
               <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
                 <defs>
                   <filter id="goo">
@@ -121,29 +121,29 @@
                   </filter>
                 </defs>
               </svg>
-  
+
               <span class="button--bubble__container">
                 <a href="" class="button_y button--bubble">
                   確認報名
                 </a>
                 <span class="button--bubble__effect-container">
-                  <span class="circle top-left"></span>
+                  <span class="circle top-left"> </span>
               <span class="circle top-left"></span>
               <span class="circle top-left"></span>
-  
+
               <span class="button effect-button"></span>
-  
+
               <span class="circle bottom-right"></span>
               <span class="circle bottom-right"></span>
               <span class="circle bottom-right"></span>
               </span>
               </span>
             </div>
-            黃色bubble按鈕 end -->
+            <!-- 黃色bubble按鈕 end -->
 
-        <!-- </div> -->
+            <!-- </div> -->
 
-        <!-- <div class="handmake_right ">
+            <!-- <div class="handmake_right ">
           <img src="./img/handclass/HandMake_title.png" alt="">
           <div class="handmake_right_main">
             <h1>開課時間/地點</h1>
@@ -174,7 +174,7 @@
           </div>
   
           黃色bubble按鈕 start -->
-        <!-- <div class="bubble_btnn SignUp_RWD">
+            <!-- <div class="bubble_btnn SignUp_RWD">
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
                 <defs>
                   <filter id="goo">
@@ -210,13 +210,13 @@
       </article>
 
 
-    </div>
+      </div>
 
 
 
 
-    <!-- 用來調整上下間隔高度的，高度目前設定為100px，一定要放在section裡 -->
-    <!-- <div class="ex"></div> -->
+      <!-- 用來調整上下間隔高度的，高度目前設定為100px，一定要放在section裡 -->
+      <!-- <div class="ex"></div> -->
 
   </section>
 
@@ -390,108 +390,42 @@
   <script src="./js/qa.js"></script>
 
   <script>
-    //頁面載入
-    // function doQuery(str) {
-    //   //Typing your code...
-    //   $.ajax({
-    //     method: "POST",
-    //     url: "./php/handmake.php",
-    //     data: {
-    //       Name: str
-    //     },
-    //     dataType: "text",
-    //     success: function(response) {
-    //       //更新html內容
-    //       document.getElementsByClassName('article')[0].innerHTML = response;
-    //     },
-    //     error: function(exception) {
-    //       alert("發生錯誤: " + exception.status);
-    //     }
-    //   });
-    // }
-
-    // $('.article').on('click', '.HDclass01', (e) => {
-    //   // console.log(e);
-    //   $.ajax({
-    //     method: "POST",
-    //     url: "./php/handmake.php",
-    //     data: {
-    //       // Name: str
-    //     },
-    //     dataType: "text",
-    //     success: function(response) {
-    //       //更新html內容
-    //       document.getElementsByClassName('article')[0].innerHTML = response;
-    //     },
-    //     error: function(exception) {
-    //       alert("發生錯誤: " + exception.status);
-    //     }
-    //   });
-    // })
-    // $('.article').on('click', '.HDclass02', (e) => {
-    //   // console.log(e);
-    //   $.ajax({
-    //     method: "POST",
-    //     url: "./php/HDclass02.php",
-    //     data: {
-    //       // Name: str
-    //     },
-    //     dataType: "text",
-    //     success: function(response) {
-    //       //更新html內容
-    //       document.getElementsByClassName('article')[0].innerHTML = response;
-    //     },
-    //     error: function(exception) {
-    //       alert("發生錯誤: " + exception.status);
-    //     }
-    //   });
-    // })
-    // $('.article').on('click', '.HDclass03', (e) => {
-    //   // console.log(e);
-    //   $.ajax({
-    //     method: "POST",
-    //     url: "./php/HDclass03.php",
-    //     data: {
-    //       // Name: str
-    //     },
-    //     dataType: "text",
-    //     success: function(response) {
-    //       //更新html內容
-    //       document.getElementsByClassName('article')[0].innerHTML = response;
-    //     },
-    //     error: function(exception) {
-    //       alert("發生錯誤: " + exception.status);
-    //     }
-    //   });
-    // })
-
     new Vue({
       el: '#appHD',
       data: {
         number: 0,
       },
       method: {
-        addNUM() {
-          // this.number += 1;
-          console.log(123);
-        },
-        lessNUm() {
-          // this.number -= 1;
-          console.log(123);
-        },
+        // addNUM() {
+        //   // this.number += 1;
+        //   console.log(123);
+        // },
+        // lessNUm() {
+        //   // this.number -= 1;
+        //   console.log(456);
+        // },
       },
       computed: {},
       mounted() {
+        // console.log(this.number);
+        // let temp = this.number;
         $.ajax({
           method: "POST",
           url: "./php/handmake.php",
           data: {
             // Name: str
           },
-          dataType: "text",
+          dataType: "html",
           success: function(response) {
+            // console.log(response);
+            // let number = `<td>${response}</td>`;
             //更新html內容
             document.getElementsByClassName('article')[0].innerHTML = response;
+            let fa_minus = document.getElementsByClassName('HM_choseNumber')[0].getElementsByClassName('fa-minus')[0];
+
+            fa_minus.addEventListener('click', () => {
+              // temp -= 1;
+            });
           },
           error: function(exception) {
             alert("發生錯誤: " + exception.status);
@@ -506,7 +440,7 @@
             data: {
               // Name: str
             },
-            dataType: "text",
+            dataType: "html",
             success: function(response) {
               //更新html內容
               document.getElementsByClassName('article')[0].innerHTML = response;
@@ -525,7 +459,7 @@
             data: {
               // Name: str
             },
-            dataType: "text",
+            dataType: "html",
             success: function(response) {
               //更新html內容
               document.getElementsByClassName('article')[0].innerHTML = response;
@@ -544,7 +478,7 @@
             data: {
               // Name: str
             },
-            dataType: "text",
+            dataType: "html",
             success: function(response) {
               //更新html內容
               document.getElementsByClassName('article')[0].innerHTML = response;
@@ -555,6 +489,9 @@
           });
         })
       },
+      // updated() {
+      //   console.log(this.number);
+      // },
     });
   </script>
 

@@ -22,11 +22,8 @@ include('./loginCheck.php');
 </head>
 
 <?php
-include("./fileImg.php");
-$file = new fileImg();
-
 //建立SQL---->
-$sql = "SELECT * 
+$sql = "SELECT *  
         FROM SUCCULENTS_PLANT.PRODUCT
         WHERE productNO = ?";
 //執行
@@ -90,7 +87,6 @@ $data = $statement->fetchAll();
                   <td>
                     <input type="text" id="productSize" name="productSize" value="<?= $row["productSize"] ?>" />
                   </td>
-                </tr>
                 <tr>
                   <td>商品敘述</td>
                   <td>
@@ -114,7 +110,7 @@ $data = $statement->fetchAll();
                   <td>商品圖片01</td>
                   <td>
                     <input type="file" name="productNew01" />
-                    <img src="./img/<?= $row["productImg01"] ?>" alt="">
+                    <img src="../img/product/<?= $row["productImg01"] ?>" alt="">
                     <input type="hidden" name="productImg01" value="<?= $row["productImg01"] ?>" />
                   </td>
                 </tr>
@@ -122,7 +118,7 @@ $data = $statement->fetchAll();
                   <td>商品圖片02</td>
                   <td>
                     <input type="file" name="productNew02" />
-                    <img src="./img/<?= $row["productImg02"] ?>" alt="">
+                    <img src="../img/product/<?= $row["productImg02"] ?>" alt="">
                     <input type="hidden" name="productImg02" value="<?= $row["productImg02"] ?>" />
                   </td>
                 </tr>
@@ -130,7 +126,7 @@ $data = $statement->fetchAll();
                   <td>商品圖片03</td>
                   <td>
                     <input type="file" name="productNew03" />
-                    <img src="./img/<?= $row["productImg03"] ?>" alt="">
+                    <img src="../img/product/<?= $row["productImg03"] ?>" alt="">
                     <input type="hidden" name="productImg03" value="<?= $row["productImg03"] ?>" />
                   </td>
                 </tr>

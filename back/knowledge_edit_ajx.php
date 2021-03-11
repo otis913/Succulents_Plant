@@ -1,10 +1,7 @@
 <?php
 include('./loginCheck.php');
-include("./fileImg.php");
-$file = new fileImg();
-//取得POST過來的值
 
-// $knowledgeTypeOutPic = $_POST["knowledgeTypeOutPic"];
+//取得POST過來的值
 
 $knowledgeType = $_POST["knowledgeType"];
 $knowledgeTitle = $_POST["knowledgeTitle"];

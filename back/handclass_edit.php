@@ -26,8 +26,6 @@ include('./loginCheck.php');
 </head>
 
 <?php
-include("./fileImg.php");
-$file = new fileImg();
 
 //建立SQL---->
 $sql = "SELECT * 

@@ -15,8 +15,6 @@ include('./loginCheck.php');
   <title>肉多不怪文章管理</title>
 
   <?php
-  include("./fileImg.php");
-  $file = new fileImg();
 
   //建立SQL---->
   $sql = 'SELECT *

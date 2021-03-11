@@ -44,14 +44,12 @@ include('./loginCheck.php');
         <div class="table_div table_div_hand">
           <form action="">
             <table class="table table-striped table_hand">
-              <!-- <table> -->
-              <tr class="table-dark">
-                <!-- <tr> -->
-                <th>課程編號</th>
-                <th>課程名稱</th>
-                <th>課程價格</th>
-                <th>客滿人數</th>
-                <th>是否編輯</th>
+              <tr class="table-dark"></tr>
+              <th>課程編號</th>
+              <th>課程名稱</th>
+              <th>課程價格</th>
+              <th>客滿人數</th>
+              <th>是否編輯</th>
               </tr>
               <!-- <tr>
                 <td>001</td>
@@ -81,22 +79,9 @@ include('./loginCheck.php');
                     <li>2021/03/05</li>
                     <li>2021/03/06</li>
                     <li>2021/03/07</li>
-                    <li>2021/03/08</li>
-                    <li>2021/03/09</li>
-                    <li>2021/03/10</li>
-                    <li>2021/03/11</li>
-                    <li>2021/03/09</li>
-                    <li>2021/03/10</li>
-                    <li>2021/03/11</li> 
-                    <li>2021/03/09</li>
-                    <li>2021/03/10</li>
-                    <li>2021/03/11</li>
-                    <li>2021/03/09</li>
-                    <li>2021/03/10</li>
-                    <li>2021/03/11</li>
+                    <li>2021/03/08</li>       
                   </ul>
                 </td> -->
-
               </tr>
             </table>
           </form>
@@ -114,7 +99,7 @@ include('./loginCheck.php');
         data: {
           Name: str
         },
-        dataType: "text",
+        dataType: "html",
         success: function(response) {
           //更新html內容
           document.getElementsByClassName('table')[0].innerHTML = response;

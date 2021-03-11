@@ -69,12 +69,49 @@ include('./loginCheck.php');
 					method: "POST",
 					url: "./member_M_ajx.php",
 					data: {
-						Name: str
+
 					},
-					dataType: "text",
+					dataType: "html",
 					success: function(response) {
 						//更新html內容
 						document.getElementsByClassName('table')[0].innerHTML = response;
+						// ----------------------
+						document.body.addEventListener('click', (e) => {
+							let target = e.target;
+							let switch_input_div = target.parentElement;
+							let switch_input_td = switch_input_div.parentElement;
+							let Member_creatDate = switch_input_td.previousElementSibling;
+							let Member_status = Member_creatDate.previousElementSibling;
+
+							if (target.checked == true) {
+								Member_status.innerText = '停權';
+								Member_status.setAttribute('name', 'memberStatus');
+								Member_status.setAttribute('value', '0');
+
+								function changeSt() {
+									$.ajax({
+										method: "POST",
+										url: "./member_StChange.php",
+										data: {
+											Name: str
+										},
+										dataType: "html",
+										success: function(response) {
+											//更新html內容
+											document.getElementsByClassName('Member_status')[0].innerHTML = response;
+										},
+										error: function(exception) {
+											alert("發生錯誤: " + exception.status);
+										}
+									});
+								};
+								changeSt();
+
+							} else {
+								Member_status.innerText = '正常';
+							}
+						});
+
 					},
 					error: function(exception) {
 						alert("發生錯誤: " + exception.status);
@@ -82,12 +119,15 @@ include('./loginCheck.php');
 				});
 			}
 
-			// function edit() {
-			// 	$().();
+			// var cusSwitch = document.getElementById('customSwitch1');
+			// console.log(cusSwitch);
 
+			// cusSwitch.addEventListener('click', () => {
+			// 	console.log(123);
 
-			// }
+			// });
 		</script>
+
 		<script src="./js/leftbar.js"></script>
 </body>
 

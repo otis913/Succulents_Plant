@@ -48,9 +48,9 @@ foreach ($data as $index => $row) {
       <div class='HM_Number'>
         <h1>選擇人數</h1>
         <div class='HM_choseNumber'>
-          <i class='fas fa-minus' @click='addNUM'></i>
+          <i class='fas fa-minus' @click='number += 1 '></i>
           <input type='number' value='1' min='1' class='number_people'>
-          <i class='fas fa-plus' @click='lessNUm'></i>
+          <i class='fas fa-plus' @click='number -= 1'></i>
         </div>
       </div>
     </div>
@@ -158,4 +158,6 @@ foreach ($data as $index => $row) {
     <!-- 黃色bubble按鈕 end -->
   </div>
 </div>";
+
+  echo $row['handClassPeople'];
 }
