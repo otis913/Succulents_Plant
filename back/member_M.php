@@ -82,33 +82,41 @@ include('./loginCheck.php');
 							let switch_input_td = switch_input_div.parentElement;
 							let Member_creatDate = switch_input_td.previousElementSibling;
 							let Member_status = Member_creatDate.previousElementSibling;
+							// console.log(Member_status.closest('tr'));
+							let tr = Member_status.closest('tr');
+							let member_id = tr.querySelector('.memberNO').innerText;
 
 							if (target.checked == true) {
 								Member_status.innerText = '停權';
 								Member_status.setAttribute('name', 'memberStatus');
 								Member_status.setAttribute('value', '0');
-
-								function changeSt() {
-									$.ajax({
-										method: "POST",
-										url: "./member_StChange.php",
-										data: {
-											Name: str
-										},
-										dataType: "html",
-										success: function(response) {
-											//更新html內容
-											document.getElementsByClassName('Member_status')[0].innerHTML = response;
-										},
-										error: function(exception) {
-											alert("發生錯誤: " + exception.status);
-										}
-									});
-								};
-								changeSt();
+								let status = tr.querySelector('.Member_status').innerText;
+								console.log(status);
+								// function changeSt() {
+								// 	$.ajax({
+								// 		method: "POST",
+								// 		url: "./member_StChange.php",
+								// 		data: {
+								// 			Name: Member_status.value,
+								// 		},
+								// 		dataType: "html",
+								// 		success: function(response) {
+								// 			//更新html內容
+								// 			document.getElementsByClassName('Member_status')[0].innerHTML = response;
+								// 		},
+								// 		error: function(exception) {
+								// 			alert("發生錯誤: " + exception.status);
+								// 		}
+								// 	});
+								// };
+								// changeSt();
 
 							} else {
 								Member_status.innerText = '正常';
+								Member_status.setAttribute('name', 'memberStatus');
+								Member_status.setAttribute('value', '1');
+								let status = tr.querySelector('.Member_status').innerText;
+								console.log(status);
 							}
 						});
 

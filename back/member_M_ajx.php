@@ -24,7 +24,7 @@ echo "<tr class='table-dark'>
 
 foreach ($data as $index => $row) {
     echo "<tr class='table-light'>
-              <td>" . $row["memberNO"] . "</td>";
+              <td class='memberNO' >" . $row["memberNO"] . "</td>";
     echo "<td>" . $row["memberAccount"] . "</td>";
     echo "<td>" . $row["memberName"] . "</td>";
 
