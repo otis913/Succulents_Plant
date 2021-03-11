@@ -83,14 +83,14 @@ include('./loginCheck.php');
 							let Member_creatDate = switch_input_td.previousElementSibling;
 							let Member_status = Member_creatDate.previousElementSibling;
 							let tr = Member_status.closest('tr');
-							let member_id = tr.querySelector('.memberNO').innerText;
-							console.log();
+							// let member_id = tr.querySelector('.memberNO').innerText;
+							console.log(tr);
 							if (target.checked == true) {
 								Member_status.innerText = '停權';
 								Member_status.setAttribute('name', 'memberStatus');
 								Member_status.setAttribute('value', '0');
 								// let status = tr.querySelector('.Member_status').innerText;
-								// console.log(status);
+								console.log(status);
 								// function changeSt() {
 								// 	$.ajax({
 								// 		method: "POST",
@@ -109,13 +109,15 @@ include('./loginCheck.php');
 								// 	});
 								// };
 								// changeSt();
-
-							} else {
+							}
+							if (target.checked == false) {
 								Member_status.innerText = '正常';
 								Member_status.setAttribute('name', 'memberStatus');
 								Member_status.setAttribute('value', '1');
-								let status = tr.querySelector('.Member_status').innerText;
-								console.log(status);
+								// let status = tr.querySelector('.Member_status').innerText;
+								// console.log(status);
+							} else {
+								console.log("else");
 							}
 						});
 
