@@ -364,7 +364,7 @@ table {
 
 .-right_bottom {
   right: 0;
-  bottom: 10%;
+  bottom: 30%;
 }
 
 .-left_top {
@@ -1146,6 +1146,7 @@ article .index_diy .h1_small {
 
 .index_blog_wrapper li img {
   border-radius: 20px;
+  box-shadow: 3px 3px 5px #ccc;
 }
 
 .index_blog_wrapper li:nth-of-type(odd) {
@@ -2042,6 +2043,19 @@ article .index_diy .h1_small {
   display: block;
 }
 
+#result .-shop-take {
+  opacity: 0.3;
+}
+
+.-shop-hei {
+  height: 42px;
+}
+
+.page_active {
+  border: 1px solid;
+  border-radius: 50%;
+}
+
 article .-off {
   display: none;
 }
@@ -2069,6 +2083,14 @@ article .-heart {
   .shop_banner {
     height: 30vh;
   }
+}
+
+.shop_b1 {
+  background-image: url(../img/shop/product_kv2.png);
+}
+
+.shop_b2 {
+  background-image: url(../img/shop/product_kv3.png);
 }
 
 article .pro_bread {
@@ -2268,6 +2290,7 @@ article .pro_bread {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .shop_card {
@@ -2524,6 +2547,12 @@ article .-pro-bb {
   margin-right: 10px;
 }
 
+.product_amount button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
 .product_amount .fas {
   cursor: pointer;
 }
@@ -2576,6 +2605,7 @@ article .-pro-bb {
 }
 
 .product_card_style li {
+  width: 45%;
   margin: 10px;
   text-align: center;
   cursor: pointer;
@@ -2656,6 +2686,10 @@ article .-pro-bb {
 
 .product_content_word {
   font-size: 1.8rem;
+}
+
+.product_content_info p {
+  text-align: left;
 }
 
 .product_content_assess ol li {
@@ -3364,6 +3398,15 @@ article .-pro-bb {
 
 .c_lightbox ol .-this {
   background-color: #eeebeb;
+}
+
+.c_submit {
+  background-color: #2f4f4f;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  width: 200px;
+  height: 40px;
 }
 
 .c_btn_wra {
@@ -4344,6 +4387,15 @@ article .blog1_p {
   margin-top: 40px;
 }
 
+.blog_wrapper {
+  max-width: 800px;
+  width: 100%;
+}
+
+.blog_wrapper img {
+  border-radius: 30px;
+}
+
 @media screen and (max-width: 768px) {
   .blog_turn {
     padding-top: 0;
@@ -4390,12 +4442,19 @@ article .blogall_ul {
   display: flex;
   width: 1200px;
   margin: 0 auto;
+  cursor: pointer;
   margin-bottom: 30px;
   flex-wrap: wrap;
 }
 
 article .blogall_ul .blog_word {
-  background-color: #ffffff;
+  padding: 5px 5px 15px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+article .blogall_ul .blog_word:hover {
+  background-color: white;
+  transition: 0.5s;
 }
 
 article .blogall_ul .blog_word img {
@@ -4416,7 +4475,7 @@ article .blogall_ul .blog_word p {
   padding-bottom: 10px;
 }
 
-article .blogall_ul li {
+article .blogall_ul a {
   margin-left: 30px;
   margin-top: 30px;
 }
@@ -5015,7 +5074,6 @@ article .blogall_ul li {
 
 .order_center .container1 #app {
   width: 80%;
-  height: 18vh;
   padding: 20px 0;
   border-bottom: 1px dotted #25504e;
 }
@@ -5178,7 +5236,6 @@ article .blogall_ul li {
 
 .order_center .container1 #app2 {
   width: 80%;
-  height: 28vh;
   border-bottom: 1px dotted #25504e;
   padding: 3vh 0;
 }
@@ -5347,7 +5404,6 @@ article .blogall_ul li {
 
 .order_center .container1 #app3 {
   width: 80%;
-  height: 13vh;
   padding: 20px 0;
   border-bottom: 1px dotted #25504e;
 }
@@ -5516,7 +5572,6 @@ article .blogall_ul li {
 
 .order_center .container1 #app4 {
   width: 80%;
-  height: 10vh;
   padding: 20px 0;
   border-bottom: 1px dotted #25504e;
 }
@@ -5568,7 +5623,6 @@ article .blogall_ul li {
 
 .order_center .container1 #app5 {
   width: 80%;
-  height: 10vh;
   padding: 20px 0;
   border-bottom: 1px solid #25504e;
   font-size: 12px;
@@ -6902,6 +6956,267 @@ body {
   }
 }
 
+.full_wrapper {
+  position: relative;
+}
+
+.Signin_bg {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+
+.Signin_enter {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 30px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.Signin_enter_bg {
+  background-color: #2f4f4f;
+  color: #ffffff;
+  margin: 5vh auto;
+  border-radius: 30px;
+  padding: 10px 0;
+  position: relative;
+  max-height: 500px;
+}
+
+.Signin_enter_bg_login {
+  display: flex;
+  margin: 0 auto;
+  max-width: 250px;
+  padding: 10px 0;
+  max-height: 300px;
+}
+
+.Signin_enter_bg_login li {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.Signin_login {
+  display: none;
+}
+
+.Signin_reg {
+  display: none;
+}
+
+.Signin_block {
+  display: block;
+}
+
+.Signin_login_btn {
+  background-color: #2f4f4f;
+}
+
+.Signin_reg_btn {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.Signin_reg_btn_color {
+  background-color: #2f4f4f;
+}
+
+.Signin_login_btn_color {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.Signin_enter_text span {
+  color: red;
+}
+
+.Signin_enter_bg_x {
+  width: 20px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.Signin_enter_bg_logo {
+  width: 30%;
+  margin-top: 20px;
+}
+
+.Signin_enter_bg a {
+  color: #ffffff;
+  font-size: 1px;
+}
+
+.Signin_enter_text {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.Signin_enter_text li {
+  font-size: 10px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: left;
+}
+
+.Signin_enter_text a {
+  width: 70px;
+}
+
+.Signin_enter_text li input {
+  width: 100%;
+  max-width: 400px;
+  font-size: 10px;
+}
+
+.btn_yellow {
+  margin-left: 150px;
+}
+
+.Signin_enter_bg .btn_yellow a {
+  max-width: 80px;
+  padding: 10px;
+  margin: 5px auto;
+  font-size: 12px;
+}
+
+.Signin_enter_registered {
+  margin: 0 auto;
+  width: 40px;
+}
+
+.Signin_reg span {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .Signin_enter_bg li {
+    font-size: 15px;
+    margin: 5px 0;
+  }
+  .Signin_enter_bg .bubble_btnn a {
+    margin-top: 5px;
+    font-size: 15px;
+  }
+}
+
+.full_wrapper {
+  position: relative;
+}
+
+.registered_enter {
+  background-color: #2f4f4f;
+  color: #ffffff;
+  width: 60%;
+  max-width: 100px;
+  border-radius: 30px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.registered_enter_bg {
+  background-color: #2f4f4f;
+  color: #ffffff;
+  margin: 5vh auto;
+  border-radius: 30px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.registered_enter_bg_x {
+  width: 5%;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.registered_enter_bg_logo {
+  width: 30%;
+  margin-top: 10px;
+}
+
+.registered_enter_bg a {
+  color: #ffffff;
+  font-size: 10px;
+}
+
+.registered_enter_text {
+  width: 70%;
+  margin: 0 auto;
+  overflow-y: scroll;
+}
+
+.registered_enter_text {
+  max-height: 400px;
+  font-size: 14px;
+}
+
+.registered_enter_text li select {
+  width: 32%;
+}
+
+.registered_enter_text li {
+  font-size: 10px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: left;
+}
+
+.registered_enter_text a {
+  width: 70px;
+}
+
+.registered_enter_text li input {
+  width: 100%;
+}
+
+.registered_enter_bg .bubble_btnn {
+  margin-top: 16px;
+}
+
+.registered_enter_bg .bubble_btnn a {
+  font-size: 1px;
+  width: 100px;
+  padding: 5px;
+}
+
+.registered_enter_registered {
+  margin: 0 auto;
+  width: 40px;
+}
+
+.registered_enter_bg .btn_yellow a {
+  max-width: 80px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .registered_enter_bg li {
+    font-size: 15px;
+    margin: 5px 0;
+  }
+  .registered_enter_bg .bubble_btnn a {
+    margin-top: 5px;
+    font-size: 15px;
+  }
+}
+
 .qa_pos {
   position: relative;
 }
@@ -7135,7 +7450,7 @@ body {
 .front_box p {
   font-size: 42px;
   font-weight: 700;
-  color: #fff;
+  color: #d1bea4;
   position: absolute;
   top: 0;
   bottom: 80px;
@@ -7143,7 +7458,6 @@ body {
   right: 0;
   margin: auto;
   z-index: 2;
-  text-shadow: -1px -1px  #ccc;
 }
 
 @media (max-width: 990px) {
@@ -7159,6 +7473,7 @@ body {
 
 .front_box .-front_big {
   transform: rotate(270deg) scale(1);
+  border: 3px solid rgba(209, 190, 164, 0.5);
 }
 
 .front_circle, .front_circle_b {
@@ -7171,7 +7486,7 @@ body {
   right: 0;
   margin: auto;
   transform: rotate(10deg);
-  border: 3px solid rgba(255, 255, 255, 0.6);
+  border: 3px solid rgba(209, 190, 164, 0.7);
   border-radius: 61% 39% 65% 35% / 39% 59% 41% 61%;
   animation: cc 8s linear infinite;
   z-index: 1;
@@ -7290,7 +7605,7 @@ body {
 .front_circle_green1 {
   width: 800px;
   height: 600px;
-  border: 5px solid rgba(209, 190, 164, 0.5);
+  border: 5px solid rgba(255, 255, 255, 0.5);
   animation: circle1 5s linear infinite;
   transform: rotate(135deg);
   position: absolute;
