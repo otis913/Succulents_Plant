@@ -1,3 +1,6 @@
+<?php
+include('./loginCheck.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,7 +50,7 @@
                 <th>課程編號</th>
                 <th>課程名稱</th>
                 <th>課程價格</th>
-                <th>詳細資料</th>
+                <th>客滿人數</th>
                 <th>是否編輯</th>
               </tr>
               <!-- <tr>

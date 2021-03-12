@@ -1,9 +1,10 @@
 <?php
-include('./SignSql.php');
+include('./loginCheck.php');
 
 $sql = 'SELECT *
             FROM 
-            SUCCULENTS_PLANT.MEMBER';
+            SUCCULENTS_PLANT.MEMBER
+            where memberType = 1';
 
 $statement = $pdo->prepare($sql);
 $statement->execute();

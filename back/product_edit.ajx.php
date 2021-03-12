@@ -1,7 +1,7 @@
 <?php
+include('./loginCheck.php');
 include("./fileImg.php");
 $file = new fileImg();
-include("./SignSql.php");
 
 //取得POST過來的值  
 
@@ -13,7 +13,8 @@ $productPrice = $_POST["productPrice"];
 $productNumber = $_POST["productNumber"];
 $productStatus = $_POST["productStatus"];
 $productImg01 = $_POST["productImg01"];
-// $productImg01 = "";
+$productImg02 = $_POST["productImg02"];
+$productImg03 = $_POST["productImg03"];
 
 //echo $productImg01;
 //exit();
@@ -22,6 +23,29 @@ $productNO =  $_POST["productNO"];
 
 
 //先判斷是否更新(上傳)商品圖?
+// if ($_FILES["productNew01"]["size"] > 0) {
+
+//   //判斷圖片是否上傳成功?
+//   if ($_FILES["productNew01"]["error"] > 0) {
+//     //返回訊息文字
+//     $message = "上傳失敗: 錯誤代碼" . $_FILES["productNew01"]["error"];
+//   } else {
+//     //Server上的暫存檔路徑含檔名
+//     $filePath_Temp = $_FILES["productNew01"]["tmp_name"];
+
+//     //欲放置的檔案路徑
+//     $filePath = $file->getFilePath() . $_FILES["productNew01"]["name"];
+
+//     //將暫存檔搬移到正確位置
+//     if (copy($filePath_Temp, $filePath)) {
+//       //修改後的商品圖片名稱
+//       $productImg01 = $_FILES["productNew01"]["name"];
+//     } else {
+//       $message = "拷貝/移動上傳圖片失敗";
+//     }
+//   }
+// }
+
 if ($_FILES["productNew01"]["size"] > 0) {
 
   //判斷圖片是否上傳成功?

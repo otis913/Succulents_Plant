@@ -1,3 +1,6 @@
+<?php
+include('./loginCheck.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +39,7 @@
 				<div class="bottom_line"></div>
 				<div class="table_div table_div_order">
 					<table class="table table-striped">
-						<tr class="table-dark">
+						<!-- <tr class="table-dark">
 							<th>訂單編號</th>
 							<th>會員編號</th>
 							<th>訂單日期</th>
@@ -44,7 +47,7 @@
 							<th>訂單付款狀態</th>
 							<th>訂單狀態</th>
 							<th>修改訂單狀態</th>
-						</tr>
+						</tr> -->
 						<!-- <tr>
               <th>112312312</th>
               <th>001</th>

@@ -1,3 +1,6 @@
+<?php
+include('./loginCheck.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +21,7 @@
   <title>肉多不怪商品管理</title>
 
   <?php
-  include("./SignSql.php");
+
   // 建立SQL
   $sql = "SELECT * 
           FROM SUCCULENTS_PLANT.PRODUCT ";
@@ -99,19 +102,22 @@
               <tr>
                 <td>商品圖片01</td>
                 <td>
-                  <input type="file" name="file[]" />
+                  <!-- <input type="file" name="file[]" /> -->
+                  <input type="file" name="newPic01" />
                 </td>
               </tr>
               <tr>
                 <td>商品圖片02</td>
                 <td>
-                  <input type="file" name="file[]" />
+                  <!-- <input type="file" name="file[]" /> -->
+                  <input type="file" name="newPic02" />
                 </td>
               </tr>
               <tr>
                 <td>商品圖片03</td>
                 <td>
-                  <input type="file" name="file[]" />
+                  <!-- <input type="file" name="file[]" /> -->
+                  <input type="file" name="newPic03" />
                 </td>
               </tr>
               <tr>

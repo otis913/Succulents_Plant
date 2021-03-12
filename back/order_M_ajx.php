@@ -1,9 +1,18 @@
 <?php
 include('./SignSql.php');
 
-$sql = 'SELECT * 
+$sql = 'SELECT *
              FROM SUCCULENTS_PLANT.ORDER o
-             JOIN ORDER_DETAIL od on o.orderNO = od.FK_ORDER_DETAIL_orderNO';
+             left JOIN ORDER_DETAIL od on o.orderNO = od.FK_ORDER_DETAIL_orderNO';
+// $sql = 'SELECT orderNO, 
+//                FK_ORDER_DETAIL_orderNO,
+//                orderDate,
+//                orderMethod,
+//                orderPayStatus,
+//                orederStatus
+//              FROM SUCCULENTS_PLANT.ORDER o
+//              left JOIN ORDER_DETAIL od on o.orderNO = od.FK_ORDER_DETAIL_orderNO';
+
 
 $statement = $pdo->prepare($sql);
 $statement->execute();
