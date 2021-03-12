@@ -582,22 +582,6 @@
                 alert("發生錯誤: " + exception.status);
                 }
             });
-            $.ajax({
-                method: "POST",
-                url: "./php/ADDQUESTION.php",
-                data: {
-                titleQue:$('.mem_qa :text').val(),
-                userQue:$('.mem_answer .mem_reply :text').val(),
-                },
-                dataType: "text",
-                success: function(response) {
-                //更新html內容
-                    
-                },
-                error: function(exception) {
-                alert("發生錯誤: " + exception.status);
-                }
-            });
         }
     </script>
 

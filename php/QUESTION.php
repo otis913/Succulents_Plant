@@ -62,6 +62,27 @@
                         <input type='submit' value='回覆問題' class='mem_qareplay'>
                     </div>
             </div>";
+
+    if($_POST["returnQues_status"] === '' || $_POST["returnQuesDetail_reply"] === ''){
+        
+        echo "上傳失敗";
+        
+    } else {
+        $sql = "INSERT INTO 'SUCCULENTS_PLANT'.'RETURN_QUESTION','SUCCULENTS_PLANT'.'RETURN_QUESTION_DETAIL'
+        ('returnQuesDate','returnQues_status','FK_RETURN_QUESTION_memberNO','returnQuesDetail_article',
+        'returnQuesDetail_reply','FK_RETURN_QUESTION_DETAIL_returnQuesNO','returnQuesDate_DETAIL')
+        VALUES (  ?,  ?,  ?,  ?,  ?,  ?,  ? )";
     
- 
+        $statement = $pdo->prepare($sql);
+    
+        $statement->bindValue(1, $_POST["returnQuesDate"]);
+        $statement->bindValue(2, $_POST["returnQues_status"]);
+        $statement->bindValue(3, $_POST["FK_RETURN_QUESTION_memberNO"]);
+        $statement->bindValue(4, $_POST["returnQuesDetail_article"]);
+        $statement->bindValue(5, $_POST["returnQuesDetail_reply"]);
+        $statement->bindValue(6, $_POST["FK_RETURN_QUESTION_DETAIL_returnQuesNO"]);
+        $statement->bindValue(1, $_POST["returnQuesDate_DETAIL"]);
+    }
+
+
 ?>
