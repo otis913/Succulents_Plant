@@ -49,8 +49,8 @@
             </ul>
         </div>  
         <ol>
-            <li><a href=""><i class="fas fa-shopping-basket"></i></a></li>
-            <li><a href="./login.php"><i class="fas fa-user"></i></a></li>
+            <li><a href="./shopCart.html"><i data-content="0"  class="fas fa-shopping-basket"></i></a></li>
+            <li><a href="./member.html"><i class="fas fa-user"></i></a></li>
         </ol>
         <div class="ham">
             <span></span> 
@@ -72,7 +72,7 @@
     <article >
       <div  class="ex"></div> <!-- 用這個來推header的間隔 -->
       <div class="bread ">
-        <a href="./main.html">首頁</a> > <a ref="">產品</a>
+        <a href="./main.html">首頁</a> > <a href="./shop.html">多肉商城</a> > <a v-if="list[0]!=null" ref="">{{list[0].productName}}</a>
       </div>
     </article>
 
@@ -116,26 +116,27 @@
           </button>
         </div>
         <div class="product_cardcheck">
-          <input id="product_card_check" type="checkbox">
+          <input id="product_card_check" type="checkbox" v-model="checked">
           <label for="">賀卡訂製 (約10x10cm)</label>
         </div>
 
-        <div class="product_card -off">
+        <div class="product_card " v-show="checked">
           <label for="">收禮人 / 公司名 / 店名資訊</label>
-          <input type="text" maxlength="30" required>
+          <input  v-model.trim="cardReceivePeople"   type="text" maxlength="30" name="cardReceivePeople" required>
           <label for="">賀詞內容</label>
-          <textarea name="" id="" cols="2" rows="4" placeholder="限制字數50字以內" maxlength="30" required></textarea>
+          <textarea  v-model.trim="cardSendText"  name="cardSendText" id="" cols="2" rows="4" placeholder="限制字數30字以內" maxlength="30" required></textarea>
           <!-- <input type="text" placeholder="限制字數30字以內" maxlength="30"> -->
           <label for="">送禮人資訊</label>
-          <input type="text" maxlength="30" required>
+          <input v-model.trim="cardSendPeople" type="text" maxlength="30" name="cardSendPeople" required>
           <label for="">賀卡樣式(4選1)</label>
           <ol class="product_card_style">
-            <li><img src="./img/product/card_01.png" alt="">Ａ.春意盎然</li>
-            <li><img src="./img/product/card_02.png" alt="">B.春意盎然</li>
-            <li><img src="./img/product/card_03.png" alt="">C.春意盎然</li>
-            <li><img src="./img/product/card_04.png" alt="">D.春意盎然</li>
+            <li :class="{'-pro-border': cardselect == 'A'}" @click="cardselect ='A'" class="product_card_li" data-card="1"><img src="./img/product/card_01.png" alt="">Ａ.幸福青鳥</li>
+            <li :class="{'-pro-border': cardselect == 'B'}" @click="cardselect ='B'" class="product_card_li" data-card="2"><img src="./img/product/card_02.png" alt="">B.綠意盎然</li>
+            <li :class="{'-pro-border': cardselect == 'C'}" @click="cardselect ='C'" class="product_card_li" data-card="3"><img src="./img/product/card_03.png" alt="">C.小草黃了</li>
+            <li :class="{'-pro-border': cardselect == 'D'}" @click="cardselect ='D'" class="product_card_li" data-card="4"><img src="./img/product/card_04.png" alt="">D.銀色大地</li>
           </ol>
-          <p class="product_card_second">還想購買第二張賀卡嗎？ 點選前往<a href="product.html">賀卡頁面</a></p>
+          <!-- <p class="product_card_second">還想購買第二張賀卡嗎？ 點選前往<a href="./product.html?pro=34.html">賀卡頁面</a></p> -->
+
         </div>
 
         <!-- 綠色bubble按鈕 start -->
@@ -152,7 +153,7 @@
           </svg>
 
           <span class="button--bubble__container lie">
-            <a href="" class="button button--bubble">
+            <a  @click="addCar(pli)" href="#" class="button button--bubble shop_btn">
               加入購物車
             </a>
             <span class="button--bubble__effect-container">
@@ -182,11 +183,11 @@
               </filter>
             </defs>
           </svg>
-
           <span class="button--bubble__container lie">
-            <a href="" class="button_y button--bubble">
+            <!-- <a  @click="addCar(pli)" href="./shopCart.html" class="button_y button--bubble">
               立即購買
-            </a>
+            </a> -->
+            <button :class="{'active': cardchose == '直接購買'}" @click="addCar(pli,$event)"  class="button_y button--bubble"> 立即購買</button>
             <span class="button--bubble__effect-container">
               <span class="circle top-left"></span>
               <span class="circle top-left"></span>
@@ -202,9 +203,10 @@
         </div>
         <!-- 黃色bubble按鈕 end -->
         <!-- 一般的綠按鈕 -->
-        <div class="btn_green product_collect">
+        <!-- 加入我的收藏 -->
+        <!-- <div class="btn_green product_collect">
           <a class="shop_card_heart" ref=""><i class="fas fa-heart"></i>加入我的收藏</a>
-        </div>
+        </div> -->
       </div>
 
     </article>
@@ -480,22 +482,111 @@
       list:[],
       hot:[],
       newlist:[],
-      count:1
+      count:1,
+      checked: false,
+      cardReceivePeople:"",
+      cardSendText:"",
+      cardSendPeople:"",
+      itemStorage:[],
+      cardselect:'',
+      cardchose:'',
     },
     methods: {
       handlePlus(){
             this.count++;
         },
-        handleMinus(){
-            if(this.count>1){
-            this.count--;                
-            }
-        },
+      handleMinus(){
+          if(this.count>1){
+          this.count--;                
+          }
+      },
 
-        addcar(){
-          let proname = pli.productName;
+      // shop購物車
+      addCar(pli,event){
+        const vm =this
+
+        if(vm.checked == true){
+          // if(vm.cardchose =='直接購買'){}
+          // if(event){
+          //   console.log("123")
+          // }
+          if(vm.cardReceivePeople == "" || vm.cardSendText=="" || vm.cardSendPeople ==""){
+            alert(`您好，您的賀卡資訊尚未寫`)
+            
+          }
+          else if(vm.cardselect ==""){
+            alert(`您尚未選擇賀卡樣式喔！`)
+          }else if(event){
+            add()
+            window.location ="./shopCart.html"
+          }
+          else{
+            add()
+            alert("成功加入購物車")
+            vm.count =1
+            vm.cardReceivePeople=""
+            vm.cardSendText=""
+            vm.cardSendPeople =""
+            vm.cardselect =""
+          }
+        }else if(event){
+            add()
+            window.location ="./shopCart.html"
+          }
+        else{
+          add()
+          alert("成功加入購物車")
+          vm.count =1
         }
+          // vm.count++
+          function add(){
+            var produ ={
+            pro_id:pli.productNO, //產品ID
+            pro_name:pli.productName, //產品名稱
+            pro_price:pli.productPrice, //產品價錢
+            pro_count:vm.count, //產品數量
+            pro_img:pli.productImg01, //產品照片
+            pro_cardReceivePeople:vm.cardReceivePeople, //卡片收禮人
+            pro_cardSendText:vm.cardSendText, //卡片內容
+            pro_cardSendPeople:vm.cardSendPeople, //卡片送禮人
+            pro_cardselect:vm.cardselect, //卡片樣式
+          }
+          // 先檢查有無localStorage
+          let shopcart = JSON.parse(localStorage.getItem("itemStorage"))
+          // console.log(shopcart)
+          if(shopcart == null){ //如果沒有就賦予
+            vm.itemStorage.push(produ) //給予空陣列儲存
+            localStorage.setItem("itemStorage",JSON.stringify(vm.itemStorage)) //物件轉字串
+          }else{ //判斷先前的商品有無重複
+            var space = shopcart.some(function(item){
+              return item.pro_id === produ.pro_id && item.pro_cardReceivePeople === produ.pro_cardReceivePeople;
+            })
+            // console.log(space)
+            if (space) {
+              for(i = 0; i < shopcart.length; i++){
+                if(shopcart[i].pro_id == produ.pro_id && shopcart[i].pro_cardReceivePeople == produ.pro_cardReceivePeople){
+                  shopcart[i].pro_count += vm.count
+                }
+              }
+            }else{
+              shopcart.push(produ)
+            }
+            localStorage.setItem("itemStorage",JSON.stringify(shopcart)) //物件轉字串
+            // console.log(vm.itemStorage)
+          }
+          // alert("成功加入購物車")
+        }
+          
+        },
   },
+    // watch:{
+    //   cardtext(){
+    //     if(this.cardtext =""){
+    //       alert(123)
+    //     }
+    //   }
+    // },
+
     computed:{
       hotpro(){
         const vm = this
@@ -510,9 +601,9 @@
           newlist.push(alldata[num]); 
          }
         return newlist;
-          
-         
-      }
+      },
+
+
     },
     
     // beforeMount(){
@@ -556,29 +647,29 @@
     },
     // mounted(){
     updated(){
-  // s
-  var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      autoplay: {
+    // s
+    var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    autoplay: {
         delay: 3500,
         disableOnInteraction: false,
-      },
-      keyboard: {
+    },
+    keyboard: {
         enabled: true,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
+    },
+    breakpoints: {
         428: {
-          slidesPerView: 2,
-          spaceBetween: 0,
+        slidesPerView: 2,
+        spaceBetween: 0,
         },
         768: {
           slidesPerView: 3,
@@ -598,7 +689,7 @@
   // bubble_btn動畫效果
     // s
     $(document).ready(function () {
-  $(".button--bubble").each(function () {
+    $(".button--bubble").each(function () {
     var $circlesTopLeft = $(this).parent().find(".circle.top-left");
     var $circlesBottomRight = $(this).parent().find(".circle.bottom-right");
 
@@ -717,7 +808,7 @@
 
     // e
     },
-  })
+})
 </script>
 
 </body>

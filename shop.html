@@ -47,7 +47,7 @@
             </ul>
         </div>  
         <ol>
-            <li><a href=""><i class="fas fa-shopping-basket"></i></a></li>
+            <li><a href="./shopCart.html"><i data-content="" class="fas fa-shopping-basket"></i></a></li>
             <li><a href="./member.html"><i class="fas fa-user"></i></a></li>
         </ol>
         <div class="ham">
@@ -63,8 +63,8 @@
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="shop_banner swiper-slide"></div>
-        <div class="shop_banner swiper-slide"></div>
-        <div class="shop_banner swiper-slide"></div>
+        <div class="shop_banner shop_b1 swiper-slide"></div>
+        <div class="shop_banner shop_b2 swiper-slide"></div>
       </div>
       <!-- Add Pagination -->
       <div class="swiper-pagination"></div>
@@ -154,7 +154,7 @@
               </defs>
             </svg>
             <span class="button--bubble__container lie">
-              <a href="#" class="button button--bubble shop_btn">
+              <a @click="addCar(item)" href="#" class="button button--bubble shop_btn">
                 加入購物車
               </a>
               <span class="button--bubble__effect-container">
@@ -380,46 +380,20 @@
         // isShow:true,
         sortBy:"", //排序
         isReverse:true, 
+        itemStorage:[],//LocalStorage
+        count:1,
       },
       methods: {
-        // 搜尋 未完成
-        searchData(){
-          let vm = this;
-          let fil = this.filterText.toLowerCase()
-          return vm.data
-          
-        // .sort(function (a, b) {
-        //   if (!vm.isReverse) {
-        //     return a[vm.sortBy] - b[vm.sortBy]; /*小到大*/
-        //   } else {
-        //     return b[vm.sortBy] - a[vm.sortBy]; /*大到小*/
-        //   }
-        // })
-        // .filter(function (item) {
-        //   return item.name.match(vm.filterText);
-        // });
-
-        
-        // vm.data.filter((item) =>{
-        //   if(this.filterText == ''){
-        //   return vm.data
-        //   }else{
-        //     vm.data = vm.data.filter(function (item) {
-        //     return item.productName.toLowerCase().match(fil); 
-        //     })
-        //   }
-        // });
-
+        // 頁數
+        prev() {
+          const vm = this;
+          if(vm.currentPage === 0) {
+            vm.currentPage = 0
+          } else {
+            vm.currentPage --
+          }     
         },
-          prev() {
-            const vm = this;
-            if(vm.currentPage === 0) {
-              vm.currentPage = 0
-            } else {
-              vm.currentPage --
-            }     
-          },
-          next() {
+        next() {
           const vm = this;
           if(vm.currentPage === vm.newData.length - 1) {
             vm.currentPage = vm.newData.length - 1
@@ -427,6 +401,46 @@
             vm.currentPage ++
           }
         },
+
+        // shop購物車
+        addCar(item){
+          const vm =this
+          // vm.count++
+          var produ ={
+            pro_id:item.productNO,
+            pro_name:item.productName,
+            pro_price:item.productPrice,
+            pro_count:vm.count,
+            pro_img:item.productImg01
+          }
+          // 先檢查有無localStorage
+          let shopcart = JSON.parse(localStorage.getItem("itemStorage"))
+          // console.log(shopcart.length)
+          if(shopcart == null){ //如果沒有就賦予
+            vm.itemStorage.push(produ) //給予空陣列儲存
+            localStorage.setItem("itemStorage",JSON.stringify(vm.itemStorage)) //物件轉字串
+
+          }
+          else{ //判斷先前的商品有無重複
+            var space = shopcart.some(function(item){
+              return item.pro_id === produ.pro_id;
+            })
+            // console.log(space)
+
+            if (space) {
+              for(i = 0; i < shopcart.length; i++){
+                if(shopcart[i].pro_id == produ.pro_id){
+                  shopcart[i].pro_count += vm.count
+                }
+              }
+            }else{
+              shopcart.push(produ)
+            }
+            localStorage.setItem("itemStorage",JSON.stringify(shopcart)) //物件轉字串
+            // console.log(vm.itemStorage)
+          }
+        },
+
         // 照顧難易度>>updated
         renewPage(){
           let take_ol = document.getElementsByClassName("shop_card_take");
@@ -616,7 +630,6 @@
               return vm.newData
               break;
           }
-
       //第二 
       //     const vm = this;
       // let category = ''; 
@@ -629,15 +642,11 @@
       //     console.log(category)
       //   return prev
       // },[])
-    
         },
-
         // 頁數
         // filterData(){
           // searchData()
-
         // 
-
         // switch(this.visibility){
         //     case 'all':
         //       return this.data
@@ -686,7 +695,7 @@
           // console.log(response.data[0])
           // console.log(response.data[0].productType)
           this.data = response.data
-          console.log(response.data)
+          // console.log(response.data)
         })
         .catch(error => {
           //失敗時的處理函數

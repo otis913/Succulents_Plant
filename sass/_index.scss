@@ -43,7 +43,7 @@
     p{
         font-size: 42px;
         font-weight: 700;
-        color: #fff;
+        color:  rgba(209,190,164,1);
         position: absolute;
         top: 0;
         bottom: 80px;
@@ -51,7 +51,7 @@
         right: 0;
         margin: auto;
         z-index: 2;
-        text-shadow: -1px -1px  #ccc;
+        // text-shadow: -1px -1px  #333;
         @include pad{
             left: 0;
         }
@@ -64,6 +64,7 @@
     }
     .-front_big{
         transform: rotate(270deg) scale(1);
+        border: 3px solid rgba(209,190,164,.5);
       
     }
  }
@@ -78,7 +79,7 @@
     right: 0;
     margin: auto;
     transform: rotate(10deg);
-    border: 3px solid rgba(255,255,255,.6);
+    border: 3px solid rgba(209,190,164,.7);
     border-radius: 61% 39% 65% 35% / 39% 59% 41% 61%  ;
     animation: cc 8s linear infinite;
     z-index: 1;
@@ -89,7 +90,7 @@
 }
 
 .front_box:hover .front_circle,.front_box:hover .front_circle_b{
-    background-color: rgba(255,255,255,.4);
+    background-color:  rgba(255,255,255,.4);
 }
 
 .front_circle_b{
@@ -194,7 +195,8 @@
     width: 800px;
     height: 600px;
     // background-color: rgba(209,190,164,.8);
-    border: 5px solid rgba(209,190,164,.5);
+    // border: 5px solid rgba(209,190,164,.5);
+    border: 5px solid rgba(255,255,255,.5);
     animation: circle1 5s linear infinite;
     transform: rotate(135deg);
     position: absolute;

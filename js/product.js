@@ -11,6 +11,7 @@ $(document).ready(function () {
   //   });
   // }
 
+  // 小圖
   // $(".product_left_simg_smpic").on("click", function (e) {
   $(`section`).on("click", ".product_left_simg_smpic", function (e) {
     // console.log(e.target);
@@ -55,18 +56,86 @@ $(document).ready(function () {
   // $(`#product_card_check`).on("click", function (e) {
   //   $(`.product_card`).toggleClass("-off");
   // });
-  $(`section`).on("click", "#product_card_check", function (e) {
-    $(`.product_card`).toggleClass("-off");
-  });
+  // $(`section`).on("click", "#product_card_check", function (e) {
+  //   // alert(123);
+  //   $(`.product_card`).toggleClass("-off");
+  // });
+  // if($(“input#your-checkbox-id”).attr(‘checked’))
 
   // 賀卡樣式
-  // $(`.product_card_style>li`).click(function (e) {
-  $(`section`).on("click", ".product_card_style>li", function (e) {
-    // e.preventDefault();
-    $(`.product_card_style>li`).removeClass("-pro-border");
-    $(this).addClass("-pro-border");
-  });
+  // $(`section`).on("click", ".product_card_li", function (e) {
+  //   // e.preventDefault();
+  //   $(`.product_card_style>li`).removeClass("-pro-border");
+  //   $(this).addClass("-pro-border");
+  //   if ($(this).hasClass("-pro-border")) {
+  //     // console.log($(this).data("card"));
+  //   }
+  // });
 
+  // 賀卡填寫判斷
+  // 收禮人 / 公司名 / 店名資訊
+  // let card_rp = $("input[name='cardReceivePeople']").val();
+  $(`section`)
+    .on("focus", "input[name='cardReceivePeople']", function (e) {
+      $(this).css("background-color", "lightyellow");
+    })
+    .on("blur", "input[name='cardReceivePeople']", function (e) {
+      // .blur(function () {
+      if ($(this).val() == "") {
+        $(this).attr("placeholder", "請填寫收禮人 / 公司名 / 店名資訊");
+        // $(this).css({
+        //   border: "3px solid red",
+        // });
+      } else {
+        return;
+      }
+    });
+
+  //賀詞內容
+  $(`section`)
+    .on("focus", "textarea[name='cardSendText']", function (e) {
+      $(this).css("background-color", "lightyellow");
+    })
+    .on("blur", "textarea[name='cardSendText']", function (e) {
+      if ($(this).val() == "") {
+        $(this).attr("placeholder", "請填寫賀詞內容字數30字以內");
+      } else {
+        return;
+      }
+    });
+  // 送禮人資訊
+  $(`section`)
+    .on("focus", "input[name='cardSendPeople']", function (e) {
+      $(this).css("background-color", "lightyellow");
+    })
+    .on("blur", "input[name='cardSendPeople']", function (e) {
+      if ($(this).val() == "") {
+        $(this).attr("placeholder", "請填寫送禮人資訊");
+      }
+    });
+
+  // 已成功加入購物車
+  // document.body.addEventListener("click", (e) => {
+  //   const target = e.target;
+  //   // console.log(target);
+  //   if (e.target.matches(`.shop_btn`)) {
+  //     // if (e.target.classList.contains("shop_btn")) {
+  //     e.preventDefault();
+  //     // target.preventDefault();
+  //     // console.log(e.target);
+  //     alert("已成功加入購物車");
+  //   }
+  // });
+  // function carcheck() {
+
+  // 　　$("input[type='checkbox']").prop("checked")
+  // if ($("#product_card_check").prop("checked", true)) {
+  // alert(123);
+  // console.log("123");
+  // $(`.product_card`).toggleClass("-off");
+  // }
+  // }
+  // carcheck();
   // 愛心收藏(未完成 判斷會員可以收藏)
   // $(`.shop_card_heart`).click(function (e) {
   $(`section`).on("click", ".shop_card_heart", function (e) {
