@@ -32,6 +32,8 @@
     <!-- 自己的css -->
     <link rel="stylesheet" href="css/style.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
 </head>
 
@@ -51,8 +53,9 @@
                 </ul>
             </div>  
             <ol>
-                <li><a href=""><i class="fas fa-shopping-basket"></i></a></li>
-                <li><a href="./custom.html"><i class="fas fa-user"></i></a></li>
+                <li> <a href=""><i class="fas fa-shopping-basket" ></i></a></li>
+                <span><input type="text" class="input-num" id="input-num" value="0" /></span>
+                <li><a href="./member.html"><i class="fas fa-user"></i></a></li>
             </ol>
             <div class="ham">
                 <span></span> 
@@ -127,7 +130,11 @@
                     </svg>
                     
                     <span class="button--bubble__container">
+<<<<<<< HEAD:custom.php
                       <a ref="" class="button button--bubble">
+=======
+                      <a ref="" class="button button--bubble"  >
+>>>>>>> albert:font/custom.html
                         確認送出
                       </a>
                       <span class="button--bubble__effect-container">
@@ -260,6 +267,7 @@
                         </span>
                     </div>
                    
+<<<<<<< HEAD:custom.php
 
                     
                     <div class="bubble_btnn" id="cus_card">
@@ -387,83 +395,128 @@
         
 
 
+=======
+>>>>>>> albert:font/custom.html
+
+                    
+                    <div class="bubble_btnn" id="cus_card">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+                          <defs>
+                            <filter id="goo">
+                              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                              <feComposite in="SourceGraphic" in2="goo"/>
+                            </filter>
+                          </defs>
+                        </svg>
+                        
+                        <span class="button--bubble__container confirm ">
+                          <a ref="" class="button button--bubble">
+                            前往訂製賀卡
+                          </a>
+                          <span class="button--bubble__effect-container">
+                            <span class="circle top-left"></span>
+                            <span class="circle top-left"></span>
+                            <span class="circle top-left"></span>
+                        
+                            <span class="button effect-button"></span>
+                        
+                            <span class="circle bottom-right"></span>
+                            <span class="circle bottom-right"></span>
+                            <span class="circle bottom-right"></span>
+                          </span>
+                        </span>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="c_lightbox" id="cus_box2">
+                <i class="fas fa-times"></i>
+                <p style="font-weight: 700;">賀卡訂製</p>
+
+                <form action="" method="post">
+                    <ul>
+                        <li>
+                            <label for="">收禮人 / 公司名 / 店名資訊</label>
+                            <input type="text" maxlength="30" name="cardReceivePeople" class="cardReceivePeople" >
+                        </li>
+                        <li>
+                            <label for="">賀詞內容</label>
+                            <textarea name="cardcontent" id="" cols="2" rows="4" placeholder="限制字數30字以內" maxlength="30" class="card" ></textarea>
+                        </li>
+                        <li>
+                            <label for="">送禮人資訊</label>
+                            <input type="text" maxlength="30" name="cardSendPeople" class="cardSendPeople" >
+                        </li>
+
+                        <li>
+                            <label for="">賀卡樣式(4選1)</label>
+                            <ol class="olPic" >
+                                <li >
+                                    <img src="./img/custom/card_01.png" alt="">Ａ.幸福青鳥
+                                    <input type="hidden" name="cardTYPE" value="1">
+                                </li>
+                                <li>
+                                    <img src="./img/custom/card_02.png" alt="">B.綠意盎然
+                                    <input type="hidden" name="cardTYPE" value="2">
+                                </li>
+                                <li>
+                                    <img src="./img/custom/card_03.png" alt="">C.小草黃了
+                                    <input type="hidden" name="cardTYPE" value="3">
+                                </li>
+                                <li>
+                                    <img src="./img/custom/card_04.png" alt="">D.銀色大地
+                                    <input type="hidden" name="cardTYPE" value="4">
+                                </li>
+                            </ol> 
+                        </li> 
+                        
+                    </ul>   
+                    <input type="submit" name="submit" value="確認送出" class="c_submit" /> 
+                </form>  
+                  
+                <div class="c_btn_wra">
+                    <div class="bubble_btnn">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+                          <defs>
+                            <filter id="goo">
+                              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                              <feComposite in="SourceGraphic" in2="goo"/>
+                            </filter>
+                          </defs>
+                        </svg>
+                        
+                        <span class="button--bubble__container">
+                          <a href="" class="button button--bubble">
+                            確認送出
+                          </a>
+                          <span class="button--bubble__effect-container">
+                            <span class="circle top-left"></span>
+                            <span class="circle top-left"></span>
+                            <span class="circle top-left"></span>
+                        
+                            <span class="button effect-button"></span>
+                        
+                            <span class="circle bottom-right"></span>
+                            <span class="circle bottom-right"></span>
+                            <span class="circle bottom-right"></span>
+                          </span>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+
+
 
     </section>
 
 
-
-    <!-- footer start -->
-    <!-- <div class="plant_info">
-        <img src="img/icon_plant_footer.png" alt="">
-    </div> -->
-
-        <!-- 購物車 側邊欄  開始-->
-        <div class="order">
-            <i class="fas fa-window-close"></i>
-            <h2>購物清單</h2>
-            <div class="orderPith"></div>
-            <div class="order-custom">
-                <i class="fa fa-times" aria-hidden="true"></i>
-                <div class="order_custom_con">
-                    <img src="img/shopcart/assets_5.png" alt="">
-                    <div class="txt">
-                        <h4>黃金山脈-金 晃丸盆栽</h4>
-                        <h2>賀卡訂製</h2>
-                        <p>NT$1850</p>
-                        <div id="app8">
-                            <div class="shop">
-                                <i @click="counter += -1" class="fa fa-minus" aria-hidden="true"></i> 
-                                <div class="counter">{{counter}}</div>
-                                <i @click="counter += 1" class="fa fa-plus" aria-hidden="true"  ></i>          
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="order-custom-pro">
-                <i class="fa fa-times" aria-hidden="true"></i>
-                <div class="order_custom_con_con">
-                    <img src="img/shopcart/assets_5.png" alt="">
-                    <div class="txt">
-                        <h4>客製化多肉</h4>
-                        <h2>賀卡訂製</h2>
-                        <p>NT$1850</p>
-                        <div id="app9">
-                            <div class="shop">
-                                <i @click="counter += -1" class="fa fa-minus" aria-hidden="true"></i> 
-                                <div class="counter">{{counter}}</div>
-                                <i @click="counter += 1" class="fa fa-plus" aria-hidden="true"  ></i>          
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="detail">
-                    <h2>詳細內容</h2>
-                    <p>黃金山脈多肉 x1</p>
-                    <p>黃金山脈多肉 x1</p>
-                    <p>黃金山脈多肉 x1</p>
-                    <p>器皿-水泥器皿 x1</p>
-                    <p>裝飾品-小蘑菇 x1</p>
-                </div>
-                
-            </div>
-            <div class="amount">
-                <h2 class="coin">金額
-                    <p>$3600</p>
-                </h2>
-                <h2 class="sale">優惠
-                    <p>-＄20</p>
-                </h2>
-            </div>
-            <div class="total">
-             <h4>總金額</h4>
-             <p>$3580</p>
-            </div>
-            <a href=""></a>
-            <button class="checkbuy"> <a href="./shopCart.html">確定購買</a></button>
-        </div>
-    
-         <!-- 購物車 側邊欄  結束-->
+        
 
    <!-- QA仙人掌開始 -->
    <section class="qa_pos">
@@ -604,7 +657,12 @@
 
             //訂製賀卡彈跳視窗
             $('.custom_block7 .bubble_btnn').click(function () { 
+<<<<<<< HEAD:custom.php
                 $('.c_wrapper').delay(10500).fadeIn(400);   
+=======
+                $('.c_wrapper').fadeIn(400);   
+                // $('.c_wrapper').delay(10500).fadeIn(400);   
+>>>>>>> albert:font/custom.html
                 $('#cus_box1').show();               
             });
 
