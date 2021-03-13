@@ -76,7 +76,10 @@ include('./loginCheck.php');
 						//更新html內容
 						document.getElementsByClassName('table')[0].innerHTML = response;
 						// ----------------------
-						for (let i = 0; i < 10; i++) {
+						// 載入偵測會員狀況顯示switch
+						let tr_number = document.getElementsByTagName('tr').length;
+
+						for (let i = 0; i < (tr_number) - 1; i++) {
 							let swinput = document.getElementById(`customSwitch${i}`);
 							let Member_status_text = document.getElementsByClassName('Member_status')[i].textContent;
 							// console.log(Member_status_text);
@@ -87,7 +90,7 @@ include('./loginCheck.php');
 								swinput.checked = true;
 							}
 						}
-
+						// switch改變時觸發事件
 						document.body.addEventListener('click', (e) => {
 							let target = e.target;
 							let switch_input_div = target.parentElement;
@@ -98,16 +101,12 @@ include('./loginCheck.php');
 							let tr = Member_status.closest('tr');
 							let member_id = tr.querySelector('.memberNO').innerText;
 
-							// console.log(Member_status);
-							// console.log(member_id);
-
 							if (target.checked == true) {
 								Member_status.innerText = '停權';
 								Member_status.setAttribute('value', '0');
-								// let status = tr.querySelector('.Member_status').innerText;
-								// let Member_status_number = Member_status.getAttribute('value');
 								let status_stop = Member_status.getAttribute('value');
 
+								// 資料庫連接ajax更改
 								function changeSt() {
 									$.ajax({
 										method: "POST",
@@ -127,12 +126,12 @@ include('./loginCheck.php');
 									});
 								};
 								changeSt();
-							}
-							if (target.checked == false) {
+							} else if (target.checked == false) {
 								Member_status.innerText = '正常';
 								Member_status.setAttribute('value', '1');
 								let status_start = Member_status.getAttribute('value');
 
+								// 資料庫連接ajax更改
 								function changeSt() {
 									$.ajax({
 										method: "POST",

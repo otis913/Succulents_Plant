@@ -79,6 +79,93 @@ include('./loginCheck.php');
 						success: function(response) {
 							//更新html內容
 							document.getElementsByClassName('table')[0].innerHTML = response;
+							// ----------------------
+							// 載入偵測訂單狀況顯示option
+							let tr_number = document.getElementsByTagName('tr').length;
+
+							for (let i = 0; i < (tr_number) - 1; i++) {
+								let o_select = document.getElementById(`o_select${i}`);
+								let option0 = o_select[0];
+								let option1 = o_select[1];
+								let option2 = o_select[2];
+								let o_status = document.getElementsByClassName('o_status');
+
+								if (o_status[i].innerText == '訂單處理中') {
+									option0.setAttribute('selected', 'selected');
+
+								} else if (o_status[i].innerText == '訂單完成') {
+									option1.setAttribute('selected', 'selected');
+
+								} else if (o_status[i].innerText == '取消訂單') {
+									option2.setAttribute('selected', 'selected');
+
+								}
+							}
+							// option改變時觸發事件
+							let o_selectALL = document.getElementsByClassName('o_select')[0];
+							// console.log(o_selectALL);
+
+							function selectChange() {
+								// console.log(1);
+							}
+							o_selectALL.addEventListener('click', selectChange());
+
+
+
+
+							// for (let i = 0; i < 3; i++) {
+							// 	let o_select = document.getElementById(`o_select${i}`);
+							// 	let option0 = o_select[0];
+							// 	let option1 = o_select[1];
+							// 	let option2 = o_select[2];
+							// 	let o_status = document.getElementsByClassName('o_status');
+
+							// 	let orderNO = document.getElementById(`orderNO${i}`);
+
+							// 	let orderNO = tr.querySelector('.orderNO').innerText;
+
+							// 	console.log(orderNO);
+
+							// 	if (o_status[i].innerText == '訂單處理中') {
+							// 		option0.setAttribute('selected', 'selected');
+
+							// 		function changeSt() {
+							// 			$.ajax({
+							// 				method: "POST",
+							// 				url: "./order_change.php",
+							// 				data: {
+							// 					// 'o_status': status_stop,
+							// 					// 'orderNO': 
+							// 				},
+							// 				dataType: "html",
+							// 				success: function(response) {
+							// 					//更新html內容
+							// 					document.getElementsByClassName('.o_status').innerHTML = response;
+							// 				},
+							// 				error: function(exception) {
+							// 					alert("發生錯誤: " + exception.status);
+							// 				}
+							// 			});
+							// 		};
+
+							// 	} else if (o_status[i].innerText == '訂單完成') {
+							// 		option1.setAttribute('selected', 'selected');
+
+							// 	} else if (o_status[i].innerText == '取消訂單') {
+							// 		option2.setAttribute('selected', 'selected');
+							// 	// }
+							// }
+
+
+
+
+
+
+
+
+
+
+
 						},
 						error: function(exception) {
 							alert("發生錯誤: " + exception.status);

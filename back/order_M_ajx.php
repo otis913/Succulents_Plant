@@ -1,9 +1,10 @@
 <?php
-include('./SignSql.php');
+include('./loginCheck.php');
 
 $sql = 'SELECT *
-             FROM SUCCULENTS_PLANT.ORDER o
-             left JOIN ORDER_DETAIL od on o.orderNO = od.FK_ORDER_DETAIL_orderNO';
+             FROM SUCCULENTS_PLANT.ORDER';
+
+
 // $sql = 'SELECT orderNO, 
 //                FK_ORDER_DETAIL_orderNO,
 //                orderDate,
@@ -31,8 +32,8 @@ $data = $statement->fetchAll();
 
 
 foreach ($data as $index => $row) {
-    echo "<tr class='table-light'>
-              <td>" . $row["orderNO"] . "</td>";
+    echo "<tr class='table-light '>
+              <td class='orderNO'>" . $row["orderNO"] . "</td>";
     echo "<td>" . $row["FK_ORDER_memberNO"] . "</td>";
     echo "<td>" . $row["orderDate"] . "</td>";
 
@@ -70,14 +71,23 @@ foreach ($data as $index => $row) {
             $orderPayStatus = "訂單取消";
             break;
     };
-    echo "<td>" . $orderPayStatus . "</td>";
+    echo "<td class='o_status'>" . $orderPayStatus . "</td>";
 
-    echo "<td>
-            <select name='orederStatus' >
-                <option value='1'>訂單處理中</option>
-                <option value='2'>訂單處理中</option>
-                <option value='3'></option>
-            </select>
-         </td>
-        </tr>";
+    // echo "<td class='o_td_select'>
+    //         <select name='orederStatus' class='o_select' id='o_select'>
+    //             <option value='1' class='o_Dispose' >訂單處理中</option>
+    //             <option value='2' class='o_Carry' >訂單完成</option>
+    //             <option value='3' class='o_Cancle' >取消訂單</option>
+    //         </select>
+    //      </td>
+    //     </tr>";
+
+    echo "<td class='o_td_select'>
+        <select name='orederStatus' class='o_select' id='o_select" . $index . "'>
+            <option value='1' class='o_Dispose' >訂單處理中</option>
+            <option value='2' class='o_Carry' >訂單完成</option>
+            <option value='3' class='o_Cancle' >取消訂單</option>
+        </select>
+     </td>
+    </tr>";
 }
