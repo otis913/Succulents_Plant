@@ -4053,11 +4053,6 @@ body {
   }
 }
 
-.handmake_left h1 {
-  text-align: left;
-  margin: 10px 0 10px 50px;
-}
-
 @media (max-width: 990px) {
   .handmake_left h1 {
     margin: 10px auto;
