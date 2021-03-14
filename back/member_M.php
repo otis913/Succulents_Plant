@@ -82,7 +82,6 @@ include('./loginCheck.php');
 						for (let i = 0; i < (tr_number) - 1; i++) {
 							let swinput = document.getElementById(`customSwitch${i}`);
 							let Member_status_text = document.getElementsByClassName('Member_status')[i].textContent;
-							// console.log(Member_status_text);
 							if (Member_status_text == "正常") {
 								swinput.checked = false;
 							}

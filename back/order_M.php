@@ -81,7 +81,7 @@ include('./loginCheck.php');
 							document.getElementsByClassName('table')[0].innerHTML = response;
 							// ----------------------
 							// 載入偵測訂單狀況顯示option
-							let tr_number = document.getElementsByTagName('tr').length;
+							var tr_number = document.getElementsByTagName('tr').length;
 
 							for (let i = 0; i < (tr_number) - 1; i++) {
 								let o_select = document.getElementById(`o_select${i}`);
@@ -89,30 +89,29 @@ include('./loginCheck.php');
 								let option1 = o_select[1];
 								let option2 = o_select[2];
 								let o_status = document.getElementsByClassName('o_status');
-
+								// let o_selectALL = document.getElementsByClassName('o_select');
 								if (o_status[i].innerText == '訂單處理中') {
 									option0.setAttribute('selected', 'selected');
-
 								} else if (o_status[i].innerText == '訂單完成') {
 									option1.setAttribute('selected', 'selected');
-
 								} else if (o_status[i].innerText == '取消訂單') {
 									option2.setAttribute('selected', 'selected');
-
 								}
+
+								$(`#o_select${i}`).change((e) => {
+									let option = $(`#o_select${i}`);
+									const option_value = $(`#o_select${i}`).val();
+
+
+
+									console.log(option);
+								});
+								// $(`#o_select${i}`).click(() => {
+								// 	let option = $(`#o_select${i}`).children('option');
+								// 	console.log(option);
+								// });
+
 							}
-							// option改變時觸發事件
-							let o_selectALL = document.getElementsByClassName('o_select')[0];
-							// console.log(o_selectALL);
-
-							function selectChange() {
-								// console.log(1);
-							}
-							o_selectALL.addEventListener('click', selectChange());
-
-
-
-
 							// for (let i = 0; i < 3; i++) {
 							// 	let o_select = document.getElementById(`o_select${i}`);
 							// 	let option0 = o_select[0];

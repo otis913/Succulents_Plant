@@ -21,4 +21,4 @@ $statement->execute();
 
 //導頁
 //header("Location: Index.php");    
-echo "正常";
+// echo "正常";

@@ -31,7 +31,7 @@ body {
 
 .handmake_section {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   @include pad {
     flex-direction: column;
   }
@@ -43,9 +43,10 @@ body {
   background-color: map-get($color, "main_g");
   border-radius: 10px;
   color: map-get($color, "white");
+  flex: 1;
   @include pad {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
   }
   h1 {
@@ -84,10 +85,14 @@ body {
       width: 100px;
       margin: 5px;
     }
-  }
-  button:hover {
-    background-color: map-get($color, "gold");
-    color: map-get($color, "white");
+    &.active {
+      background-color: map-get($color, "gold");
+      color: map-get($color, "white");
+    }
+    &:hover {
+      background-color: map-get($color, "gold");
+      color: map-get($color, "white");
+    }
   }
 }
 
