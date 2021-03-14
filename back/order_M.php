@@ -94,36 +94,33 @@ include('./loginCheck.php');
 									option0.setAttribute('selected', 'selected');
 								} else if (o_status[i].innerText == '訂單完成') {
 									option1.setAttribute('selected', 'selected');
-								} else if (o_status[i].innerText == '取消訂單') {
+								} else if (o_status[i].innerText == '訂單取消') {
 									option2.setAttribute('selected', 'selected');
 								}
 
 								$(`#o_select${i}`).change((e) => {
+
 									let option = $(`#o_select${i}`);
-									const option_value = $(`#o_select${i}`).val();
+									// let option = $(`#o_select${i}`);
+									let option_value = $(`#o_select${i}`).val();
+									// let option_td = option[i].parentElement;
+									// let option_st_td = option_td.previousElementSibling;
+									// let o_status_text = option_st_td.textContent;
+									// console.log(o_status_text);
+									// console.log(e_option);
 
+									// if (option_value === 1) {
+									// 	o_status_text.innerText == '訂單處理中';
+									// } else if (option_value === 2) {
+									// 	o_status_text.innerText == '訂單完成';
+									// } else if (option_value === 3) {
+									// 	o_status_text.innerText == '訂單取消';
+									// }
 
-
-									console.log(option);
 								});
-								// $(`#o_select${i}`).click(() => {
-								// 	let option = $(`#o_select${i}`).children('option');
-								// 	console.log(option);
-								// });
 
 							}
-							// for (let i = 0; i < 3; i++) {
-							// 	let o_select = document.getElementById(`o_select${i}`);
-							// 	let option0 = o_select[0];
-							// 	let option1 = o_select[1];
-							// 	let option2 = o_select[2];
-							// 	let o_status = document.getElementsByClassName('o_status');
 
-							// 	let orderNO = document.getElementById(`orderNO${i}`);
-
-							// 	let orderNO = tr.querySelector('.orderNO').innerText;
-
-							// 	console.log(orderNO);
 
 							// 	if (o_status[i].innerText == '訂單處理中') {
 							// 		option0.setAttribute('selected', 'selected');
@@ -145,14 +142,7 @@ include('./loginCheck.php');
 							// 					alert("發生錯誤: " + exception.status);
 							// 				}
 							// 			});
-							// 		};
 
-							// 	} else if (o_status[i].innerText == '訂單完成') {
-							// 		option1.setAttribute('selected', 'selected');
-
-							// 	} else if (o_status[i].innerText == '取消訂單') {
-							// 		option2.setAttribute('selected', 'selected');
-							// 	// }
 							// }
 
 

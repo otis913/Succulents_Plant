@@ -1,23 +1,17 @@
-<?php
+<?php 
+$server_name ='localhost';
+$username ='albert_huang';
+$password='albert';
+$db_name='SUCCULENTS_PLANT';
 
-$server_name = 'localhost';
-$username = 'albert_huang';
-$password = 'albert';
-$db_name = 'SUCCULENTS_PLANT';
+$conn = new mysqli($server_name,$username,$password,$db_name);
 
-$conn = new mysqli($server_name, $username, $password, $db_name);
-
-if (!empty($conn->connect_error)) {
-    die('資料庫連線錯誤:' . $conn->connect_error);
+if(!empty($conn->connect_error)){
+    die('資料庫連線錯誤:'.$conn->connect_error);
 }
 
 $conn->query('SET NAMES UTF8');
-$conn->query('SET time_zone ="+8:00"');
-
-?>
-
-
-
+$conn->query('SET time_zone ="+8:00"'); ?>
 <!-- 導入後端資料 開始 -->
 
 <!-- 會員中心資料 -->
@@ -38,7 +32,7 @@ $row = $result->fetch_assoc();
 <!-- $sql2 == 處理orderNO -->
 <?php
 $memberNO = $_SESSION["memberNO"];
-$sql2 = 'SELECT * FROM `ORDER` where FK_ORDER_memberNO = ' . $memberNO;
+$sql2 = 'SELECT * FROM `ORDER` where FK_ORDER_memberNO = '.$memberNO;
 $result2 = $conn->query($sql2);
 $row2 = $result2->fetch_assoc();
 
@@ -52,9 +46,6 @@ switch ($type) {
         break;
     case '1';
         $paymethod = '信用卡';
-        break;
-    case '2';
-        $paymethod = '超商付款';
         break;
 }
 // 處理詳細資料的變數部分- 訂單狀態
@@ -91,7 +82,7 @@ switch ($type) {
 <?php
 $memberNO = $_SESSION["memberNO"];
 
-$sql4 = 'SELECT * FROM `CARD` where FK_CARD_memberNO = ' . $memberNO;
+$sql4 = 'SELECT * FROM `CARD` where FK_CARD_memberNO = '.$memberNO;
 $result4 = $conn->query($sql4);
 $row4 = $result4->fetch_assoc();
 
@@ -176,7 +167,7 @@ $row4 = $result4->fetch_assoc();
             <ul class="mem_btn">
                 <li class="-mem_this">個人資料</li>
                 <li>訂單查詢</li>
-                <li onclick="doQuery_fav()">我的收藏</li>
+                <li>我的收藏</li>
                 <li>我有問題</li>
 
             </ul>
@@ -185,6 +176,7 @@ $row4 = $result4->fetch_assoc();
             <div class="mem_main">
 
                 <!-- 個人資料 -->
+
                 <div class="center_wrapper -mem_show" id="app">
                     <h1>個人資料</h1>
                     <div class="center_contain">
@@ -210,7 +202,7 @@ $row4 = $result4->fetch_assoc();
                                 <label for="">密碼：</label>
                                 <input type="text" value="<?php echo $row['memberPassword'] ?> " class="TetstText pass" disabled name="pass">
                                 <input type="button" value='修改' onclick="ChangeDisabled(1)">
-                                <input type="button" class="save keydown" value='儲存' onclick="ChangeDisabled(2)">
+                                <input type="button" class="save keydown" value='' onclick="ChangeDisabled(2)">
 
                             </div>
 
@@ -218,17 +210,17 @@ $row4 = $result4->fetch_assoc();
                                 <label for="">電話：</label>
                                 <input type="text" value="<?php echo $row['memberCellPhone'] ?> " class="TetstText" id='phone' disabled name="phone">
                                 <input type="button" value='修改' onclick="ChangeDisabledPhone(1)">
-                                <input type="button" class="save keydown" value='儲存' onclick="ChangeDisabledPhone(2)">
+                                <input type="button" class="save keydown" value='' onclick="ChangeDisabledPhone(2)">
                                 <br />
                             </div>
                             <div class="mem_wrp">
                                 <label for="">地址： </label>
                                 <input type="text" value="<?php echo $row['memberAddress'] ?> " class="TetstText address" disabled name="address">
                                 <input type="button" value='修改' onclick="ChangeDisabledAdd(1)">
-                                <input type="button" value='儲存' onclick="ChangeDisabledAdd(2)">
+                                <input type="button" value='' onclick="ChangeDisabledAdd(2)">
                             </div>
                             <div class="judge error correct "></div>
-                            <input type="submit" value="確認修改" class="mem_submit" >
+                            <input type="submit" value="確認修改" class="mem_submit">
                             <div id="error2"></div>
 
                         </form>
@@ -248,147 +240,129 @@ $row4 = $result4->fetch_assoc();
 
                         <!-- 情況2 訂單進來了 -->
                         <div class="mem_order">
-                            <!-- 訂單明細開始 -->
-                            <?php 
-                            $memberNO = $_SESSION["memberNO"];
-                            $sql = 'Select o.*,d.*,p.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `product` p on d.FK_ORDER_DETAIL_productNO = p.productNO where FK_ORDER_memberNO =' . $memberNO; 
-                            $result = $conn->query($sql);
-                            ?>
-                            <div class="order_detail">
-                                <form action="./update.php" method="POST">
+                            <form action="./update.php" method="POST">
 
-                                    <ul class="mem_order_top">
-                                        <li class="mem_time">
-                                            <div class="tit">訂單時間</div>
-                                            <span name="orderTime"><?php echo $row2['orderDate'] ?></span>
+                                <ul class="mem_order_top">
+                                    <li class="mem_time">
+                                        <div class="tit">訂單時間</div>
+                                        <span name="orderTime"><?php echo $row2['orderDate'] ?></span>
+                                    </li>
+
+                                    <li class="mem_no">
+                                        <div class="tit">訂單編號</div>
+                                        <span name="orderNo"><?php echo $row2['orderNO'] ?></span>
+                                    </li>
+
+                                    <li class="mem_pay">
+                                        <div class="tit">付款方式</div>
+                                        <span name="orderMethods"><?php echo $paymethod ?></span>
+                                    </li>
+
+                                    <li class="mem_totle">
+                                        <div class="tit">訂單金額</div>
+                                        <span class="orderMoney" name="orderMoney"><?php echo $row2['orderTotal'] ?></span>
+                                    </li>
+
+                                    <li class="mem_status">
+                                        <div class="tit">訂單狀態</div>
+                                        <span name="orderStatus"><?php echo $status ?></span>
+                                    </li>
+
+                                </ul>
+
+                            </form>
+
+
+                            <div class="mem_open">訂單明細 <i class="fas fa-plus"></i></div>
+                            <form action="">
+
+                                <div class="order_list_wrapper">
+                                    <ol>
+                                        <li>商品名稱</li>
+                                        <li>數量</li>
+                                        <li>價格</li>
+                                        <!-- <li>評價</li> -->
+                                    </ol>
+                                    <?php
+
+
+                                    ?>
+                                    <!-- 賀卡訂製 -->
+                                    <ul class="mem_order_list">
+                                        <li class="pro_list">
+                                            <div class="list_column">
+                                                <img src="img/PeopleAvatars.png" alt="">
+                                                <div class="pro_item">
+                                                    <span>
+                                                        <?php 
+                                                         $memberNO = $_SESSION["memberNO"];
+                                                         $sql_product = 'Select o.*,d.*,p.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `product` p on d.FK_ORDER_DETAIL_productNO = p.productNO where FK_ORDER_memberNO ='.$memberNO;
+                                                         $result = $conn->query($sql_product);
+                                                         $row_product = $result ->fetch_assoc();
+                                                         echo $row_product['productName'];
+                                                        ?>
+                                                    </span>
+                                                    <span>賀卡訂製</span>
+                                                    <dl>
+                                                        <dt>收禮人：<span><?php echo $row4['cardReceivePople'] ?></span> </dt>
+                                                        <dt>賀詞內容：<span><?php echo $row4['cardContentText'] ?></span> </dt>
+                                                        <dt>送禮人：<span><?php echo $row4['cardSendPople'] ?></dd> </span>
+                                                        <dt>賀卡樣式：<span>A.春意盎然</span> </dt>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                            <span>1</span>
+                                            <span class="productPrice" ><?php echo $row_product['productPrice']?></span>
                                         </li>
-
-                                        <li class="mem_no">
-                                            <div class="tit">訂單編號</div>
-                                            <span name="orderNo"><?php echo $row2['orderAccunt'] ?></span>
-                                        </li>
-
-                                        <li class="mem_pay">
-                                            <div class="tit">付款方式</div>
-                                            <span name="orderMethods"><?php echo $paymethod ?></span>
-                                        </li>
-
-                                        <li class="mem_totle">
-                                            <div class="tit">訂單金額</div>
-                                            <span name="orderMoney" class="orderMoney"></span>
-                                        </li>
-
-                                        <li class="mem_status">
-                                            <div class="tit">訂單狀態</div>
-                                            <span name="orderStatus"><?php echo $status ?></span>
-                                        </li>
-
                                     </ul>
+                                    <!-- 手作課程 -->
 
-                                </form>
-
-
-                                <div class="mem_open">訂單明細 <i class="fas fa-plus"></i></div>
-                                <form action="">
-
-                                    <div class="order_list_wrapper">
-                                        <ol>
-                                            <li>商品名稱</li>
-                                            <li>數量</li>
-                                            <li>價格</li>
-                                            <!-- <li>評價</li> -->
-                                        </ol>
-
-                                        <!-- 賀卡訂製 -->
-                                        <?php
-                                        $memberNO = $_SESSION["memberNO"];
-                                        $sql_product = 'Select o.*,d.*,p.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `product` p on d.FK_ORDER_DETAIL_productNO = p.productNO where FK_ORDER_memberNO =' . $memberNO;
-                                        $result = $conn->query($sql_product);
-                                        $row_product = $result->fetch_assoc();
-
-                                        if ($row_product['orderCard'] == 1) { ?>
-                                            <ul class="mem_order_list">
-                                                <li class="pro_list">
-                                                    <div class="list_column">
-                                                        <img src="img/PeopleAvatars.png" alt="">
-                                                        <div class="pro_item">
-                                                            <span>
-                                                                <?php
-                                                                $memberNO = $_SESSION["memberNO"];
-                                                                $sql_product = 'Select o.*,d.*,p.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `product` p on d.FK_ORDER_DETAIL_productNO = p.productNO where FK_ORDER_memberNO =' . $memberNO;
-                                                                $result = $conn->query($sql_product);
-                                                                $row_product = $result->fetch_assoc();
-                                                                echo $row_product['productName'];
-                                                                ?>
-                                                            </span>
-                                                            <span>賀卡訂製</span>
-                                                            <dl>
-                                                                <dt>收禮人：<span><?php echo $row4['cardReceivePople'] ?></span> </dt>
-                                                                <dt>賀詞內容：<span><?php echo $row4['cardContentText'] ?></span> </dt>
-                                                                <dt>送禮人：<span><?php echo $row4['cardSendPople'] ?></dd> </span>
-                                                                <dt>賀卡樣式：<span>A.春意盎然</span> </dt>
-                                                            </dl>
-                                                        </div>
-                                                    </div>
-                                                    <span>1</span>
-                                                    <span class="productPrice"><?php echo $row_product['productPrice'] ?></span>
-                                                </li>
-                                            </ul>
-                                        <?php } ?>
-                                        <!-- 手作課程 -->
-                                        <?php
-                                        $memberNO = $_SESSION["memberNO"];
-                                        $sql_class = 'Select o.*,d.*,h.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `HANDCLASS` h on d.FK_ORDER_DETAIL_handClassNO = h.handClassNO where FK_ORDER_memberNO = ' . $memberNO;
-                                        $result_class = $conn->query($sql_class);
-                                        $row_class = $result_class->fetch_assoc();
-                                        if ($row_class['handClassNO'] >= 1) { ?>
-
-                                            <ul class="mem_order_list">
-                                                <li class="pro_list">
-                                                    <div class="list_column">
-                                                        <img src="img/PeopleAvatars.png" alt="">
-                                                        <div class="pro_item">
-                                                            <span>
-                                                                <?php
-                                                                $memberNO = $_SESSION["memberNO"];
-                                                                $sql_class = 'Select o.*,d.*,h.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `HANDCLASS` h on d.FK_ORDER_DETAIL_handClassNO = h.handClassNO where FK_ORDER_memberNO = ' . $memberNO;
-                                                                $result_class = $conn->query($sql_class);
-                                                                if ($result_class) {
-                                                                    while ($row_class = $result_class->fetch_assoc()) {
-                                                                        echo   $row_class['handClassName'];
-                                                                    }
-                                                                } else {
-                                                                    echo 'error=' . $conn->error;
-                                                                }
-
-                                                                ?>
-                                                            </span>
-
-                                                            <span>課程日期：
-                                                                <?php
-                                                                $memberNO = $_SESSION["memberNO"];
-                                                                $sql_class = 'Select o.*,d.*,h.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `HANDCLASS` h on d.FK_ORDER_DETAIL_handClassNO = h.handClassNO where FK_ORDER_memberNO = ' . $memberNO;
-                                                                $result_class = $conn->query($sql_class);
-                                                                if ($result_class) {
-                                                                    while ($row_class = $result_class->fetch_assoc()) {
-                                                                        echo   $row_class['handClassDate'];
-                                                                    }
-                                                                } else {
-                                                                    echo 'error=' . $conn->error;
-                                                                }
-
-                                                                ?>
-
-
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <span>1</span>
-                                                    <span class="handClassPrice">
-
+                                    <ul class="mem_order_list">
+                                        <li class="pro_list">
+                                            <div class="list_column">
+                                                <img src="img/PeopleAvatars.png" alt="">
+                                                <div class="pro_item">
+                                                    <span>
                                                         <?php
                                                         $memberNO = $_SESSION["memberNO"];
-                                                        $sql_class = 'Select o.*,d.*,h.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `HANDCLASS` h on d.FK_ORDER_DETAIL_handClassNO = h.handClassNO where FK_ORDER_memberNO = ' . $memberNO;
+                                                        $sql_class = 'Select o.*,d.*,h.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `HANDCLASS` h on d.FK_ORDER_DETAIL_handClassNO = h.handClassNO where FK_ORDER_memberNO = '.$memberNO;
+                                                        $result_class = $conn->query($sql_class);
+                                                        if ($result_class) {
+                                                            while ($row_class = $result_class->fetch_assoc()) {
+                                                                echo   $row_class['handClassName'];
+                                                            }
+                                                        } else {
+                                                            echo 'error=' . $conn->error;
+                                                        }
+
+                                                        ?>
+                                                    </span>
+
+                                                    <span>課程日期：
+                                                        <?php
+                                                            $memberNO = $_SESSION["memberNO"];
+                                                            $sql_class = 'Select o.*,d.*,h.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `HANDCLASS` h on d.FK_ORDER_DETAIL_handClassNO = h.handClassNO where FK_ORDER_memberNO = '.$memberNO;
+                                                            $result_class = $conn->query($sql_class);
+                                                            if ($result_class) {
+                                                                while ($row_class = $result_class->fetch_assoc()) {
+                                                                    echo   $row_class['handClassDate'];
+                                                                }
+                                                            } else {
+                                                                echo 'error=' . $conn->error;
+                                                            }
+
+                                                        ?>
+
+
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <span>1</span>
+                                            <span class="handClassPrice" >
+
+                                                <?php
+                                                        $memberNO = $_SESSION["memberNO"];
+                                                        $sql_class = 'Select o.*,d.*,h.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `HANDCLASS` h on d.FK_ORDER_DETAIL_handClassNO = h.handClassNO where FK_ORDER_memberNO = '.$memberNO;
                                                         $result_class = $conn->query($sql_class);
                                                         if ($result_class) {
                                                             while ($row_class = $result_class->fetch_assoc()) {
@@ -397,24 +371,21 @@ $row4 = $result4->fetch_assoc();
                                                         } else {
                                                             echo 'error=' . $conn->error;
                                                         }
-                                                        ?>
 
-                                                    </span>
-                                                    <!-- <span><i class="fas fa-star"></i></span> -->
-                                                </li>
-                                            </ul>
-                                        <?php } ?>
-                                    </div>
 
-                                </form>
-                                <!-- 訂單明細結束 -->
-  
-                            </div>
-                            
+                                                ?>
+
+                                            </span>
+                                            <!-- <span><i class="fas fa-star"></i></span> -->
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </form>
 
                         </div>
                         <!-- 情況2結束 訂單進來了 -->
-
+                      
                     </div>
 
                 </div>
@@ -709,72 +680,9 @@ $row4 = $result4->fetch_assoc();
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        function doQuery_fav(int) {
 
-            //Typing your code...
-            $.ajax({
-                method: "POST",
-                url: "./php/mem_fav.php",
-                data: {
-                    ID: int
-                },
-                dataType: "text",
-                success: function(response) {
-                    //更新html內容
-                    document.getElementsByClassName("mem_love")[0].innerHTML = response;
-                    console.log(response);
-                },
-                error: function(exception) {
-                    alert("發生錯誤: " + exception.status);
-                }
-            });
-
-        }
     </script>
-    <script>
-        //訂單金額
-        let orderMoney = document.querySelector('.orderMoney');
-        let productPrice = document.querySelector('.productPrice');
-        let pro_str = productPrice.innerText;
-        let handClassPrice = document.querySelector('.handClassPrice');
-        let hand_str = handClassPrice.innerText;
-        let pro_int = parseInt(pro_str);
-        let hand_int = parseInt(hand_str);
-        let total = pro_int + hand_int;
-        orderMoney.innerHTML = total;
 
-        //判斷賀卡
-        let mem_order_card = document.querySelector('.mem_order_list');
-
-
-
-
-        $('body').on('click', '.aa', function() {
-
-            // alert('ee');
-            console.log($(this));
-            let productNO = $(this).parents('li').children('.productNO').html();
-            console.log(productNO);
-
-            $.ajax({
-                method: "POST",
-                url: "./php/favdelete.php",
-                data: {
-                    'productNO': productNO,
-                },
-                dataType: "text",
-                success: function(response) {
-                    //更新html內容
-                    console.log(response);
-                    doQuery_fav();
-                },
-                error: function(exception) {
-                    alert("發生錯誤: " + exception.status);
-                }
-            });
-
-        });
-    </script>
 
 
     <!-- aos動畫效果 -->
