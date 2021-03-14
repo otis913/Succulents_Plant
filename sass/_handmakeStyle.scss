@@ -47,7 +47,7 @@ body {
   @include pad {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    // justify-content: space-around;
   }
   h1 {
     text-align: left;
@@ -66,7 +66,7 @@ body {
 
 .HM_class_btn {
   @include pad {
-    display: flex;
+    // display: flex;
   }
   @include HM600RWD {
     flex-direction: column;
@@ -147,6 +147,9 @@ body {
     width: 20%;
     text-align: center;
     border-radius: 5px;
+    @include pad {
+      width: 10%;
+    }
   }
   .fas {
     margin: 0 10px;
@@ -183,12 +186,18 @@ body {
     display: block;
     width: 400px;
     margin: 0 auto;
+    @include pad {
+      width: 100%;
+    }
   }
 }
 
 .handmake_right_main {
   padding-left: 50px;
   text-align: left;
+  @include pad {
+    padding-left: 0;
+  }
   p {
     margin: 10px 40px;
     text-align: left;

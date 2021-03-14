@@ -3361,8 +3361,7 @@ body {
 @media (max-width: 990px) {
   .handmake_left {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
   }
 }
 
@@ -3381,12 +3380,6 @@ body {
 .HM_class {
   display: flex;
   flex-direction: column;
-}
-
-@media (max-width: 990px) {
-  .HM_class_btn {
-    display: flex;
-  }
 }
 
 @media (max-width: 600px) {
@@ -3485,6 +3478,12 @@ body {
   border-radius: 5px;
 }
 
+@media (max-width: 990px) {
+  .HM_choseNumber .number_people {
+    width: 10%;
+  }
+}
+
 .HM_choseNumber .fas {
   margin: 0 10px;
   cursor: pointer;
@@ -3526,9 +3525,21 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 990px) {
+  .handmake_right img {
+    width: 100%;
+  }
+}
+
 .handmake_right_main {
   padding-left: 50px;
   text-align: left;
+}
+
+@media (max-width: 990px) {
+  .handmake_right_main {
+    padding-left: 0;
+  }
 }
 
 .handmake_right_main p {
