@@ -4063,6 +4063,7 @@ body {
 .HM_class {
   display: flex;
   flex-direction: column;
+  margin: 10px 0;
 }
 
 @media (max-width: 600px) {
@@ -4100,6 +4101,10 @@ body {
   color: #ffffff;
 }
 
+.HM_date_number {
+  margin: 10px 0;
+}
+
 @media (max-width: 990px) {
   .HM_date_number {
     display: flex;
@@ -4115,6 +4120,10 @@ body {
 .HM_date_number .fa-calendar-alt {
   margin-left: 10px;
   cursor: pointer;
+}
+
+.HM_Date {
+  margin: 10px 0;
 }
 
 @media (max-width: 990px) {
@@ -4146,6 +4155,10 @@ body {
   text-align: center;
 }
 
+.HM_Number {
+  margin: 10px 0;
+}
+
 .HM_choseNumber input::-webkit-outer-spin-button,
 .HM_choseNumber input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -4170,6 +4183,10 @@ body {
 .HM_choseNumber .fas {
   margin: 0 10px;
   cursor: pointer;
+}
+
+.handmake_left_text {
+  margin: 10px 0;
 }
 
 @media (max-width: 990px) {

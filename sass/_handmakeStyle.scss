@@ -62,6 +62,7 @@
     .HM_class {
       display: flex;
       flex-direction: column;
+      margin: 10px 0;
     }
     
     .HM_class_btn {
@@ -97,6 +98,7 @@
     }
     
     .HM_date_number {
+      margin: 10px 0;
       @include pad {
         display: flex;
       }
@@ -111,6 +113,7 @@
     }
     
     .HM_Date {
+      margin: 10px 0;
       @include pad {
         margin: 0 auto;
       }
@@ -133,7 +136,12 @@
       }
     }
     
-    .HM_Number {}
+    .HM_Number {
+      margin: 10px 0;
+      h1 {
+        margin: 10px 0;
+      }
+    }
     
     .HM_choseNumber {
       input::-webkit-outer-spin-button,
@@ -160,6 +168,7 @@
     }
     
     .handmake_left_text {
+      margin: 10px 0;
       @include pad {
         display: none;
       }

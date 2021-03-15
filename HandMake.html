@@ -84,7 +84,7 @@
               </div>
             </div>
             <div class="handmake_left_text ex20px ">
-              <h1>尚於<span>{{info.handClassNowPeople}}</span>人可報名</h1>
+              <h1>尚於<span>{{nowPeople}}</span>人可報名</h1>
               <h1>課程費用<span>${{info.handClassPrice}}</span>/人</h1>
             </div>
             <!-- 黃色bubble按鈕 start -->
@@ -136,7 +136,7 @@
               </div>
             </div>
             <div class='handmake_left_text handmark_text_RWD ex20px'>
-              <h1>尚於<span>{{nowPeople()}}</span>人可報名</h1>
+              <h1>尚於<span>{{nowPeople}}</span>人可報名</h1>
               <h1>課程費用<span>${{info.handClassPrice}}</span>/人</h1>
             </div>
             <div class="bubble_btnn SignUp_RWD ">
@@ -277,6 +277,11 @@
           console.log(this.info.handClassName);
           return;
         },
+        nowPeople() {
+          let people = (this.info.handClassPeople - this.info.handClassNowPeople);
+          return people;
+        },
+
       },
       mounted() {
         this.getHandClass(1);
@@ -307,11 +312,6 @@
         },
         addPeople() {
           this.classPeople = (this.classPeople + 1) >= this.info.handClassPeople ? this.info.handClassPeople : this.classPeople + 1;
-        },
-        nowPeople() {
-          let people = (this.info.handClassPeople - this.info.handClassNowPeople);
-
-          return people;
         },
         changeHandler(event) {
           if (/e/g.test(event.target.value)) {
