@@ -104,7 +104,7 @@
           <p>尺寸：{{pli.productSize}}</p>
           <!-- <p>擁有一盆紓壓療癒的多肉盆栽好幸福。</p> -->
         </div>
-        <p class="product_price">{{pli.productPrice}}</p>
+        <p class="product_price">${{pli.productPrice}}</p>
         <div class="product_amount">
           <label for="">數量</label>
           <button @click='handleMinus'>
@@ -130,10 +130,10 @@
           <input v-model.trim="cardSendPeople" type="text" maxlength="30" name="cardSendPeople" required>
           <label for="">賀卡樣式(4選1)</label>
           <ol class="product_card_style">
-            <li :class="{'-pro-border': cardselect == 'A'}" @click="cardselect ='A'" class="product_card_li" data-card="1"><img src="./img/product/card_01.png" alt="">Ａ.幸福青鳥</li>
-            <li :class="{'-pro-border': cardselect == 'B'}" @click="cardselect ='B'" class="product_card_li" data-card="2"><img src="./img/product/card_02.png" alt="">B.綠意盎然</li>
-            <li :class="{'-pro-border': cardselect == 'C'}" @click="cardselect ='C'" class="product_card_li" data-card="3"><img src="./img/product/card_03.png" alt="">C.小草黃了</li>
-            <li :class="{'-pro-border': cardselect == 'D'}" @click="cardselect ='D'" class="product_card_li" data-card="4"><img src="./img/product/card_04.png" alt="">D.銀色大地</li>
+            <li :class="{'-pro-border': cardselect == '幸福青鳥'}" @click="cardselect ='幸福青鳥'" class="product_card_li" data-card="1"><img src="./img/product/card_01.png" alt="">Ａ.幸福青鳥</li>
+            <li :class="{'-pro-border': cardselect == '綠意盎然'}" @click="cardselect ='綠意盎然'" class="product_card_li" data-card="2"><img src="./img/product/card_02.png" alt="">B.綠意盎然</li>
+            <li :class="{'-pro-border': cardselect == '小草黃了'}" @click="cardselect ='小草黃了'" class="product_card_li" data-card="3"><img src="./img/product/card_03.png" alt="">C.小草黃了</li>
+            <li :class="{'-pro-border': cardselect == '銀色大地'}" @click="cardselect ='銀色大地'" class="product_card_li" data-card="4"><img src="./img/product/card_04.png" alt="">D.銀色大地</li>
           </ol>
           <!-- <p class="product_card_second">還想購買第二張賀卡嗎？ 點選前往<a href="./product.html?pro=34.html">賀卡頁面</a></p> -->
 
@@ -187,7 +187,7 @@
             <!-- <a  @click="addCar(pli)" href="./shopCart.html" class="button_y button--bubble">
               立即購買
             </a> -->
-            <button :class="{'active': cardchose == '直接購買'}" @click="addCar(pli,$event)"  class="button_y button--bubble"> 立即購買</button>
+            <button :class="{'active': cardchose == '直接購買'}" @click="addCar(pli,$event)"  class="button_y button--bubble pro_nowshop"> 立即購買</button>
             <span class="button--bubble__effect-container">
               <span class="circle top-left"></span>
               <span class="circle top-left"></span>
@@ -215,7 +215,7 @@
       <ol class="product_tabs">
         <li><a class="product_tabs_link " href="#pro_info">商品描述</a></li>
         <li><a class="product_tabs_link" href="#pro_notice">訂購需知</a></li>
-        <li><a class="product_tabs_link" href="#pro_assess">購買評價</a></li>
+        <!-- <li><a class="product_tabs_link" href="#pro_assess">購買評價</a></li> -->
       </ol>
       <ul class="product_content">
         <li id="pro_info" class="product_content_info pro_con">
@@ -239,7 +239,7 @@
             25個工作天以內會將商品寄出。
           </p>
         </li>
-        <li id="pro_assess" class="product_content_assess pro_con">
+        <!-- <li id="pro_assess" class="product_content_assess pro_con">
           <ol>
             <li>
               <p>文XX君</p>
@@ -265,7 +265,7 @@
               <p>2021/02/04</p>
             </li>
           </ol>
-        </li>
+        </li> -->
       </ul>
 
 
@@ -550,6 +550,7 @@
             pro_cardSendText:vm.cardSendText, //卡片內容
             pro_cardSendPeople:vm.cardSendPeople, //卡片送禮人
             pro_cardselect:vm.cardselect, //卡片樣式
+            pro_cardcustom:vm.checked
           }
           // 先檢查有無localStorage
           let shopcart = JSON.parse(localStorage.getItem("itemStorage"))

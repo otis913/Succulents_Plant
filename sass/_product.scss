@@ -54,6 +54,10 @@ article .-pro-bb {
   border-bottom: 2px solid;
 }
 
+.pro_nowshop {
+  outline: none;
+}
+
 // 開始
 .product_up {
   @include flex() {

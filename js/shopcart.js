@@ -13,19 +13,19 @@ fawin.addEventListener("click", () => {
   order.style.display = "none";
 });
 
-// 側邊欄
-var app9 = new Vue({
-  el: "#app8",
-  data: {
-    counter: 0,
-  },
-});
-var app9 = new Vue({
-  el: "#app9",
-  data: {
-    counter: 0,
-  },
-});
+// // 側邊欄
+// var app9 = new Vue({
+//   el: "#app8",
+//   data: {
+//     counter: 0,
+//   },
+// });
+// var app9 = new Vue({
+//   el: "#app9",
+//   data: {
+//     counter: 0,
+//   },
+// });
 
 $(document).ready(function () {
   關閉側邊欄位;
@@ -41,38 +41,38 @@ $(document).ready(function () {
   });
 });
 
-//計數器的部分
-Vue.component("counter-component", {
-  data: function () {
-    return {
-      counter: 0,
-    };
-  },
-  template: `
-    <div>
-    <p >{{ counter }}</p>
-    </div>
-   `,
-});
+// //計數器的部分
+// Vue.component("counter-component", {
+//   data: function () {
+//     return {
+//       counter: 0,
+//     };
+//   },
+//   template: `
+//     <div>
+//     <p >{{ counter }}</p>
+//     </div>
+//    `,
+// });
 
-var app = new Vue({
-  el: "#app",
-  data: {
-    counter: 0,
-  },
-});
-var app = new Vue({
-  el: "#app2",
-  data: {
-    counter: 0,
-  },
-});
-var app = new Vue({
-  el: "#app3",
-  data: {
-    counter: 0,
-  },
-});
+// var app = new Vue({
+//   el: "#app",
+//   data: {
+//     counter: 0,
+//   },
+// });
+// var app = new Vue({
+//   el: "#app2",
+//   data: {
+//     counter: 0,
+//   },
+// });
+// var app = new Vue({
+//   el: "#app3",
+//   data: {
+//     counter: 0,
+//   },
+// });
 // 繼續購物、下一步、上一步、訂單送出
 $(document).ready(function () {
   $(".next").click(function () {

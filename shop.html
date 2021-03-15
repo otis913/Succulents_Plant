@@ -128,7 +128,7 @@
               <!-- <li data-tag="tag_new" class="shop_card_tag_new">新上市</li> -->
               <!-- <li class="shop_card_tag_hot">人氣NO.1</li> -->
             <!-- </ol> -->
-            <button class="shop_card_heart"><i class="fas fa-heart"></i></button>
+            <!-- <button class="shop_card_heart"><i class="fas fa-heart"></i></button> -->
             <a :href="'product.html?pro='+item.productNO">
               <img :src="'img/product/'+item.productImg01" alt="" /></a>
           </div>
@@ -138,7 +138,7 @@
             <li><i  class="fas fa-leaf"></i></li>
             <li><i  class="fas fa-leaf"></i></li>
           </ol>
-          <p class="shop_card_price">{{item.productPrice}}</p>
+          <p class="shop_card_price">${{item.productPrice}}</p>
 
           <!-- <button class="btn shop_card_addcart">加入購物車</button> -->
           <!-- 綠色bubble按鈕 start -->
