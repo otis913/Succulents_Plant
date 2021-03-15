@@ -440,13 +440,13 @@
       //    outline: 1px solid red;
     }
     .order_header {
-      width: 80%;
+      width: 90%;
       margin-top: 4vh;
-      height: 3.5vh;
+      height: 4.5vh;
       background-color: rgb(37, 80, 78);
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      // justify-content: space-around;
       // outline: 1px solid red;
       @include phone414() {
         width: 95vw;
@@ -454,12 +454,43 @@
       p {
         font-size: 12px;
         color: rgb(255, 255, 255);
+
         @include phone414() {
           font-size: 10px;
         }
       }
+      .data {
+        @include pad768() {
+          margin-left: 9vw;
+        }
+        margin-left: 6vw;
+      }
       .num {
-        margin-left: 12vw;
+        margin-left: 17vw;
+        @include pad768() {
+          margin-left: 17vw;
+        }
+        @include phone414() {
+          margin-left: 15vw;
+        }
+      }
+      .price {
+        margin-left: 5.5vw;
+        @include pad768() {
+          margin-left: 11vw;
+        }
+        @include phone414() {
+          margin-left: 10vw;
+        }
+      }
+      .delete {
+        margin-left: 6.5vw;
+        @include pad768() {
+          margin-left: 11vw;
+        }
+        @include phone414() {
+          margin-left: 12vw;
+        }
       }
     }
     #abc {
@@ -484,11 +515,11 @@
           height: 50px;
         }
         .info {
-          width: 130px;
+          width: 8vw;
           height: 100%;
           font-size: 12px;
           // outline: 1px solid red;
-          margin-left: 1vw;
+          margin-left: 0vw;
           // margin-top: 2vh;
           @include phone414() {
             font-size: 8px;
@@ -509,14 +540,32 @@
             color: #707070;
             text-align: left;
             margin-top: -1vh;
+
             p {
               margin-left: 10px;
+            }
+            @include phone414() {
+              h4 {
+                width: 14vw;
+              }
+              p {
+                margin: 0;
+                width: 20vw;
+              }
+            }
+            @include pad768() {
+              h4 {
+                margin-left: 10px;
+              }
+              p {
+                width: 20vw;
+              }
             }
           }
         }
         .counterNum {
           width: 6vw;
-          height: 2vh;
+          height: 3vh;
           display: flex;
           // outline: 1px solid red;
           margin-left: 10vw;
@@ -525,10 +574,10 @@
           @include pad768() {
             // outline: 1px solid red;
             width: 10vw;
-            margin-left: 8vw;
+            // margin-left: 8vw;
           }
           @include phone414() {
-            margin-left: 5vw;
+            margin-left: 15vw;
             font-size: 8px;
           }
           .fa-minus {
@@ -566,7 +615,7 @@
           }
         }
         .price {
-          margin-left: 2.5vw;
+          margin-left: 3.5vw;
           margin-top: 2vh;
           color: #2f4f4f;
           font-size: 12px;
@@ -579,7 +628,7 @@
         }
         .delete {
           margin-top: 2vh;
-          margin-left: 5.2vw;
+          margin-left: 7vw;
           color: #2f4f4f;
           @include pad768() {
             margin-left: 12vw;
@@ -742,11 +791,11 @@
           height: 50px;
         }
         .info {
-          width: 130px;
+          // width: 130px;
           height: 100%;
           font-size: 12px;
           // outline: 1px solid red;
-          margin-left: 1vw;
+          margin-left: 2vw;
           text-align: left;
           // margin-top: 2vh;
           @include phone414() {
@@ -828,7 +877,7 @@
           }
         }
         .price {
-          margin-left: 2.3vw;
+          margin-left: 5vw;
           margin-top: 2vh;
           color: #2f4f4f;
           font-size: 12px;
@@ -841,7 +890,7 @@
         }
         .delete {
           margin-top: 2vh;
-          margin-left: 5.2vw;
+          margin-left: 6.5vw;
           color: #2f4f4f;
           @include pad768() {
             margin-left: 12vw;
@@ -1140,8 +1189,7 @@
             margin-left: 10px;
             border: none;
             background-color: #e9e6e5;
-            padding: 0 30px;
-            padding: 5px 30px;
+            padding: 5px;
           }
         }
         .info_address {
@@ -1152,8 +1200,7 @@
             margin-left: 10px;
             border: none;
             background-color: #e9e6e5;
-            padding: 0 30px;
-            padding: 5px 30px;
+            padding: 5px;
           }
         }
       }

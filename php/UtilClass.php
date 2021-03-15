@@ -9,7 +9,7 @@ class UtilClass
     //     // return $ServerRoot."/EC/Upload/";
     // }
 
-    //取得PDO物件
+    //取得PDO物件 
     function getPDO()
     {
         $db_host = "localhost";

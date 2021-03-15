@@ -44,7 +44,7 @@
   display: none;
   background-color: #fff;
   border-radius: 30px 30px 10px 10px;
-  > h1 {
+  >h1 {
     background-color: #2f4f4f;
     color: #fff;
     border-radius: 30px;
@@ -131,7 +131,6 @@
     width: 95%;
     margin: 0 auto;
   }
-
   .mem_order_top {
     display: flex;
     justify-content: space-evenly;
@@ -210,7 +209,7 @@
       }
       .pro_item {
         text-align: left;
-        > span {
+        >span {
           display: block;
         }
         dl {
@@ -220,7 +219,7 @@
         }
       }
     }
-    > span {
+    >span {
       display: block;
       // outline: 1px solid red;
       width: 100px;
@@ -247,7 +246,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   position: absolute;
   top: 0;
   bottom: 0;
@@ -255,7 +253,6 @@
   right: 0;
   margin: auto;
   z-index: 10;
-
   .fa-times {
     margin-left: auto;
     font-size: 18px;
@@ -298,7 +295,6 @@
 }
 
 // ---------- 我的收藏 -----------
-
 .mem_love {
   display: flex;
   justify-content: flex-start;
@@ -442,7 +438,6 @@
   padding-left: 40px;
   margin: 10px auto;
   position: relative;
-
   p {
     background-color: #eeebeb;
   }

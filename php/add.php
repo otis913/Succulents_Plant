@@ -21,7 +21,7 @@ if (
   empty($_POST['address']) ||
   empty($_POST['phone'])
 ) {
-  header('Location: ../login.php');
+  header('Location:./login.php');
   echo '請輸入完整訊息';
   die();
 }
@@ -44,10 +44,10 @@ if (!$result) {
   die($conn->error);
 }
 
-echo '新增成功';
+// echo '新增成功';
 
 
-header("Location:../login.php")
+header("Location:./login.php")
 
 ?>
 

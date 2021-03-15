@@ -34,7 +34,7 @@ $sql = "select * from MEMBER where memberAccount= '$account' and memberPassword=
 //     $password
 //   );
 $result = $conn->query($sql);
-$row =   $result->fetch_assoc();
+$row =   $result->fetch_all();
 
 //print_r($row);
 
@@ -42,7 +42,7 @@ if (count($row) > 0) {
   // print_r($row);
   // exit();
   foreach ($row as $data) {
-    $memberNO = $data;
+    $memberNO = $data[0];
     break;
   }
 
@@ -51,9 +51,9 @@ if (count($row) > 0) {
   $_SESSION["memberNO"] = $memberNO;
 
 
-  header("Location:../php/member.php");
+  header("Location:./member.php");
 } else {
   //echo '登入失敗！';
-  header("Location:../login.php");
+  header("Location:./login.php");
   //echo $conn->error;
 }

@@ -98,11 +98,17 @@ include('./loginCheck.php');
 									option2.setAttribute('selected', 'selected');
 								}
 
-								$(`#o_select${i}`).change((e) => {
-
+								$(`#o_select${i}`).change(function(e) {
 									let option = $(`#o_select${i}`);
 									// let option = $(`#o_select${i}`);
 									let option_value = $(`#o_select${i}`).val();
+
+									let change_place = $(`#o_select${i}`).parent().parent().children('.o_status');
+
+
+									const text = $(`#o_select${i} option`).eq($(`#o_select${i}`).val() - 1).text();
+
+									change_place.text(text)
 									// let option_td = option[i].parentElement;
 									// let option_st_td = option_td.previousElementSibling;
 									// let o_status_text = option_st_td.textContent;

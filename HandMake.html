@@ -34,7 +34,9 @@
       </div>
       <ol>
         <li><a href="./shopCart.html"><i class="fas fa-shopping-basket"></i></a></li>
-        <li><a href="./login.php"><i class="fas fa-user"></i></a></li>
+        <li><a href="./php/login.php"><i class="fas fa-user member_btn"></i></a></li>
+        <li><a href="./php/logout.php"><i class="fas fa-sign-out-alt"></i></a></li>
+
       </ol>
       <div class="ham">
         <span></span>
@@ -50,7 +52,7 @@
     <!-- 麵包屑在這 -->
     <article>
       <div class="bread">
-        <a href="./main.html">首頁</a> > <a href="./HandMake.html">手作課程</a>
+        <a href="./main.html">首頁</a> > <a ref="./HandMake.html">手作課程</a>
       </div>
     </article>
     <!-- article 的內容的安全範圍(1200px)，每個區塊都用一個article包起來 -->
@@ -84,8 +86,8 @@
               </div>
             </div>
             <div class="handmake_left_text ex20px ">
-              <h1>尚於<span>{{nowPeople}}</span>人可報名</h1>
-              <h1>課程費用<span>${{info.handClassPrice}}</span>/人</h1>
+              <h1>尚於<span></span>人可報名</h1>
+              <h1>課程費用<span>$2800</span>/人</h1>
             </div>
             <!-- 黃色bubble按鈕 start -->
             <div class="bubble_btnn SignUp ">
@@ -136,8 +138,8 @@
               </div>
             </div>
             <div class='handmake_left_text handmark_text_RWD ex20px'>
-              <h1>尚於<span>{{nowPeople}}</span>人可報名</h1>
-              <h1>課程費用<span>${{info.handClassPrice}}</span>/人</h1>
+              <h1>尚於<span>{{info.handClassPeople}}</span>人可報名</h1>
+              <h1>課程費用<span>$2800</span>/人</h1>
             </div>
             <div class="bubble_btnn SignUp_RWD ">
               <svg xmlns="http://www.w3.org/2000/svg " version="1.1 " class="goo ">
@@ -250,6 +252,7 @@
     new Vue({
       el: '#appHD',
       data: {
+        hand_data: [],
         classPeople: 1,
         selectDate: '',
         info: {
@@ -260,31 +263,19 @@
           handClassPeople: 0,
           handClassPrice: 0,
           handClassNowPeople: 0,
-          handClassName: '',
+          handClassName: ''
+
         },
         handClassIndex: 0,
       },
       computed: {
         dateArray() {
           return this.info.handClassDate.split(',');
-        },
-        className() {
-          return this.info.handClassName.split(',');
-        },
-        CanApplyPeople() {
-          // return;
-          // console.log(this.info.handClassPeople);
-          console.log(this.info.handClassName);
-          return;
-        },
-        nowPeople() {
-          let people = (this.info.handClassPeople - this.info.handClassNowPeople);
-          return people;
-        },
-
+        }
       },
       mounted() {
         this.getHandClass(1);
+
       },
       methods: {
         getHandClass(classNo) {
@@ -302,10 +293,10 @@
             this.info = res;
             this.selectDate = this.dateArray[0];
             this.handClassIndex = this.info.handClassNO;
-            this.handClassNowPeople = this.info.handClassNowPeople;
-            this.handClassPeople = this.info.handClassPeople;
             this.handClassName = this.info.handClassName;
+            this.handClassPrice = this.info.handClassPrice
           });
+          console.log(res)
         },
         minusPeople() {
           this.classPeople = (this.classPeople - 1) <= 0 ? 1 : this.classPeople - 1;
@@ -331,7 +322,11 @@
           }
           this.classPeople = value;
         },
+        // CanApplyPeople() {
 
+        //   // return;
+        //   console.log(this.info.handClassPeople);
+        // },
         applyHdclass() {
           const data = {
             handClassNO: this.info.handClassNO,
@@ -341,7 +336,8 @@
             handClassName: this.handClassName,
             // handClassNowPeople: this.handClassNowPeople,
           }
-          localStorage.setItem('handClass_apply', JSON.stringify(data));
+          this.hand_data.push(data)
+          localStorage.setItem('handClass_apply', JSON.stringify(this.hand_data));
 
           window.location.href = './shopCart.html';
         },

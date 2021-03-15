@@ -41,4 +41,18 @@ document.addEventListener("DOMContentLoaded", function () {
       this.value += "/";
     }
   });
+
+  // let shop_cart_confirm = document.getElementsByClassName("cofirm")[0];
+  // let shopcart_card = document.getElementsByClassName("shopCart_card");
+
+  // shop_cart_confirm.addEventListener("click", function (e) {
+  //   for (let i = 0; i <= shopcart_card.length; i++) {
+  //     if (shopcart_card[i].value == "") {
+  //       alert("信用卡號不能為空值");
+  //       this.shopCart_card[i].focus();
+  //       e.preventDefault();
+  //     }
+  //   }
+
+  // });
 });
