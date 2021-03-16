@@ -59,59 +59,79 @@ $sql = "INSERT INTO SUCCULENTS_PLANT.ORDER
 foreach($pro_data as $index => $item):
     $pro_id = $item->pro_id; //產品ID
     $pro_count =$item->pro_count; //產品數量
+    $pro_card = $item->pro_cardcustom;//有無卡片
 
-    print_r($item);
-    $pro_card = false;
-    if(isset($item->pro_cardcustom)){
-        $pro_card = $item->pro_cardcustom;//有無卡片
-    }
+    // print_r($item);
+    // $pro_card = false;
+    // if(isset($item->pro_cardcustom)){
+    //     $pro_card = $item->pro_cardcustom;//有無卡片
+    // }
     
     //------ 
     if($pro_card == true):
         $pro_cardReceivePeople = $item->pro_cardReceivePeople; //卡片收禮人
         $pro_cardSendText = $item->pro_cardSendText; //卡片內容
         $pro_cardSendPeople = $item->pro_cardSendPeople;//卡片送禮人
-        $sql = "INSERT INTO SUCCULENTS_PLANT.ORDER_DETAIL,SUCCULENTS_PLANT.CARD
-        (FK_ORDER_DETAIL_productNO, number, cardReceivePople, cardContentText, cardSendPople ) 
-        VALUES (  ?,  ?,  ?,  ?,  ? )
-        where FK_ORDER_DETAIL_orderNO = ?";
-    
-  $statement = $Util->getPDO()->prepare($sql);
 
+        // ,SUCCULENTS_PLANT.CARD
+        // , cardReceivePople, cardContentText, cardSendPople
+        $sql = "INSERT INTO SUCCULENTS_PLANT.ORDER_DETAIL
+        (FK_ORDER_DETAIL_orderNO,orderCard,FK_ORDER_DETAIL_productNO, number ) 
+        VALUES (  ?, 1,  ?,  ?)
+        -- where FK_ORDER_DETAIL_orderNO = ? ";
     
-      $statement->bindValue(1, $pro_id);
-      $statement->bindValue(2, $pro_count);
-      $statement->bindValue(3, $pro_cardReceivePeople);
-      $statement->bindValue(4, $pro_cardSendText);
-      $statement->bindValue(5, $pro_cardSendPeople);
-      $statement->bindValue(6, $orderNO); 
-      $statement->execute();
+        $statement = $Util->getPDO()->prepare($sql);
+
+        $statement->bindValue(1, $orderNO); 
+        $statement->bindValue(2, $pro_id);
+        $statement->bindValue(3, $pro_count);
+    //   $statement->bindValue(4, $pro_cardReceivePeople);
+    //   $statement->bindValue(5, $pro_cardSendText);
+    //   $statement->bindValue(6, $pro_cardSendPeople);
+
+    //   $statement->bindValue(7, $memberNO);
+    //   $statement->bindValue(8, $pro_id);
+        $statement->execute();
     
+        $sql = "INSERT INTO SUCCULENTS_PLANT.CARD
+        (cardReceivePople, cardContentText, cardSendPople,FK_CARD_memberNO,FK_CARD_productNO) 
+        VALUES (  ?, ?,  ?,  ?, ?)";
+        $statement = $Util->getPDO()->prepare($sql);
+        $statement->bindValue(1, $pro_cardReceivePeople); 
+        $statement->bindValue(2, $pro_cardSendText);
+        $statement->bindValue(3, $pro_cardSendPeople);
+        $statement->bindValue(4, $memberNO);
+        $statement->bindValue(5, $pro_id);
+        $statement->execute();
+
+
+
+
     else:
-
-
         $sql2 = "INSERT INTO SUCCULENTS_PLANT.ORDER_DETAIL
-        (FK_ORDER_DETAIL_productNO) 
-        VALUES (:pro_id)
-        where FK_ORDER_DETAIL_orderNO = :orderNo";
+        (FK_ORDER_DETAIL_orderNO,orderCard,FK_ORDER_DETAIL_productNO,number) 
+        VALUES (?, 0, ?, ?)
+        -- from SUCCULENTS_PLANT.ORDER
+        -- where FK_ORDER_DETAIL_orderNO = :orderNo";
     // number
     // pro_count
     // $statement = $Util->getPDO()->prepare($sql);
     echo $pro_id.PHP_EOL;
     echo $orderNO .PHP_EOL;
-    echo $pro_id.PHP_EOL;
-    $input2 = array(
-        ':pro_id'=>$pro_id,
-        // ':pro_count'=>$pro_count,
-        ':orderNO'=>$orderNO
-    );
-    $statement2 = $Util->getPDO()->prepare($sql2);
-    
-    // $statement->bindValue(1, $pro_id);
-    // $statement->bindValue(2, $pro_count);
+    echo $pro_count.PHP_EOL;
+    // $input2 = array(
+    //     ':orderNO'=>$orderNO,
+    //     ':pro_id'=>$pro_id,
+    //     ':pro_count'=>$pro_count,
+    // );
+    $statement = $Util->getPDO()->prepare($sql2);
+    $statement->bindValue(1, $orderNO); 
+    $statement->bindValue(2, $pro_id);
+    $statement->bindValue(3, $pro_count);
     // // echo $orderNO;
-    // $statement->bindValue(3, $orderNO); 
-    $statement2->execute($input2);
+    // $statement2->execute($input2);
+    $statement->execute();
+
     
     endif;
 endforeach;
