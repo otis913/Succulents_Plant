@@ -193,7 +193,7 @@
 								</label>
 							</div>
 
-							<form id="validationForm" method="POST" action="./php/update.php">
+							<form id="validationForm" method="POST" action="./update.php">
 								<div class="mem_wrp">
 									<label for="">姓名：</label>
 									<input type="text" value="<?php echo $row['memberName'] ?> " disabled>

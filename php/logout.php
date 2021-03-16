@@ -55,7 +55,7 @@ if (!empty($session)) {
         <div class="header_bg">
             <div class="headers">
                 <div class="navs">
-                    <a href="./main.html"><img src="img/logo.png" alt=""></a>
+                    <a href="./main.html"><img src="../img/logo.png" alt=""></a>
                     <ul>
                         <li><a href="./shop.html">商品專區</a></li>
                         <li><a href="./custom.html">客製多肉</a></li>
@@ -85,11 +85,11 @@ if (!empty($session)) {
         <section class="full_wrapper  ">
 
             <!-- 麵包屑在這 -->
-            <article class="articlebread  ">
+            <!-- <article class="articlebread  ">
                 <div class="bread">
                     <a href="">首頁<a> > <a href="">部落格</a> > <a>部落格版型02</a>
                 </div>
-            </article>
+            </article> -->
 
             <!-- article 的內容的安全範圍(1200px)，每個區塊都用一個article包起來 -->
             <div class="Signin_bg  ">
