@@ -580,6 +580,12 @@ table {
   font-size: 22px;
 }
 
+@media (max-width: 990px) {
+  .headers ol {
+    width: 120px;
+  }
+}
+
 .headers ol li {
   display: flex;
   cursor: pointer;
@@ -6206,6 +6212,10 @@ article .blogall_ul a {
 .mem_wrp .long {
   width: 230px;
   max-width: 300px;
+}
+
+.save {
+  display: none;
 }
 
 .mem_order {

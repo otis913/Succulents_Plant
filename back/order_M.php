@@ -102,13 +102,15 @@ include('./loginCheck.php');
 									let option = $(`#o_select${i}`);
 									// let option = $(`#o_select${i}`);
 									let option_value = $(`#o_select${i}`).val();
+									console.log(option_value);
 
 									let change_place = $(`#o_select${i}`).parent().parent().children('.o_status');
+									console.log(option);
 
 
 									const text = $(`#o_select${i} option`).eq($(`#o_select${i}`).val() - 1).text();
 
-									change_place.text(text)
+									// change_place.text(text);
 									// let option_td = option[i].parentElement;
 									// let option_st_td = option_td.previousElementSibling;
 									// let o_status_text = option_st_td.textContent;

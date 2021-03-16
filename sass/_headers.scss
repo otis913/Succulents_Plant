@@ -125,6 +125,9 @@
   display: flex;
   justify-content: space-between;
   width: 70px;
+  @include pad {
+    width: 120px;
+  }
   font-size: 22px;
   li {
     display: flex;
