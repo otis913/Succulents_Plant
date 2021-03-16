@@ -277,7 +277,7 @@ $row4 = $result4->fetch_assoc();
 
 										<li class="mem_status">
 											<div class="tit">訂單狀態</div>
-											<span name="orderStatus"><?php echo $status ?></span>
+											<span name="orderStatus">訂單處理中</span>
 										</li>
 
 									</ul>
@@ -290,9 +290,43 @@ $row4 = $result4->fetch_assoc();
 
 									<div class="order_list_wrapper">
 										<ol>
-											<li>商品名稱</li>
-											<li>數量</li>
-											<li>價格</li>
+											<li>商品名稱
+											<span>
+												<?php
+												echo '<br>';  
+				                                 $sql_productname = 'Select o.*,d.*,p.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `product` p on d.FK_ORDER_DETAIL_productNO = p.productNO where FK_ORDER_memberNO =' . $memberNO;
+												 $result = $conn->query( $sql_productname);
+												 $rowProductname =  $result->fetch_assoc();
+												 echo  $rowProductname['productName'];
+												
+												?>
+											</span>
+											</li>
+											<li>數量
+										    <span>
+											<?php
+												echo '<br>';  
+				                                 $sql_productname = 'Select o.*,d.*,p.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `product` p on d.FK_ORDER_DETAIL_productNO = p.productNO where FK_ORDER_memberNO =' . $memberNO;
+												 $result = $conn->query( $sql_productname);
+												 $rowProductname =  $result->fetch_assoc();
+												 echo  $rowProductname['number'];
+												
+												?>
+											</span>
+											</li>
+											<li>價格
+											<span>
+											<?php
+												echo '<br>';  
+				                                 $sql_productname = 'Select o.*,d.*,p.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `product` p on d.FK_ORDER_DETAIL_productNO = p.productNO where FK_ORDER_memberNO =' . $memberNO;
+												 $result = $conn->query( $sql_productname);
+												 $rowProductname =  $result->fetch_assoc();
+												 echo  $rowProductname['productPrice'];
+												
+												?>
+											</span>
+
+											</li>
 											<!-- <li>評價</li> -->
 										</ol>
 										<?php
@@ -301,95 +335,13 @@ $row4 = $result4->fetch_assoc();
 										?>
 										<!-- 賀卡訂製 -->
 										<ul class="mem_order_list">
-											<li class="pro_list">
-												<div class="list_column">
-													<img src="../img/PeopleAvatars.png" alt="">
-													<div class="pro_item">
-														<span>
-															<?php
-															$memberNO = $_SESSION["memberNO"];
-															$sql_product = 'Select o.*,d.*,p.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `product` p on d.FK_ORDER_DETAIL_productNO = p.productNO where FK_ORDER_memberNO =' . $memberNO;
-															$result = $conn->query($sql_product);
-															$row_product = $result->fetch_assoc();
-															echo $row_product['productName'];
-															?>
-														</span>
-														<span>賀卡訂製</span>
-														<dl>
-															<dt>收禮人：<span><?php echo $row4['cardReceivePople'] ?></span> </dt>
-															<dt>賀詞內容：<span><?php echo $row4['cardContentText'] ?></span> </dt>
-															<dt>送禮人：<span><?php echo $row4['cardSendPople'] ?></dd> </span>
-															<dt>賀卡樣式：<span>A.春意盎然</span> </dt>
-														</dl>
-													</div>
-												</div>
-												<span>1</span>
-												<span class="productPrice"><?php echo $row_product['productPrice'] ?></span>
-											</li>
+
 										</ul>
+										
 										<!-- 手作課程 -->
 
 										<ul class="mem_order_list">
-											<li class="pro_list">
-												<div class="list_column">
-													<img src="../img/PeopleAvatars.png" alt="">
-													<div class="pro_item">
-														<span>
-															<?php
-															$memberNO = $_SESSION["memberNO"];
-															$sql_class = 'Select o.*,d.*,h.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `HANDCLASS` h on d.FK_ORDER_DETAIL_handClassNO = h.handClassNO where FK_ORDER_memberNO = ' . $memberNO;
-															$result_class = $conn->query($sql_class);
-															if ($result_class) {
-																while ($row_class = $result_class->fetch_assoc()) {
-																	echo   $row_class['handClassName'];
-																}
-															} else {
-																echo 'error=' . $conn->error;
-															}
 
-															?>
-														</span>
-
-														<span>課程日期：
-															<?php
-															$memberNO = $_SESSION["memberNO"];
-															$sql_class = 'Select o.*,d.*,h.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `HANDCLASS` h on d.FK_ORDER_DETAIL_handClassNO = h.handClassNO where FK_ORDER_memberNO = ' . $memberNO;
-															$result_class = $conn->query($sql_class);
-															if ($result_class) {
-																while ($row_class = $result_class->fetch_assoc()) {
-																	echo   $row_class['handClassDate'];
-																}
-															} else {
-																echo 'error=' . $conn->error;
-															}
-
-															?>
-
-
-														</span>
-													</div>
-												</div>
-												<span>1</span>
-												<span class="handClassPrice">
-
-													<?php
-													$memberNO = $_SESSION["memberNO"];
-													$sql_class = 'Select o.*,d.*,h.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `HANDCLASS` h on d.FK_ORDER_DETAIL_handClassNO = h.handClassNO where FK_ORDER_memberNO = ' . $memberNO;
-													$result_class = $conn->query($sql_class);
-													if ($result_class) {
-														while ($row_class = $result_class->fetch_assoc()) {
-															echo   $row_class['handClassPrice'];
-														}
-													} else {
-														echo 'error=' . $conn->error;
-													}
-
-
-													?>
-
-												</span>
-												<!-- <span><i class="fas fa-star"></i></span> -->
-											</li>
 										</ul>
 									</div>
 
@@ -401,7 +353,7 @@ $row4 = $result4->fetch_assoc();
 						</div>
 
 					</div>
-				<?php } else { ?> <div class="center_wrapper">
+				<?php } else {  ?> <div class="center_wrapper">
 						<h1>訂單查詢</h1>
 						<div class="center_contain">
 							<!-- 情況1 -->
