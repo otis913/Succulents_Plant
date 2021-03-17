@@ -1,51 +1,59 @@
-$(document).ready(function () {
-  $(".mem_open").click(function () {
+$(document).ready(function() {
+  $(".mem_open").click(function() {
+
     $(".order_list_wrapper").slideToggle(1000);
   });
+  // $(`full_wrapper`).on("click", ".mem_open", function(e) {
+  //   console.log("123")
+  //     // e.preventDefault();
+  //     // if ($(this).hasClass("-mem_open")) {
+  //     //   // $(this).find(".order_list_wrapper").slideToggle(1000);
+  //     // }
+  // });
 
   //選單點擊
-  $(".mem_btn li").click(function () {
+  $(".mem_btn li").click(function() {
     $(".mem_btn li").not(this).removeClass("-mem_this");
     $(this).addClass("-mem_this");
   });
 
-  $(".mem_btn li:nth-child(1)").click(function () {
+  $(".mem_btn li:nth-child(1)").click(function() {
     $(".mem_main .center_wrapper").not(this).removeClass("-mem_show");
     $(".mem_main .center_wrapper:nth-child(1)").addClass("-mem_show");
   });
 
-  $(".mem_btn li:nth-child(2)").click(function () {
+  $(".mem_btn li:nth-child(2)").click(function() {
     $(".mem_main .center_wrapper").not(this).removeClass("-mem_show");
     $(".mem_main .center_wrapper:nth-child(2)").addClass("-mem_show");
   });
 
-  $(".mem_btn li:nth-child(3)").click(function () {
+  $(".mem_btn li:nth-child(3)").click(function() {
     $(".mem_main .center_wrapper").not(this).removeClass("-mem_show");
     $(".mem_main .center_wrapper:nth-child(3)").addClass("-mem_show");
   });
 
-  $(".mem_btn li:nth-child(4)").click(function () {
+  $(".mem_btn li:nth-child(4)").click(function() {
     $(".mem_main .center_wrapper").not(this).removeClass("-mem_show");
     $(".mem_main .center_wrapper:nth-child(4)").addClass("-mem_show");
   });
 
-  $(".mem_btn li").click(function () {
+  $(".mem_btn li").click(function() {
     $(".mem_btn li").not(this).removeClass("-mem_this");
     $(this).addClass("-mem_this");
   });
 
   //點擊評價出現評價視窗
-  $(".pro_list span i").click(function () {
+  $(".pro_list span i").click(function() {
     $(".lightbox_wrapper").show();
   });
 
   //評價星星變色
-  $(".mem_star i").click(function () {
+  $(".mem_star i").click(function() {
     $(this).toggleClass("-this_star");
   });
 
   //點x關閉評價視窗
-  $(".mem_star_wrapper>i").click(function () {
+  $(".mem_star_wrapper>i").click(function() {
     $(".lightbox_wrapper").hide();
   });
 
@@ -61,23 +69,24 @@ $(document).ready(function () {
     }
     let txt1 = document.querySelectorAll(".TetstText")[0];
     txt1.addEventListener("keydown", (e) => {
-      if (e.keyCode == 13) {
-        document.querySelectorAll(".TetstText")[0].disabled = true;
-        document.querySelectorAll(".TetstText")[0].style.background = "white";
-        document.querySelectorAll(".TetstText")[0].style.color = " #2f4f4f";
-        var pass = document.querySelector(".pass").value.trim();
-        var reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,10}$/;
-        //  正規表示式驗證密碼包含數字字母6到10位
-        if (!reg.test(pass)) {
-          // alert('手機號碼輸入有誤！');
-          judge.classList.remove("correct");
-          error.innerHTML = "密碼輸入格式有誤！";
-        } else {
-          // alert('手機號碼輸入正確！');
-          judge.classList.add("correct");
-          correct.innerHTML = "密碼輸入格式正確！";
-        }
+
+      document.querySelectorAll(".TetstText")[0].disabled = true;
+      document.querySelectorAll(".TetstText")[0].style.background = "white";
+      document.querySelectorAll(".TetstText")[0].style.color = " #2f4f4f";
+      var pass = document.querySelector(".pass").value.trim();
+      var reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,10}$/;
+      console.log(!reg.test(pass));
+      //  正規表示式驗證密碼包含數字字母6到10位
+      if (!reg.test(pass)) {
+        // alert('手機號碼輸入有誤！');
+        judge.classList.remove("correct");
+        error.innerHTML = "密碼輸入格式有誤！";
+      } else {
+        // alert('手機號碼輸入正確！');
+        judge.classList.add("correct");
+        correct.innerHTML = "密碼輸入格式正確！";
       }
+
     });
   };
   ChangeDisabledPhone = (value) => {
@@ -91,24 +100,24 @@ $(document).ready(function () {
     }
     let txt2 = document.querySelectorAll(".TetstText")[1];
     txt2.addEventListener("keydown", (e) => {
-      if (e.keyCode == 13) {
-        document.querySelectorAll(".TetstText")[1].disabled = true;
-        document.querySelectorAll(".TetstText")[1].style.background = "white";
-        document.querySelectorAll(".TetstText")[1].style.color = " #2f4f4f";
-        // 手機驗證
-        var reg = /^09\d{2}-?\d{3}-?\d{3}$/;
-        var phone = document.querySelector("#phone").value.trim();
-        console.log(phone);
-        if (!reg.test(phone)) {
-          // alert('手機號碼輸入有誤！');
-          judge.classList.remove("correct");
-          error.innerHTML = "手機號碼輸入有誤！";
-        } else {
-          // alert('手機號碼輸入正確！');
-          judge.classList.add("correct");
-          correct.innerHTML = "手機號碼輸入正確！";
-        }
+
+      document.querySelectorAll(".TetstText")[1].disabled = true;
+      document.querySelectorAll(".TetstText")[1].style.background = "white";
+      document.querySelectorAll(".TetstText")[1].style.color = " #2f4f4f";
+      // 手機驗證
+      var isPhone = /^09[0-9]{8}$/;
+      var phone = document.querySelector("#phone").value.trim();
+      console.log(phone);
+      if (!isPhone.test(phone)) {
+        // alert('手機號碼輸入有誤！');
+        judge.classList.remove("correct");
+        error.innerHTML = "手機號碼輸入有誤！";
+      } else {
+        // alert('手機號碼輸入正確！');
+        judge.classList.add("correct");
+        correct.innerHTML = "手機號碼輸入正確！";
       }
+
     });
   };
   ChangeDisabledAdd = (value) => {
@@ -122,11 +131,11 @@ $(document).ready(function () {
     }
     let txt3 = document.querySelectorAll(".TetstText")[2];
     txt3.addEventListener("keydown", (e) => {
-      if (e.which == 13) {
-        document.querySelectorAll(".TetstText")[2].disabled = true;
-        document.querySelectorAll(".TetstText")[2].style.background = "white";
-        document.querySelectorAll(".TetstText")[2].style.color = " #2f4f4f";
-      }
+
+      document.querySelectorAll(".TetstText")[2].disabled = true;
+      document.querySelectorAll(".TetstText")[2].style.background = "white";
+      document.querySelectorAll(".TetstText")[2].style.color = " #2f4f4f";
+
     });
   };
   // 會員資料再度更新表單驗證
