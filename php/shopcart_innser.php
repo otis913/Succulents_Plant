@@ -68,7 +68,7 @@ $n_handClassDate =strval($handClassDate);
 
 $sql2 = "INSERT INTO SUCCULENTS_PLANT.ORDER_DETAIL
         (FK_ORDER_DETAIL_orderNO, `number` , orderCard, 
-        handClassName,  handClassDate, `NOWpeople` ) 
+        handClassName,  handClassDate, `HDNO` ) 
         VALUES (  ?,  ?,  0,  ?,  ? ,?)";
         // -- select  FROM HANDCLASS where ;
 //   echo strtotime($handclassDate).PHP_EOL;
@@ -211,6 +211,3 @@ else:
 
 endif;
 endforeach;
-
-?>
-

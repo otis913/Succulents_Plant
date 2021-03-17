@@ -2075,7 +2075,7 @@ article .-heart {
   background-image: url(../img/shop/product_kv1.png);
   background-size: cover;
   background-position: center;
-  height: 65vh;
+  height: 70vh;
   background-repeat: no-repeat;
 }
 
@@ -2303,6 +2303,7 @@ article .pro_bread {
 .shop_card {
   width: 33.33%;
   padding: 20px;
+  margin-bottom: 70px;
 }
 
 @media (max-width: 768px) {
@@ -2348,7 +2349,7 @@ article .pro_bread {
 }
 
 .shop_card_price {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .shop_card_take {
@@ -6249,12 +6250,16 @@ article .blogall_ul a {
   justify-content: space-evenly;
   width: 100%;
   max-width: 800px;
+  flex-direction: column;
 }
 
-@media (max-width: 990px) {
-  .center_contain {
-    flex-direction: column;
-  }
+.center_contain2 {
+  display: flex;
+  margin: 0 auto;
+  padding: 30px 0;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 800px;
 }
 
 .mem_wrapper form {

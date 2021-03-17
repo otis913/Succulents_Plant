@@ -62,9 +62,19 @@
   justify-content: space-evenly;
   width: 100%;
   max-width: 800px;
+  flex-direction: column;
   @include pad {
-    flex-direction: column;
+    // flex-direction: column;
   }
+}
+
+.center_contain2 {
+  display: flex;
+  margin: 0 auto;
+  padding: 30px 0;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 800px;
 }
 
 .mem_wrapper form {
