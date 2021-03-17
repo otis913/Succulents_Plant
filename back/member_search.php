@@ -6,7 +6,7 @@ $memberName = $_POST["search_text"];
 $sql = 'SELECT *
             FROM 
             SUCCULENTS_PLANT.MEMBER
-            where memberName like ?';
+            where memberNO = 1 && memberName like ?';
 //執行
 $statement = $pdo->prepare($sql);
 //給值    

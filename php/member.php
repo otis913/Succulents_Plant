@@ -241,30 +241,27 @@ $row4 = $result4->fetch_assoc();
 				$sql_product = 'Select o.*,d.*,p.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `product` p on d.FK_ORDER_DETAIL_productNO = p.productNO where FK_ORDER_memberNO =' . $memberNO;
 				$result = $conn->query($sql_product);
 				// $row_product = $result->fetch_assoc();
-				// while ($row_product = $result->fetch_assoc()) {
-				// echo $row_product['orderNO']   
+				while ($row_product = $result->fetch_assoc()) {
+					// echo $row_product['orderNO']   
 				?>
-				<div class="center_wrapper">
-					<h1>訂單查詢</h1>
-					<div class="center_contain">
-						<!-- 情況1 -->
-						<!-- <p>您現在還沒有訂單喔！</p> -->
-						<?php
-						while ($row_product = $result->fetch_assoc()) {
+					<div class="center_wrapper">
+						<h1>訂單查詢</h1>
+						<div class="center_contain">
+							<!-- 情況1 -->
+							<!-- <p>您現在還沒有訂單喔！</p> -->
 
-						?>
 							<!-- 情況2 訂單進來了 -->
 							<div class="mem_order">
 								<form action="./update.php" method="POST">
 									<ul class="mem_order_top">
 										<li class="mem_time">
 											<div class="tit">訂單時間</div>
-											<span name="orderTime"><?php echo $row_product['orderDate'] ?></span>
+											<span name="orderTime"><?php echo $row2['orderDate'] ?></span>
 										</li>
 
 										<li class="mem_no">
 											<div class="tit">訂單編號</div>
-											<span name="orderNo"><?php echo $row_product['orderNO'] ?></span>
+											<span name="orderNo"><?php echo $row2['orderNO'] ?></span>
 										</li>
 
 										<li class="mem_pay">
@@ -274,7 +271,7 @@ $row4 = $result4->fetch_assoc();
 
 										<li class="mem_totle">
 											<div class="tit">訂單金額</div>
-											<span class="orderMoney" name="orderMoney"><?php echo $row_product['orderTotal'] ?></span>
+											<span class="orderMoney" name="orderMoney"><?php echo $row2['orderTotal'] ?></span>
 										</li>
 
 										<li class="mem_status">
@@ -319,6 +316,9 @@ $row4 = $result4->fetch_assoc();
 														echo  $rowProductname['number'];
 														echo '<br>';
 													}
+
+
+
 													?>
 												</span>
 											</li>
@@ -347,131 +347,128 @@ $row4 = $result4->fetch_assoc();
 
 										<ul class="mem_order_list">
 
-											<!-- </ul> -->
-											<!-- </div> -->
-
-											<!-- </form> -->
-										</ul>
-									</div>
-								</form>
-							</div>
-
-						<?php break;
-						} ?>
-
-						<!-- 情況2結束 訂單進來了 -->
-
-
-					</div>
-
-					<!-- ====== -->
-					<div class="center_wrapper">
-						<h1>訂單查詢</h1>
-						<div class="center_contain">
-							<!-- 情況1 -->
-							<!-- <p>您現在還沒有訂單喔！</p> -->
-
-							<!-- 情況2 訂單進來了 -->
-							<div class="mem_order">
-								<form action="./update.php" method="POST">
-
-									<ul class="mem_order_top">
-										<li class="mem_time">
-											<div class="tit">訂單時間</div>
-											<span name="orderTime"></span>
-										</li>
-
-										<li class="mem_no">
-											<div class="tit">訂單編號</div>
-											<span name="orderNo"></span>
-										</li>
-
-										<li class="mem_pay">
-											<div class="tit">付款方式</div>
-											<span name="orderMethods"></span>
-										</li>
-
-										<li class="mem_totle">
-											<div class="tit">訂單金額</div>
-											<!-- <span class="orderMoney" name="orderMoney"></span> -->
-										</li>
-
-										<li class="mem_status">
-											<div class="tit">訂單狀態</div>
-											<span name="orderStatus">目前尚無訂單</span>
-										</li>
-
-									</ul>
-
-								</form>
-
-
-								<div class="mem_open">訂單明細 <i class="fas fa-plus"></i></div>
-								<form action="">
-
-									<div class="order_list_wrapper">
-
-										<!-- 賀卡訂製 -->
-										<ul class="mem_order_list">
-											<li class="pro_list">
-												<div class="list_column">
-
-													<div class="pro_item">
-														<span>
-
-														</span>
-
-													</div>
-												</div>
-
-												<span class="productPrice"></span>
-											</li>
-										</ul>
-										<!-- 手作課程 -->
-
-										<ul class="mem_order_list">
-											<li class="pro_list">
-												<div class="list_column">
-													<div class="pro_item">
-														<span>
-
-														</span>
-
-														<span>
-
-														</span>
-													</div>
-												</div>
-
-												<span class="handClassPrice">
-
-
-
-												</span>
-												<!-- <span><i class="fas fa-star"></i></span> -->
-											</li>
 										</ul>
 									</div>
 
 								</form>
 
 							</div>
+
 							<!-- 情況2結束 訂單進來了 -->
 
 						</div>
 
 					</div>
 
-					<!-- 訂單查詢 -->
-					<!-- 我的收藏 -->
-					<!-- <div class="center_wrapper"> -->
-					<!-- <h1>我的收藏</h1> -->
-					<!-- <div class="center_contain"> -->
-					<!-- 情況1 -->
-					<!-- <p>現在還沒有任何收藏喔， <a href="custom.html" style="color:#d9a420; display: unset;">快前往商城</a>看看吧</p> -->
+					<!-- ====== -->
+				<?php } ?>
+				<div class="center_wrapper">
+					<h1>訂單查詢</h1>
+					<div class="center_contain">
+						<!-- 情況1 -->
+						<!-- <p>您現在還沒有訂單喔！</p> -->
 
-					<!-- 情況2 有收藏商品了 -->
-					<!-- <ul class="mem_love">
+						<!-- 情況2 訂單進來了 -->
+						<div class="mem_order">
+							<form action="./update.php" method="POST">
+
+								<ul class="mem_order_top">
+									<li class="mem_time">
+										<div class="tit">訂單時間</div>
+										<span name="orderTime"></span>
+									</li>
+
+									<li class="mem_no">
+										<div class="tit">訂單編號</div>
+										<span name="orderNo"></span>
+									</li>
+
+									<li class="mem_pay">
+										<div class="tit">付款方式</div>
+										<span name="orderMethods"></span>
+									</li>
+
+									<li class="mem_totle">
+										<div class="tit">訂單金額</div>
+										<!-- <span class="orderMoney" name="orderMoney"></span> -->
+									</li>
+
+									<li class="mem_status">
+										<div class="tit">訂單狀態</div>
+										<span name="orderStatus">目前尚無訂單</span>
+									</li>
+
+								</ul>
+
+							</form>
+
+
+							<div class="mem_open">訂單明細 <i class="fas fa-plus"></i></div>
+							<form action="">
+
+								<div class="order_list_wrapper">
+
+									<!-- 賀卡訂製 -->
+									<ul class="mem_order_list">
+										<li class="pro_list">
+											<div class="list_column">
+
+												<div class="pro_item">
+													<span>
+
+													</span>
+
+												</div>
+											</div>
+
+											<span class="productPrice"></span>
+										</li>
+									</ul>
+									<!-- 手作課程 -->
+
+									<ul class="mem_order_list">
+										<li class="pro_list">
+											<div class="list_column">
+												<div class="pro_item">
+													<span>
+
+													</span>
+
+													<span>
+
+													</span>
+												</div>
+											</div>
+
+											<span class="handClassPrice">
+
+
+
+											</span>
+											<!-- <span><i class="fas fa-star"></i></span> -->
+										</li>
+									</ul>
+								</div>
+
+							</form>
+
+						</div>
+						<!-- 情況2結束 訂單進來了 -->
+
+					</div>
+
+				</div>
+
+				<!-- 訂單查詢 -->
+				<!-- 我的收藏 -->
+				<!-- <div class="center_wrapper"> -->
+				<!-- <h1>我的收藏</h1> -->
+				<!-- <div class="center_contain"> -->
+				<!-- 情況1 -->
+				<!-- <p>現在還沒有任何收藏喔， <a href="custom.html" style="color:#d9a420; display: unset;">快前往商城</a>看看吧</p> -->
+
+				<!-- 情況2 有收藏商品了 -->
+				<!-- <ul class="mem_love">
 							<li>
 								<img src="./img/product_1.png" alt="">
 								<p>黃金山脈 – 金晃丸盆栽</p>
@@ -519,64 +516,64 @@ $row4 = $result4->fetch_assoc();
 						</ul>
 					</div>
 				</div> -->
-					<!-- 我的收藏結束 -->
+				<!-- 我的收藏結束 -->
 
-					<!-- 我有問題 -->
-					<div class="center_wrapper nobg">
-						<div class="mem_qa">
-							<input type="text" placeholder="輸入問題 ...">
-							<input type="submit" value="新增問題" class="mem_qanew">
-						</div>
-						<div class="mem_answer_all">
-							<div class="mem_answer">
-								<div class="mem_qs_wrapper ">
-									<!-- <img src="img/PeopleAvatars.png" alt=""> -->
-									<div class="mem_qs_box">
-										<p>消費者問問題</p>
-										<time class="mem_push">2021/1/30 13:30</time>
-									</div>
+				<!-- 我有問題 -->
+				<div class="center_wrapper nobg">
+					<div class="mem_qa">
+						<input type="text" placeholder="輸入問題 ...">
+						<input type="submit" value="新增問題" class="mem_qanew">
+					</div>
+					<div class="mem_answer_all">
+						<div class="mem_answer">
+							<div class="mem_qs_wrapper ">
+								<!-- <img src="img/PeopleAvatars.png" alt=""> -->
+								<div class="mem_qs_box">
+									<p>消費者問問題</p>
+									<time class="mem_push">2021/1/30 13:30</time>
 								</div>
-
-								<div class="line_down"></div>
-
-								<!-- 對話區塊 -->
-								<div class="mem_talk">
-									<div class="mem_ans_wrapper ">
-										<img src="../img/member/1.png" alt="">
-										<div class="mem_ans_box">
-											<p>我是客服</p>
-											<time>2021/1/30 13:32</time>
-										</div>
-									</div>
-
-									<div class="mem_ans_wrapper ">
-										<img src="../img/member/2.png" alt="">
-										<div class="mem_ans_box">
-											<p>我是消費者</p>
-											<time>2021/1/30 13:35</time>
-										</div>
-									</div>
-
-									<div class="mem_ans_wrapper ">
-										<img src="../img/member/1.png" alt="">
-										<div class="mem_ans_box">
-											<p>我是客服</p>
-											<time>2021/1/30 13:40</time>
-										</div>
-									</div>
-								</div>
-								<!-- 對話區塊結束 -->
-
-								<div class="mem_reply">
-									<input type="text" placeholder="輸入內容 ...">
-									<input type="submit" value="回覆問題" class="mem_qareplay">
-								</div>
-
 							</div>
+
+							<div class="line_down"></div>
+
+							<!-- 對話區塊 -->
+							<div class="mem_talk">
+								<div class="mem_ans_wrapper ">
+									<img src="../img/member/1.png" alt="">
+									<div class="mem_ans_box">
+										<p>我是客服</p>
+										<time>2021/1/30 13:32</time>
+									</div>
+								</div>
+
+								<div class="mem_ans_wrapper ">
+									<img src="../img/member/2.png" alt="">
+									<div class="mem_ans_box">
+										<p>我是消費者</p>
+										<time>2021/1/30 13:35</time>
+									</div>
+								</div>
+
+								<div class="mem_ans_wrapper ">
+									<img src="../img/member/1.png" alt="">
+									<div class="mem_ans_box">
+										<p>我是客服</p>
+										<time>2021/1/30 13:40</time>
+									</div>
+								</div>
+							</div>
+							<!-- 對話區塊結束 -->
+
+							<div class="mem_reply">
+								<input type="text" placeholder="輸入內容 ...">
+								<input type="submit" value="回覆問題" class="mem_qareplay">
+							</div>
+
 						</div>
 					</div>
-					<!-- 我有問題結束 -->
 				</div>
+				<!-- 我有問題結束 -->
+			</div>
 		</article>
 		<div class="ex"></div>
 		<div class="ex"></div>
