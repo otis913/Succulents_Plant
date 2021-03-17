@@ -57,7 +57,7 @@ include('./loginCheck.php');
               <tr>
                 <td>商品類別</td>
                 <td>
-                  <select class="productNew_type" name="productType" id="productType">
+                  <select class="productNew_type" name="productType">
                     <option value="0">請選擇</option>
                     <option value="1">景天科</option>
                     <option value="2">仙人掌科</option>

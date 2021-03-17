@@ -47,7 +47,7 @@ include('./loginCheck.php');
         <div class="knowledge_content">
           <h1>文章編輯</h1>
           <div class="bottom_line"></div>
-          <a class="inserBtn knowledge_inserBtn" href="./knowledge_creat.html">新增文章</a>
+          <a class="inserBtn knowledge_inserBtn" href="./knowledge_creat.php">新增文章</a>
           <div class="table_div table_div_knowEdit">
             <form method="post" action="./knowledge_edit_ajx.php" enctype="multipart/form-data">
               <?php
@@ -83,7 +83,7 @@ include('./loginCheck.php');
                     <td>文章外顯示圖片</td>
                     <td>
                       <input type="file" id="knowledgeOutPic" name="knowledgeOutPic" />
-                      <img src="./img/<?= $row['knowledgeOutPic'] ?>" alt="">
+                      <img src="../img/blogall/<?= $row['knowledgeOutPic'] ?>" alt="">
                     </td>
                   </tr>
                   <tr>
@@ -114,21 +114,21 @@ include('./loginCheck.php');
                     <td>圖片01</td>
                     <td>
                       <input type="file" id="article_pic01">
-                      <img src="./img/<?= $row["knowledgeContentPic01"] ?>" alt="">
+                      <img src="../img/blogall/<?= $row["knowledgeContentPic01"] ?>" alt="">
                     </td>
                   </tr>
                   <tr>
                     <td>圖片02</td>
                     <td>
                       <input type="file" id="article_pic02">
-                      <img src="./img/<?= $row["knowledgeContentPic02"] ?>" alt="">
+                      <img src="../img/blogall/<?= $row["knowledgeContentPic02"] ?>" alt="">
                     </td>
                   </tr>
                   <tr>
                     <td>圖片03</td>
                     <td>
                       <input type="file" id="article_pic03">
-                      <img src="./img/<?= $row["knowledgeContentPic03"] ?>" alt="">
+                      <img src="../img/blogall/<?= $row["knowledgeContentPic03"] ?>" alt="">
                     </td>
                   </tr>
 

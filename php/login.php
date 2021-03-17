@@ -130,32 +130,44 @@ if (getMemberID() == "") {
             <form class="Signin_reg" method="POST" action="./add.php">
               <ul class="registered_enter_text">
                 <li>姓名: <br>
-                  <input type="text" name="name">
+                  <input type="text" name="name" class="name" placeholder="請輸入姓名">
                 </li>
                 <li>帳號: <br>
-                  <input type="text" class="registered_ID" name="account">
+                  <input type="text" name="account" class="account" placeholder="xxx@gmail.com">
                 </li>
                 <li>設定密碼:<br>
-                  <input type="password" v-model="form_value.password.value" name="password">
+                  <input type="password" v-model="form_value.password.value" name="password" class="pwd" placeholder="請輸入四位數任意英文數字">
                   <span v-if="form_value.password.check === false">密碼錯誤</span>
                 </li>
                 <!-- <li>密碼確認: <br>
                                 <input type="password">
                             </li> -->
                 <li>地址: <br>
-                  <input type="text" name="address">
+                  <input type="text" name="address" class="address" placeholder="請輸入地址">
 
                 </li>
                 <li>電話: <br>
-                  <input type="text" name="phone">
+                  <input type="text" name="phone" class="phone" placeholder="09xxxxxxxx">
                 </li>
 
 
               </ul>
-              <input class="btn_yellow" type="submit" value="送出">
+              <input class="btn_yellow" type="submit" value="送出" onclick="return doSubmit();">
               <a href="#" @click="check_all()">註冊會員</a>
               </input>
-              <span class="error"></span>
+              <span class="error">
+                <?php
+                if (!empty($_GET['errorCode'])) {
+                  $msg = 'aaaa';
+                  if ($_GET['errorCode'] === '1') {
+                    $msg = '資料不齊全';
+                  } else if ($_GET['errorCode'] === '2') {
+                    $msg = '帳號已被註冊';
+                  }
+                  echo '<h2 class="error">' . $msg . '</h2>';
+                }
+                ?>
+              </span>
             </form>
           </div>
         </article>
@@ -244,6 +256,70 @@ if (getMemberID() == "") {
       //     input.attr("type", "password");
       //   }
       // });
+    </script>
+    <script type="text/javascript">
+      function doSubmit(e) {
+
+
+
+
+
+        var isPhone = /^09[0-9]{8}$/;
+        var isgmail = /^([A-Za-z0-9_\-\.])+\@(gmail.com)$/;
+        var ispwd = /^\d{4}$/;
+
+        // alert("account");
+        let name = document.getElementsByClassName("name")[0].value;
+        let account = document.getElementsByClassName("account")[0].value;
+        let pwd = document.getElementsByClassName("pwd")[0].value;
+        let address = document.getElementsByClassName("address")[0].value;
+        let phone = document.getElementsByClassName("phone")[0].value;
+
+        if (name == "") {
+          alert("請填寫姓名");
+          return false;
+        } else if (!isgmail.test(account)) {
+          alert("帳號格式錯誤");
+          return false;
+        } else if (!ispwd.test(pwd)) {
+          alert("密碼格式錯誤");
+          return false;
+        } else if (address == '') {
+          alert("請填寫[地址]");
+          return false;
+        } else if (!isPhone.test(phone)) {
+          alert("電話格式錯誤");
+          return false;
+        }
+
+
+        // var isPhone = /^([0-9]{3,4}-)?[0-9]{7,8}$/;
+        // var reg2 = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,10}$/;
+        // let phone = document.getElementsByClassName('phone')[0].value;
+        // let phone = document.getElementsByClassName('phone')[0].value;
+        // // alert(phone);
+        // let pwd = document.getElementsByClassName("registered_pwd").value.trim();
+        // let pwd_span = document.getElementsByClassName("regis_span_pwd")[0];
+        // let phone_span = document.getElementsByClassName("regis_span_cellphone")[0];
+
+        // alert(isPhone.test(phone));
+        // if (!isPhone.test(phone)) {
+        //     // alert('aaaa');
+        //     // alert('手機號碼輸入有誤！');
+        //     // phoneTxt.style.color = "red";
+        //     // phone_span.classList.add("-on");
+        //     alert("電話格式錯誤");
+        //     return false;
+        // }
+        // if (!reg2.test(pwd)) {
+        //     // alert('手機號碼輸入有誤！');
+        //     // phoneTxt.style.color = "red";
+        //     // pwd_span.classList.add("-on");
+        //     alert("密碼格式錯誤");
+        //     return false;
+        // }
+
+      }
     </script>
     <script>
       new Vue({
@@ -335,6 +411,8 @@ if (getMemberID() == "") {
       </script>";
 }
   ?>
+
+
   </body>
 
   </html>

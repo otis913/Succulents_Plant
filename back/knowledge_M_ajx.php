@@ -21,7 +21,7 @@ foreach ($data as $index => $row) {
       echo "<tr class='table-light'>
               <td>" . $row["knowledgeNO"] . "</td>";
       echo "<td>" . $row["knowledgeType"] . "</td>";
-      echo "<td>" . "<img src='./img/" . $row["knowledgeOutPic"] . " '> " . "</td>";
+      echo "<td>" . "<img src='../img/blogall/" . $row["knowledgeOutPic"] . " '> " . "</td>";
       echo "<td>" . $row["knowledgeTitle"] . "</td>";
       echo "<td>
               <a href='./knowledge_edit.php?PID=" . $row['knowledgeNO'] . "'>編輯</a>            

@@ -21,7 +21,6 @@ echo "<tr class='table-dark'>
             <th>訂單編號</th>
             <th>會員編號</th>
             <th>訂單日期</th> 
-            <th>付款方式</th>
             <th>訂單付款狀態</th>
             <th>訂單狀態</th>
             <th>修改訂單狀態</th>
@@ -36,17 +35,6 @@ foreach ($data as $index => $row) {
               <td class='orderNO'>" . $row["orderNO"] . "</td>";
     echo "<td>" . $row["FK_ORDER_memberNO"] . "</td>";
     echo "<td>" . $row["orderDate"] . "</td>";
-
-    $orderMethod = $row["orderMethod"];
-    switch ($orderMethod) {
-        case "1":
-            $orderMethod = "ATM匯款";
-            break;
-        case "2":
-            $orderMethod = "信用卡匯款";
-            break;
-    };
-    echo "<td>" . $orderMethod . "</td>";
 
     $orderPayStatus = $row["orderPayStatus"];
     switch ($orderPayStatus) {

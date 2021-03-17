@@ -26,9 +26,6 @@ foreach ($data as $index => $row) {
                   <td>" . $row["handClassNO"] . "</td>";
   echo "<td>" . $row["handClassName"] . "</td>";
   echo "<td>" . $row["handClassPrice"] . "</td>";
-  // echo "<td>
-  //                 <i class='fas fa-minus hand_hide'></i>" . "<i class='fas fa-plus hand_show'></i>
-  //                 </td>";
   echo "<td>" . $row['handClassPeople'] . "</td>";
   echo "<td>" . $row['handClassNowPeople'] . "</td>";
 

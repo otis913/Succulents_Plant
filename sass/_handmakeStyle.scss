@@ -180,6 +180,10 @@
       }
     }
     
+    .apply-hdclass {
+      outline: none;
+    }
+    
     .handmake_right {
       margin-left: 10px;
       color: map-get($color, "main_g");

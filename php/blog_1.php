@@ -35,15 +35,15 @@ foreach ($data as $index => $row) {
     </article>
     <article class='blog01'>
         <article class='blog_wrapper'>
-            <img src='./img/blog1/" . $row['knowledgeContentPic01'] . "'>
+            <img src='./img/blogall/" . $row['knowledgeContentPic01'] . "'>
             <p class='blog1_p'>" . $row['knowledgeContent01'] . "</p>
         </article>
         <article class='blog_wrapper'>
-            <img src='./img/blog1/" . $row['knowledgeContentPic02'] . "'>
+            <img src='./img/blogall/" . $row['knowledgeContentPic02'] . "'>
             <p class='blog1_p'>" . $row['knowledgeContent02'] . "</p>
         </article>
         <article class='blog_wrapper'>
-            <img src='./img/blog1/" . $row['knowledgeContentPic03'] . "'>
+            <img src='./img/blogall/" . $row['knowledgeContentPic03'] . "'>
             <p class='blog1_p'>" . $row['knowledgeContent03'] . "</p>
         </article>
         <div class='ex'></div>

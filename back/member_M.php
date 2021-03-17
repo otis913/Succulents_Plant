@@ -40,11 +40,12 @@ include('./loginCheck.php');
 			<div class="right_main">
 				<h1>會員管理</h1>
 				<div class="bottom_line"></div>
-				<!-- <div class="search_name">
+				<div class="search_name">
 					<h2>姓名搜尋</h2>
 					<input type="text" class="search_text">
-					<input type="submit" class="search_btn" value="search">
-				</div> -->
+					<i class="fas fa-search"></i>
+					<!-- <input type="submit" class="search_btn" value="search"> -->
+				</div>
 				<div class="table_div table_div_member">
 					<form action="">
 						<table class="table table-striped">
@@ -78,7 +79,6 @@ include('./loginCheck.php');
 						// ----------------------
 						// 載入偵測會員狀況顯示switch
 						let tr_number = document.getElementsByTagName('tr').length;
-
 						for (let i = 0; i < (tr_number) - 1; i++) {
 							let swinput = document.getElementById(`customSwitch${i}`);
 							let Member_status_text = document.getElementsByClassName('Member_status')[i].textContent;
@@ -96,15 +96,12 @@ include('./loginCheck.php');
 							let switch_input_td = switch_input_div.parentElement;
 							let Member_creatDate = switch_input_td.previousElementSibling;
 							let Member_status = Member_creatDate.previousElementSibling;
-
 							let tr = Member_status.closest('tr');
 							let member_id = tr.querySelector('.memberNO').innerText;
-
 							if (target.checked == true) {
 								Member_status.innerText = '停權';
 								Member_status.setAttribute('value', '0');
 								let status_stop = Member_status.getAttribute('value');
-
 								// 資料庫連接ajax更改
 								function changeSt() {
 									$.ajax({
@@ -129,7 +126,6 @@ include('./loginCheck.php');
 								Member_status.innerText = '正常';
 								Member_status.setAttribute('value', '1');
 								let status_start = Member_status.getAttribute('value');
-
 								// 資料庫連接ajax更改
 								function changeSt() {
 									$.ajax({
@@ -152,6 +148,26 @@ include('./loginCheck.php');
 								changeSt();
 							}
 						});
+						$('.fa-search').on('click', () => {
+							let search_text = document.getElementsByClassName('search_text')[0].value;
+							// console.log(search_text);
+							$.ajax({
+								method: "POST",
+								url: "./member_search.php",
+								data: {
+									'search_text': search_text,
+								},
+								dataType: "html",
+								success: function(response) {
+									//更新html內容
+									document.getElementsByClassName('table')[0].innerHTML = response;
+								},
+								error: function(exception) {
+									alert("發生錯誤: " + exception.status);
+								}
+							});
+						});
+
 					},
 					error: function(exception) {
 						alert("發生錯誤: " + exception.status);

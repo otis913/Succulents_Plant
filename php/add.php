@@ -32,8 +32,8 @@ $password = $_POST['password'];
 $address = $_POST['address'];
 $phone = $_POST['phone'];
 //下query找出結果，沒結果印出錯誤
-$sql = "INSERT INTO `MEMBER` (`memberAccount`, `memberPassword`, `memberName`, `memberCellPhone`, `memberAddress`) 
-VALUES ('$account', '$password', '$name', '$phone', '$address');";
+$sql = "INSERT INTO `MEMBER` (`memberAccount`, `memberType`,`memberPassword`, `memberName`, `memberCellPhone`, `memberAddress`,`memberStatus`, `memberDate`) 
+VALUES ('$account','1' ,'$password', '$name', '$phone', '$address', '1', NOW() )";
 // $sql = sprintf(
 // "insert into MEMBER(memberPassword,memberCellPhone,memberAddress)values('%s')",
 // $pass,$phone,$address
@@ -44,10 +44,13 @@ if (!$result) {
   die($conn->error);
 }
 
+//==========================================================
+
+
 // echo '新增成功';
 
-
-header("Location:./login.php")
+echo "<script>alert('註冊成功!'); location.href = './Login.php';</script>";
+// header("Location:./login.php")
 
 ?>
 
