@@ -61,7 +61,7 @@ article .-heart {
   background-image: url(../img/shop/product_kv1.png);
   background-size: cover;
   background-position: center;
-  height: 65vh;
+  height: 70vh;
   // width: auto;
   background-repeat: no-repeat;
   @include mobile() {
@@ -277,6 +277,7 @@ article .pro_bread {
 .shop_card {
   width: 33.33%;
   padding: 20px;
+  margin-bottom: 70px;
   @include mobile() {
     width: 50%;
   }
@@ -317,7 +318,7 @@ article .pro_bread {
   }
 
   &_price {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   &_take {
