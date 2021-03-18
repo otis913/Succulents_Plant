@@ -20,15 +20,13 @@ $sql = 'SELECT * FROM `MEMBER` where memberNO =' . $memberNO;
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 // print_r($row);
-?>
-<!-- 訂單詳細資料   -->
-<!-- $sql2 == 處理orderNO -->
-<?php
-$memberNO = (int)$_SESSION["memberNO"];
-$sql2 = 'SELECT * FROM `ORDER` where FK_ORDER_memberNO = ' . $memberNO;
-$result2 = $conn->query($sql2);
-$row2 = $result2->fetch_assoc();
-$orderNO = isset($row2['orderNO']);
+// $memberNO = (int)$_SESSION["memberNO"];
+// $sql2 = 'SELECT * FROM `ORDER` where FK_ORDER_memberNO = ' . $memberNO;
+// $result2 = $conn->query($sql2);
+// $row2 = $result2->fetch_assoc();
+// $orderNO = isset($row2['orderNO']);
+
+
 // 處理詳細資料的變數部分- 付款方式 paymethod
 // $row2Method = $row2['orderMethod'];
 // $row2Methodstr = (string)$row2Method;
@@ -52,28 +50,28 @@ $orderNO = isset($row2['orderNO']);
 // }
 // 處理詳細資料的變數部分- 訂單狀態
 // 0取消訂單1訂單處理中2訂單完成
-if (($orderNO)) {
-	$orderStatus = $row2['orederStatus'];
-	$orderStatus = (string)$orderStatus;
-	$type = $orderStatus;
-	switch ($type) {
-		case '0';
-			$status = '取消訂單';
-			break;
-		case '1';
-			$status = '訂單處理中';
-			break;
-		case '2';
-			$status = '訂單完成';
-			break;
-	}
-}
+// if (($orderNO)) {
+// 	$orderStatus = $row2['orederStatus'];
+// 	$orderStatus = (string)$orderStatus;
+// 	$type = $orderStatus;
+// 	switch ($type) {
+// 		case '0';
+// 			$status = '取消訂單';
+// 			break;
+// 		case '1';
+// 			$status = '訂單處理中';
+// 			break;
+// 		case '2';
+// 			$status = '訂單完成';
+// 			break;
+// 	}
+// }
 ?>
 <?php
-$memberNO = $_SESSION["memberNO"];
-$sql4 = 'SELECT * FROM `CARD` where FK_CARD_memberNO = ' . $memberNO;
-$result4 = $conn->query($sql4);
-$row4 = $result4->fetch_assoc();
+// $memberNO = $_SESSION["memberNO"];
+// $sql4 = 'SELECT * FROM `CARD` where FK_CARD_memberNO = ' . $memberNO;
+// $result4 = $conn->query($sql4);
+// $row4 = $result4->fetch_assoc();
 ?>
 
 <!-- 導入後端資料 結束 -->
@@ -140,7 +138,7 @@ $row4 = $result4->fetch_assoc();
 				<li class="-mem_this">個人資料</li>
 				<li>訂單查詢</li>
 				<!-- <li>我的收藏</li> -->
-				<!-- <li>我有問題</li> -->
+				<li>我有問題</li>
 			</ul>
 			<!-- 右邊內容區塊 -->
 			<div class="mem_main">
@@ -243,132 +241,113 @@ $row4 = $result4->fetch_assoc();
 									</ul>
 
 								</form>
-
 								<div class="mem_open">訂單明細 <i class="fas fa-plus mem_open"></i></div>
 								<?php
 								// }
 								?>
 								<form action="">
 									<div class="order_list_wrapper">
-										<ol>
+										<ol class="order_list_title">
 											<li>商品名稱</li>
+											<li>數量</li>
+											<li>價格</li>
+										</ol>
+										<ol>
+											<!-- <li>商品名稱</li> -->
 											<li>
 												<?php
-												$sql_productname = 'select o.*,d.*,p.*
-																						from `order_detail` d 
-																						join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO 
-																						join `product` p on d.FK_ORDER_DETAIL_productNO = p.productNO 
-																						where FK_ORDER_memberNO = ' . $memberNO;
-												$result = $conn->query($sql_productname);
-												while ($rowProductname =  $result->fetch_assoc()) {
+												$order_no =  $row_detail['orderNO'];
+												// echo $order_no;
+												$sql_productname = ' select
+																						d.orderDetailNO,
+																						d.number,
+																						d.handClassDate,
+																						d.handClassPrice,
+																						d.handClassName,
+																						p.productName,
+																						p.productPrice,
+																						p.productImg01,
+																						d.FK_ORDER_DETAIL_customPlantNO
+																					from `order` o 
+																						join `order_detail` d on d.FK_ORDER_DETAIL_orderNO = o.orderNO 
+																						left join `product` p on d.FK_ORDER_DETAIL_productNO = p.productNO
+																					where o.orderNO =' . $order_no;
+												$result_1 = $conn->query($sql_productname);
+												while ($rowProductname =  $result_1->fetch_assoc()) {
 													echo  $rowProductname['productName'];
-													// echo '<br>';
-												}
 												?>
 											</li>
-											<li>數量</li>
-											<li><?php
-													echo '<br>';
-													$sql_productname = 'Select o.*,d.*,p.* 
-																					from `order_detail` d 
-																					join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO 
-																					join `product` p on d.FK_ORDER_DETAIL_productNO = p.productNO 
-																					where FK_ORDER_memberNO =' . $memberNO;
-													$result = $conn->query($sql_productname);
-													while ($rowProductname =  $result->fetch_assoc()) {
-														echo  $rowProductname['number'];
-														echo '<br>';
-													}
-													?>
+											<li>
+												<?php
+													echo $rowProductname['number'];
+												?>
 											</li>
-											<li>價格</li>
-											<li> <?php
-														echo '<br>';
-														$sql_productname = 'Select o.*,d.*,p.* from `order_detail` d join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO join `product` p on d.FK_ORDER_DETAIL_productNO = p.productNO where FK_ORDER_memberNO =' . $memberNO;
-														$result = $conn->query($sql_productname);
-														while ($rowProductname =  $result->fetch_assoc()) {
-															echo  $rowProductname['productPrice'];
-															echo '<br>';
-														};
-														?>
+											<li>
+												<?php
+													echo  $rowProductname['productPrice'];
+												?>
 											</li>
 										</ol>
-										<?php
-										echo '<br>';
-										$sql_handname = 'Select o.*,d.*,h.* 
-																					from `order_detail` d 
-																					join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO 
-																					join `HANDCLASS` h on d.HDNO = h.handClassNO 
-																					where' . $memberNO;
-										$result = $conn->query($sql_handname);
-										?>
+										<!-- 客製多肉 -->
+										<ol class="order_list_title">
+											<li>客製多肉</li>
+											<li>數量</li>
+											<li>價錢</li>
+										</ol>
 										<ol class="mem_order_list">
-											<li>課程名稱</li>
+											<!-- <li>客製多肉</li> -->
 											<li>
 												<?php
-												$sql_class = 'Select o.*,d.*,h.* 
-													from `order_detail` d 
-													join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO 
-													join `HANDCLASS` h on d.HDNO = h.handClassNO 
-													where FK_ORDER_memberNO = ' . $memberNO;
-												$result_class = $conn->query($sql_class);
-												while ($row_class = $result_class->fetch_assoc()) {
-													echo $row_class['handClassName'];
-												}
+													echo $rowProductname['handClassName'];
 												?>
 											</li>
-											<li>報名人數</li>
 											<li>
-												<?php
-												$sql_class = 'Select o.*,d.*,h.* 
-													from `order_detail` d 
-													join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO 
-													join `HANDCLASS` h on d.HDNO = h.handClassNO 
-													where FK_ORDER_memberNO = ' . $memberNO;
-												$result_class = $conn->query($sql_class);
-												while ($row_class = $result_class->fetch_assoc()) {
-													echo $row_class['number'];
-												}
-												?>
+												<span>1</span>
 											</li>
-											<li>報名日期</li>
 											<li>
-												<?php
-												$result_class = $conn->query($sql_class);
-												while ($row_class = $result_class->fetch_assoc()) {
-													echo $row_class['handClassDate'];
-												}
-												?>
-											</li>
-											<li>課程價錢</li>
-											<li>
-												<?php
-												$result_class = $conn->query($sql_class);
-												while ($row_class = $result_class->fetch_assoc()) {
-													echo $row_class['handClassPrice'];
-												}
-												?>
+												<span>1660</span>
 											</li>
 										</ol>
 										<!-- 手作課程 -->
+										<ol class="order_list_title">
+											<li>課程名稱</li>
+											<li>報名人數</li>
+											<li>報名日期</li>
+											<li>課程價錢</li>
+										</ol>
 										<ol class="mem_order_list">
-											<li>客製多肉</li>
+											<!-- <li>課程名稱</li> -->
 											<li>
 												<?php
-												$sql_handclass = 'Select o.*,d.*,c.* 
-												from `order_detail` d 
-												join `order` o on d.FK_ORDER_DETAIL_orderNO = o.orderNO 
-												join `CUSTOM_PLANT` c on d.FK_ORDER_DETAIL_customPlantNO = c.customPlantNO 
-												where FK_ORDER_memberNO = ' . $memberNO;
-												$result_handclass = $conn->query($sql_handclass);
-												$row_handclass = $result_handclass->fetch_assoc();
-												echo $row_handclass['customPlantNO'];
+													echo $rowProductname['FK_ORDER_DETAIL_customPlantNO'];
+												?>
+											</li>
+											<!-- <li>報名人數</li> -->
+											<li>
+												<?php
+													echo $rowProductname['number'];
+												?>
+											</li>
+											<!-- <li>報名日期</li> -->
+											<li>
+												<?php
+													echo $rowProductname['handClassDate'];
+												?>
+											</li>
+											<!-- <li>課程價錢</li> -->
+											<li>
+												<?php
+													echo $rowProductname['handClassPrice'];
 												?>
 											</li>
 										</ol>
+									<?php
+												}
+									?>
 									</div>
 								</form>
 							</div>
+
 						<?php
 						}
 						?>
@@ -437,70 +416,68 @@ $row4 = $result4->fetch_assoc();
 											</span>  -->
 									<!-- <span><i class="fas fa-star"></i></span> -->
 									<!-- </li>
-									</ul>
+									</ul>-->
 								</div>
 							</form>
-						</div> -->
-									<!-- 情況2結束 訂單進來了 -->
-									<!-- </div>
-				</div> -->
-
-									<!-- 我有問題 -->
-									<!-- <div class="center_wrapper nobg">
-												<div class="mem_qa">
-													<input type="text" placeholder="輸入問題 ...">
-													<input type="submit" value="新增問題" class="mem_qanew">
-												</div>
-												<div class="mem_answer_all">
-													<div class="mem_answer">
-														<div class="mem_qs_wrapper "> -->
-									<!-- <img src="img/PeopleAvatars.png" alt=""> -->
-									<!-- <div class="mem_qs_box">
-																<p>消費者問問題</p>
-																<time class="mem_push">2021/1/30 13:30</time>
-															</div>
-														</div>
-														<div class="line_down"></div> -->
-									<!-- 對話區塊 -->
-									<!-- <div class="mem_talk">
-															<div class="mem_ans_wrapper ">
-																<img src="../img/member/1.png" alt="">
-																<div class="mem_ans_box">
-																	<p>我是客服</p>
-																	<time>2021/1/30 13:32</time>
-																</div>
-															</div>
-															<div class="mem_ans_wrapper ">
-																<img src="../img/member/2.png" alt="">
-																<div class="mem_ans_box">
-																	<p>我是消費者</p>
-																	<time>2021/1/30 13:35</time>
-																</div>
-															</div>
-															<div class="mem_ans_wrapper ">
-																<img src="../img/member/1.png" alt="">
-																<div class="mem_ans_box">
-																	<p>我是客服</p>
-																	<time>2021/1/30 13:40</time>
-																</div>
-															</div>
-														</div> -->
-									<!-- 對話區塊結束 -->
-									<!-- <div class="mem_reply">
-															<input type="text" placeholder="輸入內容 ...">
-															<input type="submit" value="回覆問題" class="mem_qareplay">
+						</div>
+					</div>
+				</div>
+				<!-- 我有問題 -->
+				<!-- <div class="center_wrapper nobg"> -->
+				<!-- <div class="mem_qa">
+											<input type="text" placeholder="輸入問題 ...">
+											<input type="submit" value="新增問題" class="mem_qanew">
+										</div> -->
+				<!-- <div class="mem_answer_all"> -->
+				<!-- <div class="mem_answer"> -->
+				<!-- <div class="mem_qs_wrapper ">
+													<img src="img/PeopleAvatars.png" alt="">
+													<div class="mem_qs_box">
+														<p>消費者問問題</p>
+														<time class="mem_push">2021/1/30 13:30</time>
+													</div>
+												</div> -->
+				<!-- <div class="line_down"></div> -->
+				<!-- 對話區塊 -->
+				<!-- <div class="mem_talk">
+													<div class="mem_ans_wrapper ">
+														<img src="../img/member/1.png" alt="">
+														<div class="mem_ans_box">
+															<p>我是客服</p>
+															<time>2021/1/30 13:32</time>
 														</div>
 													</div>
-												</div>
-											</div> -->
-									<!-- 我有問題結束 -->
-									<!-- </div> -->
+													<div class="mem_ans_wrapper ">
+														<img src="../img/member/2.png" alt="">
+														<div class="mem_ans_box">
+															<p>我是消費者</p>
+															<time>2021/1/30 13:35</time>
+														</div>
+													</div>
+													<div class="mem_ans_wrapper ">
+														<img src="../img/member/1.png" alt="">
+														<div class="mem_ans_box">
+															<p>我是客服</p>
+															<time>2021/1/30 13:40</time>
+														</div>
+													</div>
+												</div> -->
+				<!-- 對話區塊結束 -->
+				<!-- <div class="mem_reply">
+													<input type="text" placeholder="輸入內容 ...">
+													<input type="submit" value="回覆問題" class="mem_qareplay">
+												</div> -->
+				<!-- </div> -->
+				<!-- </div> -->
+				<!-- </div> -->
+				<!-- 我有問題結束 -->
+			</div>
 		</article>
 		<div class="ex"></div>
 		<div class="ex"></div>
 	</section>
 	<!-- 購物車 側邊欄  開始-->
-	<!-- <div class="order">
+	<div class="order">
 		<i class="fas fa-window-close"></i>
 		<h2>購物清單</h2>
 		<div class="orderPith"></div>
@@ -585,7 +562,7 @@ $row4 = $result4->fetch_assoc();
 						<h2>Q:想更換或取消訂單，怎麼辦呢？</h2>
 						<p>A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
 					</li>
-					<!-- <div class="cusQUS">{{message}}</div> -->
+					<div class="cusQUS">{{message}}</div>
 					<div class="answer">we will hope you</div>
 				</ul>
 				<div class="cusQ">

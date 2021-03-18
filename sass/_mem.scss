@@ -185,13 +185,16 @@
 
 .mem_order ol {
   display: flex;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
+  justify-content: space-between;
   li:first-child {
-    width: 100%;
+    // width: 100%;
+    width: 40%;
     text-align: left;
     padding-left: 20px;
   }
   li {
+    text-align: center;
     width: 100px;
   }
 }
@@ -209,7 +212,6 @@
 
 .mem_order_list {
   line-height: 1.8;
-  
   .pro_list {
     display: flex;
     padding: 20px 0;
@@ -469,4 +471,9 @@
 .mem_reply {
   margin: 0;
   padding: 30px 0 10px;
+}
+
+// add
+.order_list_title {
+  background-color: beige;
 }

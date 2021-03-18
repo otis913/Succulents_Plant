@@ -6394,16 +6394,17 @@ article .blogall_ul a {
 
 .mem_order ol {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .mem_order ol li:first-child {
-  width: 100%;
+  width: 40%;
   text-align: left;
   padding-left: 20px;
 }
 
 .mem_order ol li {
+  text-align: center;
   width: 100px;
 }
 
@@ -6721,6 +6722,10 @@ article .blogall_ul a {
 .mem_reply {
   margin: 0;
   padding: 30px 0 10px;
+}
+
+.order_list_title {
+  background-color: beige;
 }
 
 .full_wrapper {
