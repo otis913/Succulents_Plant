@@ -6,11 +6,11 @@ $memberName = $_POST["search_text"];
 $sql = 'SELECT *
             FROM 
             SUCCULENTS_PLANT.MEMBER
-            where memberNO = 1 && memberName like ?';
+            where memberType = 1 and memberName like ?';
 //執行
 $statement = $pdo->prepare($sql);
 //給值    
-$statement->bindValue(1, $memberName);
+$statement->bindValue(1, '%' . $memberName . '%');
 $statement->execute();
 //抓出全部且依照順序封裝成一個二維陣列
 $data = $statement->fetchAll();

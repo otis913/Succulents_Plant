@@ -1,15 +1,10 @@
 $(document).ready(function() {
-  $(".mem_open").click(function() {
-
-    $(".order_list_wrapper").slideToggle(1000);
+  $("body").on("click", ".mem_open", (event) => {
+    const target = event.target;
+    if (target.matches(`.mem_open,.fa-plus`)) {
+      $(target).parent().find(".order_list_wrapper").slideToggle(1000);
+    }
   });
-  // $(`full_wrapper`).on("click", ".mem_open", function(e) {
-  //   console.log("123")
-  //     // e.preventDefault();
-  //     // if ($(this).hasClass("-mem_open")) {
-  //     //   // $(this).find(".order_list_wrapper").slideToggle(1000);
-  //     // }
-  // });
 
   //選單點擊
   $(".mem_btn li").click(function() {
