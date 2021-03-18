@@ -247,18 +247,10 @@ $row = $result->fetch_assoc();
 								?>
 								<form action="">
 									<div class="order_list_wrapper">
-										<ol class="order_list_title">
-											<li>商品名稱</li>
-											<li>數量</li>
-											<li>價格</li>
-										</ol>
-										<ol>
-											<!-- <li>商品名稱</li> -->
-											<li>
-												<?php
-												$order_no =  $row_detail['orderNO'];
-												// echo $order_no;
-												$sql_productname = ' select
+										<?php
+										$order_no =  $row_detail['orderNO'];
+										// echo $order_no;
+										$sql_productname = ' select
 																						d.orderDetailNO,
 																						d.number,
 																						d.handClassDate,
@@ -272,78 +264,92 @@ $row = $result->fetch_assoc();
 																						join `order_detail` d on d.FK_ORDER_DETAIL_orderNO = o.orderNO 
 																						left join `product` p on d.FK_ORDER_DETAIL_productNO = p.productNO
 																					where o.orderNO =' . $order_no;
-												$result_1 = $conn->query($sql_productname);
-												while ($rowProductname =  $result_1->fetch_assoc()) {
-													echo  $rowProductname['productName'];
-												?>
-											</li>
-											<li>
+
+										$result_1 = $conn->query($sql_productname);
+										while ($rowProductname =  $result_1->fetch_assoc()) {
+											if (!empty($rowProductname['productName'])) {
+										?>
+												<ol class="order_list_title">
+													<li>商品名稱</li>
+													<li>數量</li>
+													<li>價格</li>
+												</ol>
+												<ol>
+													<!-- <li>商品名稱</li> -->
+													<li>
+														<?php
+														echo  $rowProductname['productName'];
+														?>
+													</li>
+													<li>
+														<?php
+														echo $rowProductname['number'];
+														?>
+													</li>
+													<li>
+														<?php
+														echo  $rowProductname['productPrice'];
+														?>
+													</li>
 												<?php
-													echo $rowProductname['number'];
+											} else if (!empty($rowProductname['FK_ORDER_DETAIL_customPlantNO'])) {
 												?>
-											</li>
-											<li>
+												</ol>
+												<!-- 客製多肉 -->
+												<ol class="order_list_title">
+													<li>客製多肉</li>
+													<li>數量</li>
+													<li>價錢</li>
+												</ol>
+												<ol class="mem_order_list">
+													<li>
+														<span>客製多肉</span>
+													</li>
+													<li>
+														<span>1</span>
+													</li>
+													<li>
+														<span>1660</span>
+													</li>
 												<?php
-													echo  $rowProductname['productPrice'];
+											} else if (!empty($rowProductname['handClassName'])) {
 												?>
-											</li>
-										</ol>
-										<!-- 客製多肉 -->
-										<ol class="order_list_title">
-											<li>客製多肉</li>
-											<li>數量</li>
-											<li>價錢</li>
-										</ol>
-										<ol class="mem_order_list">
-											<!-- <li>客製多肉</li> -->
-											<li>
+												</ol>
+												<!-- 手作課程 -->
+												<ol class="order_list_title">
+													<li>課程名稱</li>
+													<li>報名人數</li>
+													<li>報名日期</li>
+													<li>課程價錢</li>
+												</ol>
+												<ol class="mem_order_list">
+													<li>
+														<?php
+														echo $rowProductname['handClassName'];
+														?>
+													</li>
+													<li>
+														<?php
+														echo $rowProductname['number'];
+														?>
+													</li>
+													<li>
+														<?php
+														echo $rowProductname['handClassDate'];
+														?>
+													</li>
+													<li>
+														<?php
+														echo $rowProductname['handClassPrice'];
+														?>
+													</li>
 												<?php
-													echo $rowProductname['handClassName'];
+											}
 												?>
-											</li>
-											<li>
-												<span>1</span>
-											</li>
-											<li>
-												<span>1660</span>
-											</li>
-										</ol>
-										<!-- 手作課程 -->
-										<ol class="order_list_title">
-											<li>課程名稱</li>
-											<li>報名人數</li>
-											<li>報名日期</li>
-											<li>課程價錢</li>
-										</ol>
-										<ol class="mem_order_list">
-											<!-- <li>課程名稱</li> -->
-											<li>
-												<?php
-													echo $rowProductname['FK_ORDER_DETAIL_customPlantNO'];
-												?>
-											</li>
-											<!-- <li>報名人數</li> -->
-											<li>
-												<?php
-													echo $rowProductname['number'];
-												?>
-											</li>
-											<!-- <li>報名日期</li> -->
-											<li>
-												<?php
-													echo $rowProductname['handClassDate'];
-												?>
-											</li>
-											<!-- <li>課程價錢</li> -->
-											<li>
-												<?php
-													echo $rowProductname['handClassPrice'];
-												?>
-											</li>
-										</ol>
-									<?php
-												}
-									?>
+												</ol>
+											<?php
+										}
+											?>
 									</div>
 								</form>
 							</div>

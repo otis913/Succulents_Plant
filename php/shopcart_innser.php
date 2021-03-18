@@ -60,7 +60,7 @@ foreach ($hand_data as $index => $item) :
   $handClassDate = $item->handClassDate; //課程日期
   $handClassPeople = $item->handClassPeople; //課程人數
   $handClassName = $item->handClassName; //課程名稱
-// $handClassPrice= $item->handClassPrice; //課程價錢
+  $handClassPrice = $item->handClassPrice; //課程價錢
 endforeach;
 $n_handClassDate = strval($handClassDate);
 // $n_handClassNO =strval($handClassNO);
@@ -68,8 +68,8 @@ $n_handClassDate = strval($handClassDate);
 
 $sql2 = "INSERT INTO SUCCULENTS_PLANT.ORDER_DETAIL
         (FK_ORDER_DETAIL_orderNO, `number` , orderCard, 
-        handClassName,  handClassDate, `HDNO` ) 
-        VALUES (  ?,  ?,  0,  ?,  ? ,?)";
+        handClassName,  handClassDate, `HDNO` ,handClassPrice) 
+        VALUES (  ?,  ?,  0,  ?,  ? , ?, ?)";
 // -- select  FROM HANDCLASS where ;
 //   echo strtotime($handclassDate).PHP_EOL;
 
@@ -80,7 +80,7 @@ $statement->bindValue(2, $handClassPeople);
 $statement->bindValue(3, $handClassName);
 $statement->bindValue(4, $n_handClassDate);
 $statement->bindValue(5, $handClassNO);
-//   $statement->bindValue(8, $orderDate);   
+$statement->bindValue(6, $handClassPrice);
 $statement->execute();
 
 //   訂單明細
