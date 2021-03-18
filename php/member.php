@@ -138,7 +138,7 @@ $row = $result->fetch_assoc();
 				<li class="-mem_this">個人資料</li>
 				<li>訂單查詢</li>
 				<!-- <li>我的收藏</li> -->
-				<li>我有問題</li>
+				<!-- <li>我有問題</li> -->
 			</ul>
 			<!-- 右邊內容區塊 -->
 			<div class="mem_main">
@@ -482,71 +482,8 @@ $row = $result->fetch_assoc();
 		<div class="ex"></div>
 		<div class="ex"></div>
 	</section>
-	<!-- 購物車 側邊欄  開始-->
-	<div class="order">
-		<i class="fas fa-window-close"></i>
-		<h2>購物清單</h2>
-		<div class="orderPith"></div>
-		<div class="order-custom">
-			<i class="fa fa-times" aria-hidden="true"></i>
-			<div class="order_custom_con">
-				<img src="img/shopcart/assets_5.png" alt="">
-				<div class="txt">
-					<h4>黃金山脈-金 晃丸盆栽</h4>
-					<h2>賀卡訂製</h2>
-					<p>NT$1850</p>
-					<div id="app8">
-						<div class="shop">
-							<i @click="counter += -1" class="fa fa-minus" aria-hidden="true"></i>
-							<div class="counter">{{counter}}</div>
-							<i @click="counter += 1" class="fa fa-plus" aria-hidden="true"></i>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="order-custom-pro">
-			<i class="fa fa-times" aria-hidden="true"></i>
-			<div class="order_custom_con_con">
-				<img src="img/shopcart/assets_5.png" alt="">
-				<div class="txt">
-					<h4>客製化多肉</h4>
-					<h2>賀卡訂製</h2>
-					<p>NT$1850</p>
-					<div id="app9">
-						<div class="shop">
-							<i @click="counter += -1" class="fa fa-minus" aria-hidden="true"></i>
-							<div class="counter">{{counter}}</div>
-							<i @click="counter += 1" class="fa fa-plus" aria-hidden="true"></i>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="detail">
-				<h2>詳細內容</h2>
-				<p>黃金山脈多肉 x1</p>
-				<p>黃金山脈多肉 x1</p>
-				<p>黃金山脈多肉 x1</p>
-				<p>器皿-水泥器皿 x1</p>
-				<p>裝飾品-小蘑菇 x1</p>
-			</div>
-		</div>
-		<div class="amount">
-			<h2 class="coin">金額
-				<p>$3600</p>
-			</h2>
-			<h2 class="sale">優惠
-				<p>-＄20</p>
-			</h2>
-		</div>
-		<div class="total">
-			<h4>總金額</h4>
-			<p>$3580</p>
-		</div>
-		<a href=""></a>
-		<button class="checkbuy"> <a href="./shopCart.html">確定購買</a></button>
-	</div> -->
-	<!-- 購物車 側邊欄  結束-->
+
+
 	<!-- QA仙人掌開始，放在footer上面 -->
 	<section class="qa_pos">
 		<div class="qa_wrapper">
@@ -561,15 +498,15 @@ $row = $result->fetch_assoc();
 						<p>A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
 					</li>
 					<li class="question">
-						<h2>Q:想更換或取消訂單，怎麼辦呢？</h2>
-						<p>A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
+						<h2>Q:請問植栽可以配送國外嗎？</h2>
+						<p>A:植物無配送國外之服務，但如欲購買空盆，請加入 LINE ID：@succulents_plant，由專人為你服務。</p>
 					</li>
 					<li class="question">
-						<h2>Q:想更換或取消訂單，怎麼辦呢？</h2>
-						<p>A:植栽沒有提供七天鑑賞期，恕無法退貨。</p>
+						<h2>Q:我突然想更換或是取消訂單，會怎麼辦呢？</h2>
+						<p>A:送達時間 24 小時內不得取消訂單，若需更改訂單請於送達時間前 24 小時內聯繫客服（LINE ID：@succulents_plant），由專人為你服務。</p>
 					</li>
 					<div class="cusQUS">{{message}}</div>
-					<div class="answer">we will hope you</div>
+					<div class="answer">We Will Help You!!!Please Contact Me LINE ID:@succulents_plant</div>
 				</ul>
 				<div class="cusQ">
 					<div class="adimit">
@@ -581,6 +518,7 @@ $row = $result->fetch_assoc();
 		</div>
 	</section>
 	<!-- QA仙人掌結束 -->
+
 	<!-- footer start -->
 	<footer>
 		<article>

@@ -4457,7 +4457,7 @@ body {
 
 article .blog1_p {
   font-size: 16px;
-  text-align: center;
+  text-align: left;
   margin-top: 40px;
 }
 
@@ -5219,7 +5219,7 @@ article .blogall_ul a {
 }
 
 .order_center .container1 #abc li img {
-  margin-top: 2vh;
+  margin-top: 20px;
   width: 50px;
   height: 50px;
 }
@@ -5284,8 +5284,8 @@ article .blogall_ul a {
   width: 6vw;
   height: 3vh;
   display: flex;
-  margin-left: 10vw;
-  margin-top: 2vh;
+  margin-left: 200px;
+  margin-top: 20px;
   font-size: 12px;
 }
 
@@ -5453,8 +5453,8 @@ article .blogall_ul a {
   width: 6vw;
   height: 2vh;
   display: flex;
-  margin-left: 10vw;
-  margin-top: 2vh;
+  margin-left: 200px;
+  margin-top: 20px;
   font-size: 12px;
 }
 
@@ -5515,8 +5515,8 @@ article .blogall_ul a {
 }
 
 .order_center .container1 #app2 li .price {
-  margin-left: 2.5vw;
-  margin-top: 2vh;
+  margin-left: 3.5vw;
+  margin-top: 20px;
   color: #2f4f4f;
   font-size: 12px;
 }
@@ -5535,7 +5535,7 @@ article .blogall_ul a {
 
 .order_center .container1 #app2 li .delete {
   margin-top: 2vh;
-  margin-left: 5.2vw;
+  margin-left: 130px;
   color: #2f4f4f;
 }
 
@@ -5621,8 +5621,8 @@ article .blogall_ul a {
   width: 6vw;
   height: 2vh;
   display: flex;
-  margin-left: 10vw;
-  margin-top: 2vh;
+  margin-left: 230px;
+  margin-top: 20px;
   font-size: 12px;
 }
 
@@ -5683,7 +5683,7 @@ article .blogall_ul a {
 }
 
 .order_center .container1 #app3 li .price {
-  margin-left: 5vw;
+  margin-left: 70px;
   margin-top: 2vh;
   color: #2f4f4f;
   font-size: 12px;

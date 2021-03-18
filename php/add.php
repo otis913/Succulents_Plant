@@ -41,7 +41,8 @@ VALUES ('$account','1' ,'$password', '$name', '$phone', '$address', '1', NOW() )
 // echo 'SQL:' . $sql ."<br>";
 $result = $conn->query($sql);
 if (!$result) {
-  die($conn->error);
+  // die($conn->error);
+  echo "<script>alert('帳號重複註冊,請重新註冊!'); location.href = './login.php';</script>";
 }
 
 //==========================================================
@@ -49,7 +50,7 @@ if (!$result) {
 
 // echo '新增成功';
 
-echo "<script>alert('註冊成功!'); location.href = './Login.php';</script>";
+echo "<script>alert('註冊成功!'); location.href = './member.php';</script>";
 // header("Location:./login.php")
 
 ?>

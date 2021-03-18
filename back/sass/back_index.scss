@@ -170,6 +170,7 @@ header {
 // --------------------------登入頁面
 .Sign_div {
   width: 1200px;
+  margin: 0 auto;
   h1 {
     @include h1();
     text-align: center;

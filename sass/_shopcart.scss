@@ -509,7 +509,9 @@
         // margin-top: -2vh;
         margin-bottom: 50px;
         img {
-          margin-top: 2vh;
+          // margin-top: 2vh;
+          margin-top: 20px;
+
           width: 50px;
           height: 50px;
         }
@@ -566,8 +568,12 @@
           height: 3vh;
           display: flex;
           // outline: 1px solid red;
-          margin-left: 10vw;
-          margin-top: 2vh;
+          // margin-left: 10vw;
+          margin-left: 200px;
+
+          // margin-top: 2vh;
+          margin-top: 20px;
+
           font-size: 12px;
           @include pad768() {
             // outline: 1px solid red;
@@ -697,8 +703,12 @@
           height: 2vh;
           display: flex;
           // outline: 1px solid red;
-          margin-left: 10vw;
-          margin-top: 2vh;
+          // margin-left: 10vw;
+          margin-left: 200px;
+
+          // margin-top: 2vh;
+          margin-top: 20px;
+
           font-size: 12px;
           @include pad768() {
             // outline: 1px solid red;
@@ -744,8 +754,12 @@
           }
         }
         .price {
-          margin-left: 2.5vw;
-          margin-top: 2vh;
+          // margin-left: 2.5vw;
+          margin-left: 3.5vw;
+
+          // margin-top: 2vh;
+          margin-top: 20px;
+
           color: #2f4f4f;
           font-size: 12px;
           @include pad768() {
@@ -757,7 +771,9 @@
         }
         .delete {
           margin-top: 2vh;
-          margin-left: 5.2vw;
+          // margin-left: 5.2vw;
+          margin-left: 130px;
+
           color: #2f4f4f;
           @include pad768() {
             margin-left: 12vw;
@@ -827,8 +843,12 @@
           height: 2vh;
           display: flex;
           // outline: 1px solid red;
-          margin-left: 10vw;
-          margin-top: 2vh;
+          // margin-left: 10vw;
+          margin-left: 230px;
+
+          // margin-top: 2vh;
+          margin-top: 20px;
+
           font-size: 12px;
           @include pad768() {
             // outline: 1px solid red;
@@ -874,7 +894,9 @@
           }
         }
         .price {
-          margin-left: 5vw;
+          // margin-left: 5vw;
+          margin-left: 70px;
+
           margin-top: 2vh;
           color: #2f4f4f;
           font-size: 12px;
