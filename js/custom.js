@@ -13,7 +13,8 @@ let plant3 = document.querySelector("#custom_03");
 let dec1 = document.querySelector("#decoration");
 var pot1 = document.querySelector("#pot");
 
-var PlantArray = [{
+var PlantArray = [
+  {
     obj: plant1,
     pos: 0,
     id: "custom_01",
@@ -48,7 +49,7 @@ clearset();
 let turn180 = document.querySelector(".turn180");
 turn180.addEventListener(
   "click",
-  function() {
+  function () {
     rotateplant();
   },
   false
@@ -56,7 +57,7 @@ turn180.addEventListener(
 let delet = document.querySelector("#delet");
 delet.addEventListener(
   "click",
-  function() {
+  function () {
     clearset();
   },
   false
@@ -65,7 +66,7 @@ delet.addEventListener(
 for (let i = 0; i < plants.length; i++) {
   plants[i].addEventListener(
     "click",
-    function() {
+    function () {
       // alert(document.getElementById('custom_01').src);
       if (buybox == 0) {
         plant1.src = `img/custom/custom_0${i + 1}.png`;
@@ -85,7 +86,7 @@ for (let i = 0; i < plants.length; i++) {
 for (let i = 0; i < decorations.length; i++) {
   decorations[i].addEventListener(
     "click",
-    function() {
+    function () {
       if (isback) {
         dec1.src = `img/custom/dec_0${i + 1}_s.png`;
       } else {
@@ -102,7 +103,7 @@ for (let i = 0; i < decorations.length; i++) {
 for (let i = 0; i < pots.length; i++) {
   pots[i].addEventListener(
     "click",
-    function() {
+    function () {
       pot1.src = `img/custom/pot_0${i + 1}.png`;
     },
     false
@@ -113,7 +114,7 @@ for (let i = 0; i < pots.length; i++) {
 for (let i = 0; i < PlantArray.length; ++i) {
   PlantArray[i].obj.addEventListener(
     "mousedown",
-    function() {
+    function () {
       setorder(i);
       buybox = i;
     },
@@ -143,7 +144,7 @@ decoration.addEventListener('mousedown',function(){
 
 plant1.addEventListener(
   "mouseup",
-  function() {
+  function () {
     var ob = document.getElementById("custom_01");
     let tt = ob.style.left;
     let yy = parseInt(tt.slice(0, -2), 10);
@@ -154,7 +155,7 @@ plant1.addEventListener(
 
 plant2.addEventListener(
   "mouseup",
-  function() {
+  function () {
     var ob = document.getElementById("custom_02");
     let tt = ob.style.left;
     let yy = parseInt(tt.slice(0, -2), 10);
@@ -165,7 +166,7 @@ plant2.addEventListener(
 
 plant3.addEventListener(
   "mouseup",
-  function() {
+  function () {
     var ob = document.getElementById("custom_03");
     let tt = ob.style.left;
     let yy = parseInt(tt.slice(0, -2), 10);
@@ -176,7 +177,7 @@ plant3.addEventListener(
 
 dec1.addEventListener(
   "mouseup",
-  function() {
+  function () {
     var ob = document.getElementById("decoration");
     let tt = ob.style.left;
     let yy = parseInt(tt.slice(0, -2), 10);
@@ -322,19 +323,21 @@ if (
 
 var tl = new TimelineMax();
 tl.to(".custom_paw_out", 1.5, {
-    y: pawpos,
-  })
+  y: pawpos,
+})
   .addLabel("rotate")
   .to(
     ".paw_l",
-    1, {
+    1,
+    {
       rotation: -7,
     },
     "rotate"
   )
   .to(
     ".paw_r",
-    1, {
+    1,
+    {
       rotation: 7,
     },
     "rotate"
@@ -342,14 +345,16 @@ tl.to(".custom_paw_out", 1.5, {
   .addLabel("upup")
   .to(
     ".custom_paw_out",
-    1.5, {
+    1.5,
+    {
       y: down,
     },
     "upup"
   )
   .to(
     ".custom_draw",
-    1.5, {
+    1.5,
+    {
       y: -70,
     },
     "upup"
@@ -357,28 +362,32 @@ tl.to(".custom_paw_out", 1.5, {
   .addLabel("nono")
   .to(
     ".custom_price",
-    1, {
+    1,
+    {
       opacity: 0,
     },
     "nono"
   )
   .to(
     ".custom_block7 .bubble_btnn",
-    1, {
+    1,
+    {
       opacity: 0,
     },
     "nono"
   )
   .to(
     ".custom_btn",
-    1, {
+    1,
+    {
       opacity: 0,
     },
     "nono"
   )
   .to(
     ".custom_block3",
-    1, {
+    1,
+    {
       opacity: hide,
       display: show,
     },
@@ -396,21 +405,24 @@ tl.to(".custom_paw_out", 1.5, {
   .addLabel("rotate_d")
   .to(
     ".paw_l",
-    0.5, {
+    0.5,
+    {
       rotation: 7,
     },
     "rotate_d"
   )
   .to(
     ".paw_r",
-    0.5, {
+    0.5,
+    {
       rotation: -7,
     },
     "rotate_d"
   )
   .to(
     ".custom_draw",
-    0.5, {
+    0.5,
+    {
       delay: 0.2,
       y: 40,
       zIndex: 1,
@@ -431,7 +443,7 @@ tl.to(".custom_paw_out", 1.5, {
 tl.stop();
 bubblebtnn.addEventListener(
   "click",
-  function() {
+  function () {
     tl.play();
   },
   false
@@ -460,6 +472,7 @@ nocard.addEventListener("click", () => {
   }
   localStorage.setItem("plants", JSON.stringify(plants));
   //   localStorage.setItem("cus_plant", "this is plant");
+  alert("已成功加入購物車");
 });
 
 let c_submit = document.querySelector(".c_submit");
@@ -495,6 +508,7 @@ c_submit.addEventListener("click", (e) => {
     plants = [plant];
   }
   localStorage.setItem("plants", JSON.stringify(plants));
+  alert("已成功加入購物車");
 });
 
 //購物車加一顯示
