@@ -43,8 +43,8 @@ include('./loginCheck.php');
           <i class="fas fa-search"></i>
           <!-- <input type="submit" class="search_btn" value="search"> -->
         </div>
-        <!-- <div class="product_type">
-          <select name="productType_select">
+        <div class="PDiv_select">
+          <select class="productType_select" id='productType_select'>
             <option value="1">景天科</option>
             <option value="2">仙人掌科</option>
             <option value="3">百合科</option>
@@ -52,21 +52,19 @@ include('./loginCheck.php');
             <option value="5">飾品</option>
             <option value="6">器皿</option>
             <option value="8">賀卡</option>
-          </select> -->
-        <a class="inserBtn product_inserBtn" href="./product_creat.php">新增商品</a>
-        <div class="table_div table_div_product">
-          <table class="table table-striped">
-          </table>
+          </select>
+          <a class="inserBtn product_inserBtn" href="./product_creat.php">新增商品</a>
+          <div class="table_div table_div_product">
+            <table class="table table-striped">
+            </table>
+          </div>
         </div>
       </div>
-
     </div>
   </div>
   </div>
-
-  </div>
-
   <script>
+    // 頁面載入
     function doQuery(str) {
       //Typing your code...
       $.ajax({
@@ -80,40 +78,54 @@ include('./loginCheck.php');
           //更新html內容
           document.getElementsByClassName('table')[0].innerHTML = response;
           // ----------------------
-          $('.fa-search').on('click', () => {
-            let search_text = document.getElementsByClassName('search_text')[0].value;
-            // console.log(search_text);
-            $.ajax({
-              method: "POST",
-              url: "./product_search.php",
-              data: {
-                'search_text': search_text,
-              },
-              dataType: "html",
-              success: function(response) {
-                //更新html內容
-                document.getElementsByClassName('table')[0].innerHTML = response;
-                // -----------------
-
-
-
-
-
-
-
-
-              },
-              error: function(exception) {
-                alert("發生錯誤: " + exception.status);
-              }
-            });
-          });
         },
         error: function(exception) {
           alert("發生錯誤: " + exception.status);
         }
       });
     }
+    // 商品名稱搜尋
+    $('.fa-search').on('click', () => {
+      let search_text = document.getElementsByClassName('search_text')[0].value;
+      // console.log(search_text);
+      $.ajax({
+        method: "POST",
+        url: "./product_search.php",
+        data: {
+          'search_text': search_text,
+        },
+        dataType: "html",
+        success: function(response) {
+          //更新html內容
+          document.getElementsByClassName('table')[0].innerHTML = response;
+          // -----------------
+        },
+        error: function(exception) {
+          alert("發生錯誤: " + exception.status);
+        }
+      });
+    });
+    // 商品類別切換 
+    $('#productType_select').change(() => {
+      let option_value = parseInt($('#productType_select').val());
+      // console.log(typeof(option_value))
+      $.ajax({
+        method: "POST",
+        url: "./product_T.php",
+        data: {
+          'option_value': option_value
+        },
+        dataType: "text",
+        success: function(response) {
+          //更新html內容
+          document.getElementsByClassName('table')[0].innerHTML = response;
+          // ----------------------
+        },
+        error: function(exception) {
+          alert("發生錯誤: " + exception.status);
+        }
+      });
+    });
   </script>
   <script src="./js/leftbar.js"></script>
 </body>

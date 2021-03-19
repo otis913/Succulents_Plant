@@ -2,7 +2,7 @@
 @import "./sassMix";
 @import "./sassVar";
 body {
-  background-image: url(../img/gray_bg.png);
+  background-image: url(../../img/gray_bg.png);
   cursor: default;
 }
 
@@ -156,6 +156,8 @@ header {
 
 .productType_select {
   margin-bottom: 10px;
+  padding: 3px;
+  width: 202px;
 }
 
 // .table td, .table th

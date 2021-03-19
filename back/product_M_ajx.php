@@ -23,7 +23,6 @@ $data = $statement->fetchAll();
 foreach ($data as $index => $row) {
 	echo "<tr class='table-light'>
               <td>" . $row["productNO"] . "</td>";
-
 	$productType = $row["productType"];
 	switch ($productType) {
 		case "1":
@@ -57,11 +56,9 @@ foreach ($data as $index => $row) {
 			$productType = '錯誤';
 	};
 	echo "<td>" . $productType . "</td>";
-
 	echo "<td>" . $row["productName"] . "</td>";
 	echo "<td>" . $row["productNumber"] . "</td>";
 	echo '<td ><img src="../img/product/' . $row['productImg01'] . '"></td>';
-
 	$productStatus = $row["productStatus"];
 	switch ($productStatus) {
 		case "1":
@@ -74,7 +71,6 @@ foreach ($data as $index => $row) {
 			$productStatus = '錯誤';
 	};
 	echo "<td>" . $productStatus . "</td>";
-
 	echo "<td>
           <a href='./product_edit.php?PID=" . $row['productNO'] . "'>編輯</a>
         </td>
