@@ -34,13 +34,13 @@ $(document).ready(function() {
 
   $('.mem_btn li:nth-child(3)').click(function() {
     $('.mem_main .center_wrapper').not(this).removeClass('-mem_show');
-    $('.mem_main .center_wrapper:nth-child(3)').addClass('-mem_show');
+    $('.mem_main .center_wrapper:last-child').addClass('-mem_show');
   });
 
-  $('.mem_btn li:nth-child(4)').click(function() {
-    $('.mem_main .center_wrapper').not(this).removeClass('-mem_show');
-    $('.mem_main .center_wrapper:nth-child(4)').addClass('-mem_show');
-  });
+  // $('.mem_btn li:nth-child(4)').click(function() {
+  //   $('.mem_main .center_wrapper').not(this).removeClass('-mem_show');
+  //   $('.mem_main .center_wrapper:nth-child(4)').addClass('-mem_show');
+  // });
 
 
   $('.mem_btn li').click(function() {
@@ -80,7 +80,7 @@ $(document).ready(function() {
       document.querySelectorAll('.TetstText')[0].style.background = "white"
       document.querySelectorAll('.TetstText')[0].style.color = " #2f4f4f";
       var pass = document.querySelector('.pass').value.trim();
-      var reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,10}$/;
+      var reg = /^\d{4}$/;
       //  正規表示式驗證密碼包含數字字母6到10位
       if (!reg.test(pass)) {
         // alert('手機號碼輸入有誤！');
@@ -179,7 +179,7 @@ $(document).ready(function() {
   //訂單提交頁-驗證密碼
   save.addEventListener('click', () => {
     var pass = document.querySelector('.pass').value.trim();
-    var reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,10}$/;
+    var reg = /^\d{4}$/;
     //  正規表示式驗證密碼包含數字字母6到10位
     if (!reg.test(pass)) {
       // alert('手機號碼輸入有誤！');
@@ -197,7 +197,7 @@ $(document).ready(function() {
   let memSubmit = document.querySelector('.mem_submit');
   memSubmit.addEventListener('click', (e) => {
       var reg = /^09\d{2}-?\d{3}-?\d{3}$/;
-      var reg2 = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,10}$/;
+      var reg2 = /^\d{4}$/;
       var phone = document.querySelector('#phone').value.trim();
       // alert(phone);
       var pass = document.querySelector('.pass').value.trim();

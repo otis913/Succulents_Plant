@@ -136,6 +136,12 @@
       }
     }
     
+    .hdQA {
+      @include mobile {
+        display: none;
+      }
+    }
+    
     .HM_Number {
       margin: 10px 0;
       h1 {

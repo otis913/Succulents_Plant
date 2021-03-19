@@ -50,7 +50,7 @@ if (!$result) {
 
 // echo '新增成功';
 
-echo "<script>alert('註冊成功!'); location.href = './member.php';</script>";
+echo "<script>alert('註冊成功!'); location.href = './login.php';</script>";
 // header("Location:./login.php")
 
 ?>

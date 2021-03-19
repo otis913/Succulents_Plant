@@ -58,7 +58,7 @@
     </div>
   </div>
 
-  <section id="result" calss="shop">
+  <section id="result" v-cloak calss="shop">
     <!-- 產品輪播banner -->
     <div class="swiper-container">
       <div class="swiper-wrapper">
@@ -573,7 +573,7 @@
               break;
             case '景天科':
               tempData = vm.data.filter((item) => {
-                return item.productType == 2;
+                return item.productType == 1;
               });
               tempData.forEach((item, i) => {
                 // this.sun.forEach((item, i) =>{
@@ -587,7 +587,7 @@
               break;
             case '仙人掌科':
               tempData = vm.data.filter((item) => {
-                return item.productType == 1;
+                return item.productType == 2;
               });
               tempData.forEach((item, i) => {
                 // this.sun.forEach((item, i) =>{

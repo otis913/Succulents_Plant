@@ -82,7 +82,7 @@ include('./loginCheck.php');
                   <tr>
                     <td>文章外顯示圖片</td>
                     <td>
-                      <input type="file" id="knowledgeOutPic" name="knowledgeOutPic" />
+                      <input type="file" name="knowledgeOutPic" />
                       <img src="../img/blogall/<?= $row['knowledgeOutPic'] ?>" alt="">
                     </td>
                   </tr>

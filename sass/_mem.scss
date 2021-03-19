@@ -68,6 +68,10 @@
   }
 }
 
+.mem_talk {
+  width: 100%;
+}
+
 .center_contain2 {
   display: flex;
   margin: 0 auto;
@@ -75,6 +79,9 @@
   justify-content: space-evenly;
   width: 100%;
   max-width: 800px;
+  @include phone {
+    display: block;
+  }
 }
 
 .mem_wrapper form {
@@ -82,6 +89,9 @@
   @include pad {
     text-align: center;
     margin: 30px auto;
+  }
+  @include phone {
+    margin: 0 20px;
   }
   input {
     border: none;

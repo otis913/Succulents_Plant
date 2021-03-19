@@ -3,7 +3,6 @@ include('./loginCheck.php');
 $sql = 'SELECT *              
             from KNOWLEDGE';
 
-
 $statement = $pdo->prepare($sql);
 $statement->execute();
 

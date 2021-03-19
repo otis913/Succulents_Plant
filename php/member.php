@@ -66,8 +66,7 @@ $row = $result->fetch_assoc();
 // 			break;
 // 	}
 // }
-?>
-<?php
+
 // $memberNO = $_SESSION["memberNO"];
 // $sql4 = 'SELECT * FROM `CARD` where FK_CARD_memberNO = ' . $memberNO;
 // $result4 = $conn->query($sql4);
@@ -137,8 +136,9 @@ $row = $result->fetch_assoc();
 			<ul class="mem_btn">
 				<li class="-mem_this">個人資料</li>
 				<li>訂單查詢</li>
+				<li>我有問題</li>
 				<!-- <li>我的收藏</li> -->
-				<!-- <li>我有問題</li> -->
+
 			</ul>
 			<!-- 右邊內容區塊 -->
 			<div class="mem_main">
@@ -353,10 +353,10 @@ $row = $result->fetch_assoc();
 									</div>
 								</form>
 							</div>
-
 						<?php
 						}
 						?>
+
 						<!-- 情況2結束 訂單進來了 -->
 					</div>
 				</div>
@@ -429,53 +429,53 @@ $row = $result->fetch_assoc();
 					</div>
 				</div>
 				<!-- 我有問題 -->
-				<!-- <div class="center_wrapper nobg"> -->
-				<!-- <div class="mem_qa">
-											<input type="text" placeholder="輸入問題 ...">
-											<input type="submit" value="新增問題" class="mem_qanew">
-										</div> -->
-				<!-- <div class="mem_answer_all"> -->
-				<!-- <div class="mem_answer"> -->
-				<!-- <div class="mem_qs_wrapper ">
-													<img src="img/PeopleAvatars.png" alt="">
-													<div class="mem_qs_box">
-														<p>消費者問問題</p>
-														<time class="mem_push">2021/1/30 13:30</time>
-													</div>
-												</div> -->
-				<!-- <div class="line_down"></div> -->
-				<!-- 對話區塊 -->
-				<!-- <div class="mem_talk">
-													<div class="mem_ans_wrapper ">
-														<img src="../img/member/1.png" alt="">
-														<div class="mem_ans_box">
-															<p>我是客服</p>
-															<time>2021/1/30 13:32</time>
-														</div>
-													</div>
-													<div class="mem_ans_wrapper ">
-														<img src="../img/member/2.png" alt="">
-														<div class="mem_ans_box">
-															<p>我是消費者</p>
-															<time>2021/1/30 13:35</time>
-														</div>
-													</div>
-													<div class="mem_ans_wrapper ">
-														<img src="../img/member/1.png" alt="">
-														<div class="mem_ans_box">
-															<p>我是客服</p>
-															<time>2021/1/30 13:40</time>
-														</div>
-													</div>
-												</div> -->
-				<!-- 對話區塊結束 -->
-				<!-- <div class="mem_reply">
-													<input type="text" placeholder="輸入內容 ...">
-													<input type="submit" value="回覆問題" class="mem_qareplay">
-												</div> -->
-				<!-- </div> -->
-				<!-- </div> -->
-				<!-- </div> -->
+				<div class="center_wrapper nobg">
+					<div class="mem_qa">
+						<input type="text" placeholder="輸入問題 ...">
+						<input type="submit" value="新增問題" class="mem_qanew">
+					</div>
+					<div class="mem_answer_all">
+						<div class="mem_answer">
+							<div class="mem_qs_wrapper ">
+								<img src="../img/PeopleAvatars.png" alt="">
+								<div class="mem_qs_box">
+									<p>消費者問問題</p>
+									<time class="mem_push">2021/1/30 13:30</time>
+								</div>
+							</div>
+							<div class="line_down"></div>
+							<!-- 對話區塊 -->
+							<div class="mem_talk">
+								<div class="mem_ans_wrapper ">
+									<img src="../img/member/1.png" alt="">
+									<div class="mem_ans_box">
+										<p>我是客服</p>
+										<time>2021/1/30 13:32</time>
+									</div>
+								</div>
+								<div class="mem_ans_wrapper ">
+									<img src="../img/member/2.png" alt="">
+									<div class="mem_ans_box">
+										<p>我是消費者</p>
+										<time>2021/1/30 13:35</time>
+									</div>
+								</div>
+								<div class="mem_ans_wrapper ">
+									<img src="../img/member/1.png" alt="">
+									<div class="mem_ans_box">
+										<p>我是客服</p>
+										<time>2021/1/30 13:40</time>
+									</div>
+								</div>
+							</div>
+							<!-- 對話區塊結束 -->
+							<div class="mem_reply">
+								<input type="text" placeholder="輸入內容 ...">
+								<input type="submit" value="回覆問題" class="mem_qareplay">
+							</div>
+						</div>
+					</div>
+				</div>
 				<!-- 我有問題結束 -->
 			</div>
 		</article>
@@ -560,6 +560,7 @@ $row = $result->fetch_assoc();
 	<!-- <script src="../js/shopcart.js"></script> -->
 	<script src="../js/header.js"></script>
 	<script src="../js/qa.js"></script>
+	<script src="../js/login.js"></script>
 	<script>
 		// 1.新增問題
 
@@ -579,7 +580,7 @@ $row = $result->fetch_assoc();
 					$(`.mem_answer_all`).prepend(`
                             <div class="mem_answer">
                                 <div class="mem_qs_wrapper ">
-                                    <img src="img//member/2.png" alt="">
+                                    <img src="../img//member/2.png" alt="">
                                         <div class="mem_qs_box">
                                             <p>${mem_qanew}</p>
                                             <time class="mem_push">${today}</time>
@@ -618,7 +619,7 @@ $row = $result->fetch_assoc();
 				// alert('有值');
 				$($(this).parents(".mem_answer").children(".mem_talk")).append(`
                             <div class="mem_ans_wrapper ">
-                                <img src="img/member/2.png" alt="">
+                                <img src="../img/member/2.png" alt="">
                                 <div class="mem_ans_box">
                                     <p>${mem_text}</p>
                                     <time>${today}</time>

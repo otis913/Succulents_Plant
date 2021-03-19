@@ -3,6 +3,7 @@ include('./loginCheck.php');
 $sql = "SELECT * 
         FROM SUCCULENTS_PLANT.KNOWLEDGE";
 $statement = $pdo->prepare($sql);
+
 if ($_FILES["knowledgeOutPic"]["error"] > 0) {
   echo "移動上傳外顯圖片失敗";
 } else {
@@ -40,8 +41,8 @@ if ($_FILES["knowledgeOutPic"]["error"] > 0) {
   //執行
   $statement = $pdo->prepare($sql);
   $sql = "INSERT INTO SUCCULENTS_PLANT.KNOWLEDGE
-          ( `knowledgeTitle`, `knowledgeType`, `knowledgeOutPic`, 
-          `knowledgeContent01`, `knowledgeContent02`, `knowledgeContent03`,
+          ( `knowledgeTitle`, `knowledgeType`, 
+          `knowledgeContent01`, `knowledgeContent02`, `knowledgeContent03`, `knowledgeOutPic`, 
           `knowledgeContentPic01`, `knowledgeContentPic02`, `knowledgeContentPic03` ) 
           VALUES (  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ? )";
   //執行

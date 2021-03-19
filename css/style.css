@@ -2032,6 +2032,10 @@ article .index_diy .h1_small {
   }
 }
 
+[v-cloak] {
+  opacity: 0;
+}
+
 .btn {
   border-radius: 10px;
   padding: 15px 0;
@@ -4167,6 +4171,12 @@ body {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .hdQA {
+    display: none;
+  }
+}
+
 .HM_Number {
   margin: 10px 0;
 }
@@ -5163,7 +5173,7 @@ article .blogall_ul a {
 
 @media (max-width: 414px) {
   .order_center .container1 .order_header .num {
-    margin-left: 15vw;
+    margin-left: 28vw;
   }
 }
 
@@ -5297,7 +5307,7 @@ article .blogall_ul a {
 
 @media (max-width: 414px) {
   .order_center .container1 #abc li .counterNum {
-    margin-left: 15vw;
+    margin-left: 28vw;
     font-size: 8px;
   }
 }
@@ -5467,7 +5477,7 @@ article .blogall_ul a {
 
 @media (max-width: 414px) {
   .order_center .container1 #app2 li .counterNum {
-    margin-left: 5vw;
+    margin-left: 3vw;
     font-size: 8px;
   }
 }
@@ -5715,7 +5725,7 @@ article .blogall_ul a {
 
 @media (max-width: 414px) {
   .order_center .container1 #app3 li .delete {
-    margin-left: 14vw;
+    margin-left: 11vw;
   }
 }
 
@@ -5863,6 +5873,7 @@ article .blogall_ul a {
   .order_center .the_order1 button {
     font-size: 10px;
     padding: 5px 40px;
+    margin-bottom: 20px;
   }
 }
 
@@ -6253,6 +6264,10 @@ article .blogall_ul a {
   flex-direction: column;
 }
 
+.mem_talk {
+  width: 100%;
+}
+
 .center_contain2 {
   display: flex;
   margin: 0 auto;
@@ -6260,6 +6275,12 @@ article .blogall_ul a {
   justify-content: space-evenly;
   width: 100%;
   max-width: 800px;
+}
+
+@media (max-width: 414px) {
+  .center_contain2 {
+    display: block;
+  }
 }
 
 .mem_wrapper form {
@@ -6270,6 +6291,12 @@ article .blogall_ul a {
   .mem_wrapper form {
     text-align: center;
     margin: 30px auto;
+  }
+}
+
+@media (max-width: 414px) {
+  .mem_wrapper form {
+    margin: 0 20px;
   }
 }
 
@@ -6946,7 +6973,6 @@ article .blogall_ul a {
 .registered_enter_text {
   width: 70%;
   margin: 0 auto;
-  overflow-y: scroll;
 }
 
 .registered_enter_text {

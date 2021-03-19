@@ -2,7 +2,8 @@
 include('./loginCheck.php');
 
 $sql = 'SELECT *
-             FROM SUCCULENTS_PLANT.ORDER';
+             FROM SUCCULENTS_PLANT.ORDER
+             order by orderNO desc';
 
 
 // $sql = 'SELECT orderNO, 
@@ -60,16 +61,6 @@ foreach ($data as $index => $row) {
             break;
     };
     echo "<td class='o_status'>" . $orderPayStatus . "</td>";
-
-    // echo "<td class='o_td_select'>
-    //         <select name='orederStatus' class='o_select' id='o_select'>
-    //             <option value='1' class='o_Dispose' >訂單處理中</option>
-    //             <option value='2' class='o_Carry' >訂單完成</option>
-    //             <option value='3' class='o_Cancle' >取消訂單</option>
-    //         </select>
-    //      </td>
-    //     </tr>";
-
     echo "<td class='o_td_select'>
         <select name='orederStatus' class='o_select' id='o_select" . $index . "'>
             <option value='1' class='o_Dispose' >訂單處理中</option>

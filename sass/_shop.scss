@@ -3,6 +3,9 @@
 // @import "./var";
 // @import "./bubblebtn";
 // @import "./mixins";
+[v-cloak] {
+  opacity: 0;
+}
 
 .btn {
   @include btn;
@@ -13,14 +16,12 @@
 //     // width: auto;
 //   }
 // }
-
 // img {
 //   @include pad() {
 //     max-width: 100%;
 //     height: auto;
 //   }
 // }
-
 // 動態
 .-shop-click {
   background-color: map-get($color, "gray2");
@@ -72,12 +73,15 @@ article .-heart {
     height: 30vh;
   }
 }
+
 .shop_b1 {
   background-image: url(../img/shop/product_kv2.png);
 }
+
 .shop_b2 {
   background-image: url(../img/shop/product_kv3.png);
 }
+
 // 麵包屑
 article .pro_bread {
   margin-top: 0;
@@ -99,7 +103,6 @@ article .pro_bread {
   }
   a {
     padding: 25px 0;
-
     text-align: center;
     color: map-get($color, "white");
     font-size: map-get($fontsize, "big");
@@ -123,7 +126,6 @@ article .pro_bread {
     overflow-x: scroll;
     height: auto;
   }
-
   li {
     @include mobile() {
       margin: 0 10px;
@@ -194,33 +196,27 @@ article .pro_bread {
   display: flex;
   // display: block;
   justify-content: space-between;
-
   @media (max-width: 428px) {
     display: block;
   }
-
   @include phone() {
     // flex-direction: column;
     // align-items: flex-start;
-
     &_select {
       text-align: left;
     }
   }
-
   select {
     padding: 10px;
     border-radius: 10px;
     margin-right: 20px;
     outline: none;
     font-size: map-get($fontsize, "normall");
-
     @media (max-width: 428px) {
       width: 100%;
       margin-bottom: 20px;
       margin-right: 0;
     }
-
     // @include phone() {
     //   width: 100%;
     //   margin-bottom: 20px;
@@ -242,7 +238,6 @@ article .pro_bread {
     background-color: map-get($color, "gray2");
     border: 1px solid #444444;
     padding: 10px;
-
     @media (max-width: 428px) {
       width: 100%;
     }
@@ -255,7 +250,6 @@ article .pro_bread {
     background-color: map-get($color, "gray2");
     transform: translate(-35px);
     outline: none;
-
     @media (max-width: 428px) {
       position: absolute;
       top: 0;
@@ -281,21 +275,17 @@ article .pro_bread {
   @include mobile() {
     width: 50%;
   }
-
   @media (max-width: 428px) {
     width: 100%;
   }
-
   // @include phone() {
   //   width: 100%;
   // }
-
   &_tag {
     @include flex;
   }
   &_img {
     position: relative;
-
     img {
       display: block;
     }
@@ -316,11 +306,9 @@ article .pro_bread {
   &_price {
     font-size: map-get($fontsize, "larger");
   }
-
   &_price {
     margin-bottom: 20px;
   }
-
   &_take {
     @include flex;
     li {
@@ -366,7 +354,6 @@ article .pro_bread {
   @include flex;
   li {
     margin: 0 20px;
-
     @include phone() {
       margin: 0 10px;
     }

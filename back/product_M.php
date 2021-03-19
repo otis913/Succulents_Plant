@@ -37,35 +37,31 @@ include('./loginCheck.php');
       <div class="right_main">
         <h1>商品管理</h1>
         <div class="bottom_line"></div>
+        <div class="search_name">
+          <h2>商品搜尋</h2>
+          <input type="text" class="search_text">
+          <i class="fas fa-search"></i>
+          <!-- <input type="submit" class="search_btn" value="search"> -->
+        </div>
+        <!-- <div class="product_type">
+          <select name="productType_select">
+            <option value="1">景天科</option>
+            <option value="2">仙人掌科</option>
+            <option value="3">百合科</option>
+            <option value="4">菊科</option>
+            <option value="5">飾品</option>
+            <option value="6">器皿</option>
+            <option value="8">賀卡</option>
+          </select> -->
         <a class="inserBtn product_inserBtn" href="./product_creat.php">新增商品</a>
         <div class="table_div table_div_product">
           <table class="table table-striped">
-            <!-- <tr class="table-dark">
-              <th>商品編號</th>
-              <th>商品類別</th>
-              <th>商品名稱</th>
-              <th>商品庫存量</th>
-              <th>商品圖片01</th>
-              <th>商品狀態</th>
-              <th>是否編輯</th>
-            </tr>
-            <tr>
-              <th scope="row">111232312</th>
-              <td>植物</td>
-              <td>仙人掌</td>
-              <td>20</td>
-              <td>
-                <img class="back_product_img" src="./img/product_big.png" alt="">
-              </td>
-              <td>上架</td>
-              <td>
-                <a href="./porduct_edit.php">編輯</a>
-              </td>
-            </tr> -->
           </table>
         </div>
       </div>
+
     </div>
+  </div>
   </div>
 
   </div>
@@ -83,6 +79,35 @@ include('./loginCheck.php');
         success: function(response) {
           //更新html內容
           document.getElementsByClassName('table')[0].innerHTML = response;
+          // ----------------------
+          $('.fa-search').on('click', () => {
+            let search_text = document.getElementsByClassName('search_text')[0].value;
+            // console.log(search_text);
+            $.ajax({
+              method: "POST",
+              url: "./product_search.php",
+              data: {
+                'search_text': search_text,
+              },
+              dataType: "html",
+              success: function(response) {
+                //更新html內容
+                document.getElementsByClassName('table')[0].innerHTML = response;
+                // -----------------
+
+
+
+
+
+
+
+
+              },
+              error: function(exception) {
+                alert("發生錯誤: " + exception.status);
+              }
+            });
+          });
         },
         error: function(exception) {
           alert("發生錯誤: " + exception.status);

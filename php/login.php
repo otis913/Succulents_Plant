@@ -135,7 +135,7 @@ if (getMemberID() == "") {
                                     <input type="text" name="account" class="account" placeholder="xxx@gmail.com">
                                 </li>
                                 <li>設定密碼:<br>
-                                    <input type="password" v-model="form_value.password.value" name="password" class="pwd" placeholder="請輸入四位數任意英文數字">
+                                    <input type="password" v-model="form_value.password.value" name="password" class="pwd" placeholder="請輸入四位數任意數字">
                                     <span v-if="form_value.password.check === false">密碼錯誤</span>
                                 </li>
                                 <!-- <li>密碼確認: <br>
@@ -257,63 +257,65 @@ if (getMemberID() == "") {
             // });
         </script>
         <script type="text/javascript">
-            // function doSubmit(e) {
-            //     var isPhone = /^09[0-9]{8}$/;
-            //     var isgmail = /^([A-Za-z0-9_\-\.])+\@(gmail.com)$/;
-            //     var ispwd = /^\d{4}$/;
+            function doSubmit(e) {
 
-            //     // alert("account");
-            //     let name = document.getElementsByClassName("name")[0].value;
-            //     let account = document.getElementsByClassName("account")[0].value;
-            //     let pwd = document.getElementsByClassName("pwd")[0].value;
-            //     let address = document.getElementsByClassName("address")[0].value;
-            //     let phone = document.getElementsByClassName("phone")[0].value;
+                var isPhone = /^09[0-9]{8}$/;
+                var isgmail = /^([A-Za-z0-9_\-\.])+\@(gmail.com)$/;
+                var ispwd = /^\d{4}$/;
 
-            //     if (name == "") {
-            //         alert("請填寫姓名");
-            //         return false;
-            //     } else if (!isgmail.test(account)) {
-            //         alert("帳號格式錯誤");
-            //         return false;
-            //     } else if (!ispwd.test(pwd)) {
-            //         alert("密碼格式錯誤");
-            //         return false;
-            //     } else if (address == '') {
-            //         alert("請填寫[地址]");
-            //         return false;
-            //     } else if (!isPhone.test(phone)) {
-            //         alert("電話格式錯誤");
-            //         return false;
-            //     }
+                // alert("account");
+                let name = document.getElementsByClassName("name")[0].value;
+                let account = document.getElementsByClassName("account")[0].value;
+                let pwd = document.getElementsByClassName("pwd")[0].value;
+                let address = document.getElementsByClassName("address")[0].value;
+                let phone = document.getElementsByClassName("phone")[0].value;
+                // alert("有點到");
+                // return false;
+                if (name == "") {
+                    alert("請填寫姓名");
+                    return false;
+                } else if (!isgmail.test(account)) {
+                    alert("帳號格式錯誤");
+                    return false;
+                } else if (!ispwd.test(pwd)) {
+                    alert("密碼格式錯誤");
+                    return false;
+                } else if (address == '') {
+                    alert("請填寫[地址]");
+                    return false;
+                } else if (!isPhone.test(phone)) {
+                    alert("電話格式錯誤");
+                    return false;
+                }
 
 
-            // var isPhone = /^([0-9]{3,4}-)?[0-9]{7,8}$/;
-            // var reg2 = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,10}$/;
-            // let phone = document.getElementsByClassName('phone')[0].value;
-            // let phone = document.getElementsByClassName('phone')[0].value;
-            // // alert(phone);
-            // let pwd = document.getElementsByClassName("registered_pwd").value.trim();
-            // let pwd_span = document.getElementsByClassName("regis_span_pwd")[0];
-            // let phone_span = document.getElementsByClassName("regis_span_cellphone")[0];
+                // var isPhone = /^([0-9]{3,4}-)?[0-9]{7,8}$/;
+                // var reg2 = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,10}$/;
+                // let phone = document.getElementsByClassName('phone')[0].value;
+                // let phone = document.getElementsByClassName('phone')[0].value;
+                // // alert(phone);
+                // let pwd = document.getElementsByClassName("registered_pwd").value.trim();
+                // let pwd_span = document.getElementsByClassName("regis_span_pwd")[0];
+                // let phone_span = document.getElementsByClassName("regis_span_cellphone")[0];
 
-            // alert(isPhone.test(phone));
-            // if (!isPhone.test(phone)) {
-            //     // alert('aaaa');
-            //     // alert('手機號碼輸入有誤！');
-            //     // phoneTxt.style.color = "red";
-            //     // phone_span.classList.add("-on");
-            //     alert("電話格式錯誤");
-            //     return false;
-            // }
-            // if (!reg2.test(pwd)) {
-            //     // alert('手機號碼輸入有誤！');
-            //     // phoneTxt.style.color = "red";
-            //     // pwd_span.classList.add("-on");
-            //     alert("密碼格式錯誤");
-            //     return false;
-            // }
+                // alert(isPhone.test(phone));
+                // if (!isPhone.test(phone)) {
+                //     // alert('aaaa');
+                //     // alert('手機號碼輸入有誤！');
+                //     // phoneTxt.style.color = "red";
+                //     // phone_span.classList.add("-on");
+                //     alert("電話格式錯誤");
+                //     return false;
+                // }
+                // if (!reg2.test(pwd)) {
+                //     // alert('手機號碼輸入有誤！');
+                //     // phoneTxt.style.color = "red";
+                //     // pwd_span.classList.add("-on");
+                //     alert("密碼格式錯誤");
+                //     return false;
+                // }
 
-            // }
+            }
         </script>
         <script>
             new Vue({

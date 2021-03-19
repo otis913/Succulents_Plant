@@ -4,7 +4,8 @@ include('./loginCheck.php');
 $sql = 'SELECT *
             FROM 
             SUCCULENTS_PLANT.MEMBER
-            where memberType = 1';
+            where memberType = 1
+            order by memberNO desc';
 
 $statement = $pdo->prepare($sql);
 $statement->execute();

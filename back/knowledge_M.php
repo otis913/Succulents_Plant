@@ -40,24 +40,6 @@ include('./loginCheck.php');
         <a class="inserBtn knowledge_inserBtn" href="./knowledge_creat.php">新增文章</a>
         <div class="table_div table_div_know">
           <table class="table table-striped">
-            <!-- <tr class="table-dark">
-              <th>文章編號</th>
-              <th>文章版型</th>
-              <th>文章外顯示圖片</th>
-              <th>文章標題</th>
-              <th>是否修改</th>
-            </tr> -->
-            <!-- <tr>
-              <th>1</th>
-              <td>1</td>
-              <td>
-                <img class="knowledge_img" src="./img/product_big.png" alt="">
-              </td>
-              <td>種植多肉的十個必須要知道的事情</td>
-              <td>
-                <a href="./knowledge_edit.html">編輯</a>
-              </td>
-            </tr> -->
           </table>
         </div>
       </div>

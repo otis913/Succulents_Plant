@@ -31,7 +31,7 @@ foreach ($order_data as $index => $item) {
   $orderAddress = $item->order_memberAddress; //地址
 
 }
-$orderPayStatus = 1;
+$orderPayStatus = 2;
 
 // 會員資料
 foreach ($member_data as $index => $item) {
