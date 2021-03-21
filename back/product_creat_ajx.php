@@ -44,8 +44,8 @@ if ($_FILES["newPic01"]["error"] > 0) {
   $productStatus = $_POST["productStatus"];
   $sql = "INSERT INTO SUCCULENTS_PLANT.PRODUCT
                   (`productType`, `productName`,  `productSize`,  `productDes`, `productPrice`,
-                    `productNumber`,  `productStatus`,  `productImg01`, `productImg02`, `productImg03`) 
-                  VALUES (  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?)";
+                    `productNumber`,  `productStatus`,  `productImg01`, `productImg02`, `productImg03`,`plantLive`) 
+                  VALUES (  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?, 1)";
   //執行
   $statement = $pdo->prepare($sql);
   //給值
