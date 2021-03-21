@@ -89,6 +89,7 @@ include('./loginCheck.php');
 							const text = $(`#o_select${i} option`).eq($(`#o_select${i}`).val() - 1).text();
 
 							let order_No = $(`#o_select${i}`).parent().parent().children('.orderNO').text;
+							o_status.text(text);
 							// if (o_status.text(text)) {
 							// 	$.ajax({
 							// 		method: "POST",

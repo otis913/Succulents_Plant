@@ -6215,7 +6215,7 @@ article .blogall_ul a {
 @media (max-width: 990px) {
   .mem_btn li {
     margin: 20px 5px;
-    flex-basis: 25%;
+    flex-basis: 35%;
   }
 }
 

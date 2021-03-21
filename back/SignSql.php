@@ -1,13 +1,13 @@
 <?php
-// $db_host = "localhost";
-// $db_user = "root";
-// $db_pass = "00000";
-// $db_select = "SUCCULENTS_PLANT";
-
 $db_host = "localhost";
-$db_user = "tibamefe_ted102";
-$db_pass = "qweasdzxc123";
-$db_select = "tibamefe_ted102_g2";
+$db_user = "root";
+$db_pass = "00000";
+$db_select = "SUCCULENTS_PLANT";
+
+// $db_host = "localhost";
+// $db_user = "tibamefe_ted102";
+// $db_pass = "qweasdzxc123";
+// $db_select = "tibamefe_ted102_g2";
 
 //建立資料庫連線物件
 $dsn = "mysql:host=" . $db_host . ";dbname=" . $db_select;

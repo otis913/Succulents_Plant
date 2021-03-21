@@ -4,15 +4,15 @@ $sql = "SELECT * FROM KNOWLEDGE where knowledgeType = 2 and knowledgeNO = " . $_
 
 function getPDO()
 {
-    // $db_host = "localhost";
-    // $db_user = "root";
-    // $db_pass = "00000";
-    // $db_select = "SUCCULENTS_PLANT";
-
     $db_host = "localhost";
-    $db_user = "tibamefe_ted102";
-    $db_pass = "qweasdzxc123";
-    $db_select = "tibamefe_ted102_g2";
+    $db_user = "root";
+    $db_pass = "00000";
+    $db_select = "SUCCULENTS_PLANT";
+
+    // $db_host = "localhost";
+    // $db_user = "tibamefe_ted102";
+    // $db_pass = "qweasdzxc123";
+    // $db_select = "tibamefe_ted102_g2";
 
     $dsn = "mysql:host=" . $db_host . ";dbname=" . $db_select;
 

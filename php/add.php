@@ -1,14 +1,14 @@
 <?php
 
-// $server_name = 'localhost';
-// $username = 'root';
-// $password = '00000';
-// $db_name = 'SUCCULENTS_PLANT';
+$server_name = 'localhost';
+$username = 'root';
+$password = '00000';
+$db_name = 'SUCCULENTS_PLANT';
 
-$server_name = "localhost";
-$username = "tibamefe_ted102";
-$password = "qweasdzxc123";
-$db_name = "tibamefe_ted102_g2";
+// $server_name = "localhost";
+// $username = "tibamefe_ted102";
+// $password = "qweasdzxc123";
+// $db_name = "tibamefe_ted102_g2";
 
 $conn = new mysqli($server_name, $username, $password, $db_name);
 

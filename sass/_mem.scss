@@ -19,7 +19,8 @@
     cursor: pointer;
     @include pad {
       margin: 20px 5px;
-      flex-basis: 25%;
+      // flex-basis: 25%;
+      flex-basis: 35%;
     }
   }
 }
