@@ -56,63 +56,64 @@ include('./loginCheck.php');
 						success: function(response) {
 							//更新html內容
 							document.getElementsByClassName('table')[0].innerHTML = response;
-							// ----------------------							
+							// ----------------------	
+							// 載入偵測訂單狀況顯示option
+							function change_status() {
+								var tr_number = document.getElementsByTagName('tr').length;
+								for (let i = 0; i < (tr_number) - 1; i++) {
+									let o_select = document.getElementById(`o_select${i}`);
+									let option0 = o_select[0];
+									let option1 = o_select[1];
+									let option2 = o_select[2];
+									let o_status = document.getElementsByClassName('o_status');
+									// let o_selectALL = document.getElementsByClassName('o_select');
+									if (o_status[i].innerText == '訂單處理中') {
+										option0.setAttribute('selected', 'selected');
+									} else if (o_status[i].innerText == '訂單完成') {
+										option1.setAttribute('selected', 'selected');
+									} else if (o_status[i].innerText == '訂單取消') {
+										option2.setAttribute('selected', 'selected');
+									}
+
+									$(`#o_select${i}`).change(function() {
+										let option_value = $(`#o_select${i}`).val();
+										let o_status = $(`#o_select${i}`).parent().parent().children('.o_status');
+										const text = $(`#o_select${i} option`).eq($(`#o_select${i}`).val() - 1).text();
+										o_status.text(text);
+										// let option = $(`#o_select${i}`);
+										// let option_value = $(`#o_select${i}`).val();
+										// let change_place = $(`#o_select${i}`).parent().parent().children('.o_status');
+										// const text = $(`#o_select${i} option`).eq($(`#o_select${i}`).val() - 1).text();
+										// change_place.text(text)
+										// 		// if (o_status.text(text)) {
+										// 		// 	$.ajax({
+										// 		// 		method: "POST",
+										// 		// 		url: "./order_change.php",
+										// 		// 		data: {
+										// 		// 			'orderNO': order_No,
+										// 		// 			'o_status': option_value
+										// 		// 		},
+										// 		// 		dataType: "text",
+										// 		// 		success: function(response) {
+										// 		// 			//更新html內容
+										// 		// 			alert("訂單狀態已修改");
+										// 		// 			// o_status.text(text);
+										// 		// 		},
+										// 		// 		error: function(exception) {
+										// 		// 			alert("發生錯誤: " + exception.status);
+										// 		// 		}
+										// 		// 	});
+										// 		// }
+									});
+								}
+							};
+							change_status();
 						},
 						error: function(exception) {
 							alert("發生錯誤: " + exception.status);
 						}
 					});
 				}
-
-				// 載入偵測訂單狀況顯示option
-				function change_status() {
-					var tr_number = document.getElementsByTagName('tr').length;
-					for (let i = 0; i < (tr_number) - 1; i++) {
-						let o_select = document.getElementById(`o_select${i}`);
-						let option0 = o_select[0];
-						let option1 = o_select[1];
-						let option2 = o_select[2];
-						let o_status = document.getElementsByClassName('o_status');
-						// let o_selectALL = document.getElementsByClassName('o_select');
-						if (o_status[i].innerText == '訂單處理中') {
-							option0.setAttribute('selected', 'selected');
-						} else if (o_status[i].innerText == '訂單完成') {
-							option1.setAttribute('selected', 'selected');
-						} else if (o_status[i].innerText == '訂單取消') {
-							option2.setAttribute('selected', 'selected');
-						}
-
-						$(`#o_select${i}`).change(function() {
-							// let order_No = $(`#o_select${i}`).parent().parent().children('.orderNO');
-							let option_value = $(`#o_select${i}`).val();
-							let o_status = $(`#o_select${i}`).parent().parent().children('.o_status');
-							const text = $(`#o_select${i} option`).eq($(`#o_select${i}`).val() - 1).text();
-
-							let order_No = $(`#o_select${i}`).parent().parent().children('.orderNO').text;
-							o_status.text(text);
-							// if (o_status.text(text)) {
-							// 	$.ajax({
-							// 		method: "POST",
-							// 		url: "./order_change.php",
-							// 		data: {
-							// 			'orderNO': order_No,
-							// 			'o_status': option_value
-							// 		},
-							// 		dataType: "text",
-							// 		success: function(response) {
-							// 			//更新html內容
-							// 			alert("訂單狀態已修改");
-							// 			// o_status.text(text);
-							// 		},
-							// 		error: function(exception) {
-							// 			alert("發生錯誤: " + exception.status);
-							// 		}
-							// 	});
-							// }
-						});
-					}
-				};
-				change_status();
 			</script>
 			<script src="./js/leftbar.js"></script>
 </body>
