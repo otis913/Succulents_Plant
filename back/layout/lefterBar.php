@@ -11,7 +11,7 @@
         <a class="leftBtn" data-page="肉多不怪商品管理" href="./product_M.php">商品管理</a>
       </li>
       <li>
-        <a class="leftBtn" data-page="肉多不怪課程管理" href="./handClass_M.php">課程管理</a>
+        <a class="leftBtn" data-page="肉多不怪課程管理" href="./handclass_M.php">課程管理</a>
       </li>
       <li>
         <a class="leftBtn" data-page="肉多不怪文章管理" href="./knowledge_M.php">知識文章</a>
